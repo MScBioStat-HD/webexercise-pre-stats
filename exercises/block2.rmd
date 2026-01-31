@@ -25,7 +25,7 @@ $x$ &isin; $[-5, 5]$ und $y$ &isin; $[-5, 5]$ ein. Geben Sie die Geraden jeweils
 (c) Zeichnen Sie die Gerade die Gerade durch den Punkt (1,1) und mit der Steigung m = -0.5
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 Bild hier
 :::
 
@@ -48,7 +48,7 @@ cat("(a) Wie groß ist die Zeitspanne
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (a) Für die Verdoppelungszeit $\delta$ muss gelten $\ u \delta = 2 \cdot u(0)$. Eingesetzt in die
 Funktionsgleichung ergibt sich
 
@@ -73,8 +73,8 @@ cat("(b) Verdoppeln sich kleine oder große Populationen schneller?",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-Die Verdoppelungszeit ist nicht von der Anfangspopulation $u_{0}$
+:::: {.callout-tip collapse="true" title="Lösung"}
+(b) Die Verdoppelungszeit ist nicht von der Anfangspopulation $u_{0}$
 abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich
 schnell
 :::
@@ -92,13 +92,13 @@ opts <- c(
 	"Der Nullpunkt sollte in das Jahr 19675 gelegt werden."
 )
 
-cat("(a)Wohin legen Sie den Nullpunkt, um wenig Arbeit mit dem
+cat("(a) Wohin legen Sie den Nullpunkt, um wenig Arbeit mit dem
 	rechnen zu haben?",
 	longmcq(opts))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (a) Der Nullpunkt sollte in das Jahr 1960 gelegt werden.
 :::
 
@@ -115,7 +115,7 @@ cat("(b) Geben Sie $y(0)$ und $y(15)$ an.",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (b) Mit dem Nullpunkt aus Teilaufgabe (a) erhält man $y(0) = 5.5$ und $y(15) = 8.1$
 :::
 
@@ -132,8 +132,8 @@ cat("(c) Bestimmen Sie nun $y_{0}$ und $\\lambda$ so, dass $\\gamma = \\gamma_0 
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-c) Mit den Angaben aus Teilaufgabe (b) und dem Wachstumsmodell $\gamma = \gamma_0 \cdot e^{\lambda t}$ erhält man:
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Mit den Angaben aus Teilaufgabe (b) und dem Wachstumsmodell $\gamma = \gamma_0 \cdot e^{\lambda t}$ erhält man:
 
 	$\gamma(0) = 5.5 = \gamma_0 \cdot e^{\lambda 0} \Rightarrow \gamma_0 = 5.5$ <br> <br>
 	$\gamma(15) = 8.1 = 5.5 \cdot e^{\lambda \cdot 15} \Leftrightarrow e^{\lambda \cdot 15} = \frac{8.1}{5.5} \Leftrightarrow \lambda = \frac{1}{15} \cdot \ln(\frac{8.1}{5.5}) = 0.0258$

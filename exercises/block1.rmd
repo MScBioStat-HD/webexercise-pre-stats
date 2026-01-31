@@ -49,7 +49,7 @@ cat("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A", longmcq(opts))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 
 :::
 
@@ -76,8 +76,8 @@ cat("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Erg
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
 die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
 
 $\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
@@ -99,8 +99,8 @@ cat("(b) Wie viel Elemente enthält die Menge $\\Omega$? Geben Sie eine geeignet
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-Die Anzahl der Elemente von $\Omega$ ist #$\Omega$ = 2·2·2·2 = 16, da es für jeden Wurf
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Die Anzahl der Elemente von $\Omega$ ist #$\Omega$ = 2·2·2·2 = 16, da es für jeden Wurf
 zwei mögliche Ergebnisse gibt.
 :::
 
@@ -115,8 +115,8 @@ cat("c) Geben Sie für das Ereignis A: „es ist genau zweimal
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-Die Menge der Ergebnisse, in denen genau zweimal Wappen gefallen ist, lässt
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Die Menge der Ergebnisse, in denen genau zweimal Wappen gefallen ist, lässt
 sich durch A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
 W), (Z, Z, W, W)} beschreiben.
 :::
@@ -136,8 +136,8 @@ cat("(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wapp
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
 die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
 
 $\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
@@ -156,8 +156,8 @@ cat("(e) Bestimmen Sie A $\\cap$ B",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-Die Schnittmenge zwischen beiden Ereignissen enthält nur ein Ergebnis
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) Die Schnittmenge zwischen beiden Ereignissen enthält nur ein Ergebnis
 A $\cap$ B = {(W, W, Z, Z)}.
 :::
 
@@ -206,11 +206,11 @@ Lösen Sie folgende Gleichungen:
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(a) $x^{2}$ = 18 $\\Rightarrow$", fitb(4,17, num = TRUE))
+cat("(a) $x^{2}$ = 18 $\\Rightarrow$", fitb(4.17, num = TRUE))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (a) $x = log_{2}18 \approx 4.17$
 :::
 
@@ -220,7 +220,7 @@ cat("(b) $e^{x}$ = 1 $\\Rightarrow$", fitb(3, num = TRUE))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (b) $x = \ln(1) = 0$
 :::
 
@@ -230,7 +230,7 @@ cat("(c) $x^{2}$ = 18 $\\Rightarrow$", fitb(3, num = TRUE))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (c) $x = \ln(27) \approx 3.3$
 :::
 
@@ -240,7 +240,7 @@ cat("(d) $x^{2}$ = 18 $\\Rightarrow$", fitb(3, num = TRUE))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (d) $\log_{10}(2) + \log_{10}(5) = \log_{10}(2 \cdot 5) = \log_{10}10 = 1$
 :::
 
@@ -250,7 +250,7 @@ cat("(e) $x^{2}$ = 18 $\\Rightarrow$", fitb(3, num = TRUE))
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 (e) $\log_{2}(4) = \log_{2}(2) + \log_{2}(2) = 2$ <br>
  oder $\log_{2}(2^{2}) = 2 \cdot \log_{2}(2) = 2$
 :::

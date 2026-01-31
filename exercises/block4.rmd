@@ -9,28 +9,97 @@ library(webexercises)
 
 ### Übungen 4 – A1
 
-::: {.callout-tip collapse="true"}
-$\\ \int_{2}^{0} (x^{3} + 2x)dx = \frac{1}{4}x^{4} + x^{2} \big|_{0}^{2} = (\frac{16}{4} + 4) - 0 = 8$
+Berechnen Sie die folgenden Integrale.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$6$",
+	"$12$",
+	answer = "$8$"
+)
+
+cat("(a) $\\int_{0}^{2} (x^{3} + 2x)dx$",
+	longmcq(opts))
+```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\ \int_{2}^{-2} e^{2x}dx + \frac{1}{2}e^{2x} \big|_{-2}^{2} = (\frac{1}{2} \cdot e^{4}) - (\frac{1}{2}e^{-4}) = 27.29$
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\\ \int_{2}^{0} (x^{3} + 2x)dx = \frac{1}{4}x^{4} + x^{2} \big|_{0}^{2} = (\frac{16}{4} + 4) - 0 = 8$
 :::
 
-::: {.callout-tip collapse="true"}
-$\\ \int_{2}^{0} (x +4)^{2}dx = \int_{2}^{0}(x^{2} + 8x + 16)dx = \frac{1}{3}x^{3} + 4x^{2} + 16x\big|_{0}^{2}$ <br> <br>
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$e^{4} - 1$",
+	answer = "$27.29$",
+	"$23$"
+)
+
+cat("(b) $\\int_{-2}^{2}$ $e^{2x} dx$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $\\ \int_{2}^{-2} e^{2x}dx + \frac{1}{2}e^{2x} \big|_{-2}^{2} = (\frac{1}{2} \cdot e^{4}) - (\frac{1}{2}e^{-4}) = 27.29$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$\\frac{152}{3}$",
+	"$50$",
+	answer = "$50\\frac{2}{3}$"
+)
+
+cat("(c) $\\int_{0}^{2}(x + 4 )^{2} dx$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $\\ \int_{2}^{0} (x +4)^{2}dx = \int_{2}^{0}(x^{2} + 8x + 16)dx = \frac{1}{3}x^{3} + 4x^{2} + 16x\big|_{0}^{2}$ <br> <br>
 $\\ (\frac{8}{3} + 16 + 32) - 0 = 50\frac{2}{3}$
 :::
 
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$2x + c$",
+	answer = "$2x^{2} + c$",
+	"$4x^{2} + c$"
+)
 
-::: {.callout-tip collapse="true"}
-$\\ \int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c$
+cat("(d) $\\int_{}^{} 4x dx$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $\\ \int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c$
 :::
 
 ### Übungen 4 – A2
 
-::: {.callout-tip collapse="true"}
-$\\ f(x) = -2x$, Fläche im Intervall [-2,2] <br>
+Berechnen Sie die die Fläche unterhalb der Funktion im
+angegebenen Intervall. Skizzieren Sie die Funktion.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "$8$",
+	"$0$",
+	"$4$"
+)
+
+cat("(a) $f(x) = -2x$, Fläche im Intervall $[-2,2]$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\\ f(x) = -2x$, Fläche im Intervall [-2,2] <br>
 	Nullstelle: x = 0 <br>
 	Stammfunktion: $\\ F(x) = -x^{2} + c$ 
 	<br><br>
@@ -39,10 +108,23 @@ $\\ f(x) = -2x$, Fläche im Intervall [-2,2] <br>
 	$\\ = 4 + 4 = 8$
 :::
 
-::: {.callout-tip collapse="true"}
-$\\ f(x) = \begin{cases} 0 & \text{für} x < 0 \\ -x^{2} + \frac{4}{3} & \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 & \text{für} x > 1\end{cases}$<br><br>
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$\\frac{1}{3}$",
+	"$\\frac{4}{3}$",
+	answer = "$1$"
+)
+
+cat("(b) <br> $\\\\ f(x) = \\begin{cases} 0 & \\text{für} & x<0 \\\\
+	-x^{2} + \\frac{4}{3} & \\text{für} & 0 \\le x\\le 1 & \\text{im Intervall} & [0,2] \\\\
+	0 & \\text{für} & x>1 \\end{cases}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $\\ f(x) = \begin{cases} 0 & \text{für} x < 0 \\ -x^{2} + \frac{4}{3} & \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 & \text{für} x > 1\end{cases}$<br><br>
 Stammfunktion: $\\(F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c$ <br><br>
 Fäche: $\\(F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1$
 :::
-
-

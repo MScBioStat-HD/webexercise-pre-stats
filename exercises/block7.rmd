@@ -8,7 +8,118 @@ library(webexercises)
 ## Exercises
 
 ### Übungen 7 – A1
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"",
+	answer = "",
+	"$$"
+)
+cat("(a) Besitzt das lineare Gleichungssystem <br><br> $\\begin{array}{r r r l}
+	 x_{1} & + & x_{2} & + &  x_{3} & = & 1 \\\\\\
+	 x_{1} & + & &         &  x_{3} & = & 1 \\\\\\
+	2x_{1} & + & x_{2} & + & 2x_{3} & = & 0
+	\\end{array}$ <br><br> eine Lösung?",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+(a) $$ BB^{T}\begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
+:::
 ### Übungen 7 – A2
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"",
+	answer = "",
+	"$$"
+)
+cat("(a) Besitzt das lineare Gleichungssystem <br><br>$\\begin{array}{r r r l}
+	 x_{1} & + & x_{2} & + &  x_{3} & = & 1 \\\\\\
+	 x_{1} & + & &         &  x_{3} & = & 1 \\\\\\
+	2x_{1} & + & x_{2} & + & 2x_{3} & = & 0
+	\\end{array}$ <br><br> eine Lösung?",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+(a) $$ BB^{T}\begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
+:::
+
 ### Übungen 7 – A3
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"",
+	answer = "",
+	"$$"
+)
+cat("(a) Ist das lineare Gleichungssystem <br><br>$\\begin{array}{r r r l}
+	-3x_{1} & + & x_{2} & + & 4x_{3} & = & 1 \\\\\\
+	  x_{1} & + & x_{2} & + & x_{3} & = & 0 \\\\\\
+	-2x_{1} & + & &         & x_{3} & = &-1 \\\\\\
+	x_{1} & + & x_{2} & - & 2x_{3} & = & 0
+	\\end{array}$ <br> <br>lösbar?",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $$ BB^{T}\begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
+:::
+
 ### Übungen 7 – A4
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Das Gleichungssystem besitzt nur für $a = 2$ eine Lösung.",
+	answer = "Für alle $a \\in \\mathbb{R}$ existiert genau eine Lösung mit 
+	$x = a - 2, y = 4 - a, z = a - 2$.",
+	"Das Gleichungssystem besitzt für alle $a \\in \\mathbb{R}$ unendlich viele Lösungen."
+)
+cat("(a) Für welche Werte von a hat das folgende Gleichungssystem eine
+	Lösung? Geben Sie die Lösung an. <br><br>
+	$\\begin{array}{r r r l}
+	x & + & y & + & z & = & a \\\\\\
+	x & + & y & &     & = & 0 \\\\\\
+	&     & y & + & z & = & 2
+	\\end{array}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $$ BB^{T}\begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
+:::
+
 ### Übungen 7 – A5
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Für $a \\neq 1$ besitzt das Gleichungssystem genau eine Lösung:
+	$x_{1} = \\frac{5}{a-1}$, $x_2 = 0$, $x_3 = 0$.",
+	answer = "Für $a \\neq 1$ besitzt das Gleichungssystem unendlich viele Lösungen mit
+	$x_{1} = \\frac{5a - 1}{3a - 3} +  \\frac{1}{3} \\alpha$, 
+	$x_{2} = \\alpha$, 
+	$x_{3} = \\frac{4}{1-a}\\alpha$.",
+	"Für $a \\neq 1$ besitzt das Gleichungssystem unendlich viele Lösungen mit
+	$x_{1} = \\frac{5}{a-1}$, 
+	$x_{2} = \\alpha$, 
+	$x_{3} = \\frac{3}{a-1} \\alpha$."
+)
+cat("(a) Lösen Sie das folgende Gleichungssystem, wobei a $\\neq$ 1 eine reelle Zahl ist. <br><br> $\\begin{array}{r r r l}
+	3x_{1} & - & 2x_{2} & - & ax_{3} & = 1\\\\\\
+	3x_{1} & - & x_{2} & + &  x_{3} & = 5
+	\\end{array}$ <br><br> eine Lösung?",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $$ BB^{T}\begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
+:::

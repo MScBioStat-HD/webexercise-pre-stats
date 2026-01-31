@@ -8,5 +8,135 @@ library(webexercises)
 ## Exercises
 
 ### Übungen 5 – A1
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "Nein",
+	"Ja"
+)
+
+cat("(a) Sind die drei Vektoren 
+	$x = \\begin{pmatrix} 1 \\\\\\ 0 \\\\\\ 0 \\end{pmatrix}$, $y = \\begin{pmatrix} 1 \\\\\\ 2 \\\\\\ 3 \\end{pmatrix}$ und $z = \\begin{pmatrix} 2 \\\\\\ 2 \\\\\\ 3 \\end{pmatrix}$ linear unabhängig?",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Mit $x = (1\,0\,0)^{T}$, $y = (1\,2\,3)^{T}$ und $z = (2\,2\,3)^{T}$ gilt
+	$$
+	x + y - z
+	=
+	\begin{pmatrix}1\\0\\0\end{pmatrix}
+	+
+	\begin{pmatrix}1\\2\\3\end{pmatrix}
+	-
+	\begin{pmatrix}2\\2\\3\end{pmatrix}
+	=
+	\begin{pmatrix}0\\0\\0\end{pmatrix}
+	$$
+	Außerdem ist:
+	$$
+	\det
+	\begin{pmatrix}
+	1 & 1 & 2 \\
+	0 & 2 & 2 \\
+	0 & 3 & 3
+	\end{pmatrix}
+	=
+	1 \cdot
+	\det
+	\begin{pmatrix}
+	2 & 2 \\
+	3 & 3
+	\end{pmatrix}
+	=
+	2\cdot 3 - 3\cdot 2
+	=
+	0
+	$$
+
+	Die Vektoren sind linear abhängig.
+
+
+<br>
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Nein",
+	answer = "Ja"
+)
+
+cat("(b) Sind die drei Vektoren 
+	$x = \\begin{pmatrix} 1 \\\\\\ 1 \\\\\\ 1 \\end{pmatrix}$, $y = \\begin{pmatrix} 2 \\\\\\ 0 \\\\\\ 1 \\end{pmatrix}$ und $z = \\begin{pmatrix} 3 \\\\\\ 3 \\\\\\ 2 \\end{pmatrix}$ linear unabhängig?",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Gesucht sind $\alpha, \beta$ und $\gamma$ mit \alpha \cdot x + \beta \cdot y + \gamma \cdot z = 0. Man erhält das folgende Gleichungssystem:
+	$$
+	\begin{cases}
+	\alpha + 2\beta + 3\gamma = 0 \\
+	\alpha + 3\gamma = 0 \\
+	\alpha + \beta + 2\gamma = 0
+	\end{cases}
+	$$
+
+	Aus der zweiten Gleichung folgt \alpha = -3\gamma. Setzt man dies in die erste Gleichung ein, so erhält man
+	$$
+	-3\gamma + 2\beta + 3\gamma = 2\beta = 0,
+	$$
+	d.h. $\beta = 0$. Setzt man beides in die dritte Gleichung ein, so ergibt sich
+	$$
+	-3\gamma + 0 + 2\gamma = -\gamma = 0,
+	$$
+	also $\gamma = 0$ und damit auch $\alpha = 0$. Andere Lösungen für $\alpha, \beta$ und $\gamma$ gibt es nicht.
+
+	Zusätzlich gilt:
+	$$
+	\det
+	\begin{pmatrix}
+	1 & 2 & 3 \\
+	1 & 0 & 3 \\
+	1 & 1 & 2
+	\end{pmatrix}
+	=
+	1\cdot 0\cdot 2
+	+ 2\cdot 3\cdot 1
+	+ 3\cdot 1\cdot 1
+	- 1\cdot 0\cdot 3
+	- 1\cdot 3\cdot 1
+	- 2\cdot 1\cdot 2
+	= 2 \neq 0.
+	$$
+:::
+
 ### Übungen 5 – A2
-### Übungen 5 – A3
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$x^{T}y = -4$, d.h. der Winkel zwischen x und y ist stumpf.",
+	"$x^{T}y = 6$, d.h. die Vektoren zeigen überwiegend in die gleiche Richtung.",
+	answer = "$x^{T}y = 0$, d.h. die beiden Vektoren stehen senkrecht zueinander."
+)
+
+cat("(a) Gegeben sind die Vektoren $x = (1, 2, 3)$ und $y = (0, -3, 2)$.
+	Berechnen Sie das Skalarprodukt von x und y und interpretieren Sie das
+	Ergebnis geometrisch.",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Seien x = (1, 2, 3) und y = (0, -3, 2) zwei Vektoren.
+	Berechnen Sie das Skalarprodukt von x und y. <br>
+	Interpretieren Sie das Ergebnis geometrisch.
+	<br>
+	**Lösung:**
+	$$ x^{T}y = (1\,2\,3) \begin{pmatrix}0 \\ -3 \\ 2 \end{pmatrix} = 1 \cdot 0 + 2 \cdot (-3) + 3 \cdot 2 = 0 $$
+	d.h. die beiden Vektoren stehen senkrecht zueinander.
+:::

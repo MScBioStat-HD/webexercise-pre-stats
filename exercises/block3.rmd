@@ -22,8 +22,8 @@ cat("(a) ${f}(x) = 3 x^{4} + x^{2} + 5$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} = 2x$
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\\f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} = 2x$
 :::
 
 ::: {.webex-check .webex-box}
@@ -39,8 +39,8 @@ cat("(b) ${f}(x) = e^{3x}$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = e^{3x} \Rightarrow f'(x) = 3e^{3x}$
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $\\f(x) = e^{3x} \Rightarrow f'(x) = 3e^{3x}$
 :::
 
 ::: {.webex-check .webex-box}
@@ -56,8 +56,8 @@ cat("(c) ${f}(x) = 2x + e^{3x} + x$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = 2x + e^{3x} + x \Rightarrow f'(x) = 2 +3e^{3x} + 1 = 3e^{3x} + 3$
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $\\f(x) = 2x + e^{3x} + x \Rightarrow f'(x) = 2 +3e^{3x} + 1 = 3e^{3x} + 3$
 :::
 
 ::: {.webex-check .webex-box}
@@ -73,8 +73,8 @@ cat("(d) ${f}(x) = \\sqrt{1 - x^{2}}$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = \sqrt{1 - x^{2}} = (1 - x^{2})^{1/2} \Rightarrow f'(x) = 1/2 \cdot (1 - x^{2})^{- \frac{1}{2}} \cdot (-2x)$
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $\\f(x) = \sqrt{1 - x^{2}} = (1 - x^{2})^{1/2} \Rightarrow f'(x) = 1/2 \cdot (1 - x^{2})^{- \frac{1}{2}} \cdot (-2x)$
 :::
 
 ::: {.webex-check .webex-box}
@@ -90,8 +90,8 @@ cat("(e) ${f}(x) = e^{x} \\cdot ln(x)$",
 ```
 ::: 
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = e^{x} \cdot \ln(x) \Rightarrow f'(x) = e^{x} \cdot \frac{1}{x} + e^{x} \cdot \ln(x)$
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) $\\f(x) = e^{x} \cdot \ln(x) \Rightarrow f'(x) = e^{x} \cdot \frac{1}{x} + e^{x} \cdot \ln(x)$
 :::
 
 ::: {.webex-check .webex-box}
@@ -107,8 +107,8 @@ cat("(f) ${f}(x) =  \\frac{x+4}{x^{2}}$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = \frac{(x + 4)}{x^{2}} = (x + 4) \cdot \frac{1}{x^{2}} \Rightarrow f'(x) = (x + 4) \cdot (-2) \cdot \frac{1}{x^{3}} + 1 \cdot \frac{1}{x^{2}}$
+::: {.callout-tip collapse="true" title="Lösung"}
+(f) $\\f(x) = \frac{(x + 4)}{x^{2}} = (x + 4) \cdot \frac{1}{x^{2}} \Rightarrow f'(x) = (x + 4) \cdot (-2) \cdot \frac{1}{x^{3}} + 1 \cdot \frac{1}{x^{2}}$
 :::
 
 ::: {.webex-check .webex-box}
@@ -124,8 +124,8 @@ cat("(g) ${f}(x) = (x + 4) \\cdot e^{x}$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = (x + 4) \cdot e^{x} \Rightarrow f'(x) = (x + 4) \cdot e^{x} + 1 \cdot e^{x}$
+::: {.callout-tip collapse="true" title="Lösung"}
+(g) $\\f(x) = (x + 4) \cdot e^{x} \Rightarrow f'(x) = (x + 4) \cdot e^{x} + 1 \cdot e^{x}$
 :::
 
 ::: {.webex-check .webex-box}
@@ -142,7 +142,7 @@ cat("(h) ${f}(x) = ln(x - 4) + 2$",
 :::
 
 ::: {.callout-tip collapse="true"}
-$\\f(x) = \\ln(x - 4) + 2 \Rightarrow f'(x) = 1/(x - 4)$
+(h) $\\f(x) = \\ln(x - 4) + 2 \Rightarrow f'(x) = 1/(x - 4)$
 :::
 
 ::: {.webex-check .webex-box}
@@ -158,8 +158,8 @@ cat("(i) ${f}(x) = e^{-2x}$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = e^{-2x} \Rightarrow f'(x) = -2e^{-2x}$
+::: {.callout-tip collapse="true" title="Lösung"}
+(i) $\\f(x) = e^{-2x} \Rightarrow f'(x) = -2e^{-2x}$
 :::
 
 ::: {.webex-check .webex-box}
@@ -175,8 +175,8 @@ cat("(j) ${f}(x) = e^{-2x^{2}}$",
 ```
 :::
 
-::: {.callout-tip collapse="true"}
-$\\f(x) = e^{-2x} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}$
+::: {.callout-tip collapse="true" title="Lösung"}
+(j) $\\f(x) = e^{-2x} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}$
 :::
 
 ### Übungen 3 – A2
@@ -200,7 +200,7 @@ cat("Gegeben ist die Funktion ${f}(x) = 8 x^{3} + 3 x^{2} – 3x$. <br>
 ```
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-tip collapse="true" title="Lösung"}
 Zunächst muss die Ableitung gebildet werden.<br>
 Es ist $\\f'(x) = 24x^{2} + 2 6x -3$ <br>
 
