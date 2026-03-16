@@ -10,3 +10,5 @@ _site/
 **/*.quarto_ipynb
 out/
 .backup/
+.DS_Store
+.sisyphus/
