@@ -3,254 +3,211 @@ title: Block 1
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
+source("include/helper.R")
 ```
-
-Block 1 is about doing X with Y.
-
-
-## Exercises
 
 ### Übungen 1 – A1
+Überlegen Sie anhand eines Venn-Diagramms:
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
-opts <- c(
-	"",
-	"",
-	answer = ""
+Notiz: Die symmetrische Differenz A$\Delta$ B von zwei Mengen ist definiert als die Menge aller
+Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen.
+
+```{r exercise-1a, echo=FALSE, results='asis'}
+question_with_solution(
+	question = "(a) Welche Elemente gehören zur symmetrischen Differenz $A \\Delta B$?",
+	solution = "Die symmetrische Differenz ist der schraffierte Bereich.",
+	image = "images/image_1A_a.png"
 )
-
-cat("(a) Welche Elemente gehören zur symmetrischen Differenz A $\\Delta$ B ?", longmcq(opts))
 ```
-:::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
-opts <- c(
-	"",
-	"",
-	answer = ""
+```{r exercise-1b, echo=FALSE, results='asis'}
+question_with_solution(
+	question = "(b) Die symmetrische Differenz lässt sich auch ausdrücken als $A \\Delta B = (A \\setminus B) \\cup (B \\setminus A)$.",
+	solution = "$A \\setminus B$ ist der von links oben schraffierte Bereich. $B \\setminus A$ ist der von rechts oben schraffierte Bereich. Die Vereinigung sind beide schraffierten Bereiche. Ein Vergleich mit Teilaufgabe (a) liefert die gewünschte Aussage.",
+	image = "images/image_1A_b.png"
 )
-
-cat("(b) Die symmetrische Differenz lässt sich $\\sigma$ auch ausdrücken 
-	als A $\\Delta$ B = (A\\B) $\\cup$ (B\\A)", longmcq(opts))
 ```
-:::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
-opts <- c(
-	"",
-	"",
-	answer = ""
+```{r exercise-1c, echo=FALSE, results='asis'}
+question_with_solution(
+	question = "(c) $A \\cap B = B$ heißt dasselbe wie $B \\subset A$",
+	solution = "$B$ ist die schraffierte Menge. $A \\cap B = B$  und $B \\subset A$",
+	image = "images/image_1A_c.png"
 )
-
-cat("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A", longmcq(opts))
 ```
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-
-:::
 
 ### Übungen 1 – A2
 
 Bei einem Spiel mit Münzen wird eine Münze 4 Mal hintereinander geworfen. Dabei wird jedes Mal notiert, ob
 Wappen (W) oder Zahl (Z) gefallen ist.
 
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-library(webexercises)
-
-opts <- c(
-	answer = paste0(
-		"$\\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\\in$ {W, Z}, \\
-		i = 1, …,4} = {(W, W, W, W), (W, W, W, Z), (W, W, Z, W), 
-		(W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}"),
-	"$\\Omega$ = {W, Z}"
+```{r exercise-2a, echo=FALSE, results='asis'}
+question_with_single_choice(
+	question = "(a) Welche Ergebnismenge $\\Omega$ beschreibt das viermalige Werfen einer Münze korrekt?",
+	choices = c( answer = "$\\Omega = \\{(x_1, x_2, x_3, x_4) \\mid x_i \\in \\{W, Z\\},\\ i = 1, \\ldots, 4\\} =$
+	<br> $\\{(W, W, W, W), (W, W, W, Z), (W, W, Z, W),$ <br> $(W, W, Z, Z), (W, Z, W, W), \\ldots, (Z, Z, Z, Z)\\}$",
+	"$\\Omega = \\{W, Z\\}$"
+	),
+	solution = "Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
+	$\\Omega = \\{(x_{1}, x_{2}, x_{3}, x_{4}) \\mid x_{i} \\in \\{W, Z\\}, i = 1, \\ldots,4\\} =$ <br> $\\{(W, W, W, W), (W, W, W, Z),$
+	$(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), \\ldots, (Z, Z, Z, Z)\\}$"
 )
-
-cat("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
-    longmcq(opts))
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(a) Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
-die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
-
-$\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
-(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-library(webexercises)
-
-opts <- c(
-	answer = "16 Elemente",
-	"6 Elemente",
-	"8 Elemente"
+```{r exercise-2b, echo=FALSE, results='asis'}
+question_with_fitb(
+  question = "(b) Wie viele Elemente enthält die Menge $\\Omega$ aus Aufgabe (a)?",
+  answer = 16,
+  prefix = "$\\Omega =$",
+  solution = "Die Anzahl der Elemente von $\\Omega$ ist $\\#\\Omega = 2 \\cdot 2 \\cdot 2 \\cdot 2 = 16$, da es für jeden Wurf zwei mögliche Ergebnisse gibt."
 )
-
-cat("(b) Wie viel Elemente enthält die Menge $\\Omega$? Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
-	longmcq(opts))
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(b) Die Anzahl der Elemente von $\Omega$ ist #$\Omega$ = 2·2·2·2 = 16, da es für jeden Wurf
-zwei mögliche Ergebnisse gibt.
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-opts <- c(
-	answer = "A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z, W), (Z, Z, W, W)}",
-	"A = {(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z), (Z, Z, W, W)}"
+```{r exercise-2c, echo=FALSE, results='asis'}
+question_with_single_choice(
+	question = "(c) Geben Sie für das Ereignis $A$: „Es ist genau zweimal Wappen gefallen“ die Ereignismenge an.",
+	choices = c(
+    answer = paste(
+      "$A = \\{(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W),$",
+      "<br>",
+      "$(Z, W, W, Z), (Z, W, Z, W), (Z, Z, W, W)\\}$"
+    ),
+    paste(
+      "$A = \\{(W, W, Z, Z), (W, Z, W, Z),$",
+      "<br>",
+      "$(Z, W, W, Z), (Z, Z, W, W)\\}$"
+    )
+  ),
+	solution = "Die Menge der Ergebnisse, in denen genau zweimal Wappen fällt, lautet $A = \\{(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z, W), (Z, Z, W, W)\\}$."
 )
-cat("c) Geben Sie für das Ereignis A: „es ist genau zweimal
-	Wappen gefallen“ die Ereignismenge an.", longmcq(opts))
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(c) Die Menge der Ergebnisse, in denen genau zweimal Wappen gefallen ist, lässt
-sich durch A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
-W), (Z, Z, W, W)} beschreiben.
-:::
-
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-opts <- c(
-	answer = paste0(
-	"B = \\{(W, W, $x_{3}$, $x_{4}$) | $x_{3}$,
-	$x_{4}$ $\\in$ {W, Z\\}\\} = {(W, W, W, W),(W, W, W, Z),(W, W, Z, W),(W, W, Z, Z)}"),
-	"B = { (W, W, W, W), (W, W, Z, Z) }"
+```{r exercise-2d, echo=FALSE, results='asis'}
+question_with_single_choice(
+	question = "(d) Geben Sie für das Ereignis $B$: „In den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
+  choices = c(
+    answer = paste(
+      "$B = \\{(W, W, x_{3}, x_{4}) \\mid x_{3}, x_{4} \\in \\{W, Z\\}\\}$",
+      "<br>",
+      "$= \\{(W, W, W, W), (W, W, W, Z), (W, W, Z, W), (W, W, Z, Z)\\}$"
+    ),
+    "$B = \\{(W, W, W, W), (W, W, Z, Z)\\}$"
+  ),
+	solution = "Sind die ersten beiden Würfe Wappen, so dürfen die letzten beiden beliebig sein: $B = \\{(W, W, x_3, x_4) \\mid x_3, x_4 \\in \\{W, Z\\}\\}$."
 )
-
-cat("(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
-	longmcq(opts))
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(d) Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
-die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
-
-$\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
-(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-opts <- c(
-	"A $\\cap$ B = { (W, W, W, Z), (W, W, Z, W)}",
-	answer = "A $\\cap$ B = {(W, W, Z, Z)}"
+```{r exercise-2e, echo=FALSE, results='asis'}
+question_with_single_choice(
+	question = "(e) Bestimmen Sie die Schnittmenge $A \\cap B$, wobei $A$ aus Teil (c) und $B$ aus Teil (d) stammt.",
+	choices = c(
+		"$A \\cap B = \\{(W, W, W, Z), (W, W, Z, W)\\}$",
+		answer = "$A \\cap B = \\{(W, W, Z, Z)\\}$"
+	),
+	solution = "Nur das Ergebnis $(W, W, Z, Z)$ erfüllt beide Ereignisse gleichzeitig, daher $A \\cap B = \\{(W, W, Z, Z)\\}$."
 )
-
-cat("(e) Bestimmen Sie A $\\cap$ B",
-	longmcq(opts))
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(e) Die Schnittmenge zwischen beiden Ereignissen enthält nur ein Ergebnis
-A $\cap$ B = {(W, W, Z, Z)}.
-:::
 
 ### Übungen 1 – A3
 
 Bestimmen Sie die Mächtigkeit folgender Mengen
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(a) A = {1, 2, 3} $\\Rightarrow$", fitb(3, num = TRUE))
+```{r exercise-3a, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(a) $A = \\{1, 2, 3\\}$",
+	answer = 3,
+	prefix = "$|A| =$",
+	solution = "$|A| = 3$"
+)
 ```
-:::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(b) B = {a, b, c} $\\Rightarrow$", 	fitb(3, num = TRUE))
+```{r exercise-3b, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(b) $B = \\{a, b, c\\}$",
+	answer = 3,
+	prefix = "$|B| =$",
+	solution = "$|B| = 3$"
+)
 ```
-:::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(c) C = A $\\cup$ B $\\cup$ {1, . . . , 11} $\\Rightarrow$", fitb(14, num = TRUE))
+```{r exercise-3c, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(c) $C = A \\cup B \\cup \\{1, \\ldots , 11\\}$",
+	answer = 14,
+	prefix = "$|C| =$",
+	solution = "$|C| = 14$"
+)
 ```
-:::
 
 ### Übungen 1 – A4
 
 Geben Sie die Potenzmenge zu folgenden Mengen an. Bestimmen Sie vorher die Anzahl der Elemente in der
 Potenzmenge.
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("Anzahl der Elemente für A = {{1, 2} , {3, 4}} $\\Rightarrow$", fitb(4, num = TRUE))
+```{r exercise-4a, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(a) Anzahl der Elemente für $A = \\{\\{1, 2\\}, \\{3, 4\\}\\}$",
+	answer = 4,
+	prefix = "$|P(A)| =$",
+	solution = "Es gilt $|P(A)| = 2^{|A|} = 2^2 = 4$. Daher $P(A) = \\{\\{\\}, \\{\\{1, 2\\}\\}, \\{\\{3, 4\\}\\}, \\{\\{1, 2\\}, \\{3, 4\\}\\}\\}$."
+)
 ```
-:::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(b) Anzahl der Elemente für B = {1, 2, 3, 4}} $\\Rightarrow$", fitb(16, num = TRUE))
+```{r exercise-4b, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(b) Anzahl der Elemente für $B = \\{1, 2, 3, 4\\}$",
+	answer = 16,
+	prefix = "$|P(B)| =$",
+	solution = "Es gilt $|P(B)| = 2^{|B|} = 2^4 = 16$. Damit enthält $P(B)$ alle $2^4$ möglichen Teilmengen, u.a. $\\{\\}, \\{1\\}, \\ldots, \\{1, 2, 3, 4\\}$."
+)
 ```
-:::
 
 ### Übungen 1 – A5
 
 Lösen Sie folgende Gleichungen:
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(a) $x^{2}$ = 18 $\\Rightarrow$", fitb(4.17, num = TRUE))
+```{r exercise-5a, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(a) $2x^{2} = 18$",
+	answer = 4.17,
+	prefix = "$x =$",
+	solution = "$x = \\log_{2} 18 \\approx 4.17$"
+)
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(a) $x = log_{2}18 \approx 4.17$
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(b) $e^{x}$ = 1 $\\Rightarrow$", fitb(3, num = TRUE))
+```{r exercise-5b, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(b) $e^{x} = 1$",
+	answer = 0,
+	prefix = "$x =$",
+	solution = "$x = \\ln(1) = 0$"
+)
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(b) $x = \ln(1) = 0$
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(c) $x^{2}$ = 18 $\\Rightarrow$", fitb(3, num = TRUE))
+```{r exercise-5c, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(c) $e^{x} = 27$",
+	answer = 3.3,
+	prefix = "$x =$",
+	solution = "$x = \\ln(27) \\approx 3.3$"
+)
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(c) $x = \ln(27) \approx 3.3$
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(d) $x^{2}$ = 18 $\\Rightarrow$", fitb(3, num = TRUE))
+```{r exercise-5d, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(d) $\\log_{10}(2) + \\log_{10}(5)$",
+	answer = 1,
+	prefix = "$=$",
+	solution = "$\\log_{10}(2) + \\log_{10}(5) = \\log_{10}(2 \\cdot 5) = \\log_{10} 10 = 1$"
+)
 ```
-:::
 
-::: {.callout-tip collapse="true" title="Lösung"}
-(d) $\log_{10}(2) + \log_{10}(5) = \log_{10}(2 \cdot 5) = \log_{10}10 = 1$
-:::
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(e) $x^{2}$ = 18 $\\Rightarrow$", fitb(3, num = TRUE))
+```{r exercise-5e, echo=FALSE, results='asis'}
+question_with_fitb(
+	question = "(e) $\\log_{2}(4)$",
+	answer = 2,
+	prefix = "$=$",
+	solution = "$\\log_{2}(4) = \\log_{2}(2) + \\log_{2}(2) = 2$ oder $\\log_{2}(2^{2}) = 2 \\cdot \\log_{2}(2) = 2$."
+)
 ```
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-(e) $\log_{2}(4) = \log_{2}(2) + \log_{2}(2) = 2$ <br>
- oder $\log_{2}(2^{2}) = 2 \cdot \log_{2}(2) = 2$
-:::
