@@ -120,9 +120,9 @@ opts <- c(
 )
 
 cat("(c) Sind die drei Vektoren 
-$v_1 = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$, 
-$v_2 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$ und 
-$v_3 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ linear unabhängig?",
+$x = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$, 
+$y = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$ und 
+$z = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ linear unabhängig?",
 longmcq(opts))
 ```
 :::
@@ -130,14 +130,14 @@ longmcq(opts))
 ::: {.callout-tip collapse="true" title="Lösung"}
 (c) Die drei Vektoren
 	$$
-	v_1=\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
-	v_2=\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
-	v_3=\begin{pmatrix}1\\1\\0\end{pmatrix}
+	x =\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
+	y =\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
+	z =\begin{pmatrix}1\\1\\0\end{pmatrix}
 	$$
 	sind linear unabhängig.
 
 	Zum Nachweis betrachten wir
-	$\lambda_1 v_1+\lambda_2 v_2+\lambda_3 v_3=\begin{pmatrix}0\\0\\0\end{pmatrix}.$
+	$\lambda_1 x +\lambda_2 y +\lambda_3 z =\begin{pmatrix}0\\0\\0\end{pmatrix}.$
 
 	$$
 	\begin{aligned}
@@ -178,7 +178,7 @@ longmcq(opts))
 	\lambda_3=0.
 	$$
 
-	Daraus folgen auch $\lambda_2 = 0$ und $\lambda_1 = 0$. Also sind $v_{1},v_{2},v_{3}$ linear unabhängig.
+	Daraus folgen auch $\lambda_2 = 0$ und $\lambda_1 = 0$. Also sind $x,\; y \; \text{und} \; z$ linear unabhängig.
 :::
 
 ::: {.webex-check .webex-box}
