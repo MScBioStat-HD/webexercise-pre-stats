@@ -57,8 +57,6 @@ cat("(a) Sind die drei Vektoren
 	$$
 
 	Die Vektoren sind linear abhängig.
-
-
 <br>
 :::
 
@@ -112,6 +110,117 @@ cat("(b) Sind die drei Vektoren
 	- 2\cdot 1\cdot 2
 	= 2 \neq 0.
 	$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Nein",
+  answer = "Ja"
+)
+
+cat("(c) Sind die drei Vektoren 
+$v_1 = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$, 
+$v_2 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$ und 
+$v_3 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ linear unabhängig?",
+longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Die drei Vektoren
+	$$
+	v_1=\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
+	v_2=\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
+	v_3=\begin{pmatrix}1\\1\\0\end{pmatrix}
+	$$
+	sind linear unabhängig.
+
+	Zum Nachweis betrachten wir
+	$\lambda_1 v_1+\lambda_2 v_2+\lambda_3 v_3=\begin{pmatrix}0\\0\\0\end{pmatrix}.$
+
+	$$
+	\begin{aligned}
+		\lambda_2+\lambda_3&=0\\
+		\lambda_1+\lambda_3&=0\\
+		\lambda_1+\lambda_2&=0
+	\end{aligned}
+	\overset{\substack{I \leftrightarrow III\\ II-I\to II}}{\Longrightarrow}
+	\begin{aligned}
+		\lambda_1+\lambda_2&=0\\
+		-\lambda_2+\lambda_3&=0\\
+		\lambda_2+\lambda_3&=0
+	\end{aligned}
+	\overset{II + III \to III}{\Longrightarrow}
+	\begin{aligned}
+		\lambda_1+\lambda_2&=0\\
+		-\lambda_2+\lambda_3&=0\\
+		2\lambda_3&=0
+	\end{aligned}
+	$$
+
+
+	Dies liefert das Gleichungssystem
+	$$
+	\begin{aligned}
+		\lambda_1+\lambda_2&=0\\
+		-\lambda_2+\lambda_3&=0\\
+		2\lambda_3&=0
+	\end{aligned}
+	$$
+
+	Aus der ersten Gleichung folgt $\lambda_{2} = - \lambda_{3}$, aus der zweiten $\lambda_{1} = - \lambda_{3}$. In die dritte Gleichung eingesetzt ergibt sich
+	$$
+	-\lambda_3-\lambda_3=0
+	\quad\Rightarrow\quad
+	-2\lambda_3=0
+	\quad\Rightarrow\quad
+	\lambda_3=0.
+	$$
+
+	Daraus folgen auch $\lambda_2 = 0$ und $\lambda_1 = 0$. Also sind $v_{1},v_{2},v_{3}$ linear unabhängig.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  answer = "Nein",
+  "Ja"
+)
+
+cat("(d) Sind die vier Vektoren 
+$v_1 = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$, 
+$v_2 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$, 
+$v_3 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ und 
+$v_4 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix}$ linear unabhängig?",
+longmcq(opts))
+
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Die vier Vektoren
+	$$
+	v_1=\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
+	v_2=\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
+	v_3=\begin{pmatrix}1\\1\\0\end{pmatrix},\qquad
+	v_4=\begin{pmatrix}1\\1\\1\end{pmatrix}
+	$$
+	sind nicht linear unabhängig.
+
+	Denn es gilt
+	$$
+	v_1+v_2+v_3-2v_4
+	=
+	\begin{pmatrix}0\\1\\1\end{pmatrix}
+	+\begin{pmatrix}1\\0\\1\end{pmatrix}
+	+\begin{pmatrix}1\\1\\0\end{pmatrix}
+	-2\begin{pmatrix}1\\1\\1\end{pmatrix}
+	=
+	\begin{pmatrix}0\\0\\0\end{pmatrix}.
+	$$
+
+	Damit liegt eine nichttriviale Linearkombination der Vektoren vor, die den Nullvektor ergibt. Also sind $v_{1}, \; v_{2},\; v_{3},\; v_{4}$ linear abhängig.
 :::
 
 ### Übungen 5 – A2
