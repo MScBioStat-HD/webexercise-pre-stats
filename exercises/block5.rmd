@@ -3,23 +3,24 @@ title: Block 5
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
-source("include/helper.R")
 ```
 
 ## Exercises
 
 ### Übungen 5 – A1
 
-```{r exercise-5a1, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Sind die drei Vektoren $x = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}$, $y = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}$ und $z = \\begin{pmatrix} 2 \\\\ 2 \\\\ 3 \\end{pmatrix}$ linear unabhängig?",
-	choices = c(
-		answer = "Nein",
-		"Ja"
-	),
-	solution = "Antwort: Nein. Siehe ausführliche Lösung im folgenden Callout."
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "Nein",
+	"Ja"
 )
+
+cat("(a) Sind die drei Vektoren 
+	$x = \\begin{pmatrix} 1 \\\\\\ 0 \\\\\\ 0 \\end{pmatrix}$, $y = \\begin{pmatrix} 1 \\\\\\ 2 \\\\\\ 3 \\end{pmatrix}$ und $z = \\begin{pmatrix} 2 \\\\\\ 2 \\\\\\ 3 \\end{pmatrix}$ linear unabhängig?",
+	longmcq(opts))
 ```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) Mit $x = (1\,0\,0)^{T}$, $y = (1\,2\,3)^{T}$ und $z = (2\,2\,3)^{T}$ gilt
@@ -61,19 +62,21 @@ question_with_single_choice(
 <br>
 :::
 
-```{r exercise-5a2, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) Sind die drei Vektoren $x = \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix}$, $y = \\begin{pmatrix} 2 \\\\ 0 \\\\ 1 \\end{pmatrix}$ und $z = \\begin{pmatrix} 3 \\\\ 3 \\\\ 2 \\end{pmatrix}$ linear unabhängig?",
-	choices = c(
-		"Nein",
-		answer = "Ja"
-	),
-	solution = "Antwort: Ja. Siehe ausführliche Lösung im folgenden Callout."
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Nein",
+	answer = "Ja"
 )
+
+cat("(b) Sind die drei Vektoren 
+	$x = \\begin{pmatrix} 1 \\\\\\ 1 \\\\\\ 1 \\end{pmatrix}$, $y = \\begin{pmatrix} 2 \\\\\\ 0 \\\\\\ 1 \\end{pmatrix}$ und $z = \\begin{pmatrix} 3 \\\\\\ 3 \\\\\\ 2 \\end{pmatrix}$ linear unabhängig?",
+	longmcq(opts))
 ```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(b) Gesucht sind $\alpha, \beta$ und $\gamma$ mit $\alpha \cdot x + \beta \cdot y + \gamma \cdot z = 0$. Man erhält das folgende Gleichungssystem:
+(b) Gesucht sind $\alpha, \beta$ und $\gamma$ mit \alpha \cdot x + \beta \cdot y + \gamma \cdot z = 0. Man erhält das folgende Gleichungssystem:
 	$$
 	\begin{cases}
 	\alpha + 2\beta + 3\gamma = 0 \\
@@ -82,7 +85,7 @@ question_with_single_choice(
 	\end{cases}
 	$$
 
-	Aus der zweiten Gleichung folgt $\alpha = -3\gamma$. Setzt man dies in die erste Gleichung ein, so erhält man
+	Aus der zweiten Gleichung folgt \alpha = -3\gamma. Setzt man dies in die erste Gleichung ein, so erhält man
 	$$
 	-3\gamma + 2\beta + 3\gamma = 2\beta = 0,
 	$$
@@ -109,37 +112,35 @@ question_with_single_choice(
 	- 2\cdot 1\cdot 2
 	= 2 \neq 0.
 	$$
-		Die Vektoren sind linear unabhängig.
 :::
 
 ### Übungen 5 – A2
 
-```{r exercise-5b1, echo=FALSE, results='asis'}
-question_with_fitb(
-	question = "(a) Gegeben sind die Vektoren $x = (1, 2, 3)$ und $y = (0, -3, 2)$. Berechnen Sie das Skalarprodukt von $x$ und $y$.",
-	answer = 0,
-	prefix = "$x^{T}y =$"
-)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+library(webexercises)
+cat("(a) Gegeben sind die Vektoren $x = (1, 2, 3)$ und $y = (0, -3, 2)$. <br><br> Berechnen Sie das Skalarprodukt von $x \\; \\text{und} \\;y$")
+cat("$x^{T}y =$", fitb(0, num=TRUE))
 ```
-
-```{r exercise-5b2, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Interpretieren Sie das Ergebnis geometrisch.",
-	choices = c(
-		"Der Winkel zwischen $x$ und $y$ ist stumpf.",
-		"Die Vektoren zeigen überwiegend in die gleiche Richtung.",
-		answer = "Die beiden Vektoren stehen senkrecht zueinander."
-	),
-	solution = "Antwort: Die Vektoren stehen senkrecht zueinander. Siehe den ausführlichen Rechenweg darunter."
-)
-```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a) Seien $x = (1, 2, 3)$ und $y = (0, -3, 2)$ zwei Vektoren.
-	Berechnen Sie das Skalarprodukt von $x$ und $y$. <br>
-	Interpretieren Sie das Ergebnis geometrisch.
-	<br>
-	**Lösung:**
+(a) Seien x = (1, 2, 3) und y = (0, -3, 2) zwei Vektoren.
 	$$ x^{T}y = (1\,2\,3) \begin{pmatrix}0 \\ -3 \\ 2 \end{pmatrix} = 1 \cdot 0 + 2 \cdot (-3) + 3 \cdot 2 = 0 $$
-	d.h. die beiden Vektoren stehen senkrecht zueinander.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Der Winkel zwischen x und y ist stumpf.",
+	"Die Vektoren zeigen überwiegend in die gleiche Richtung.",
+	answer = "Die beiden Vektoren stehen senkrecht zueinander."
+)
+
+cat("(b) Interpretieren Sie das Ergebnis geometrisch:", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Die beiden Vektoren stehen senkrecht zueinander.
 :::

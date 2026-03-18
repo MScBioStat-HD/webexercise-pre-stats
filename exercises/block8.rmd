@@ -3,172 +3,156 @@ title: Block 8
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
-source("include/helper.R")
 ```
 
 ## Exercises
 
 ### Übungen 8 – A1
 
-```{r exercise-8a1, echo=FALSE, results='asis'}
-question_with_fitb(
-	question = "(a) Berechnen Sie die Determinante der Matrix $A =\\begin{pmatrix} 2 & -3 \\\\ 5 & 1 \\end{pmatrix}$.",
-	answer = 17,
-	prefix = "det $A =$",
-	solution = "(a) $\\det A = 2 \\cdot 1 - 5 \\cdot (-3) = 2 + 15 = 17$"
-)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("a) Berechnen Sie die Determinaten der folgenden Matrizen: $A =\\begin{pmatrix} 2 & -3 \\\\\\ 5 & 1 \\end{pmatrix}$ <br>")
+cat("det $A =$ ", fitb(17, num=TRUE))
 ```
+:::
 
-```{r exercise-8a2, echo=FALSE, results='asis'}
-question_with_fitb(
-	question = "(b) Berechnen Sie die Determinante der Matrix $B = \\begin{pmatrix} 2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 7\\end{pmatrix}$.",
-	answer = 14,
-	prefix = "det $B =$",
-	solution = "(b) $\\det B = 2 \\cdot 1 \\cdot 7 = 14$"
-)
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $$\det\, A = 2 \cdot 1 - 5 \cdot (-3) = 2 + 15 = 17$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Berechnen Sie die Determinaten der folgenden Matrizen: $B = \\begin{pmatrix} 2 & 0 & 0 \\\\\\ 0 & 1 & 0 \\\\\\ 0 & 0 & 7\\end{pmatrix}$ <br>")
+cat("det $B =$ ", fitb(14, num=TRUE))	
 ```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $$\det \, B = 2 \cdot 1 \cdot 7 = 14$$
+:::
 
 ### Übungen 8 – A2
-Gegeben ist die Matrix $A =\begin{pmatrix} 1 & -1 & 1 \\\\ 2 & 1 & -1 \\\\ -1 & 2 & 2 \end{pmatrix}$
+Gegeben ist die  Matrix $A =\begin{pmatrix} 1 & -1 & 1 \\ 2 & 1 & -1 \\ -1 & 2 & 2 \end{pmatrix}$
 
-```{r exercise-8a3, echo=FALSE, results='asis'}
-question_with_fitb(
-	question = "(a) Berechnen Sie die Determinante von $A$.",
-	answer = 12,
-	prefix = "det $A =$",
-	solution = "$\\det A = 12$"
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "Ja",
+	"Nein."
 )
+cat("(a) Berechnen Sie die Determinante von $A$:<br> 
+$det \\; A =$", (fitb(12, num = TRUE)),
+"<br><br> Beantworten Sie die Frage: Ist $A$ invertierbar?", longmcq(opts))
 ```
+:::
 
-```{r exercise-8a4, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) Ist $A$ invertierbar?",
-	choices = c(
-		answer = "Ja",
-		"Nein."
-	),
-	solution = "Da $\\det A = 12 \\neq 0$, ist $A$ invertierbar."
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Zunächst berechnet man die Determinante der Matrix. Wegen 
+$$
+\det\left(
+\begin{array}{ccc|cc}
+1 & -1 & 1 & 1 & -1 \\
+2 & 1 & -1 & 2 & 1 \\
+-1 & 2 & 2 & -1 & 2
+\end{array}
+\right) $$<br> 
+$$ = 1 \cdot 1 \cdot 2 + (-1) \cdot (-1) \cdot (-1) + 1 \cdot 2 \cdot 2 - (-1) \cdot 1 \cdot 1 - 2 \cdot (-1) \cdot 1 - 2 \cdot 2 \cdot (-1)$$
+<br>
+$$
+= 2 - 1 + 4 + 1  + 2 + 4 = 12 \neq 0
+$$
+ist die Matrix invertierbar.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$- \\frac{1}{12}$",
+	answer = "$\\frac{1}{12}$",
+	"0"
 )
+cat("(b) Berechnen Sie $det \\; A^{-1}$:<br><br>", longmcq(opts))
 ```
+:::
 
-```{r exercise-8a5, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(c) Berechnen Sie $\\det \\; A^{-1}$.",
-	choices = c(
-		"$- \\frac{1}{12}$",
-		answer = "$\\frac{1}{12}$",
-		"0"
-	),
-	solution = "Es gilt $\\det A^{-1} = 1 / \\det A = 1/12$."
-)
-```
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Die Determinante der inversen Matrix ist dann: 
+$$ \det A^{-1} = \frac{1}{detA} = \frac{1}{12}$$
+:::
 
-```{r exercise-8a6, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(d) Berechnen Sie die Inverse der Matrix $A$.",
-	choices = c(
-		"$A^{-1} = \\begin{pmatrix} \\frac{1}{3} & \\frac{1}{3} & 0 \\\\ -\\frac{1}{4} & \\frac{1}{4} & \\frac{1}{4} \\\\ \\frac{5}{12} & \\frac{1}{12} & \\frac{1}{4} \\end{pmatrix}$",
-		answer = "$A^{-1} = \\begin{pmatrix} \\frac{1}{3} & \\frac{1}{3} & 0 \\\\ \\frac{1}{4} & -\\frac{1}{4} & \\frac{1}{4} \\\\ \\frac{5}{12} & -\\frac{1}{12} & \\frac{1}{4} \\end{pmatrix}$",
-		"$A^{-1} = \\begin{pmatrix} \\frac{1}{3} & \\frac{1}{3} & 0 \\\\ -\\frac{1}{4} & \\frac{1}{4} & \\frac{1}{4} \\\\ \\frac{5}{12} & -\\frac{1}{12} & \\frac{1}{4} \\end{pmatrix}$"
-	),
-	solution = paste(
-	"Zunächst berechnet man die Determinante der Matrix. Wegen",
-	"$$",
-	"\\det\\left(",
-	"\\begin{array}{ccc|cc}",
-	"1 & -1 & 1 & 1 & -1 \\\\",
-	"2 & 1 & -1 & 2 & 1 \\\\",
-	"-1 & 2 & 2 & -1 & 2",
-	"\\end{array}",
-	"\\right)",
-	"$$",
-	"<br>",
-	"$$",
-	"= 1 \\cdot 1 \\cdot 2 + (-1) \\cdot (-1) \\cdot (-1) + 1 \\cdot 2 \\cdot 2 - (-1) \\cdot 1 \\cdot 1 - 2 \\cdot (-1) \\cdot 1 - 2 \\cdot 2 \\cdot (-1)",
-	"$$",
-	"<br>",
-	"$$",
-	"= 2 - 1 + 4 + 1 + 2 + 4 = 12 \\neq 0",
-	"$$",
-	"ist die Matrix invertierbar. Die Determinante der inversen Matrix ist dann:",
-	"$$",
-	"\\det A^{-1} = \\frac{1}{\\det A} = \\frac{1}{12}",
-	"$$",
-	"Zur Berechnung der Inversen schreibt man auf die rechte Seite der erweiterten Matrix die passende Einheitsmatrix und formt auf Zeilen-Stufen-Form um.",
-	"<br>",
-	"$$",
-	"\\left(",
-	"\\begin{array}{ccc|ccc}",
-	"1 & -1 & 1 & 1 & 0 & 0 \\\\",
-	"2 & 1 & -1 & 0 & 1 & 0 \\\\",
-	"-1 & 2 & 2 & 0 & 0 & 1",
-	"\\end{array}",
-	"\\right)",
-	"\\xrightarrow{",
-	"\\substack{",
-	"II - 2\\cdot I \\Rightarrow II \\\\",
-	"III + I \\Rightarrow III",
-	"}",
-	"}",
-	"$$",
-	"<br>",
-	"$$",
-	"\\left(",
-	"\\begin{array}{ccc|ccc}",
-	"1 & -1 & 1 & 1 & 0 & 0 \\\\",
-	"0 & 3 & -3 & -2 & 1 & 0 \\\\",
-	"0 & 1 & 3 & 1 & 0 & 1",
-	"\\end{array}",
-	"\\right)",
-	"\\xrightarrow{",
-	"\\substack{",
-	"3 \\cdot I + II \\Rightarrow I \\\\",
-	"3 \\cdot III - II \\Rightarrow III",
-	"}",
-	"}",
-	"$$",
-	"<br>",
-	"$$",
-	"\\left(",
-	"\\begin{array}{ccc|ccc}",
-	"3 & 0 & 0 & 1 & 1 & 0 \\\\",
-	"0 & 3 & -3 & -2 & 1 & 0 \\\\",
-	"0 & 0 & 12 & 5 & -1 & 3",
-	"\\end{array}",
-	"\\right)",
-	"\\xrightarrow{4 \\cdot II + III \\Rightarrow II}",
-	"\\left(",
-	"\\begin{array}{ccc|ccc}",
-	"3 & 0 & 0 & 1 & 1 & 0 \\\\",
-	"0 & 12 & 0 & -3 & 3 & 3 \\\\",
-	"0 & 0 & 12 & 5 & -1 & 3",
-	"\\end{array}",
-	"\\right)",
-	"\\xrightarrow{",
-	"\\substack{",
-	"I : 3 \\Rightarrow I \\\\",
-	"II : 12 \\Rightarrow II \\\\",
-	"III : 12 \\Rightarrow III",
-	"}",
-	"}",
-	"$$",
-	"<br>",
-	"$$",
-	"\\left(",
-	"\\begin{array}{ccc|ccc}",
-	"1 & 0 & 0 & 1/3 & 1/3 & 0 \\\\",
-	"0 & 1 & 0 & -1/4 & 1/4 & 1/4 \\\\",
-	"0 & 0 & 1 & 5/12 & -1/12 & 1/4",
-	"\\end{array}",
-	"\\right)",
-	"$$",
-	"Daraus lässt sich nun die Inverse ablesen:",
-	"$$",
-	"A^{-1} = \\frac{1}{12} \\begin{pmatrix}",
-	"4 & 4 & 0 \\\\",
-	"-3 & 3 & 3 \\\\",
-	"5 & -1 & 3",
-	"\\end{pmatrix}",
-	"$$",
-	sep = "\n"))
-```
+::: {.webex .webex-box}
+(c) Berechnen Sie die Inverse der Matrix $A =\begin{pmatrix} 1 & -1 & 1 \\ 2 & 1 & -1 \\ -1 & 2 & 2 \end{pmatrix}$
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Zur Berechnung der Inversen schreibt man auf die rechte Seite der erweiterten Matrix die passende
+Einheitsmatrix und formt auf Zeilen-Stufen-Form um.
+<br>
+$$ 
+\left(
+\begin{array}{ccc|ccc}
+1 & -1 & 1 & 1 & 0 & 0 \\
+2 & 1 & -1 & 0 & 1 & 0 \\
+-1 & 2 & 2 & 0 & 0 & 1
+\end{array}
+\right)
+\xrightarrow{
+\substack{
+II - 2\cdot I \Rightarrow II \\
+III + I \Rightarrow III
+}}
+$$
+<br><br>
+$$
+\left(
+\begin{array}{ccc|ccc}
+1 & -1 & 1 & 1 & 0 & 0 \\
+0 & 3 & -3 & -2 & 1 & 0 \\
+0 & 1 & 3 & 1 & 0 & 1
+\end{array}
+\right)
+\xrightarrow{
+\substack{
+3 \cdot I +  II \Rightarrow I \\
+3 \cdot III - II \Rightarrow III
+}}
+$$
+<br><br>
+$$
+\left(
+\begin{array}{ccc|ccc}
+3 & 0 & 0 & 1 & 1 & 0 \\
+0 & 3 & -3 & -2 & 1 & 0 \\
+0 & 0 & 12 & 5 & -1 & 3
+\end{array}
+\right)
+\xrightarrow{4 \cdot II + III \Rightarrow II}
+\left(
+\begin{array}{ccc|ccc}
+3 & 0 & 0 & 1 & 1 & 0 \\
+0 & 12 & 0 & -3 & 3 & 3 \\
+0 & 0 & 12 & 5 & -1 & 3
+\end{array}
+\right)
+\xrightarrow{
+\substack{
+I : 3 \Rightarrow II \\
+II : 12 \Rightarrow II \\
+III : 12 \Rightarrow III
+}} 
+$$
+<br>
+$$
+\\
+\left(
+\begin{array}{ccc|ccc}
+1 & 0 & 0 & 1/3 & 1/3 & 0 \\
+0 & 3 & -3 & -1/4 & 1/4 & 1/4 \\
+0 & 0 & 12 & 5/12 & -1/12 & 1/4
+\end{array}
+\right)
+$$
+
+Daraus lässt sich nun die Inverse ablesen
+$$ A^{-1} =\frac{1}{12} \begin{pmatrix} 4 & 4 & 0 \\ -3 & 3 & 3 \\ 5 & -1 & 3 \end{pmatrix}$$
+:::

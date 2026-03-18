@@ -11,178 +11,225 @@ source("include/helper.R")
 ### Übungen 3 – A1
 Bestimmen Sie die Ableitung zu
 
-```{r exercise-3a1, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) ${f}(x) = 3 x^{4} + x^{2} + 5$",
-	choices = c(
-		answer = "$f^{\\prime}(x) = 12x^{3} + 2x$",
-		"$f^{\\prime}(x) = 12x^{3} + x$",
-		"$f^{\\prime}(x) = 3x^{3} + 2x$"
-	),
-	solution = "(a) $\\f(x) =  3x^{4} + x^{2} + 5 \\Rightarrow f'(x) = 12x^{3} = 2x$"
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  answer = "$f^{\\prime}(x) = 12x^{3} + 2x$",
+  "$f^{\\prime}(x) = 12x^{3} + x$",
+  "$f^{\\prime}(x) = 3x^{3} + 2x$"
 )
+cat("(a) ${f}(x) = 3 x^{4} + x^{2} + 5$",
+  longmcq(opts))
 ```
+:::
 
-```{r exercise-3a2, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) ${f}(x) = e^{3x}$",
-	choices = c(
-		"$f^{\\prime}(x) = 2e^{3x}$",
-		"$f^{\\prime}(x) = e^{3x}/3$",
-		answer = "$f^{\\prime}(x) = 3e^{3x}$"
-	),
-	solution = "(b) $\\f(x) = e^{3x} \\Rightarrow f'(x) = 3e^{3x}$"
-)
-```
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\\f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} = 2x$
+:::
 
-```{r exercise-3a3, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(c) ${f}(x) = 2x + e^{3x} + x$",
-	choices = c(
-		"$f^{\\prime}(x) = e^{3x} + 2 + 1$",
-		answer = "$f^{\\prime}(x) = 3e^{3x} + 3$",
-		"$f^{\\prime}(x) = e^{3x} + 3$"
-	),
-	solution = "(c) $\\f(x) = 2x + e^{3x} + x \\Rightarrow f'(x) = 2 +3e^{3x} + 1 = 3e^{3x} + 3$"
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$f^{\\prime}(x) = 2e^{3x}$",
+	"$f^{\\prime}(x) = e^{3x}/3$",
+	answer = "$f^{\\prime}(x) = 3e^{3x}$"
 )
-```
 
-```{r exercise-3a4, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(d) ${f}(x) = \\sqrt{1 - x^{2}}$",
-	choices = c(
-		"$f^{\\prime}(x)  = 2 \\cdot (1 - x^{2} )^{-\\frac{1}{2}} \\cdot (-2x$",
-		"$f^{\\prime}(x) = 1 - 2x$",
-		answer = "$f^{\\prime}(x)  = 1/2 \\cdot (1 - x^{2} )^{-\\frac{1}{2}} \\cdot (-2x$"
-	),
-	solution = "(d) $\\f(x) = \\sqrt{1 - x^{2}} = (1 - x^{2})^{1/2} \\Rightarrow f'(x) = 1/2 \\cdot (1 - x^{2})^{- \\frac{1}{2}} \\cdot (-2x)$"
-)
+cat("(b) ${f}(x) = e^{3x}$",
+	longmcq(opts))
 ```
+:::
 
-```{r exercise-3a5, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(e) ${f}(x) = e^{x} \\cdot ln(x)$",
-	choices = c(
-		"$f^{\\prime}(x)$ = $e^{x}$ ($\\frac{1}{x} + \\ln(x))$",
-		answer = "$f^{\\prime}(x)$  = $e^{x}$ $\\cdot$ $\\frac{1}{x}$ + $e^{x}$ $\\cdot \\ln(x)$",
-		"$f^{\\prime}(x) = e^{x} \\cdot \\frac{1}{x}$"
-	),
-	solution = "(e) $\\f(x) = e^{x} \\cdot \\ln(x) \\Rightarrow f'(x) = e^{x} \\cdot \\frac{1}{x} + e^{x} \\cdot \\ln(x)$"
-)
-```
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $\\f(x) = e^{3x} \Rightarrow f'(x) = 3e^{3x}$
+:::
 
-```{r exercise-3a6, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(f) ${f}(x) =  \\frac{(x+4)}{x^{2}}$",
-	choices = c(
-		answer = "$f^{\\prime}(x) = (x + 4) \\cdot (-2) \\cdot \\frac{1}{x^{3}} + 1 \\cdot \\frac{1}{x^{2}}$",
-		"$f^{\\prime}(x) = (x + 4) \\cdot \\frac{1}{x^{3}} + 1 \\cdot \\frac{1}{x^{2}}$",
-		"$f^{\\prime}(x) = \\frac{1}{x^{2}} + 1 \\cdot \\frac{1}{x^{3}}$"
-	),
-	solution = "(f) $\\f(x) = \\frac{ (x + 4) }{x^{2}} = (x + 4) \\cdot \\frac{1}{x^{2}} \\Rightarrow f'(x) = (x + 4) \\cdot (-2) \\cdot \\frac{1}{x^{3}} + 1 \\cdot \\frac{1}{x^{2}}$"
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$f^{\\prime}(x) = e^{3x} + 2 + 1$",
+	answer = "$f^{\\prime}(x) = 3e^{3x} + 3$",
+	"$f^{\\prime}(x) = e^{3x} + 3$"
 )
-```
 
-```{r exercise-3a7, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(g) ${f}(x) = (x + 4) \\cdot e^{x}$",
-	choices = c(
-		"$f^{\\prime}(x) = (x + 4) \\cdot e^{x}$",
-		"$f^{\\prime}(x) = 1 + e^{x}$",
-		answer = "$f^{\\prime}(x) = (x + 4) \\cdot e^{x} + 1 \\cdot e^{x}$"
-	),
-	solution = "(g) $\\f(x) = (x + 4) \\cdot e^{x} \\Rightarrow f'(x) = (x + 4) \\cdot e^{x} + 1 \\cdot e^{x}$"
-)
+cat("(c) ${f}(x) = 2x + e^{3x} + x$",
+	longmcq(opts))
 ```
+:::
 
-```{r exercise-3a8, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(h) ${f}(x) = ln(x - 4) + 2$",
-	choices = c(
-		answer = "$f^{\\prime}(x) = 1/(x - 4)$",
-		"$f^{\\prime}(x) = x - 4$",
-		"$f^{\\prime}(x) = \\frac{1}{x^{x}} + 2$"
-	),
-	solution = "(h) $\\f(x) = \\ln(x - 4) + 2 \\Rightarrow f'(x) = 1/(x - 4)$"
-)
-```
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $\\f(x) = 2x + e^{3x} + x \Rightarrow f'(x) = 2 +3e^{3x} + 1 = 3e^{3x} + 3$
+:::
 
-```{r exercise-3a9, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(i) ${f}(x) = e^{-2x}$",
-	choices = c(
-		"$f^{\\prime}(x) = e^{-2x}$",
-		answer = "$f^{\\prime}(x) = -2e^{-2x}$",
-		"$f^{\\prime}(x) = 2e^{-2x}$"
-	),
-	solution = "(i) $\\f(x) = e^{-2x} \\Rightarrow f'(x) = -2e^{-2x}$"
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$f^{\\prime}(x)  = 2 \\cdot (1 - x^{2} )^{-\\frac{1}{2}} \\cdot (-2x$)",
+	"$f^{\\prime}(x) = 1 - 2x$",
+	answer = "$f^{\\prime}(x)  = 1/2 \\cdot (1 - x^{2} )^{-\\frac{1}{2}} \\cdot (-2x$)"
 )
-```
 
-```{r exercise-3a10, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(j) ${f}(x) = e^{-2x^{2}}$",
-	choices = c(
-		answer = "$f^{\\prime}(x) = -4x \\cdot e^{-2x^{2}}$",
-		"$f^{\\prime}(x) = e^{-2x^{2}}$",
-		"$f^{\\prime}(x) = -2x \\cdot e^{-2x^{2}}$"
-	),
-	solution = "(j) $\\f(x) = e^{-2x} \\Rightarrow f'(x) = -4x \\cdot e^{-2x^{2}}$"
-)
+cat("(d) ${f}(x) = \\sqrt{1 - x^{2}}$",
+	longmcq(opts))
 ```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $\\f(x) = \sqrt{1 - x^{2}} = (1 - x^{2})^{1/2} \Rightarrow f'(x) = 1/2 \cdot (1 - x^{2})^{- \frac{1}{2}} \cdot (-2x)$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$f^{\\prime}(x)$ = $e^{x}$ ($\\frac{1}{x} + \\ln(x))$",
+	answer = "$f^{\\prime}(x)$  = $e^{x}$ $\\cdot$ $\\frac{1}{x}$ + $e^{x}$ $\\cdot \\ln(x)$",
+	"$f^{\\prime}(x) = e^{x} \\cdot \\frac{1}{x}$"
+)
+
+cat("(e) ${f}(x) = e^{x} \\cdot ln(x)$",
+	longmcq(opts))
+```
+::: 
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) $\\f(x) = e^{x} \cdot \ln(x) \Rightarrow f'(x) = e^{x} \cdot \frac{1}{x} + e^{x} \cdot \ln(x)$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "$f^{\\prime}(x) = (x + 4) \\cdot (-2) \\cdot \\frac{1}{x^{3}} + 1 \\cdot \\frac{1}{x^{2}}$",
+	"$f^{\\prime}(x) = (x + 4) \\cdot \\frac{1}{x^{3}} + 1 \\cdot \\frac{1}{x^{2}}$",
+	"$f^{\\prime}(x) = \\frac{1}{x^{2}} + 1 \\cdot \\frac{1}{x^{3}}$"
+)
+
+cat("(f) ${f}(x) =  \\frac{(x+4)}{x^{2}}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(f) $\\f(x) = \frac{ (x + 4) }{x^{2}} = (x + 4) \cdot \frac{1}{x^{2}} \Rightarrow f'(x) = (x + 4) \cdot (-2) \cdot \frac{1}{x^{3}} + 1 \cdot \frac{1}{x^{2}}$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$f^{\\prime}(x) = (x + 4) \\cdot e^{x}$",
+	"$f^{\\prime}(x) = 1 + e^{x}$",
+	answer = "$f^{\\prime}(x) = (x + 4) \\cdot e^{x} + 1 \\cdot e^{x}$"
+)
+
+cat("(g) ${f}(x) = (x + 4) \\cdot e^{x}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(g) $\\f(x) = (x + 4) \cdot e^{x} \Rightarrow f'(x) = (x + 4) \cdot e^{x} + 1 \cdot e^{x}$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "$f^{\\prime}(x) = 1/(x - 4)$",
+	"$f^{\\prime}(x) = x - 4$",
+	"$f^{\\prime}(x) = \\frac{1}{x^{x}} + 2$"
+)
+
+cat("(h) ${f}(x) = ln(x - 4) + 2$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+(h) $\\f(x) = \\ln(x - 4) + 2 \Rightarrow f'(x) = 1/(x - 4)$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$f^{\\prime}(x) = e^{-2x}$",
+	answer = "$f^{\\prime}(x) = -2e^{-2x}$",
+	"$f^{\\prime}(x) = 2e^{-2x}$"
+)
+
+cat("(i) ${f}(x) = e^{-2x}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(i) $\\f(x) = e^{-2x} \Rightarrow f'(x) = -2e^{-2x}$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "$f^{\\prime}(x) = -4x \\cdot e^{-2x^{2}}$",
+	"$f^{\\prime}(x) = e^{-2x^{2}}$",
+	"$f^{\\prime}(x) = -2x \\cdot e^{-2x^{2}}$"
+)
+
+cat("(j) ${f}(x) = e^{-2x^{2}}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(j) $\\f(x) = e^{-2x} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}$
+:::
 
 ### Übungen 3 – A2
 Gegeben ist die Funktion ${f}(x) = 8 x^{3} + 3 x^{2} – 3x$.
-<br><br> Verwenden Sie folgende Regel:<br>
-Nullstellen einer quadratischen Funktion $f(x) = ax^{2} + bx + c$ gegeben
-durch: $x_{1,2} = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}$ <br><br>
+<br><br> Verwenden Sie folgende Regel:<br> Nullstellen einer quadratischen Funktion $f(x) = ax^{2} + bx + c$ gegeben
+durch: $x_{1,2} = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$ <br><br> 
 
-```{r exercise-3a11, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Bestimmen Sie die erste Ableitung der Funktion ${f}(x) = 8 x^{3} + 3 x^{2} – 3x$.",
-	choices = c(
-		answer = "$f^{\\prime}(x) = 24x^{2} + 6x - 3$",
-		"$f^{\\prime}(x)= 16x^{2} + 6x - 3$",
-		"$f^{\\prime}(x)= 24x^{2} + 6x + 3$"
-	),
-	solution = "(j) $\\f(x) = e^{-2x} \\Rightarrow f'(x) = -4x \\cdot e^{-2x^{2}}$"
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	 answer = "$f^{\\prime}(x) = 24x^{2} + 6x - 3$",
+  "$f^{\\prime}(x)= 16x^{2} + 6x - 3$",
+  "$f^{\\prime}(x)= 24x^{2} + 6x + 3$"
 )
 
-question_with_multi_fitb(
-	question = "Bestimmen Sie anschließend die Nullstellen:",
-	fields = list(
-		list(prefix = "$x_{1} =$", answer = -0.5),
-		list(prefix = "$x_{2} =$", answer = 0.25)
-	)
-)
+cat(
+"(a) Bestimmen Sie die erste Ableitung der Funktion ${f}(x) = 8 x^{3} + 3 x^{2} – 3x$.<br><br>",
+longmcq(opts))
 ```
-
-```{r exercise-3a12, echo=FALSE, results='asis'}
-question_with_multi_fitb(
-	question = "(b) Bestimmen Sie die globalen und lokalen Extremstellen der Funktion im Intervall $[-1,1]$. Skizzieren Sie die Funktion zunächst auf dem Intervall $[-1,1]$.",
-	fields = list(
-		list(prefix = "$f(-1) =$", answer = -2),
-		list(prefix = "$f(x1) =$", answer = 1.25),
-		list(prefix = "$f(x2) =$", answer = -0.4375),
-		list(prefix = "$f(1) =$", answer = 8)
-	)
-)
-```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Zunächst muss die Ableitung gebildet werden.<br>
-Es ist $\\f'(x) = 24x^{2} + 6x -3$ <br>
+(a) Zunächst muss die Ableitung gebildet werden.<br>
+	$\\f'(x) = 24x^{2} + 6x -3$ <br>
+:::
 
-Davon müssen nun die Nullstellen bestimmt werden: <br><br>
-$\\0 = 24x^{2} + 6x - 3 \\Leftrightarrow 0 = 8x^{2} + 2x -1$ <br><br>
-$\\ \\Leftrightarrow x_{1,2} = \\frac{-2 \\pm \\sqrt{4 - 4 \\cdot 8 \\cdot (-1)}}{16} = \\frac{-2 \\pm \\sqrt{36}}{16} \\Rightarrow x_{1} = - 0.5,x_{2} = 0.25$
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
 
-<img src="images/image_3A2.png" width="300">
+cat("(b) Bestimmen Sie die Nullstellen der Ableitung sowie die lokalen Extremstellen der Funktion im Intervall $[-1,1]$.
+Skizzieren Sie die Funktion zunächst auf dem Intervall $[-1,1]$.<br><br>",
+"**Nullstellen der Ableitung:** <br><br>",
+"$x_{1} =$ ", fitb(0.5), "<br>",
+"$x_{2} =$ ", fitb(0.25), "<br><br>",
+"**Lokale Extremstellen:** <br><br>",
+"$f(x_{1}) =$ ", fitb(1.25), "<br>",
+"$f(x_{2}) =$ ", fitb(-0.4375), "<br>"
+)
+```
+:::
 
-Eine Auswertung der Funktion an den möglichen Extremstellen, sowie am
-Rand des Intervalls ergibt: <br>
-$\\f(-1) = -2, f(-0.5) = 1.25, f(0.25) = -0.4375, f(1) = 8$ <br><br>
-Daraus lässt sich ablesen, dass die absoluten Extremwerte am Rand
-liegen. Da ein Polynom vom Grad 3 entweder zwei Extremwerte oder eine
-Wendestelle besitzt, sind die inneren Punkte auch lokale Extremwerte.
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Von der Ableitung aus Teilaufgabe (a) müssen nun die Nullstellen bestimmt werden: <br><br>
+	$\\0 = 24x^{2} + 6x - 3 \Leftrightarrow 0 = 8x^{2} + 2x -1$ <br><br>
+	$\\ \Leftrightarrow x_{1,2} = \frac{-2 \pm \sqrt{4 - 4 \cdot 8 \cdot (-1)}}{16} = \frac{-2 \pm \sqrt{36}}{16} \Rightarrow x_{1} = - 0.5,x_{2} = 0.25$
+
+	<img src="images/image_3A2.png" width="300">
+
+	Eine Auswertung der Funktion an den möglichen Extremstellen ergibt: <br>
+	$f(-0.5) = 1.25, \; f(0.25) = -0.4375$ <br><br>
+
+	Damit liegen die lokalen Extrempunkte bei
+	$(−0.5,1.25)$ und $(0.25, −0.4375)$
+
 :::

@@ -3,7 +3,6 @@ title: Block 2
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
-source("include/helper.R")
 ```
 
 Block 1 is about doing X with Y.
@@ -14,58 +13,71 @@ Block 1 is about doing X with Y.
 Zeichnen Sie die folgenden Geraden in ein Koordinatensystem mit 
 $x$ &isin; $[-5, 5]$ und $y$ &isin; $[-5, 5]$ ein. Geben Sie die Geraden jeweils in der Form $y = mx + b$ an."
 
-```{r exercise-2a1, echo=FALSE, results='asis'}
-question_with_solution(
-	question = "(a) Zeichnen Sie die Gerade $y = 2x - 1$.",
-	solution = "",
-	image = "images/image.png"
-)
-```
+::: {.webex .webex-box}
+(a) Zeichnen Sie die Gerade $y = 2x - 1$
+:::
 
-```{r exercise-2a2, echo=FALSE, results='asis'}
-question_with_solution(
-	question = "(b) Zeichnen Sie die Gerade, die durch die Punkte $(1, -3)$ und $(-2, 4)$ geht.",
-	solution = "",
-	image = "images/image.png"
-)
-```
+::: {.webex .webex-box}
+(b) Zeichnen Sie die Gerade, die durch die Punkte $(1, -3)$ und $(-2,4)$ geht
+:::
 
-```{r exercise-2a3, echo=FALSE, results='asis'}
-question_with_solution(
-	question = "(c) Zeichnen Sie die Gerade durch den Punkt $(1, 1)$ mit der Steigung $m = -0.5$.",
-	solution = "",
-	image = "images/image.png"
-)
-```
+::: {.webex .webex-box}
+(c) Zeichnen Sie die Gerade die Gerade durch den Punkt $(1,1)$ und mit der Steigung $m = -0.5$
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+<img src="images/image.png" width="300">
+:::
 
 ### Übungen 2 – A2
 Das Wachstum einer Population sei durch die Funktion
 $u(t) = u_{0} \cdot e^{\alpha t}, \alpha > 0$
 (exponentielles Wachstum) beschrieben (\\(u_{0}\\) = Anfangspopulation, also t = 0).
 
-```{r exercise-2a4, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Wie groß ist die Zeitspanne $\\delta$, innerhalb derer sich $u(t)$ verdoppelt hat?",
-	choices = c(
-		"$\\alpha \\cdot \\ln 2$",
-		"$\\ln 2$",
-		answer = "$\\frac{\\ln 2}{\\alpha}$"
-	),
-	solution = "Für die Verdoppelungszeit $\\delta$ gilt $u(\\delta) = 2 \\cdot u(0)$. Daraus folgt $u_0 e^{\\alpha \\delta} = 2u_0$, also $e^{\\alpha \\delta} = 2$, damit $\\alpha \\delta = \\ln 2$ und somit $\\delta = \\frac{\\ln 2}{\\alpha}$."
-) 
-```
-
-```{r exercise-2a5, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) Verdoppeln sich kleine oder große Populationen schneller?",
-	choices = c(
-		"Große Populationen verdoppeln sich schneller.",
-		answer = "Die Verdoppelungszeit ist nicht von der Anfangspopulation $u_{0}$ abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich schnell",
-		"Kleine Populationen verdoppeln sich schneller."
-	),
-	solution = "Die Verdoppelungszeit hängt nur von $\\alpha$ ab und nicht von $u_{0}$, daher verdoppeln sich große und kleine Populationen gleich schnell."
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$\\alpha \\cdot \\ln2$",
+	"$\\ln 2$",
+	answer = "$\\frac{\\ln 2}{\\alpha}$"
 )
+
+cat("(a) Wie groß ist die Zeitspanne 
+	$\\delta$, innerhalb derer sich $u(t)$ verdoppelt hat?",
+	longmcq(opts))
 ```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Für die Verdoppelungszeit $\delta$ muss gelten $\ u \delta = 2 \cdot u(0)$. Eingesetzt in die
+Funktionsgleichung ergibt sich
+
+	$\ u(\delta) = u_{0} \cdot e^{\alpha \cdot \delta} = 2 \cdot u_{0}$ <br>
+	$\Leftrightarrow e^{\alpha \cdot \delta} = 2$ <br>
+	$\Leftrightarrow \alpha \cdot \delta = \ln2$ <br>
+	$\Leftrightarrow \delta = \frac{\ln2}{\alpha}$ <br>
+	Damit verdoppelt sich die Anfangspopulation in einer Zeitspanne $\ln2 / \alpha$.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Große Populationen verdoppeln sich schneller.",
+	answer = "Die Verdoppelungszeit ist nicht von der Anfangspopulation $u_{0}$ abhängig, 
+	d.h. große oder kleine Populationen verdoppeln sich gleich schnell",
+	"Kleine Populationen verdoppeln sich schneller."
+)
+
+cat("(b) Verdoppeln sich kleine oder große Populationen schneller?",
+	longmcq(opts))
+```
+:::
+
+:::: {.callout-tip collapse="true" title="Lösung"}
+(b) Die Verdoppelungszeit ist nicht von der Anfangspopulation $u_{0}$
+abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich
+schnell
+:::
 
 ### Übungen 2 – A3
 
@@ -73,35 +85,58 @@ Die Einwohnerzahl von Mexiko-City betrug 5.5 Millionen im Jahre 1960
 und stieg bis 1975 auf 8.1 Millionen an. Unter Annahme eines exponentiellen Wachstums
 soll die Entwicklung der Einwohnerzahl $y$ beschrieben werden.
 
-```{r exercise-2a6, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Wohin legen Sie den Nullpunkt, um wenig Arbeit mit dem Rechnen zu haben?",
-	choices = c(
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
 		answer = "Der Nullpunkt sollte in das Jahr 1960 gelegt werden.",
-		"Der Nullpunkt sollte in das Jahr 19675 gelegt werden."
-	),
-	solution = "Im Jahr 1960 sind die Ausgangsdaten gegeben, daher ist der Nullpunkt dort am sinnvollsten."
+	"Der Nullpunkt sollte in das Jahr 19675 gelegt werden."
 )
-```
 
-```{r exercise-2a7, echo=FALSE, results='asis'}
-question_with_multi_fitb(
-	question = "(b) Geben Sie $y(0)$ und $y(15)$ an.",
-	fields = list(
-		list(prefix = "$y(0) =$", answer = 5.5),
-		list(prefix = "$y(15) =$", answer = 8.1)
-	),
-	solution = "Mit dem Nullpunkt aus Teil (a) gilt $y(0) = 5.5$ und $y(15) = 8.1$."
-)
+cat("(a) Wohin legen Sie den Nullpunkt, um wenig Arbeit mit dem
+	rechnen zu haben?",
+	longmcq(opts))
 ```
+:::
 
-```{r exercise-2a8, echo=FALSE, results='asis'}
-question_with_multi_fitb(
-	question = "(c) Bestimmen Sie nun $y_{0}$ und $\\lambda$, so dass $y = y_{0} \\cdot e^{\\lambda t}$ korrekt für die angegebenen Werte ist.",
-	fields = list(
-		list(prefix = "$y(0) =$", answer = 5.5),
-		list(prefix = "$y(15) =$", answer = 0.0258)
-	),
-	solution = "Aus Teil (b) folgt $y(0) = 5.5 = y_{0}$ und $y(15) = 5.5 e^{\\lambda \\cdot 15} = 8.1$, also $\\lambda = \\frac{1}{15} \\ln(\\frac{8.1}{5.5}) = 0.0258$."
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Der Nullpunkt sollte in das Jahr 1960 gelegt werden.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$y(0) = \\ \\ 3, \\ \\ y(15) = 23$",
+	answer = "$y(0) = 5.5, \\ y(15) = 8.1$",
+	"$y(0) = 8.1, \\ y(15) = 5.5$"
 )
+
+cat("(b) Geben Sie $y(0)$ und $y(15)$ an.",
+	longmcq(opts))
 ```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Mit dem Nullpunkt aus Teilaufgabe (a) erhält man $y(0) = 5.5$ und $y(15) = 8.1$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$y_{0} = 5.5$, $\\lambda = 0.002$",
+	"$y_{0} = 8.1$, $\\lambda = 0.12$",
+	answer = "$y_{0} = 0.0258$, $\\lambda = 5.5$"
+)
+
+cat("(c) Bestimmen Sie nun $y_{0}$ und $\\lambda$ so, dass $y = y_0 \\cdot e^{\\lambda t}$ korrekt für die angegebenen Werte ist.",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Mit den Angaben aus Teilaufgabe (b) und dem Wachstumsmodell $\gamma = \gamma_0 \cdot e^{\lambda t}$ erhält man:
+
+	$y(0) = 5.5 = y_{0} \cdot e^{\lambda 0} \Rightarrow y_{0} = 5.5$ <br> <br>
+	$y(15) = 8.1 = 5.5 \cdot e^{\lambda \cdot 15} \Leftrightarrow e^{\lambda \cdot 15} = \frac{8.1}{5.5} \Leftrightarrow \lambda = \frac{1}{15} \cdot \ln(\frac{8.1}{5.5}) = 0.0258$
+
+	Wichtig zu merken: $e^{0} = 1$
+:::

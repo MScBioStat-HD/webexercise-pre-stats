@@ -3,93 +3,131 @@ title: Block 4
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
-source("include/helper.R")
 ```
 
 ## Exercises
 
 ### Übungen 4 – A1
+
 Berechnen Sie die folgenden Integrale.
 
-```{r exercise-4a1, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) $\\int_{0}^{2} (x^{3} + 2x)\\,dx$",
-	choices = c(
-		"$6$",
-		"$12$",
-		answer = "$8$"
-	),
-	solution = "$\\int_{0}^{2} (x^{3} + 2x)\\,dx = \\tfrac{1}{4}x^{4} + x^{2}\\big|_{0}^{2} = 8$."
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$6$",
+	"$12$",
+	answer = "$8$"
 )
-```
 
-```{r exercise-4a2, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) $\\int_{-2}^{2} e^{2x}\\,dx$",
-	choices = c(
-		"$e^{4} - 1$",
-		answer = "$27.29$",
-		"$23$"
-	),
-	solution = "$\\int_{-2}^{2} e^{2x}\\,dx = \\tfrac{1}{2}e^{2x}\\big|_{-2}^{2} = \\tfrac{1}{2}(e^{4} - e^{-4}) \\approx 27.29$."
-)
+cat("(a) $\\int_{0}^{2} (x^{3} + 2x)dx$",
+	longmcq(opts))
 ```
+:::
 
-```{r exercise-4a3, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(c) $\\int_{0}^{2} (x + 4)^{2}\\,dx$",
-	choices = c(
-		"$\\tfrac{152}{3}$",
-		"$50$",
-		answer = "$50\\tfrac{2}{3}$"
-	),
-	solution = "Nach dem Ausmultiplizieren ergibt $\\int_{0}^{2}(x^{2} + 8x + 16)\\,dx = (\\tfrac{1}{3}x^{3} + 4x^{2} + 16x)\\big|_{0}^{2} = 50\\tfrac{2}{3}$."
-)
-```
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\\ \int_{2}^{0} (x^{3} + 2x)dx = \frac{1}{4}x^{4} + x^{2} \big|_{0}^{2} = (\frac{16}{4} + 4) - 0 = 8$
+:::
 
-```{r exercise-4a4, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(d) $\\int 4x\\,dx$",
-	choices = c(
-		"$2x + c$",
-		answer = "$2x^{2} + c$",
-		"$4x^{2} + c$"
-	),
-	solution = "Eine Stammfunktion lautet $2x^{2} + c$."
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$e^{4} - 1$",
+	answer = "$27.29$",
+	"$23$"
 )
+
+cat("(b) $\\int_{-2}^{2}$ $e^{2x} dx$",
+	longmcq(opts))
 ```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $\\ \int_{2}^{-2} e^{2x}dx = \frac{1}{2}e^{2x} \big|_{-2}^{2} = (\frac{1}{2} \cdot e^{4}) - (\frac{1}{2}e^{-4}) = 27.29$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$\\frac{152}{3}$",
+	"$50$",
+	answer = "$50\\frac{2}{3}$"
+)
+
+cat("(c) $\\int_{0}^{2}(x + 4 )^{2} dx$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $\\ \int_{2}^{0} (x +4)^{2}dx = \int_{2}^{0}(x^{2} + 8x + 16)dx = \frac{1}{3}x^{3} + 4x^{2} + 16x\big|_{0}^{2}$ <br> <br>
+$\\ (\frac{8}{3} + 16 + 32) - 0 = 50\frac{2}{3}$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$2x + c$",
+	answer = "$2x^{2} + c$",
+	"$4x^{2} + c$"
+)
+
+cat("(d) $\\int_{}^{} 4x dx$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $\int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c$
+:::
 
 ### Übungen 4 – A2
-Berechnen Sie die Fläche unterhalb der Funktion im angegebenen Intervall. Skizzieren Sie die Funktion.
 
-```{r exercise-4a5, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) $f(x) = -2x$, Fläche im Intervall $[-2, 2]$",
-	choices = c(
-		answer = "$8$",
-		"$0$",
-		"$4$"
-	),
-	solution = paste(
-		"Nullstelle bei $x = 0$, Stammfunktion $F(x) = -x^{2}$.",
-		"Die Fläche setzt sich aus zwei Dreiecken zusammen: $|F(0) - F(-2)| + |F(2) - F(0)| = 4 + 4 = 8$.",
-		"<br><img src=\"images/image_4A2_a.png\" width=\"300\">"
-	)
-)
-```
+Berechnen Sie die die Fläche unterhalb der Funktion im
+angegebenen Intervall. Skizzieren Sie die Funktion.
 
-```{r exercise-4a6, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) $f(x) = \\begin{cases} 0 & \\text{für } x < 0 \\\\ -x^{2} + \\tfrac{4}{3} & \\text{für } 0 \\le x \\le 1 \\\\ 0 & \\text{für } x > 1 \\end{cases}$ im Intervall $[0,2]$",
-	choices = c(
-		"$\\tfrac{1}{3}$",
-		"$\\tfrac{4}{3}$",
-		answer = "$1$"
-	),
-	solution = paste(
-		"Zwischen 0 und 1 gilt $f(x) = -x^{2} + \\tfrac{4}{3}$ und $F(x) = -\\tfrac{1}{3}x^{3} + \\tfrac{4}{3}x$.",
-		"Da außerhalb dieses Abschnitts $f(x) = 0$ ist, ergibt sich die Fläche zu $F(1) - F(0) = -\\tfrac{1}{3} + \\tfrac{4}{3} = 1$.",
-		"<br><img src=\"images/image_4A2_b.png\" width=\"300\">"
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	answer = "$8$",
+	"$0$",
+	"$4$"
 )
+
+cat("(a) $f(x) = -2x$, Fläche im Intervall $[-2,2]$",
+	longmcq(opts))
 ```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\\ f(x) = -2x$, Fläche im Intervall [-2,2] <br>
+	Nullstelle: x = 0 <br>
+	Stammfunktion: $\\ F(x) = -x^{2} + c$ 
+	<br><br>
+<img src="images/image_4A2_a.png" width="300">
+
+	Fläche 
+	$\int_{-2}^{2} -2x dx + \int_{0}^{2} -2x dx = |F(0) - F(-2)| + |F(2) - F(0)| = |(0 - (-4))| + |(-4 + 0)|$ <br><br>
+	$= 4 + 4 = 8$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$\\frac{1}{3}$",
+	"$\\frac{4}{3}$",
+	answer = "$1$"
+)
+
+cat("(b) <br> $\\\\ f(x) = \\begin{cases} 0 & \\text{für} & x<0 \\\\
+	-x^{2} + \\frac{4}{3} & \\text{für} & 0 \\le x\\le 1 & \\text{im Intervall} & [0,1] \\\\
+	0 & \\text{für} & x>1 \\end{cases}$",
+	longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $\\ f(x) = \begin{cases} 0 & \text{für} \; x < 0 \\ -x^{2} + \frac{4}{3} & \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 & \text{für} \;x > 1\end{cases}$<br><br>
+<img src="images/image_4A2_b.png" width="300"> <br><br>
+Stammfunktion: $\\(F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c$ <br><br>
+Fäche: $\\(F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1$
+:::

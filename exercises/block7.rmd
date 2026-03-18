@@ -3,376 +3,440 @@ title: Block 7
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
-source("include/helper.R")
 ```
 
-Hinweis: Für frei wählbare Variablen $t$ wählen.
+
+**Hinweis:**  Verwenden Sie **t** und **s** als Parameter für frei wählbare Variablen.
+
 
 ### Übungen 7 – A1
-
-```{r exercise-7a1, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Besitzt das lineare Gleichungssystem $\\begin{array}{r r r l} x_{1} & + & x_{2} & + &  x_{3} & = & 1 \\\\ x_{1} & + & & &  x_{3} & = & 1 \\\\ 2x_{1} & + & x_{2} & + & 2x_{3} & = & 0 \\end{array}$ eine Lösung?",
-	choices = c(
-		"Das Gleichungssystem hat genau eine Lösung.",
-		answer = "Das Gleichungssystem hat keine Lösung",
-		"Das Gleichungssystem besitzt unendlich viele Lösungen"
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Das Gleichungssystem besitzt genau eine Lösung.",
+	answer = "Das Gleichungssystem besitzt keine Lösung",
+	"Das Gleichungssystem besitzt unendlich viele Lösungen"
 )
+cat("(a) Besitzt das lineare Gleichungssystem <br><br> $\\begin{array}{r r r l}
+	 x_{1} & + & x_{2} & + &  x_{3} & = & 1 \\\\\\
+	 x_{1} & + & &         &  x_{3} & = & 1 \\\\\\
+	2x_{1} & + & x_{2} & + & 2x_{3} & = & 0
+	\\end{array}$ <br><br> eine Lösung?",
+	longmcq(opts))
 ```
+:::
 
-::: {.callout-tip collapse="true"}
-Die erweiterte Matrix wird umgeformt und in
-Zeilen-Stufen-Form gebracht
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Die erweiterte Matrix wird umgeformt und in
+	Zeilen-Stufen-Form gebracht
 
-$$ 
-\\left(
-\\begin{array}{ccc|c}
-1 & 1 & 1 & 1\\
-1 & 0 & 1 & 1\\
-2 & 1 & 2 & 0\\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-\\mathrm{I} - \\mathrm{II} \\Rightarrow \\mathrm{II}\\
-\\mathrm{III} - 2 \\cdot \\mathrm{I} \\Rightarrow \\mathrm{III}
-}}
-\\left(
-\\begin{array}{ccc|c}
-1 & 1 & 1 & 1\\
-0 & 1 & 0 & 0\\
-0 & -1 & 0 & -2\\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-\\mathrm{I} - \\mathrm{II} \\Rightarrow \\mathrm{I}\\
-\\mathrm{III} + \\mathrm{II} \\Rightarrow \\mathrm{III}
-}}
-$$
+	$$ 
+	\left(
+	\begin{array}{ccc|c}
+	1 & 1 & 1 & 1\\
+	1 & 0 & 1 & 1\\
+	2 & 1 & 2 & 0\\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	\mathrm{I} - \mathrm{II} \Rightarrow \mathrm{II}\\
+	\mathrm{III} - 2 \cdot \mathrm{I} \Rightarrow \mathrm{III}
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	1 & 1 & 1 & 1\\
+	0 & 1 & 0 & 0\\
+	0 & -1 & 0 & -2\\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	\mathrm{I} - \mathrm{II} \Rightarrow \mathrm{I}\\
+	\mathrm{III} + \mathrm{II} \Rightarrow \mathrm{III}
+	}}
+	$$
 
-<br>
+	<br>
 
-$$
-\\left(
-\\begin{array}{ccc|c}
-1 & 0 & 1 & 1\\
-0 & 1 & 0 & 0\\
-0 & 0 & 0 & -2\\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-\\mathrm{III} : (-2) \\Rightarrow \\mathrm{III}
-}}
-\\left(
-\\begin{array}{ccc|c}
-1 & 0 & 1 & 1\\
-0 & 1 & 0 & 0\\
-0 & 0 & 0 & 1\\
-\\end{array}
-\\right)
-$$
+	$$
+	\left(
+	\begin{array}{ccc|c}
+	1 & 0 & 1 & 1\\
+	0 & 1 & 0 & 0\\
+	0 & 0 & 0 & -2\\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	\mathrm{III} : (-2) \Rightarrow \mathrm{III}
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	1 & 0 & 1 & 1\\
+	0 & 1 & 0 & 0\\
+	0 & 0 & 0 & 1\\
+	\end{array}
+	\right)
+	$$
 
-Daraus liest man nun $p = 1 \;\\text{und}\; q = 0$ ab, d.h. das lineare
-Gleichungssystem hat keine Lösung.
+	Weil in Zeile III der Widerspruch 0 = 1 auftritt, besitzt das lineare Gleichungssystem keine Lösung.
 :::
 
 ### Übungen 7 – A2
 
-```{r exercise-7a2, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Besitzt das lineare Gleichungssystem $\\begin{array}{r r r l} x_{1} & + & 2x_{2} & - & 3x_{3} & + & x_{4} & = & 0 \\\\ x_{1} & + &  x_{2} & + &  x_{3} & + & x_{4} & = & 0 \\end{array}$ eine Lösung?",
-	choices = c(
-		"Das Gleichungssystem hat genau eine Lösung.",
-		"Das Gleichungssystem hat keine Lösung",
-		answer = "Das Gleichungssystem besitzt unendlich viele Lösungen"
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Das Gleichungssystem besitzt genau eine Lösung.",
+	"Das Gleichungssystem besitzt keine Lösung",
+	answer = "Das Gleichungssystem besitzt unendlich viele Lösungen"
 )
+cat("(a) Besitzt das lineare Gleichungssystem <br><br>
+	$\\begin{array}{r r r l}
+	x_{1} & + & 2x_{2} & - & 3x_{3} & + & x_{2} & = & 0 \\\\\\
+	x_{1} & + &  x_{2} & + &  x_{3} & + & x_{4} & = & 0
+	\\end{array}$ <br><br> eine Lösung?",
+	longmcq(opts))
 ```
+:::
 
-::: {.callout-tip collapse="true"}
-Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
-$$ 
-\\left(
-\\begin{array}{cccc|c}
-1 & 2 & -3 & 1 & 0\\
-1 & 1 & 1 & 1 & 0 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-\\mathrm{I} - \\mathrm{II} \\Rightarrow \\mathrm{II}
-}}
-\\left(
-\\begin{array}{cccc|c}
-1 & 2 & -3 & 1 & 0\\
-0 & 1 & -4 & 0 & 0 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-\\mathrm{I} - 2 \\cdot \\mathrm{II} \\Rightarrow \\mathrm{I}
-}}
-\\left(
-\\begin{array}{cccc|c}
-1 & 0 & 5 & 1 & 0\\
-0 & 1 & -4 & 0 & 0 \\
-\\end{array}
-\\right)
-$$
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
+	$$ 
+	\left(
+	\begin{array}{cccc|c}
+	1 & 2 & -3 & 1 & 0\\
+	1 & 1 & 1 & 1 & 0 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	\mathrm{I} - \mathrm{II} \Rightarrow \mathrm{II}
+	}}
+	\left(
+	\begin{array}{cccc|c}
+	1 & 2 & -3 & 1 & 0\\
+	0 & 1 & -4 & 0 & 0 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	\mathrm{I} - 2 \cdot \mathrm{II} \Rightarrow \mathrm{I}
+	}}
+	\left(
+	\begin{array}{cccc|c}
+	1 & 0 & 5 & 1 & 0\\
+	0 & 1 & -4 & 0 & 0 \\
+	\end{array}
+	\right)
+	$$
+	Da kein Widerspruch auftritt, ist das lineare Gleichungssystem lösbar.  
+	Außerdem gibt es nur in den Spalten von $x_{1}$ und $x_{2}$ Pivotstellen. Daher sind $x_{3}$ und $x_{4}$ freie Variablen.
 
-Daraus liest man nun $p = 0 \;\\text{und}\; q = 0$ ab, d.h. das lineare Gleichungssystem besitzt
-Lösungen und wegen $k = n - (m - p) = 4 - (2 - 0) = 2$ können zwei Variablen frei
-gewählt werden. Wählen $x_{3}, x_{4} \\in \\mathbb{R}$ beliebig, dann lässt sich die Lösung aus der Zeilen-Stufen-Form ablesen. <br>
-$$x_{1} = -5x_{3} - x_{4}$$
-$$x_{2} = 4x_{3}$$
+	Setze
+	$$
+	x_3=s,\qquad x_4=t \qquad \text{mit } s,t\in\mathbb{R}.
+	$$
+
+	Dann folgt aus der Zeilen-Stufen-Form:
+	$$
+	\begin{aligned}
+	x_1 + 5s + t &= 0 \\
+	x_2 - 4s &= 0
+	\end{aligned}
+	$$
+
+	also
+	$$
+	x_1=-5s-t,\qquad x_2=4s.
+	$$
+
+	Damit besitzt das Gleichungssystem unendlich viele Lösungen und die Lösungsmenge lautet:
+	$$
+	x_1=-5s-t,\qquad x_2=4s,\qquad x_3=s,\qquad x_4=t,
+	\qquad s,t\in\mathbb{R}.
+	$$
 :::
 
 ### Übungen 7 – A3
 
-```{r exercise-7a3, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Ist das lineare Gleichungssystem $\\begin{array}{r r r l} -3x_{1} & + & x_{2} & + & 4x_{3} & = & 1 \\\\ x_{1} & + & x_{2} & + & x_{3} & = & 0 \\\\ -2x_{1} & + & & & x_{3} & = & -1 \\\\ x_{1} & + & x_{2} & - & 2x_{3} & = & 0 \\end{array}$ lösbar?",
-	choices = c(
-		"Das Gleichungssystem hat genau eine Lösung.",
-		answer = "Das Gleichungssystem hat keine Lösung",
-		"Das Gleichungssystem besitzt unendlich viele Lösungen"
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Das Gleichungssystem besitzt genau eine Lösung.",
+	answer = "Das Gleichungssystem besitzt keine Lösung",
+	"Das Gleichungssystem besitzt unendlich viele Lösungen"
 )
+cat("(a) Ist das lineare Gleichungssystem <br><br>$\\begin{array}{r r r l}
+	-3x_{1} & + & x_{2} & + & 4x_{3} & = & 1 \\\\\\
+	  x_{1} & + & x_{2} & + & x_{3} & = & 0 \\\\\\
+	-2x_{1} & + & &         & x_{3} & = &-1 \\\\\\
+	x_{1} & + & x_{2} & - & 2x_{3} & = & 0
+	\\end{array}$ <br> <br>lösbar?",
+	longmcq(opts))
 ```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
-$$ 
-\\left(
-\\begin{array}{ccc|c}
--3 & 1 & 4 & 1 \\
-1 & 1 & 1 & 0 \\
--2 & 0 & 1 & -1 \\
-1 & 1 & -2 & 0 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-3 \\cdot \\mathrm{II} + \\mathrm{I} \\Rightarrow \\mathrm{II} \\
-3 \\cdot \\mathrm{III}  - 2 \\cdot \\mathrm{I} \\Rightarrow \\mathrm{III} \\
-3 \\cdot \\mathrm{IV} + \ mathrm{I} \\Rightarrow \\mathrm{IV}
-}}
-\\left(
-\\begin{array}{ccc|c}
--3 & 1 & 4 & 1 \\
-0 & 4 & 7 & 1 \\
-0 & -2 & -5 & -5 \\
-0 & 4 & -2 & 1 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-4 \\cdot \\mathrm{I} \\Rightarrow \\mathrm{I} \\
-2 \\cdot \\mathrm{III} + \\mathrm{II} \\Rightarrow \\mathrm{III} \\
-\\mathrm{IV} - \\mathrm{II} \\Rightarrow \\mathrm{VI}
-}}
-$$
-$$
-\\left(
-\\begin{array}{ccc|c}
--12 & 0 & 9 & 3 \\
-0 & 4 & 7 & 1 \\
-0 & 0 & -3 & -9 \\
-0 & 0 & -9 & 0 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-\\mathrm{I} + 3 \\cdot \\mathrm{III} \\Rightarrow \\mathrm{I} \\
-3 \\cdot \\mathrm{II} + 7 \\cdot \\mathrm{III} \\Rightarrow \\mathrm{II} \\
-\\mathrm{IV} - 3 \\cdot \\mathrm{III} \\Rightarrow \\mathrm{IV}
-}}
-\\left(
-\\begin{array}{ccc|c}
--12 & 0 & 0 & -24 \\
-0 & 12 & 0 & -60 \\
-0 & 0 & -3 & -9 \\
-0 & 0 & 0 & 27 \\
-\\end{array}
-\\right)
-$$
+(a) Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
+	$$ 
+	\left(
+	\begin{array}{ccc|c}
+	-3 & 1 & 4 & 1 \\
+	1 & 1 & 1 & 0 \\
+	-2 & 0 & 1 & -1 \\
+	1 & 1 & -2 & 0 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	3 \cdot \mathrm{II} + \mathrm{I} \Rightarrow \mathrm{II} \\
+	3 \cdot \mathrm{III}  - 2 \cdot \mathrm{I} \Rightarrow \mathrm{III} \\
+	3 \cdot \mathrm{IV} + \ mathrm{I} \Rightarrow \mathrm{IV}
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	-3 & 1 & 4 & 1 \\
+	0 & 4 & 7 & 1 \\
+	0 & -2 & -5 & -5 \\
+	0 & 4 & -2 & 1 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	4 \cdot \mathrm{I} \Rightarrow \mathrm{I} \\
+	2 \cdot \mathrm{III} + \mathrm{II} \Rightarrow \mathrm{III} \\
+	\mathrm{IV} - \mathrm{II} \Rightarrow \mathrm{VI}
+	}}
+	$$
+	$$
+	\left(
+	\begin{array}{ccc|c}
+	-12 & 0 & 9 & 3 \\
+	0 & 4 & 7 & 1 \\
+	0 & 0 & -3 & -9 \\
+	0 & 0 & -9 & 0 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	\mathrm{I} + 3 \cdot \mathrm{III} \Rightarrow \mathrm{I} \\
+	3 \cdot \mathrm{II} + 7 \cdot \mathrm{III} \Rightarrow \mathrm{II} \\
+	\mathrm{IV} - 3 \cdot \mathrm{III} \Rightarrow \mathrm{IV}
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	-12 & 0 & 0 & -24 \\
+	0 & 12 & 0 & -60 \\
+	0 & 0 & -3 & -9 \\
+	0 & 0 & 0 & 27 \\
+	\end{array}
+	\right)
+	$$
 
-Daraus liest man nun $p = 1 \;\\text{und}\; q = 0$ ab, d.h. das lineare Gleichungssystem besitzt
-keine Lösungen.
+	Weil in Zeile IV der Widerspruch 0 = 27 auftritt, besitzt das lineare Gleichungssystem keine Lösung.
+
 :::
 
 ### Übungen 7 – A4
 
-```{r exercise-7a4, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Für welche Werte von $a$ hat das Gleichungssystem $\\begin{array}{r r r l} x & + & y & + & z & = & a \\\\ x & + & y & & & = & 2 \\\\ & & y & + & z & = & 2 \\end{array}$ eine Lösung?",
-	choices = c(
-		"Das Gleichungssystem besitzt nur für $a = 2$ eine Lösung.",
-		answer = "Für alle $a \\in \\mathbb{R}$ existiert genau eine Lösung mit $x = a - 2, y = 4 - a, z = a - 2$.",
-		"Das Gleichungssystem besitzt für alle $a \\in \\mathbb{R}$ unendlich viele Lösungen."
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Das Gleichungssystem besitzt nur für $a = 2$ eine Lösung.",
+	answer = "Für alle $a \\in \\mathbb{R}$ existiert genau eine Lösung mit 
+	$x = a - 2, y = 4 - a, z = a - 2$.",
+	"Das Gleichungssystem besitzt für alle $a \\in \\mathbb{R}$ unendlich viele Lösungen."
 )
+cat("(a) Für welche Werte von a hat das folgende Gleichungssystem eine
+	Lösung? Geben Sie die Lösung an. <br><br>
+	$\\begin{array}{r r r l}
+	x & + & y & + & z & = & a \\\\\\
+	x & + & y & &     & = & 2 \\\\\\
+	&     & y & + & z & = & 2
+	\\end{array}$",
+	longmcq(opts))
 ```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
-$$ 
-\\left(
-\\begin{array}{ccc|c}
-1 & 1 & 1 & a \\
-1 & 1 & 0 & 2 \\
-0 & 1 & 1 & 2 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-II - I \\Rightarrow II \\
-}}
-\\left(
-\\begin{array}{ccc|c}
-1 & 1 & 1 & a \\
-0 & 0 & -1 & 2 - a \\
-0 & 1 & 1 & 2 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-(-1) \\cdot II \\leftrightarrow III \\
-}}
-$$
+(a) Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
+	$$ 
+	\left(
+	\begin{array}{ccc|c}
+	1 & 1 & 1 & a \\
+	1 & 1 & 0 & 2 \\
+	0 & 1 & 1 & 2 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	II - I \Rightarrow II \\
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	1 & 1 & 1 & a \\
+	0 & 0 & -1 & 2 - a \\
+	0 & 1 & 1 & 2 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	(-1) \cdot II \leftrightarrow III \\
+	}}
+	$$
 
-$$ 
-\\left(
-\\begin{array}{ccc|c}
-1 & 1 & 1 & a \\
-0 & 1 & 1 & 2 \\
-0 & 0 & 1 & a - 2 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-I - II \\Rightarrow I \\
-}}
-\\left(
-\\begin{array}{ccc|c}
-1 & 0 & 0 & a - 2 \\
-0 & 1 & 1 & 2 \\
-0 & 0 & 1 & a - 2 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-II - III \\Rightarrow II \\
-}}
-\\left(
-\\begin{array}{ccc|c}
-1 & 0 & 0 & a - 2 \\
-0 & 1 & 0 & 4 - a \\
-0 & 0 & 1 & a - 2 \\
-\\end{array}
-\\right)
-$$
-<br>
-Daraus liest man nun $p = 0 \;\\text{und}\; q = 0$ ab (unabhängig vom Parameter $a$), d.h. das lineare
-Gleichungssystem besitzt für jedes $a$ genau eine Lösung, die man direkt aus der Zeilen-Stufen-Form
-ablesen kann: $x = a - 2$, $y = 4 - a$ und $z = a - 2$.
+	$$ 
+	\left(
+	\begin{array}{ccc|c}
+	1 & 1 & 1 & a \\
+	0 & 1 & 1 & 2 \\
+	0 & 0 & 1 & a - 2 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	I - II \Rightarrow I \\
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	1 & 0 & 0 & a - 2 \\
+	0 & 1 & 1 & 2 \\
+	0 & 0 & 1 & a - 2 \\
+	\end{array}
+	\right)
+	\xrightarrow{
+	\substack{
+	II - III \Rightarrow II \\
+	}}
+	\left(
+	\begin{array}{ccc|c}
+	1 & 0 & 0 & a - 2 \\
+	0 & 1 & 0 & 4 - a \\
+	0 & 0 & 1 & a - 2 \\
+	\end{array}
+	\right)
+	$$
+	<br>
+	Da in der Zeilen-Stufen-Form in jeder Zeile eine Pivotvariable vorkommt und kein Widerspruch entsteht, besitzt das lineare Gleichungssystem für jedes $a$
+	a genau eine Lösung. Diese kann direkt aus der Matrix abgelesen werden: 
+	$x = a \,–\, 2 \qquad 
+	y = 4 \,–\, a \; \text{und}	\qquad 
+	z = a \,–\, 2$.
 :::
 
 ### Übungen 7 – A5
 
-Lösen Sie das folgende Gleichungssystem, wobei $a \\neq 1$ eine reelle Zahl ist. <br><br> 
-$\\begin{array}{r r r l}
+Lösen Sie das folgende Gleichungssystem, wobei $a \neq 1$ eine reelle Zahl ist. <br><br> 
+$\begin{array}{r r r l}
 	3x_{1} & - & 2x_{2} & - & ax_{3} & = 1\\
 	3x_{1} & - & x_{2} & + &  x_{3} & = 5
-	\\end{array}$ <br>
+	\end{array}$ <br>
 
-```{r exercise-7a5, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(a) Welche Lösungsdarstellung ist korrekt?",
-	choices = c(
-		"$x_{1} = \\frac{5}{a - 1}$ <br>$x_{2} = 0$ <br>$x_{3} = \\frac{4}{a - 1}t$",
-		answer = "$x_{1} = \\frac{5a - 1}{3a - 3} +  \\frac{1}{3} t$ <br>$x_{2} = t$ <br>$x_{3} = \\frac{4}{1 - a}t$",
-		"$x_{1} = \\frac{5}{a - 1}$ <br>$x_{2} = t$ <br>$x_{3} = \\frac{3}{a - 1} t$"
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"$x_{1} = \\frac{5}{a - 1}$ <br>
+	$x_{2} = 0$ <br>
+	$x_{3} = \\frac{4}{a - 1}t$ <br><br>",
+	answer = "$x_{1} = \\frac{5a - 1}{3a - 3} +  \\frac{1}{3} t$ <br>
+	$x_{2} = t$ <br> 
+	$x_{3} = \\frac{4}{1 - a}t$<br><br>",
+	"$x_{1} = \\frac{5}{a - 1}$ <br>
+	$x_{2} = t$ <br>
+	$x_{3} = \\frac{3}{a - 1} t$"
 )
+cat("(a) Welche Lösungsdarstellung ist korrekt?<br><br>",
+	longmcq(opts))
 ```
+:::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
-$$ 
-\\left(
-\\begin{array}{ccc|c}
-3 & -1 & a & 1 \\
-3 & -1 & 1 & 5 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-I - II\\cdot I \\Rightarrow II \\
-}}
-\\left(
-\\begin{array}{ccc|c}
-3 & -1 & a & 1 \\
-0 & 0 & a - 1 & -4 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-(a-1) \\cdot I - a \\cdot II \\Rightarrow I \\
-a \\neq 1
-}}
-$$
-$$ 
-\\left(
-\\begin{array}{ccc|c}
-3(a-1) & 1 - a & 0 & 5a - 1 \\
-0 & 0 & a - 1 & -4 \\
-\\end{array}
-\\right)
-\\xrightarrow{
-\\substack{
-I:(3(a-1))\\Rightarrow I \\
-II:(a-1)\\Rightarrow II 
-}}
-$$
-$$
-\\left(
-\\begin{array}{ccc|c}
-1 & -1/3 & 0 & (5a - 1)/(3a - 3) \\
-0 & 0 & 1 & 4/(1 - a) \\
-\\end{array}
-\\right)
-$$
-<br>
-Wähle $x_{2} = t$, dann lässt sich die Lösung aus der Zeilen-Stufen- 
-Form ablesen.
-$$
-\\begin{aligned}
-x_1 &= \\frac{5a - 1}{3a - 3} + \\frac{1}{3}t \\
-x_2 &= t \\
-x_3 &= \\frac{4}{1-a}
-\\end{aligned}
-$$
+	$$
+	\left(
+	\begin{array}{ccc|c}
+	3 & -1 & a & 1 \\
+	3 & -1 & 1 & 5
+	\end{array}
+	\right)
+	\xrightarrow{\,I - II \to II\,}
+	\left(
+	\begin{array}{ccc|c}
+	3 & -1 & a & 1 \\
+	0 & 0 & a-1 & -4
+	\end{array}
+	\right)
+	$$
+
+	Jetzt kann man nach den Variablen umstellen.  
+
+	$$
+	\begin{aligned}
+	\text{II}\quad & ax_3 - x_3 = -4 \\
+	\text{II}\quad & (a-1)x_3 = -4 \\
+	\text{II}\quad & x_3 = \frac{4}{1-a}
+	\end{aligned}
+	$$
+
+	Nun werden $x_{2}$ und $x_{3}$ in die erste Gleichung eingesetzt:
+
+	$$
+	\begin{aligned}
+	\text{I}\quad & 3x_1 - x_2 + ax_3 = 1 \\
+	\text{I}\quad & 3x_1 - x_2 + a \cdot \frac{4}{1-a} = 1 \\
+	\text{I}\quad & 3x_1 - x_2 = 1 - \frac{4a}{1-a} \\
+							& = \frac{1(1-a)-4a}{1-a} \\
+							& = \frac{1-a-4a}{1-a} \\
+							& = \frac{1-5a}{1-a}
+	\end{aligned}
+	$$
+
+	Da $x_{2}$ frei gewählt werden kann, setzen wir
+
+	$$
+	x_2 = t \qquad \text{mit } t \in \mathbb{R}.
+	$$
+
+	Dann gilt:
+
+	$$
+	\begin{aligned}
+	3x_1 - t &= \frac{1-5a}{1-a} \\
+	3x_1 &= \frac{1-5a}{1-a} + t \\
+	x_1 &= \frac{1-5a}{3(1-a)} + \frac13 t \\
+	&= \frac{5a-1}{3a-3} + \frac13 t
+	\end{aligned}
+	$$
+
+	Damit lautet die Lösungsmenge:
+
+	$$
+	x_1 = \frac{5a-1}{3a-3} + \frac13 t,
+	\qquad
+	x_2 = t,
+	\qquad
+	x_3 = \frac{4}{1-a},
+	\qquad
+	t \in \mathbb{R}.
+	$$
 :::
 
-```{r exercise-7a6, echo=FALSE, results='asis'}
-question_with_single_choice(
-	question = "(b) Wie viele Lösungen besitzt das System für $a \\neq 1$?",
-	choices = c(
-		"Das Gleichungssystem hat genau eine Lösung.",
-		"Das Gleichungssystem hat keine Lösung",
-		answer = "Das Gleichungssystem besitzt unendlich viele Lösungen"
-	)
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+	"Das Gleichungssystem hat genau eine Lösung.",
+	"Das Gleichungssystem hat keine Lösung",
+	answer = "Das Gleichungssystem besitzt unendlich viele Lösungen"
 )
+
+cat("(b)  Wie viele Lösungen besitzt das System für $a \\neq 1$?<br><br>",
+	longmcq(opts))
 ```
+:::
+
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Daraus liest man nun $p \,=\, 0 \; \\text{und} \; q \,= \,0$ ab, d.h. das lineare Gleichungssystem besitzt
-Lösungen und wegen $k\, =\, n \,-\, (m \,-\, p) \,=\, 3 \,-\, (2 \,-\, 0) \,=\, 1$ kann eine Variable frei gewählt
-werden. <br>
-Wähle $x_{2} = t$, dann lässt sich die Lösung aus der Zeilen-Stufen- 
-Form ablesen.
+Das Gleichungssystem ist für $a \neq 1$ lösbar. Da eine Variable frei gewählt werden kann, besitzt es unendlich viele Lösungen.
 :::
