@@ -5,7 +5,7 @@ title: Block 6
 library(webexercises)
 ```
 
-## Exercises
+## Matrizen
 
 ### Übungen 6 – A1
 

@@ -5,8 +5,7 @@ title: Block 2
 library(webexercises)
 ```
 
-Block 1 is about doing X with Y.
-## Exercises
+## Rechnen mit Funktionen
 
 ### Übungen 2 – A1
 
@@ -139,4 +138,79 @@ cat("(c) Bestimmen Sie nun $y_{0}$ und $\\lambda$ so, dass $y = y_0 \\cdot e^{\\
 	$y(15) = 8.1 = 5.5 \cdot e^{\lambda \cdot 15} \Leftrightarrow e^{\lambda \cdot 15} = \frac{8.1}{5.5} \Leftrightarrow \lambda = \frac{1}{15} \cdot \ln(\frac{8.1}{5.5}) = 0.0258$
 
 	Wichtig zu merken: $e^{0} = 1$
+:::
+
+
+## Übungen 2 – A4
+
+Bestimmen Sie die Steigung folgender Geraden:
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"$m = -2$",
+	answer = "$m = 2$"
+)
+
+cat("(a) Die Gerade $y = 2x - 1$", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Bei einer Geraden der Form $y = mx + b$ ist $m$ direkt die Steigung.
+
+	Für $y = 2x - 1$ gilt also: $m = 2$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	answer = "$m = -1$",
+	"$m = 1$"
+)
+
+cat("(b) Die  Gerade, die durch die Punkte $(-2, 4)$ und $(1, 1)$ geht", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Für die Steigung einer Geraden durch zwei Punkte verwendet man:
+
+	$$
+	m = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}
+	$$
+
+	Mit den Punkten $(-2,4)$ und $(1,1)$ ergibt sich:
+
+	$$
+	m = \frac{1-4}{1-(-2)}
+	$$
+
+	$$
+	= \frac{-3}{3}
+	$$
+
+	$$
+	= -1
+	$$
+:::
+
+## Übungen 2 – A5
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+  "Die Funktion ist für alle $x \\in [-1,2]$ streng monoton wachsend",
+  "Die Funktion ist für alle $x \\in [-1,2]$ streng monoton fallend",
+  "Die Funktion ist für alle $x \\in [0,4]$ streng monoton fallend",
+  answer = "Keine der oben genannten"
+)
+
+cat("(a) Es ist die Funktion $y = x^{2} - 3$ gegeben. Welche Aussage trifft zu?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Richtige Antwort: **Keine der oben genannten** <br>
+	Erklärung: Der Scheitel der Parabel liegt bei $(0, -3)$. 
+	Die Parabel ist nach oben geöffnet und daher streng monoton wachsend im Bereich $x > 0$ und im Bereich $x < 0$.
 :::

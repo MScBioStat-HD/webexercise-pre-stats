@@ -238,9 +238,9 @@ window.Quarto = {
 <p>Betrachten Sie die Funktion \(f(x) = (x - 1 )^{2} \cdot x \) im Intervall [-1, 3].</p>
 <div class="webex-check webex-box">
 <ol type="a">
-<li>Skizzieren Sie die Funktion auf dem Intervall <span class="math inline">\([-1,3]\)</span>
-<div id="radio_BSDHQNNOWD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BSDHQNNOWD" value=""> <span><span class="math inline">\(f^{\prime}(x) = x^{2} - 2x + 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_BSDHQNNOWD" value=""> <span><span class="math inline">\(f^{\prime}(x) = 2x^{2} + 4x - 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_BSDHQNNOWD" value="answer"> <span><span class="math inline">\(f^{\prime}(x) = 3x^{2} - 4x + 1\)</span></span></label>
+<li>Bestimmen Sie die Nullstellen der Funktion <span class="math inline">\(f(x)\)</span>?
+<div id="radio_ZARPKCRSUB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZARPKCRSUB" value=""> <span><span class="math inline">\(x_{1} = 0, x_{2} = 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZARPKCRSUB" value=""> <span><span class="math inline">\(x_{1} = -1, x_{2} = 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZARPKCRSUB" value="answer"> <span><span class="math inline">\(x_{1} = 1, x_{2} = 0\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -257,24 +257,19 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><span class="math display">\[
-f(x) = (x - 1)^2 \cdot x \quad \text{im Intervall } [-1,3]
-\]</span></li>
+<li><p>Die Funktion ist ein Produkt: <span class="math inline">\(f(x) = (x - 1 )^{2} \cdot x = 0\)</span></p>
+<p>Ein Produkt ist null, wenn mindestens ein Faktor null ist:</p>
+<p><span class="math inline">\((x - 1 )^{2} \Rightarrow x = 1\)</span> (doppelte Nullstelle)</p>
+<p>Nullstellen: <span class="math inline">\(x_{1} = 0,\quad x_{2} = 1\)</span></p></li>
 </ol>
-<p><span class="math display">\[
-f(x) = (x^2 - 2x + 1)\cdot x = x^3 - 2x^2 + x
-\]</span></p>
-<p><span class="math display">\[
-f'(x) = 3x^2 - 4x + 1
-\]</span></p>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="2" type="a">
-<li>Bestimmen Sie die Nullstellen der Funktion <span class="math inline">\(f(x)\)</span>?
-<div id="radio_MBRVXOZAXU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MBRVXOZAXU" value=""> <span><span class="math inline">\(x_{1} = 0, x_{2} = 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MBRVXOZAXU" value=""> <span><span class="math inline">\(x_{1} = -1, x_{2} = 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MBRVXOZAXU" value="answer"> <span><span class="math inline">\(x_{1} = 1, x_{2} = 0\)</span></span></label>
+<li>Bestimmen Sie die Tangente im Punkt <span class="math inline">\(x_{0} = 2\)</span> und zeichnen Sie die Tangente ein?
+<div id="radio_JVFOKOEQVT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JVFOKOEQVT" value=""> <span><span class="math inline">\(t(x) = 5x - 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JVFOKOEQVT" value=""> <span><span class="math inline">\(t(x) = 3x - 4\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JVFOKOEQVT" value="answer"> <span><span class="math inline">\(t(x) = 5x - 8\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -291,21 +286,44 @@ f'(x) = 3x^2 - 4x + 1
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="2" type="a">
-<li><span class="math display">\[
-f(x) = 0 \;\Rightarrow\; x(x-1)^2 = 0
-\]</span></li>
-</ol>
+<li><p>Tangente bei <span class="math inline">\(x_{0} = 2\)</span></p>
+<p>Zuerst die Funktion ausmultiplizieren:</p>
 <p><span class="math display">\[
-\Rightarrow x_1 = 0,\quad x_2 = 1
-\]</span> (Ein Produkt ist 0, wenn mindestens ein Faktor 0 ist.)</p>
+f(x) = (x^2 - 2x + 1)\cdot x = x^{3} - 2x^{2} + x
+\]</span></p>
+<p>Ableitung:</p>
+<p><span class="math display">\[
+f'(x) = 3x^{2} - 4x + 1
+\]</span></p>
+<p>Steigung bei <span class="math inline">\(x_{0} = 2\)</span>:</p>
+<p><span class="math display">\[
+f'(2) = 3\cdot 4 - 4\cdot 2 + 1 = 12 - 8 + 1 = 5
+\]</span></p>
+<p>Funktionswert bei <span class="math inline">\(x_{0} = 2\)</span>:</p>
+<p><span class="math display">\[
+f(2) = (2 - 1)^2 \cdot 2 = 1 \cdot 2 = 2
+\]</span></p>
+<p>Tangentengleichung in Punkt-Steigungs-Form: <span class="math display">\[
+t(x) = f'(2)(x - 2) + f(2)
+\]</span></p>
+<p><span class="math display">\[
+t(x) = 5(x - 2) + 2
+\]</span></p>
+<p><span class="math display">\[
+t(x) = 5x - 10 + 2
+\]</span></p>
+<p><span class="math display">\[
+t(x) = 5x - 8
+\]</span></p></li>
+</ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="3" type="a">
-<li>Bestimmen Sie die Tangente im Punkt <span class="math inline">\(x_{0} = 2\)</span> und zeichnen Sie die Tangente ein?
-<div id="radio_NRRZEJWKDA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NRRZEJWKDA" value=""> <span><span class="math inline">\(t(x) = 5x - 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_NRRZEJWKDA" value=""> <span><span class="math inline">\(t(x) = 3x - 4\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_NRRZEJWKDA" value="answer"> <span><span class="math inline">\(t(x) = 5x - 8\)</span></span></label>
+<li>Bestimmen Sie die Extremstellen im Intervall <span class="math inline">\([-1,3]\)</span>
+<div id="radio_XFURJZXVFP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XFURJZXVFP" value=""> <span><span class="math inline">\(x_{1} = -1\)</span> und <span class="math inline">\(x_{2} = 3\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XFURJZXVFP" value=""> <span>Keine Extremstellen im Intervall</span></label><label><input type="radio" autocomplete="off" name="radio_XFURJZXVFP" value="answer"> <span><span class="math inline">\(x_{1} = 1\)</span> und <span class="math inline">\(x_{2} = \frac{1}{3}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -322,23 +340,46 @@ f(x) = 0 \;\Rightarrow\; x(x-1)^2 = 0
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="3" type="a">
-<li><span class="math display">\[
-\begin{aligned}
-t(x) &amp;= f(2) + f'(2)(x - 2) \\
-  &amp;= 2 + 5(x - 2) \\
-  &amp;= 5x - 8
-\end{aligned}
-\]</span></li>
+<li><p>Notwendige Bedingung für Extremstellen:</p>
+<p><span class="math display">\[
+f'(x)=0
+\]</span></p>
+<p>Da <span class="math inline">\(f'(x)=3x^2-4x+1\)</span> gilt:</p>
+<p><span class="math display">\[
+3x^2-4x+1=0
+\]</span></p>
+<p>Mit der Mitternachtsformel erhält man:</p>
+<p><span class="math display">\[
+x=\frac{4\pm\sqrt{16-12}}{6}
+\]</span></p>
+<p><span class="math display">\[
+x=\frac{4\pm\sqrt{4}}{6}
+\]</span></p>
+<p><span class="math display">\[
+x=\frac{4\pm2}{6}
+\]</span></p>
+<p>Damit folgen die beiden Lösungen: <span class="math display">\[
+x_{1} = 1
+\quad \text{und} \quad
+x_{2} = \frac{1}{3}
+\]</span></p>
+<p>Eingesetzt in die Funktion <span class="math inline">\(f(x)\)</span> ergibt sich für die Extremstellen und am Rand: <span class="math display">\[
+f(-1) = -4
+\]</span> <span class="math display">\[
+f(\frac{1}{3}) = \frac{4}{27}
+\]</span> <span class="math display">\[
+f(1) = 0
+\]</span> <span class="math display">\[
+f(3) = 12
+\]</span></p>
+<p>Daraus lässt sich ablesen, dass die absoluten Extremwerte am Rand liegen. Da ein Polynom vom Grad 3 entweder zwei Extremwerte oder eine Wendestelle besitzt, sind die inneren Punkte auch lokale Extremwerte.</p></li>
 </ol>
 </div>
 </div>
 </div>
-<div class="webex-check webex-box">
+<div class="webex webex-box">
 <ol start="4" type="a">
-<li>Bestimmen Sie die Extremstellen im Intervall <span class="math inline">\([-1,3]\)</span>
-<div id="radio_TAYKPGUNOL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TAYKPGUNOL" value=""> <span>Keine Extremstellen im Intervall; die Funktion ist monoton.</span></label><label><input type="radio" autocomplete="off" name="radio_TAYKPGUNOL" value=""> <span><span class="math inline">\(x_{1} = 1, x_{2} = 1/3, f(-1) = -1, f(\frac{1}{3}) = 3, f(1) = 0, f(3) = 12\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TAYKPGUNOL" value="answer"> <span><span class="math inline">\(x_{1} = 1, x_{2} = 1/3, f(-1) = -4, f(\frac{1}{3}) = 4/27, f(1) = 0, f(3) = 12\)</span></span></label>
-</div></li>
+<li>Skizzieren Sie die Funktion auf dem Intervall <span class="math inline">\([-1,3]\)</span></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -354,36 +395,16 @@ t(x) &amp;= f(2) + f'(2)(x - 2) \\
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="4" type="a">
-<li><span class="math display">\[
-f'(x) = 3x^2 - 4x + 1 = 0
-\]</span></li>
+<li><img src="images/image_final.png" width="500"> <br></li>
 </ol>
-<p><span class="math display">\[
-x_{1,2} = \frac{4 \pm \sqrt{16 - 12}}{6}
-        = \frac{4 \pm 2}{6}
-\]</span></p>
-<p><span class="math display">\[
-\Rightarrow x_1 = 1,\quad x_2 = \frac{1}{3}
-\]</span></p>
-<p>Funktionswerte an den Extremstellen und am Rand:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(-1) &amp;= -4 \\
-f\!\left(\tfrac{1}{3}\right) &amp;= \tfrac{4}{27} \\
-f(1) &amp;= 0 \\
-f(3) &amp;= 12
-\end{aligned}
-\]</span></p>
-<p>Die absoluten Extremwerte liegen an den Randpunkten.<br>
-Die inneren Punkte sind lokale Extremstellen.</p>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="5" type="a">
 <li>Berechnen Sie die Fläche unter der Kurve im Intervall <span class="math inline">\([-1,1]\)</span>
-<div id="radio_ZRDSUCVRCH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZRDSUCVRCH" value=""> <span><span class="math inline">\(-1.5\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZRDSUCVRCH" value=""> <span><span class="math inline">\(2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZRDSUCVRCH" value="answer"> <span><span class="math inline">\(1.5\)</span></span></label>
+<div id="radio_TALBMEFNMJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TALBMEFNMJ" value=""> <span><span class="math inline">\(-1.5\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TALBMEFNMJ" value=""> <span><span class="math inline">\(2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TALBMEFNMJ" value="answer"> <span><span class="math inline">\(1.5\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -400,16 +421,45 @@ Die inneren Punkte sind lokale Extremstellen.</p>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="5" type="a">
-<li><span class="math display">\[
-\begin{aligned}
-A &amp;= \left| \int_{-1}^{0} (x^{3} - 2x^{2} + x)\,dx \right|
-+ \left| \int_{0}^{1} (x^{3} - 2x^{2} + x)\,dx \right| \\
-&amp;= \left| \tfrac{1}{4} x^{4} - \tfrac{2}{3} x^{3} \tfrac{1}{2} x^{2} + \tfrac{1}{4} x^{4} - \tfrac{2}{3} x^{3} \tfrac{1}{2} x^{2}\right| \\
-  &amp;= \left| 0 - (\tfrac{1}{4} + \tfrac{2}{3} + \tfrac{1}{2}) \right|
-+ \left| \left(\tfrac{1}{4} + \tfrac{2}{3} + \tfrac{1}{2} \right) - 0 \right| \\
-  &amp;= 1.5
-\end{aligned}
-\]</span></li>
+<li><p>Gesucht ist die Fläche unter der Kurve im Intervall <span class="math inline">\([-1,1]\)</span>.</p>
+<p>Da die Funktion im Intervall <span class="math inline">\([-1,0]\)</span> unter der <span class="math inline">\(x\)</span>-Achse und im Intervall <span class="math inline">\([0,1]\)</span> über der <span class="math inline">\(x\)</span>-Achse liegt, wird die Fläche in zwei Teilflächen zerlegt:</p>
+<p><span class="math display">\[
+A = \left| \int_{-1}^{0} (x^3 - 2x^2 + x)\,dx \right|
++ \left| \int_{0}^{1} (x^3 - 2x^2 + x)\,dx \right|
+\]</span></p>
+<p>Eine Stammfunktion ist:</p>
+<p><span class="math display">\[
+F(x) = \frac{1}{4}x^4 - \frac{2}{3}x^3 + \frac{1}{2}x^2
+\]</span></p>
+<p>Damit ergibt sich:</p>
+<p><span class="math display">\[
+A =
+\left|
+\left(
+\frac{1}{4}x^4 - \frac{2}{3}x^3 + \frac{1}{2}x^2
+\right)\Big|_{-1}^{0}
+\right|
++
+\left|
+\left(
+\frac{1}{4}x^4 - \frac{2}{3}x^3 + \frac{1}{2}x^2
+\right)\Big|_{0}^{1}
+\right|
+\]</span></p>
+<p>Also:</p>
+<p><span class="math display">\[
+A=
+\left|
+0-\left(\frac{1}{4}+\frac{2}{3}+\frac{1}{2}\right)
+\right|
++
+\left|
+\left(\frac{1}{4}-\frac{2}{3}+\frac{1}{2}\right)-0
+\right|
+\]</span></p>
+<p><span class="math display">\[
+A=1.5
+\]</span></p></li>
 </ol>
 </div>
 </div>

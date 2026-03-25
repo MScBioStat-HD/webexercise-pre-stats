@@ -5,7 +5,7 @@ title: Block 4
 library(webexercises)
 ```
 
-## Exercises
+## Integralrechnung
 
 ### Übungen 4 – A1
 

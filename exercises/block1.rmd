@@ -5,7 +5,7 @@ title: Block 1
 library(webexercises)
 ```
 
-## 
+## Mathematische Grundlagen
 
 ### Übungen 1 – A1
 Überlegen Sie anhand eines Venn-Diagramms:
@@ -14,7 +14,7 @@ Notiz: Die symmetrische Differenz A$\Delta$ B von zwei Mengen ist definiert als 
 Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen.
 
 ::: {.webex .webex-box}
-(a) Welche Elemente gehören zur symmetrischen Differenz A $\Delta$ B ?
+(a) Welche Elemente gehören zur symmetrischen Differenz $A \Delta B$ ?
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -23,28 +23,78 @@ Die symmetrische Differenz ist der schraffierte Bereich <br>
 :::
 
 ::: {.webex .webex-box}
-(b) Die symmetrische Differenz lässt sich $\sigma$ auch ausdrücken als A $\Delta$ B = (A\\B) $\cup$ (B\\A)
+(b) Die symmetrische Differenz lässt sich $\sigma$ auch ausdrücken als $A \Delta B = (A \setminus B) \cup (B \setminus A)$
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 
 
 <img src="images/image_1A_b.png" width="300"> <br>
-A\\B ist der von links oben schraffierte Bereich. B\\A ist der von rechts oben schraffierte Bereich. Die
+$A \setminus B$ ist der von links oben schraffierte Bereich. B\A ist der von rechts oben schraffierte Bereich. Die
 Vereinigung sind beide schraffierten Bereiche. Ein Vergleich mit Teilaufgabe (a) liefert die gewünschte
 Aussage.<br>
 :::
 
 ::: {.webex .webex-box}
-(c) A $\cap$ B = B heißt dasselbe wie B $\subset$ A
+(c) $A \cap B = B$ heißt dasselbe wie $B \subset A$
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 <img src="images/image_1A_c.png" width="300"> <br>
-B ist die schraffierte Menge. A $\cap$ B = B  und B $\subset$ A
+$B$ ist die schraffierte Menge. $A \cap B = B$  und $B \subset A$
 :::
 
 ### Übungen 1 – A2
+
+Gegeben sind folgende Mengen $A = \{6, 4, 3, 15, 9\}$, $B = \{4, 12, 6, 9\}$ und $C = \{4\}$
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Bestimmen Sie $A \\cup B = \\{$", fitb("3, 4, 6, 9, 12, 15", num = TRUE), "$\\}$")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $A \cup B = \{3, 4, 6, 9, 12, 15\} \Rightarrow$ Vereinigung (ODER: enthält alle Elemente, die in A oder B vorkommen). 
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Bestimmen Sie $A \\cap B = \\{$", fitb("4, 6, 9", num = TRUE), "$\\}$")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $A \cap B = \{4, 6, 9\} \Rightarrow$ Schnitt (UND: enthält nur Elemente, die sowohl A als auch B haben).
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(c) Bestimmen Sie $(A \\setminus C) \\cap B = \\{$", fitb("6, 9", num = TRUE), "$\\}$")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $(A \setminus C) \cap B = \{6, 9\} \Rightarrow$ „A ohne C“ ist  $= \{6, 3, 15, 9\}$ und somit bleiben nur 6 und 9 als Elemente, die beide haben.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+library(webexercises)
+opts <- c(
+	answer = "Nein",
+	"Ja"
+	)
+cat("(d) Ist die unter c) bestimmte Menge gleich der Menge $A \\setminus (C \\cap B)$",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Nein, da  $(C \cap B) = \{4\}$ und somit A ohne $\{4\} = \{3, 6, 9, 15\}$
+:::
+
+### Übungen 1 – A3
 
 Bei einem Spiel mit Münzen wird eine Münze 4 Mal hintereinander geworfen. Dabei wird jedes Mal notiert, ob
 Wappen (W) oder Zahl (Z) gefallen ist.
@@ -141,7 +191,7 @@ $A \cap B = \{(W, W, Z, Z)\}$.
 :::
 
 
-### Übungen 1 – A3
+### Übungen 1 – A4
 
 Bestimmen Sie die Mächtigkeit folgender Mengen
 
@@ -175,7 +225,7 @@ cat("(c) C = A $\\cup$ B $\\cup$ {1, . . . , 11} $\\Rightarrow$", fitb(14, num =
 (c) $|C| = 14$
 :::
 
-### Übungen 1 – A4
+### Übungen 1 – A5
 
 Geben Sie die Potenzmenge zu folgenden Mengen an. Bestimmen Sie vorher die Anzahl der Elemente in der
 Potenzmenge.
@@ -203,7 +253,7 @@ Potenzmenge $P(A) = \{\{\} , \{1\} , \{2\} , \{3\} , \{4\} , \{1, 2\} , \{1, 3\}
 $\{1,2,3\},\{1, 2, 4\} , \{1, 3, 4\} , \{2, 3, 4\} , \{1, 2, 3, 4\}\}$
 :::
 
-### Übungen 1 – A5
+### Übungen 1 – A6
 
 Lösen Sie folgende Gleichungen:
 

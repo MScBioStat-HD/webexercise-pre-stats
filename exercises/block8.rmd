@@ -5,7 +5,7 @@ title: Block 8
 library(webexercises)
 ```
 
-## Exercises
+## Deskriptive Statistik
 
 ### Übungen 8 – A1
 

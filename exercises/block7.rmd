@@ -5,7 +5,7 @@ title: Block 7
 library(webexercises)
 ```
 
-
+## Lineare Gleichungssysteme
 **Hinweis:**  Verwenden Sie **t** und **s** als Parameter für frei wählbare Variablen.
 
 
