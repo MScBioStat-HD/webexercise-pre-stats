@@ -230,3 +230,152 @@ cat("(e) Berechnen Sie die Fläche unter der Kurve im Intervall $[-1,1]$", longm
 	A=1.5
 $$
 :::
+
+## Aufgabe 1 (Mengen)
+
+Gegeben sind folgende Mengen $A = \{1,4,7,9,11\} \;\; \text{und} \;\; B = \{1,4,6,9\}$
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Bestimmen Sie $A \\cup B = \\{$", fitb("1, 4, 6, 7, 9, 11", num = TRUE), "$\\}$")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $A \cup B = \{1, 4, 6, 7, 9, 11\} \Rightarrow$ Vereinigung (ODER: enthält alle Elemente, die in A oder B vorkommen). 
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Bestimmen Sie $A \\cap B = \\{$", fitb("1, 4, 9", num = TRUE), "$\\}$")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $A \cup B = \{1, 4, 9\} \Rightarrow$ Vereinigung (UND: enthält nur Elemente, die sowohl A als auch
+B haben).
+:::
+
+
+## Aufgabe 2 (Ableitung)
+
+Bestimmen Sie die erste Ableitung der folgenden Funktionen
+
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"$f^{\\prime}(x) = 6x + e^{4x}$",
+	"$f^{\\prime}(x) = 3x^2 + 4e^{4x}$",
+	answer = "$f^{\\prime}(x) = 6x + 4e^{4x}$"
+)
+
+cat("(a) $f(x) = 3x^{2} + e^{4x}$", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $f^{\prime}(x) = 6x + 4e^{4x} \Rightarrow$ (Notiz: innere Ableitung von $e^{4x}$ ist $4$).
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"$f^{\\prime}(x) = 2 + 2(1 - x)$",
+	answer = "$f^{\\prime}(x) = 0 + 2 \\cdot x$",
+	"$f^{\\prime}(x) = 2 + (1 - x)^{2}$"
+)
+
+cat("(b) $f(x) = 2 \\cdot x + (1 - x)^{2}$", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $f^{\prime}(x) = 2 - 2 \cdot (1 - x) = 0 + 2 \cdot x \Rightarrow$ (Notiz: innere Ableitung von $(1 - x)^{2}$ ist $-1$)
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	answer = "$f^{\\prime}(x) = -1/x^{2}$",
+	"$f^{\\prime}(x) = \\frac{1}{x^{2}}$",
+	"$f^{\\prime}(x) = -\\frac{1}{x}$"
+)
+
+cat("(c) $f(x) = \\frac{1}{x} + 2$", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $f(x) = \frac{1}{x} + 2 \Rightarrow$ (Notiz: $\frac{1}{x} = x^{-1}$)
+:::
+
+
+## Aufgabe 3 (Ableitung, Integral)
+
+Gegeben ist die Funktion $f(x) = 2 \cdot x + 2$
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Bestimmen Sie die Nullstellen der Funktion. <br> $x =$ ", fitb("-1", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $f(x) = 0$ <br>
+	$\Leftrightarrow 2 \cdot x + 2 = 0$ <br>
+	$\Leftrightarrow 2x = -2$ <br>
+	$\Leftrightarrow x = -1$
+:::
+
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	answer = "$f^{\\prime}(x) = 2$",
+	"$f^{\\prime}(x) = 2x$",
+	"$f^{\\prime}(x) = x + 2$"
+)
+
+cat("(b) Bestimmen Sie die erste Ableitung der Funktion.", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $f(x) = \frac{1}{x} + 2 \Rightarrow$ (Notiz: $\frac{1}{x} = x^{-1}$)
+:::
+
+
+::: {.webex .webex-box}
+(c) Bestimmen Sie die Fläche unterhalb der Funktion für $-2 \leq x \leq 4$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Die Stammfunktion ist $F(x)=x^2+2x$.
+
+	Die Nullstelle hatten wir bestimmt mit $x=-1$.
+
+	Bestimmung der Fläche: Addiere die Fläche für $-2 \leq x \leq -1$ und für $-1 \leq x \leq 4$.
+
+	1. $\int_{-2}^{-1} (2x + 2)dx = x^{2} + 2x \mid_{x = -2}^{-1}$ <br> <br>
+	$= F(-1) - F(-2) = (1 - 2) - (4 - 4) = -1$ <br>
+	$\Rightarrow$ Betrag davon ist dann $\left|\int_{-2}^{-1} (2x+2)\,dx\right| = 1$ <br> <br>
+	2. $\int_{-1}^{4} (2x +2)\,dx = x^2+2x \mid_{x=-1}^{x=4}$ <br>
+	$= F(4)-F(-1) = (16+8)-(1-2) = 25$
+
+	$\Rightarrow$ Somit ist die Fläche $= 1 + 25 = 26$
+:::
+
+## Aufgabe 4 (Exponentialfunktion)
+
+In einem Forschungsinstitut wird der Einfluss der Umgebungstemperatur auf das Wachstum
+von Pflanzen untersucht. Die Temperatur ändert sich gemäß der Funktion $f(t) = 6t \cdot e^{1 - 0.5t}$ 
+(t = Zeit in Tagen).
+
+
+## Aufgabe 5 (Vektor, Matrix)
+Gegeben sind <br> <br>
+$A=\begin{pmatrix} 1 & x & 1 \\ 2 & 3 & z \\ 5 & 7 & y \end{pmatrix}$,
+$C=\begin{pmatrix} 2 & 3 \\ 4 & 1 \end{pmatrix}$,
+$x=\begin{pmatrix} 0 \\ 2 \\ -1 \end{pmatrix}$,
+$D=\begin{pmatrix} 1 & 0 \\ -1 & 1 \end{pmatrix}$
