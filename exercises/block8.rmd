@@ -7,4 +7,503 @@ library(webexercises)
 
 ## Deskriptive Statistik
 
+### Übungen 8 – A1.1
 
+::: {.webex .webex-box}
+Bestimmen Sie das Skalenniveau der folgenden Merkmale:
+
+- Augenfarbe
+- Telefonnummern
+- Anzahl Operationen pro Monat
+- Tumorausdehnung (mm)
+- Blutdruck
+- Schmerzen (gering, mittel, hoch)
+- Intelligenzquotient
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+- Augenfarbe $\rightarrow$ Nominalskala
+- Telefonnummern $\rightarrow$ Nominalskala
+- Anzahl Operationen pro Monat $\rightarrow$ Verhältnisskala
+- Tumorausdehnung (mm) $\rightarrow$ Verhältnisskala
+- Blutdruck $\rightarrow$ Verhältnisskala
+- Schmerzen (gering, mittel, hoch) $\rightarrow$ Ordinalskala
+- Intelligenzquotient $\rightarrow$ Ordinalskala
+:::
+
+### Übungen 8 – A1.2
+
+::: {.webex .webex-box}
+Es wird eine Studie geplant, bei der die Wirkung eines Medikaments auf den systolischen Blutdruck bei Hypertonie untersucht werden soll. Ordnen Sie den Begriffen die passenden Oberbegriffe zu.
+
+Begriffe:
+
+1. Patient Müller
+2. 180 mmHg
+3. Blutdruck
+4. Menge aller hypertonen Patienten
+5. Hypertonie
+
+Oberbegriffe:
+
+- Beobachtungseinheit
+- Grundgesamtheit
+- Merkmal
+- Ausprägung
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+- (1) Patient Müller $\rightarrow$ Beobachtungseinheit
+- (2) 180 mmHg $\rightarrow$ Ausprägung
+- (3) Blutdruck $\rightarrow$ Merkmal
+- (4) Menge aller hypertonen Patienten $\rightarrow$ Grundgesamtheit
+- (5) Hypertonie $\rightarrow$ kein passender Oberbegriff aus der Liste
+:::
+
+### Übungen 8 – A1.3
+
+::: {.webex .webex-box}
+Welche der folgenden Merkmale sind qualitativ und welche quantitativ?
+
+- Herzfrequenz
+- Schlaganfall
+- Blutgruppe
+- Zufriedenheit
+- BMI
+- Nüchternblutzucker
+- Infektion
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Qualitativ:**
+
+- Schlaganfall (ja/nein)
+- Blutgruppe (A, B, AB, 0)
+- Zufriedenheit (z.B. niedrig, mittel, hoch)
+- Infektion (ja/nein)
+
+**Quantitativ:**
+
+- Herzfrequenz
+- BMI
+- Nüchternblutzucker
+:::
+
+## Lage- und Streuungsmaße
+
+### Übungen 8 – A2.1
+
+::: {.webex .webex-box}
+Bestimmen Sie Mittelwert und Median der folgenden Cholesterinwerte (mg/dl):
+
+195, 145, 205, 159, 244, 166, 250, 236
+
+Wie ändern sich Mittelwert und Median, wenn ein 9. Proband mit einem Cholesterinwert von 110 mg/dl dazukommt?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Für $n=8$:
+
+$$
+\bar{x} = \frac{1}{8}(195 + 145 + 205 + 159 + 244 + 166 + 250 + 236) = 200
+$$
+
+Geordnet: $145, 159, 166, 195, 205, 236, 244, 250$
+
+$$
+\tilde{x} = \frac{1}{2}(x_{(4)} + x_{(5)}) = \frac{1}{2}(195 + 205) = 200
+$$
+
+Mit dem zusätzlichen Wert $110$ gilt für $n=9$:
+
+$$
+\bar{x} = \frac{1}{9}(195 + 145 + 205 + 159 + 244 + 166 + 250 + 236 + 110) = 190
+$$
+
+Geordnet: $110, 145, 159, 166, 195, 205, 236, 244, 250$
+
+$$
+\tilde{x} = x_{(5)} = 195
+$$
+:::
+
+### Übungen 8 – A2.2
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+cat("Das 0.2-Quantil lautet: ", fitb("159", num = TRUE), "<br>")
+cat("Das 0.8-Quantil lautet: ", fitb("244", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Geordnete Werte: $145, 159, 166, 195, 205, 236, 244, 250$
+
+Für das $0.2$-Quantil:
+
+$$
+\alpha \cdot n = 0.2 \cdot 8 = 1.6 \Rightarrow k = 2
+$$
+
+$$
+\tilde{x}_{0.2} = x_{(2)} = 159
+$$
+
+Für das $0.8$-Quantil:
+
+$$
+\alpha \cdot n = 0.8 \cdot 8 = 6.4 \Rightarrow k = 7
+$$
+
+$$
+\tilde{x}_{0.8} = x_{(7)} = 244
+$$
+:::
+
+## Graphische Darstellung
+
+### Übungen 8 – A3.1
+
+::: {.webex .webex-box}
+Ordnen Sie zu den Histogrammen die folgenden Begriffe zu:
+
+- Rechtsschief
+- Linksschief
+- Multimodal
+- Unimodal
+- Rechtssteil
+- $\bar{x} > \tilde{x}$
+- $\bar{x} \approx \tilde{x}$
+
+Hinweis: Die zugehörigen Abbildungen stehen in der PDF `Block8_DeskriptiveStatistik.pdf`.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+- Histogramm 1: rechtsschief, unimodal, $\bar{x} > \tilde{x}$
+- Histogramm 2: multimodal
+- Histogramm 3: linksschief, unimodal, rechtssteil
+- Histogramm 4: unimodal, $\bar{x} \approx \tilde{x}$
+:::
+
+### Übungen 8 – A3.2
+
+::: {.webex .webex-box}
+Bestimmen Sie Median und $0.8$-Quantil für das Merkmal **BBS score** bei $n=100$ mit folgender Häufigkeitstabelle:
+
+Ausprägungen: $43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55$
+
+Absolute Häufigkeiten: $1, 2, 3, 3, 9, 7, 5, 4, 7, 15, 13, 16, 15$
+
+Absolute kumulative Häufigkeiten: $1, 3, 6, 9, 18, 25, 30, 34, 41, 56, 69, 85, 100$
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Median = $0.5$-Quantil:
+
+$$
+0.5 \cdot 100 = 50
+$$
+
+Da dies eine ganze Zahl ist, gilt:
+
+$$
+\tilde{x} = \frac{x_{(50)} + x_{(51)}}{2}
+$$
+
+Aus den kumulativen Häufigkeiten liegt sowohl der 50. als auch der 51. Wert bei 52, also:
+
+$$
+\tilde{x} = 52
+$$
+
+Für das $0.8$-Quantil:
+
+$$
+0.8 \cdot 100 = 80
+$$
+
+Da auch dies eine ganze Zahl ist, gilt:
+
+$$
+\tilde{x}_{0.8} = \frac{x_{(80)} + x_{(81)}}{2}
+$$
+
+Beide Werte liegen bei 54, also:
+
+$$
+\tilde{x}_{0.8} = 54
+$$
+:::
+
+### Übungen 8 – A3.3
+
+::: {.webex .webex-box}
+Bei einem Boxplot der BMI-Verteilung von $n=21$ Probanden sollen folgende Kennwerte abgelesen werden:
+
+- Median
+- $Q1$
+- $Q3$
+- IQA
+- Range
+
+Hinweis: Die Abbildung steht in der PDF `Block8_DeskriptiveStatistik.pdf`.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+- Median $= 24$
+- $Q1 = 21$
+- $Q3 = 25$
+- IQA $= Q3 - Q1 = 4$
+- Range $= 27 - 18 = 9$
+:::
+
+## Korrelation, Lineare Regression
+
+### Übungen 8 – A4.1
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+cat("Der Korrelationskoeffizient beträgt ungefähr: ", fitb("0.88", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Gegeben ist die Kovarianzmatrix
+
+$$
+\begin{pmatrix}
+7.6 & 4.5 \\
+4.5 & 3.4
+\end{pmatrix}
+$$
+
+Der Korrelationskoeffizient ist
+
+$$
+r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
+$$
+
+Interpretation: hoher positiver Zusammenhang.
+:::
+
+### Übungen 8 – A4.2
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+cat("Die Rangkorrelation beträgt ungefähr: ", fitb("0.88", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Mit
+
+$$
+\rho = 1 - \frac{6\sum (d_i)^2}{n(n^2 - 1)}
+$$
+
+und $\sum (d_i)^2 = 10$, $n=8$ folgt:
+
+$$
+\rho = 1 - \frac{6 \cdot 10}{8 \cdot 63} = 0.88
+$$
+:::
+
+### Übungen 8 – A4.3
+
+::: {.webex .webex-box}
+Teriparatide ist ein Medikament, welches die Aktivität in den Osteoblasten erhöht und somit die Knochenheilung anregt. Für einen Datenausschnitt von 8 Frauen soll der Zusammenhang zwischen Alter (Jahre) und Frakturheilung (Wochen) untersucht werden.
+
+Gegeben sind die Werte:
+
+| ID | Alter | Frakturheilung |
+|---|---:|---:|
+| P1 | 50 | 7 |
+| P2 | 53 | 6.5 |
+| P3 | 70 | 10 |
+| P4 | 65 | 12 |
+| P5 | 69 | 9 |
+| P6 | 58 | 8.5 |
+| P7 | 52 | 7.5 |
+| P8 | 62 | 8 |
+
+Untersuchen Sie den Zusammenhang.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Da beide Merkmale quantitativ sind, kann der Pearson-Korrelationskoeffizient verwendet werden.
+
+Gegeben:
+
+$$
+\bar{x} = 59.9, \quad \bar{y} = 8.6, \quad s_x = 7.8, \quad s_y = 1.8, \quad s_{xy} = 10.4
+$$
+
+Dann gilt:
+
+$$
+r_{xy} = \frac{10.4}{7.8 \cdot 1.8} = 0.75
+$$
+
+Es besteht also ein positiver Zusammenhang mittlerer bis stärkerer Ausprägung.
+:::
+
+### Übungen 8 – A4.4
+
+::: {.webex .webex-box}
+Für dieselbe Fragestellung wird nun Alter und Frakturheilung kategorisiert:
+
+| Alter | Frakturheilung $\leq 9$ Wochen | Frakturheilung $> 9$ Wochen |
+|---|---:|---:|
+| 45–57 | 28 | 15 |
+| 58–70 | 22 | 35 |
+
+Wie stellt sich der Zusammenhang dar?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Mit dem Vierfelderkoeffizienten $\phi$ ergibt sich:
+
+$$
+\phi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = 0.263
+$$
+
+Damit liegt ein eher schwacher positiver Zusammenhang vor.
+:::
+
+### Übungen 8 – A4.5
+
+::: {.webex .webex-box}
+Zeichnen Sie eine Gerade ein, die die Daten repräsentiert, und bestimmen Sie mit der Zwei-Punkte-Form die Gleichung dieser Geraden.
+
+Hinweis: Die Punktewolke steht in der PDF `Block8_DeskriptiveStatistik.pdf`.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Beispielhaft wähle zwei Punkte auf der eingezeichneten Geraden:
+
+$$
+(x_2, y_2) = (28, 12), \quad (x_1, y_1) = (27, 11.4)
+$$
+
+Dann ist die Steigung:
+
+$$
+m = \frac{12 - 11.4}{28 - 27} = 0.6
+$$
+
+Der Achsenabschnitt lautet:
+
+$$
+b = -0.6 \cdot 27 + 11.4 = -4.8
+$$
+
+Also ergibt sich beispielhaft:
+
+$$
+f(x) = 0.6x - 4.8
+$$
+
+Je nach eingezeichneter Geraden sind leicht andere Lösungen möglich.
+:::
+
+### Übungen 8 – A4.6
+
+::: {.webex .webex-box}
+Methode der kleinsten Quadrate:
+
+Die Zielfunktion lautet
+
+$$
+Q(m,b) = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} (y_i - m x_i - b)^2
+$$
+
+Bestimmen Sie
+
+1. die Ableitung nach $m$
+2. die Ableitung nach $b$
+
+Setzen Sie die Ableitungen jeweils gleich 0 und lösen Sie das Gleichungssystem.
+
+Hinweis aus der Vorlesung: Dies ist eine Knobelaufgabe und nicht klausurrelevant.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Die ersten Ableitungen lauten:
+
+$$
+\frac{\partial Q}{\partial m} = 2 \sum_{i=1}^{n} (y_i - m x_i - b)(-x_i)
+$$
+
+$$
+\frac{\partial Q}{\partial b} = 2 \sum_{i=1}^{n} (y_i - m x_i - b)(-1)
+$$
+
+Nach dem Gleichsetzen mit 0 und Umformen erhält man schließlich:
+
+$$
+b = \bar{y} - m \bar{x}
+$$
+
+und
+
+$$
+m = \frac{s_{xy}}{s_x^2}
+$$
+
+Damit ist die Regressionsgerade durch die Methode der kleinsten Quadrate bestimmt.
+:::
+
+### Übungen 8 – A4.7
+
+::: {.webex .webex-box}
+Der Zusammenhang zwischen Adiponectin und BMI soll untersucht werden. Es liegen Daten von 10 Probanden vor.
+
+Gegeben sind:
+
+$$
+\bar{x} = 28.6, \quad \bar{y} = 13.7, \quad s_x = 1.51, \quad s_y = 2.19, \quad s_{xy} = -2.99
+$$
+
+Aufgaben:
+
+1. Fertigen Sie eine Punktewolke zu den Daten an.
+2. Bestimmen Sie die Gleichung der Regressionsgeraden und zeichnen Sie diese in das Diagramm.
+3. Gibt es einen negativen Zusammenhang? Ermitteln Sie hierzu die Korrelation.
+4. Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Die Steigung der Regressionsgeraden ist:
+
+$$
+m = \frac{-2.99}{1.51^2} = -1.31
+$$
+
+Der Achsenabschnitt ist:
+
+$$
+b = 13.7 - (-1.31 \cdot 28.6) = 51.2
+$$
+
+Damit lautet die Regressionsgerade:
+
+$$
+y = -1.31x + 51.2
+$$
+
+Die Korrelation ist:
+
+$$
+r_{xy} = \frac{-2.99}{1.51 \cdot 2.19} = -0.904
+$$
+
+Also besteht eine starke negative Korrelation.
+
+Das Bestimmtheitsmaß ist:
+
+$$
+R^2 = (-0.904)^2 = 0.817
+$$
+
+Interpretation: Etwa $82\%$ der Variabilität der Adiponectin-Werte kann durch den BMI erklärt werden.
+:::

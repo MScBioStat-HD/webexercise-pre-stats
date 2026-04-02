@@ -379,3 +379,240 @@ $A=\begin{pmatrix} 1 & x & 1 \\ 2 & 3 & z \\ 5 & 7 & y \end{pmatrix}$,
 $C=\begin{pmatrix} 2 & 3 \\ 4 & 1 \end{pmatrix}$,
 $x=\begin{pmatrix} 0 \\ 2 \\ -1 \end{pmatrix}$,
 $D=\begin{pmatrix} 1 & 0 \\ -1 & 1 \end{pmatrix}$
+
+::: {.webex .webex-box}
+(a) Berechnen Sie: $A \cdot x$, $A^{T}$ sowie $det(C)$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a)
+
+$$
+A \cdot x =
+\begin{pmatrix} 1 & x & 1 \\ 2 & 3 & z \\ 5 & 7 & y \end{pmatrix}
+\cdot
+\begin{pmatrix} 0 \\ 2 \\ -1 \end{pmatrix}
+=
+\begin{pmatrix} 0 + 2x - 1 \\ 0 + 6 - z \\ 0 + 14 - y \end{pmatrix}
+=
+\begin{pmatrix} 2x - 1 \\ 6 - z \\ 14 - y \end{pmatrix}
+$$
+
+$$
+A^{T} =
+\begin{pmatrix} 1 & 2 & 5 \\ x & 3 & 7 \\ 1 & z & y \end{pmatrix}
+$$
+
+$$
+det(C) = 2 \cdot 1 - 3 \cdot 4 = 2 - 12 = -10
+$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	answer = "Nein",
+	"Ja"
+)
+
+cat("(b) Ist die Matrix $C$ symmetrisch?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Nein, da $C \neq C^{T}$.
+:::
+
+::: {.webex .webex-box}
+(c) Berechnen Sie $E = C + D$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c)
+
+$$
+E = C + D =
+\begin{pmatrix} 2 & 3 \\ 4 & 1 \end{pmatrix}
++
+\begin{pmatrix} 1 & 0 \\ -1 & 1 \end{pmatrix}
+=
+\begin{pmatrix} 3 & 3 \\ 3 & 2 \end{pmatrix}
+$$
+:::
+
+::: {.webex .webex-box}
+(d) Berechnen Sie $F = D \cdot C$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d)
+
+$$
+F = D \cdot C =
+\begin{pmatrix} 1 & 0 \\ -1 & 1 \end{pmatrix}
+\cdot
+\begin{pmatrix} 2 & 3 \\ 4 & 1 \end{pmatrix}
+=
+\begin{pmatrix} 2 & 3 \\ 2 & -2 \end{pmatrix}
+$$
+:::
+
+## Aufgabe 6 (Matrix)
+
+Gegeben ist das Gleichungssystem
+
+$$
+3x + y + 2z = 3
+$$
+$$
+2x - y + z = 1
+$$
+$$
+4x - 2y + 2z = 2
+$$
+
+::: {.webex .webex-box}
+(a) Hat das Gleichungssystem eine Lösung? Falls ja, wie viele Lösungen hat dieses Gleichungssystem?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Betrachte die erweiterte Matrix:
+
+$$
+\left(
+\begin{array}{ccc|c}
+3 & 1 & 2 & 3 \\
+2 & -1 & 1 & 1 \\
+4 & -2 & 2 & 2
+\end{array}
+\right)
+\sim
+\left(
+\begin{array}{ccc|c}
+3 & 1 & 2 & 3 \\
+2 & -1 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{array}
+\right)
+$$
+
+Die dritte Zeile ist also abhängig. Damit gilt: Es existiert mindestens eine Lösung, aber keine eindeutige Lösung. Das Gleichungssystem hat unendlich viele Lösungen, weil eine Variable frei wählbar ist.
+:::
+
+## Aufgabe 7 (Deskription, Einführung)
+
+Bei der Neuaufnahme ins Krankenhaus wird der Blutdruck eines Patienten gemessen.
+Welche der folgenden Aussagen ist/sind richtig?
+
+(1) Die Krankenschwester, die den Blutdruck misst, ist der Merkmalsträger.
+
+(2) Der Blutdruck ist das interessierende Merkmal.
+
+(3) Der Patient ist der Merkmalsträger.
+
+(4) Das Krankenhaus ist die Grundgesamtheit.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"nur 1 und 4 sind richtig",
+	answer = "nur 2 und 3 sind richtig",
+	"nur 2 ist richtig"
+)
+
+cat("Welche Aussage ist korrekt?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Es sind nur (2) und (3) richtig.
+:::
+
+## Aufgabe 8 (Deskription)
+
+Abbildung: Empirische Verteilungsfunktion der systolischen Blutdruckwerte von 150 Patienten mit akutem Myokardinfarkt zum Zeitpunkt der Krankenhausaufnahme (Lange & Bender. Dtsch Med Wochenschr 2007; 132:e3-e4).
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+cat("(a) Bestimmen Sie das 50 \\% Quantil (ungefähr): ", fitb("135", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) 50\%-Quantil = Median = 135
+:::
+
+::: {.webex .webex-box}
+(b) Basierend auf der empirischen Verteilungsfunktion, skizzieren Sie einen Boxplot zu diesen Daten.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $25\%$-Quantil $= 120$, $50\%$-Quantil $= 135$, $75\%$-Quantil $= 155$, Min $= 60$, Max $= 240$. Basierend auf diesen Werten kann der Boxplot gezeichnet werden.
+:::
+
+## Aufgabe 9 (Regression)
+
+Abbildung: Knochendichte am proximalen vs distalen Messort (Spriestersbach et al. Dtsch Ärzteblatt 2009; 106(36): 578-583).
+
+::: {.webex .webex-box}
+(a) Zeichnen Sie den Schwerpunkt der Punktewolke ein: $(\bar{x}, \bar{y}) = (1,1.35)$
+:::
+
+::: {.webex .webex-box}
+(b) Neben $(\bar{x}, \bar{y})$ liegt noch der Punkt $(0.5,0.75)$ auf der Regressionsgeraden. Bestimmen Sie die Gleichung der Regressionsgeraden.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Mit $y = mx + b$ gilt:
+
+	$$
+	m = \frac{1.35 - 0.75}{1 - 0.5} = 1.2
+	$$
+
+	$$
+	b = 1.35 - 1.2 \cdot 1 = 0.15
+	$$
+
+	Damit lautet die Regressionsgerade:
+
+	$$
+	y = 1.2x + 0.15
+	$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+cat("(c) Welche Knochendichte am proximalen Messort würden Sie vorhersagen bei einer Knochendichte am distalen Messort von 1.5? ", fitb("1.95", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $x = 1.5$ in die Regressionsgerade eingesetzt ergibt:
+
+	$$
+	y = 1.2 \cdot 1.5 + 0.15 = 1.95
+	$$
+
+	Es wird also eine Knochendichte am proximalen Messort von $1.95$ vorhergesagt.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+cat("(d) Wie lautet der Regressionskoeffizient? ", fitb("0.86", num = TRUE), "<br>")
+cat("Wie lautet das Bestimmtheitsmaß? ", fitb("0.74", num = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Regressionskoeffizient:
+
+	$$
+	r = m \cdot \frac{s_x}{s_y} = 1.2 \cdot \frac{0.5}{0.7} = 0.86
+	$$
+
+	Bestimmtheitsmaß:
+
+	$$
+	R^2 = 0.86^2 = 0.74
+	$$
+:::
