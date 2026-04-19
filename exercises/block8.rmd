@@ -9,19 +9,41 @@ library(webexercises)
 
 ### Übungen 8 – A1.1
 
-::: {.webex .webex-box}
-Bestimmen Sie das Skalenniveau der folgenden Merkmale:
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts_nominal <- c(
+	answer = "Nominalskala",
+	"Ordinalskala",
+	"Intervallskala",
+	"Verhältnisskala"
+)
 
-- Augenfarbe
-- Telefonnummern
-- Anzahl Operationen pro Monat
-- Tumorausdehnung (mm)
-- Blutdruck
-- Schmerzen (gering, mittel, hoch)
-- Intelligenzquotient
+opts_ordinal <- c(
+	"Nominalskala",
+	answer = "Ordinalskala",
+	"Intervallskala",
+	"Verhältnisskala"
+)
+
+opts_verhaeltnis <- c(
+	"Nominalskala",
+	"Ordinalskala",
+	"Intervallskala",
+	answer = "Verhältnisskala"
+)
+cat("(a) Bestimmen Sie das Skalenniveau der folgenden Merkmale:<br><br>")
+cat("(1) Augenfarbe: ", mcq(opts_nominal), "<br><br>")
+cat("(2) Telefonnummern: ", mcq(opts_nominal), "<br><br>")
+cat("(3) Anzahl Operationen pro Monat: ", mcq(opts_verhaeltnis), "<br><br>")
+cat("(4) Tumorausdehnung (mm): ", mcq(opts_verhaeltnis), "<br><br>")
+cat("(5) Blutdruck: ", mcq(opts_verhaeltnis), "<br><br>")
+cat("(6) Schmerzen (gering, mittel, hoch): ", mcq(opts_ordinal), "<br><br>")
+cat("(7) Intelligenzquotient: ", mcq(opts_ordinal))
+```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
+(a)
 - Augenfarbe $\rightarrow$ Nominalskala
 - Telefonnummern $\rightarrow$ Nominalskala
 - Anzahl Operationen pro Monat $\rightarrow$ Verhältnisskala
@@ -33,26 +55,79 @@ Bestimmen Sie das Skalenniveau der folgenden Merkmale:
 
 ### Übungen 8 – A1.2
 
-::: {.webex .webex-box}
-Es wird eine Studie geplant, bei der die Wirkung eines Medikaments auf den systolischen Blutdruck bei Hypertonie untersucht werden soll. Ordnen Sie den Begriffen die passenden Oberbegriffe zu.
+::: {.webex-check .webex-box}
+(a) Es wird eine Studie geplant, bei dem die Wirkung eines Medikaments auf den 
+	systolischen Blutdruck bei der Hypertonie untersucht werden soll. 
 
-Begriffe:
+	**Ordnen Sie den Begriffen die entsprechenden Oberbegriffe zu.**
 
-1. Patient Müller
-2. 180 mmHg
-3. Blutdruck
-4. Menge aller hypertonen Patienten
-5. Hypertonie
+	**Begriffe:**
 
-Oberbegriffe:
+	1. Patient Müller
+	2. 180 mmHg
+	3. Blutdruck
+	4. Menge aller hypertonen Patienten
+	5. Hypertonie
 
-- Beobachtungseinheit
-- Grundgesamtheit
-- Merkmal
-- Ausprägung
+	**Oberbegriffe:**
+
+	a. Beobachtungseinheit
+	b. Grundgesamtheit
+	c. Merkmal
+	d. Ausprägung
+
+	```{r, results='asis', echo=FALSE}
+	opts_beobachtungseinheit <- c(
+		answer = "Beobachtungseinheit",
+		"Grundgesamtheit",
+		"Merkmal",
+		"Ausprägung",
+		"kein passender Oberbegriff"
+	)
+
+	opts_auspraegung <- c(
+		"Beobachtungseinheit",
+		"Grundgesamtheit",
+		"Merkmal",
+		answer = "Ausprägung",
+		"kein passender Oberbegriff"
+	)
+
+	opts_merkmal <- c(
+		"Beobachtungseinheit",
+		"Grundgesamtheit",
+		answer = "Merkmal",
+		"Ausprägung",
+		"kein passender Oberbegriff"
+	)
+
+	opts_grundgesamtheit <- c(
+		"Beobachtungseinheit",
+		answer = "Grundgesamtheit",
+		"Merkmal",
+		"Ausprägung",
+		"kein passender Oberbegriff"
+	)
+
+	opts_keiner <- c(
+		"Beobachtungseinheit",
+		"Grundgesamtheit",
+		"Merkmal",
+		"Ausprägung",
+		answer = "kein passender Oberbegriff"
+	)
+
+	cat("<br><strong>Wählen Sie zu jedem Begriff den passenden Oberbegriff:</strong><br><br>")
+	cat("(1) Patient Müller: ", mcq(opts_beobachtungseinheit), "<br><br>")
+	cat("(2) 180 mmHg: ", mcq(opts_auspraegung), "<br><br>")
+	cat("(3) Blutdruck: ", mcq(opts_merkmal), "<br><br>")
+	cat("(4) Menge aller hypertonen Patienten: ", mcq(opts_grundgesamtheit), "<br><br>")
+	cat("(5) Hypertonie: ", mcq(opts_keiner))
+	```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
+(a)
 - (1) Patient Müller $\rightarrow$ Beobachtungseinheit
 - (2) 180 mmHg $\rightarrow$ Ausprägung
 - (3) Blutdruck $\rightarrow$ Merkmal
@@ -62,102 +137,127 @@ Oberbegriffe:
 
 ### Übungen 8 – A1.3
 
-::: {.webex .webex-box}
-Welche der folgenden Merkmale sind qualitativ und welche quantitativ?
+::: {.webex-check .webex-box}
 
-- Herzfrequenz
-- Schlaganfall
-- Blutgruppe
-- Zufriedenheit
-- BMI
-- Nüchternblutzucker
-- Infektion
+
+```{r, results='asis', echo=FALSE}
+opts_qualitativ <- c(
+	answer = "qualitativ",
+	"quantitativ"
+)
+
+opts_quantitativ <- c(
+	"qualitativ",
+	answer = "quantitativ"
+)
+cat("(a) Welche der folgenden Merkmale sind qualitativ und welche quantitativ? <br><br>")
+cat("(1) Herzfrequenz: ", mcq(opts_quantitativ), "<br><br>")
+cat("(2) Schlaganfall: ", mcq(opts_qualitativ), "<br><br>")
+cat("(3) Blutgruppe: ", mcq(opts_qualitativ), "<br><br>")
+cat("(4) Zufriedenheit: ", mcq(opts_qualitativ), "<br><br>")
+cat("(5) BMI: ", mcq(opts_quantitativ), "<br><br>")
+cat("(6) Nüchternblutzucker: ", mcq(opts_quantitativ), "<br><br>")
+cat("(7) Infektion: ", mcq(opts_qualitativ))
+```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-**Qualitativ:**
+(a) **Qualitativ:**
 
-- Schlaganfall (ja/nein)
-- Blutgruppe (A, B, AB, 0)
-- Zufriedenheit (z.B. niedrig, mittel, hoch)
-- Infektion (ja/nein)
+	- Schlaganfall (ja/nein)
+	- Blutgruppe (A, B, AB, 0)
+	- Zufriedenheit (z.B. niedrig, mittel, hoch)
+	- Infektion (ja/nein)
 
-**Quantitativ:**
+	**Quantitativ:**
 
-- Herzfrequenz
-- BMI
-- Nüchternblutzucker
+	- Herzfrequenz
+	- BMI
+	- Nüchternblutzucker
 :::
 
 ## Lage- und Streuungsmaße
 
 ### Übungen 8 – A2.1
 
-::: {.webex .webex-box}
-Bestimmen Sie Mittelwert und Median der folgenden Cholesterinwerte (mg/dl):
+::: {.webex-check .webex-box}
+(a) Bestimmen Sie **Mittelwert** und **Median** der folgenden Cholesterinwerte (mg/dl):
 
-195, 145, 205, 159, 244, 166, 250, 236
+	<img src="images/image_8A2_a.png" width="180"> <br>
 
-Wie ändern sich Mittelwert und Median, wenn ein 9. Proband mit einem Cholesterinwert von 110 mg/dl dazukommt?
+	Wie ändern sich **Mittelwert** und **Median**, wenn ein 9ter Proband mit einem Cholesterinwert von 110 mg/dl dazukommt?
+
+	```{r, results='asis', echo=FALSE}
+	cat("<br>Für <strong>n = 8</strong>:<br>")
+	cat("Mittelwert: ", fitb("200", num = TRUE), "<br>")
+	cat("Median: ", fitb("200", num = TRUE), "<br><br>")
+	cat("Für <strong>n = 9</strong>:<br>")
+	cat("Mittelwert: ", fitb("190", num = TRUE), "<br>")
+	cat("Median: ", fitb("195", num = TRUE))
+	```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Für $n=8$:
+(a) Für $n=8$:
 
-$$
-\bar{x} = \frac{1}{8}(195 + 145 + 205 + 159 + 244 + 166 + 250 + 236) = 200
-$$
+	$$
+	\bar{x} = \frac{1}{8}(195 + 145 + 205 + 159 + 244 + 166 + 250 + 236) = 200
+	$$
 
-Geordnet: $145, 159, 166, 195, 205, 236, 244, 250$
+	Geordnet: $145, \;159, \;166, \;195, \;205, \;236, \;244, \;250$
 
-$$
-\tilde{x} = \frac{1}{2}(x_{(4)} + x_{(5)}) = \frac{1}{2}(195 + 205) = 200
-$$
+	$$
+	\tilde{x} = \frac{1}{2}(x_{(4)} + x_{(5)}) = \frac{1}{2}(195 + 205) = 200
+	$$
 
-Mit dem zusätzlichen Wert $110$ gilt für $n=9$:
+	Mit dem zusätzlichen Wert $110$ gilt für $n=9$:
 
-$$
-\bar{x} = \frac{1}{9}(195 + 145 + 205 + 159 + 244 + 166 + 250 + 236 + 110) = 190
-$$
+	$$
+	\bar{x} = \frac{1}{9}(195 + 145 + 205 + 159 + 244 + 166 + 250 + 236 + 110) = 190
+	$$
 
-Geordnet: $110, 145, 159, 166, 195, 205, 236, 244, 250$
+	Geordnet: $110, \;145, \;159, \;166, \;195, \;205, \;236, \;244, \;250$
 
-$$
-\tilde{x} = x_{(5)} = 195
-$$
+	$$
+	\tilde{x} = x_{(5)} = 195
+	$$
+
+	<img src="images/image8A2_s.png" width="250"> 
 :::
 
 ### Übungen 8 – A2.2
 
 ::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
-cat("Das 0.2-Quantil lautet: ", fitb("159", num = TRUE), "<br>")
-cat("Das 0.8-Quantil lautet: ", fitb("244", num = TRUE))
-```
+(a) Bestimmen Sie das 0.2-Quantil- 0.8-Quantil der folgenden Werte. <br><br>
+	<img src="images/image_8A2_a.png" width="180"> <br><br>
+	```{r, results='asis', echo = FALSE}
+	cat("Das 0.2-Quantil lautet: ", fitb("159", num = TRUE), "<br>")
+	cat("Das 0.8-Quantil lautet: ", fitb("244", num = TRUE))
+	```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Geordnete Werte: $145, 159, 166, 195, 205, 236, 244, 250$
+(a) Geordnete Werte: $145, \;159, \;166, \;195, \;205, \;236, \;244, \;250$
 
-Für das $0.2$-Quantil:
+	Für das $0.2$-Quantil:
 
-$$
-\alpha \cdot n = 0.2 \cdot 8 = 1.6 \Rightarrow k = 2
-$$
+	$$
+	\alpha \cdot n = 0.2 \cdot 8 = 1.6 \Rightarrow k = 2
+	$$
 
-$$
-\tilde{x}_{0.2} = x_{(2)} = 159
-$$
+	$$
+	\tilde{x}_{0.2} = x_{(2)} = 159
+	$$
 
-Für das $0.8$-Quantil:
+	Für das $0.8$-Quantil:
 
-$$
-\alpha \cdot n = 0.8 \cdot 8 = 6.4 \Rightarrow k = 7
-$$
+	$$
+	\alpha \cdot n = 0.8 \cdot 8 = 6.4 \Rightarrow k = 7
+	$$
 
-$$
-\tilde{x}_{0.8} = x_{(7)} = 244
-$$
+	$$
+	\tilde{x}_{0.8} = x_{(7)} = 244
+	$$
 :::
 
 ## Graphische Darstellung
@@ -165,91 +265,104 @@ $$
 ### Übungen 8 – A3.1
 
 ::: {.webex .webex-box}
-Ordnen Sie zu den Histogrammen die folgenden Begriffe zu:
+(a) Ordnen Sie zu den **Histogrammen** die folgenden **Begriffe** zu: <br><br>
+	**Histogrammen**
+	(1) <img src="images/imageA3.1_1.png" width="200"> <br><br>
+	(2) <img src="images/imageA3.1_2.png" width="200"> <br><br>
+	(3) <img src="images/imageA3.1_3.png" width="200"> <br><br>
+	(4) <img src="images/imageA3.1_4.png" width="200"> <br><br>
 
-- Rechtsschief
-- Linksschief
-- Multimodal
-- Unimodal
-- Rechtssteil
-- $\bar{x} > \tilde{x}$
-- $\bar{x} \approx \tilde{x}$
+	**Begriffe**
 
-Hinweis: Die zugehörigen Abbildungen stehen in der PDF `Block8_DeskriptiveStatistik.pdf`.
+	(a) Rechtsschief
+	(b) Linksschief
+	(c) Multimodal
+	(d) Unimodal
+	(e) Rechtssteil
+	(f) $\bar{x} > \tilde{x}$
+	(g) $\bar{x} \approx \tilde{x}$
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-- Histogramm 1: rechtsschief, unimodal, $\bar{x} > \tilde{x}$
-- Histogramm 2: multimodal
-- Histogramm 3: linksschief, unimodal, rechtssteil
-- Histogramm 4: unimodal, $\bar{x} \approx \tilde{x}$
+(a)
+
+| Histogramm | Begriffe | Beschreibung |
+|:----------:|----------|--------------|
+| 1 | **b, e, f** | rechtsschief, unimodal, $\bar{x} > \tilde{x}$ |
+| 2 | **c**       | multimodal |
+| 3 | **b, d, e** | linksschief, unimodal, rechtssteil |
+| 4 | **d, g**    | unimodal, $\bar{x} \approx \tilde{x}$ |
+
 :::
 
 ### Übungen 8 – A3.2
 
 ::: {.webex .webex-box}
-Bestimmen Sie Median und $0.8$-Quantil für das Merkmal **BBS score** bei $n=100$ mit folgender Häufigkeitstabelle:
+(a) Bestimmen Sie **Median** und **$0.8$-Quantil** für das Merkmal BBS score bei $n=100$ mit folgender Häufigkeitstabelle:
+	<br><br><img src="images/image8A3.2.png" width="650"> <br><br>
+	**Median** $(\tilde{x}_{0.5})=$ `r fitb(52, num = TRUE)`
 
-Ausprägungen: $43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55$
-
-Absolute Häufigkeiten: $1, 2, 3, 3, 9, 7, 5, 4, 7, 15, 13, 16, 15$
-
-Absolute kumulative Häufigkeiten: $1, 3, 6, 9, 18, 25, 30, 34, 41, 56, 69, 85, 100$
+	**0.8-Quantil** $(\tilde{x}_{0.8})=$ `r fitb(54, num = TRUE)`
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Median = $0.5$-Quantil:
+(a) Median = $0.5$-Quantil:
 
-$$
-0.5 \cdot 100 = 50
-$$
+	$$
+	0.5 \cdot 100 = 50
+	$$
 
-Da dies eine ganze Zahl ist, gilt:
+	Da dies eine ganze Zahl ist, gilt:
 
-$$
-\tilde{x} = \frac{x_{(50)} + x_{(51)}}{2}
-$$
+	$$
+	\tilde{x} = \frac{x_{(50)} + x_{(51)}}{2}
+	$$
 
-Aus den kumulativen Häufigkeiten liegt sowohl der 50. als auch der 51. Wert bei 52, also:
+	Aus den kumulativen Häufigkeiten liegt sowohl der 50. als auch der 51. Wert bei 52, also:
 
-$$
-\tilde{x} = 52
-$$
+	$$
+		\textbf{Median}(\tilde{x}_{0.5}) = 52
+	$$
 
-Für das $0.8$-Quantil:
+	Für das $0.8$-Quantil:
 
-$$
-0.8 \cdot 100 = 80
-$$
+	$$
+	0.8 \cdot 100 = 80
+	$$
 
-Da auch dies eine ganze Zahl ist, gilt:
+	Da auch dies eine ganze Zahl ist, gilt:
 
-$$
-\tilde{x}_{0.8} = \frac{x_{(80)} + x_{(81)}}{2}
-$$
+	$$
+	\tilde{x}_{0.8} = \frac{x_{(80)} + x_{(81)}}{2}
+	$$
 
-Beide Werte liegen bei 54, also:
+	Beide Werte liegen bei 54, also:
 
-$$
-\tilde{x}_{0.8} = 54
+	$$
+	\textbf{0.8-Quantil} (\tilde{x}_{0.8}) = 54
 $$
 :::
 
 ### Übungen 8 – A3.3
 
-::: {.webex .webex-box}
-Bei einem Boxplot der BMI-Verteilung von $n=21$ Probanden sollen folgende Kennwerte abgelesen werden:
+::: {.webex-check .webex-box}
+(a) Bei einem Boxplot der **BMI-Verteilung** von $n=21$ Probanden sollen folgende **Kennwerte** abgelesen werden: <br><br>
+	**BMI-Verteilung:**
+	<br><br><img src="images/image8A3.3.png" width="450"> <br><br>
+**Kennwerte:**
 
-- Median
-- $Q1$
-- $Q3$
-- IQA
-- Range
+	| Kennwert | Wert |
+	|----------|------|
+	| Median   | `r fitb(24, num = TRUE)` |
+	| Q1       | `r fitb(21, num = TRUE)` |
+	| Q3       | `r fitb(25, num = TRUE)` |
+	| IQA      | `r fitb(4, num = TRUE)`  |
+	| Range    | `r fitb(9, num = TRUE)`  |
 
-Hinweis: Die Abbildung steht in der PDF `Block8_DeskriptiveStatistik.pdf`.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
+(a)
 - Median $= 24$
 - $Q1 = 21$
 - $Q3 = 25$
@@ -260,250 +373,302 @@ Hinweis: Die Abbildung steht in der PDF `Block8_DeskriptiveStatistik.pdf`.
 ## Korrelation, Lineare Regression
 
 ### Übungen 8 – A4.1
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
-cat("Der Korrelationskoeffizient beträgt ungefähr: ", fitb("0.88", num = TRUE))
-```
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-Gegeben ist die Kovarianzmatrix
-
-$$
+Gegeben ist folgende Kovarianzmatrix (n=100): <br><br>
+$\begin{pmatrix}
+S_{x}^{2} & S_{xy} \\
+S_{xy} & S_{y}^{2}
+\end{pmatrix}
+=
 \begin{pmatrix}
 7.6 & 4.5 \\
 4.5 & 3.4
 \end{pmatrix}
-$$
+$
 
-Der Korrelationskoeffizient ist
+::: {.webex-check .webex-box}
+(a) Berechnen Sie damit den Korrelationskoeffizienten.<br>
+	```{r, results='asis', echo = FALSE}
 
-$$
-r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
-$$
+	cat("Korrelationskoeffizient $=$ ", fitb("0.88", num = TRUE))
+	```
+:::
 
-Interpretation: hoher positiver Zusammenhang.
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Gegeben ist die Kovarianzmatrix
+
+	$$\begin{pmatrix}
+	7.6 & 4.5 \\
+	4.5 & 3.4
+	\end{pmatrix}
+	$$
+
+	Der Korrelationskoeffizient ist
+
+	$$
+	r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
+	$$
+:::
+
+::: {.webex .webex-box}
+(b) Wie interpretieren Sie das Ergebnis?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Interpretation: hoher positiver Zusammenhang.
 :::
 
 ### Übungen 8 – A4.2
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
-cat("Die Rangkorrelation beträgt ungefähr: ", fitb("0.88", num = TRUE))
-```
+### Übungen – A4.2 Rangkorrelation
+
+::: {.webex .webex-box}
+(a) Gegeben sind folgende Messwerte von $n = 8$ Patienten:
+
+	- Merkmal $X$ = TUG [s]
+	- Merkmal $Y$ = FES-I-Score
+
+	**Notiz:** Merkmale sind mind. ordinalskaliert.
+
+	<br><img src="images/image8A4.2.png" width="450"> <br><br>
+
+	**Schritt 1:** Vergeben Sie die Ränge für $x_i$ und $y_i$.
+
+	| $x_i$ | Rang $x_{(i)}$ | $y_i$ | Rang $y_{(i)}$ |
+	|--------|----------------|--------|----------------|
+	| 7      | `r fitb(1)`    | 16     | `r fitb(1)`    |
+	| 12     | `r fitb(8)`    | 35     | `r fitb(7)`    |
+	| 7.5    | `r fitb(2)`    | 25     | `r fitb(4)`    |
+	| 8      | `r fitb(3)`    | 24     | `r fitb(3)`    |
+	| 10.5   | `r fitb(6)`    | 30     | `r fitb(6)`    |
+	| 8.5    | `r fitb(4)`    | 23     | `r fitb(2)`    |
+	| 9      | `r fitb(5)`    | 26     | `r fitb(5)`    |
+	| 11     | `r fitb(7)`    | 38     | `r fitb(8)`    |
+
+	<br><br>**Schritt 2:** Berechnen Sie $(d_i)^2 = (\text{Rang}\, x_i - \text{Rang}\, y_i)^2$ für jede Zeile.
+
+	| $x_i$ | Rang $x_{(i)}$ | $y_i$ | Rang $y_{(i)}$ | $(d_i)^2$ |
+	|--------|----------------|--------|----------------|-----------|
+	| 7      | 1              | 16     | 1              | `r fitb(0)` |
+	| 12     | 8              | 35     | 7              | `r fitb(1)` |
+	| 7.5    | 2              | 25     | 4              | `r fitb(4)` |
+	| 8      | 3              | 24     | 3              | `r fitb(0)` |
+	| 10.5   | 6              | 30     | 6              | `r fitb(0)` |
+	| 8.5    | 4              | 23     | 2              | `r fitb(4)` |
+	| 9      | 5              | 26     | 5              | `r fitb(0)` |
+	| 11     | 7              | 38     | 8              | `r fitb(1)` |
+
+	<br><br>**Schritt 3:** Berechnen Sie die Summe $\sum (d_i)^{2} =$ `r fitb(10)`
+
+	**Schritt 4:** Berechnen Sie die Rangkorrelation nach Spearman:
+
+	$$\rho = 1 - \frac{6 \cdot \sum d_i^2}{n(n^2 - 1)}$$
+
+	$\rho =$ `r fitb(0.881, tol = 0.001)`
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Mit
+(a)
+| $x_i$ | Rang $x_{(i)}$ | $y_i$ | Rang $y_{(i)}$ | $(d_i)^2$ |
+|--------|----------------|--------|----------------|-----------|
+| 7      | 1              | 16     | 1              | 0         |
+| 12     | 8              | 35     | 7              | 1         |
+| 7.5    | 2              | 25     | 4              | 4         |
+| 8      | 3              | 24     | 3              | 0         |
+| 10.5   | 6              | 30     | 6              | 0         |
+| 8.5    | 4              | 23     | 2              | 4         |
+| 9      | 5              | 26     | 5              | 0         |
+| 11     | 7              | 38     | 8              | 1         |
 
-$$
-\rho = 1 - \frac{6\sum (d_i)^2}{n(n^2 - 1)}
-$$
+	$$\sum (d_i)^2 = 10$$
 
-und $\sum (d_i)^2 = 10$, $n=8$ folgt:
+	$$\rho = 1 - \frac{6 \cdot 10}{8 \cdot (64 - 1)} = 1 - \frac{60}{504} \approx 0.881$$
 
-$$
-\rho = 1 - \frac{6 \cdot 10}{8 \cdot 63} = 0.88
-$$
+	Es besteht ein **starker positiver Zusammenhang** zwischen TUG und FES-I-Score.
 :::
 
 ### Übungen 8 – A4.3
 
+Teriparatide ist ein Medikament, welches die Aktivität in den
+Osteoblasten erhöht und somit die Knochenheilung anregt. In
+einer klinischen Studie wurde an **$n = 100$** \ Frauen mit
+osteoporotischer Beckenfraktur untersucht, ob es einen
+Zusammenhang zwischen dem Alter \[Jahren\] und der
+Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
+
+:::: {.columns}
+<p align="center"><img src="images/image8A4.3.png" width="250"></p>
+
+
+::: {.column width="65%"}
+> **Hinweis:** Dies ist nur ein Datenausschnitt, damit Sie dies per Hand rechnen können. 
+> Bei $n = 100$ und quantitativen, normalverteilten Merkmalen 
+> kann der **Pearson-Korrelationskoeffizient** $r$ berechnet werden. Bei 
+> kleinen Stichproben würde man ansonsten eher den 
+> **Rangkorrelationskoeffizienten** berechnen.
+:::
+
 ::: {.webex .webex-box}
-Teriparatide ist ein Medikament, welches die Aktivität in den Osteoblasten erhöht und somit die Knochenheilung anregt. Für einen Datenausschnitt von 8 Frauen soll der Zusammenhang zwischen Alter (Jahre) und Frakturheilung (Wochen) untersucht werden.
+(a) Untersuchen Sie für diesen Ausschnitt von den Daten den Zusammenhang.
 
-Gegeben sind die Werte:
+	**Schritt 1:** Welches Skalenniveau haben die Merkmale?
 
-| ID | Alter | Frakturheilung |
-|---|---:|---:|
-| P1 | 50 | 7 |
-| P2 | 53 | 6.5 |
-| P3 | 70 | 10 |
-| P4 | 65 | 12 |
-| P5 | 69 | 9 |
-| P6 | 58 | 8.5 |
-| P7 | 52 | 7.5 |
-| P8 | 62 | 8 |
+	`r mcq(c("Nominalskaliert", "Ordinalskaliert", answer = "Intervallskaliert", "Verhältnisskaliert"))`
 
-Untersuchen Sie den Zusammenhang.
+	**Schritt 2:** Berechnen Sie die Mittelwerte.
+
+	$\bar{x} =$ `r fitb(59.9, tol = 0.05)` &nbsp; $\bar{y} =$ `r fitb(8.6, tol = 0.05)`
+
+	**Schritt 3:** Berechnen Sie die Standardabweichungen.
+
+	$s_x =$ `r fitb(7.8, tol = 0.05)` &nbsp; $s_y =$ `r fitb(1.8, tol = 0.05)`
+
+	**Schritt 4:** Berechnen Sie die Kovarianz.
+
+	$$s_{xy} = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})$$
+
+	$s_{xy} =$ `r fitb(10.4, tol = 0.05)`
+
+	**Schritt 5:** Berechnen Sie den Pearson-Korrelationskoeffizienten.
+
+	$$r_{xy} = \frac{s_{xy}}{s_x \cdot s_y}$$
+
+	$r_{xy} =$ `r fitb(0.75, tol = 0.01)`
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Da beide Merkmale quantitativ sind, kann der Pearson-Korrelationskoeffizient verwendet werden.
 
-Gegeben:
+(a) Die Merkmale sind **intervallskaliert** → Pearson-Korrelation wird verwendet.
 
-$$
-\bar{x} = 59.9, \quad \bar{y} = 8.6, \quad s_x = 7.8, \quad s_y = 1.8, \quad s_{xy} = 10.4
-$$
+	<img src="images/image8A4.3_s.png" width="350"> <br>
 
-Dann gilt:
+	$$r_{xy} = \frac{s_{xy}}{s_x \cdot s_y} = \frac{10.4}{7.8 \cdot 1.8} = 0.75$$
 
-$$
-r_{xy} = \frac{10.4}{7.8 \cdot 1.8} = 0.75
-$$
-
-Es besteht also ein positiver Zusammenhang mittlerer bis stärkerer Ausprägung.
+	Es besteht ein **starker positiver linearer Zusammenhang** zwischen dem 
+	Alter und der Frakturheilungszeit.
 :::
 
 ### Übungen 8 – A4.4
 
 ::: {.webex .webex-box}
-Für dieselbe Fragestellung wird nun Alter und Frakturheilung kategorisiert:
+::: {.column width="65%"}
+> Teriparatide ist ein Medikament, welches die Aktivität in den Osteoblasten 
+> erhöht und somit die Knochenheilung anregt. In einer klinischen Studie wurde 
+> an $n = 100$ Frauen mit osteoporotischer Beckenfraktur untersucht, ob es einen 
+> Zusammenhang zwischen dem Alter [Jahren] und der Frakturheilung (Zeit [Wochen]) 
+> gibt unter Gabe von Teriparatide.
+:::
+(a) Wie stellt sich der Zusammenhang dar, wenn man eine Kategorisierung 
+	des Alters und der Dauer der Frakturheilung vornimmt?
 
-| Alter | Frakturheilung $\leq 9$ Wochen | Frakturheilung $> 9$ Wochen |
-|---|---:|---:|
-| 45–57 | 28 | 15 |
-| 58–70 | 22 | 35 |
-
-Wie stellt sich der Zusammenhang dar?
+	<img src="images/image8A4.4.png" width="350"> <br><br>
+	$\varphi =$ `r fitb(0.263, tol = 0.005)`
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Mit dem Vierfelderkoeffizienten $\phi$ ergibt sich:
 
-$$
-\phi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = 0.263
-$$
+(a) Da beide Merkmale kategorisiert (dichotom) vorliegen, wird der 
+	**Vierfelderkoeffizient** $\varphi$ verwendet.
 
-Damit liegt ein eher schwacher positiver Zusammenhang vor.
+	| Alter | Frakturheilung $\leq 9$ Wochen | Frakturheilung $> 9$ Wochen |
+	|-------|:------------------------------:|:---------------------------:|
+	| 45–57 | $a = 28$                       | $b = 15$                    |
+	| 58–70 | $c = 22$                       | $d = 35$                    |
+
+	$$\varphi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = \frac{980 - 330}{\sqrt{6\,149\,250}} = \frac{650}{2\,479.8} \approx 0.263$$
 :::
 
 ### Übungen 8 – A4.5
 
 ::: {.webex .webex-box}
-Zeichnen Sie eine Gerade ein, die die Daten repräsentiert, und bestimmen Sie mit der Zwei-Punkte-Form die Gleichung dieser Geraden.
+(a) Zeichnen Sie eine Gerade ein, die die Daten repräsentiert.<br><br>
 
-Hinweis: Die Punktewolke steht in der PDF `Block8_DeskriptiveStatistik.pdf`.
+<img src="images/image8A4.5.png" width="550">
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Beispielhaft wähle zwei Punkte auf der eingezeichneten Geraden:
-
-$$
-(x_2, y_2) = (28, 12), \quad (x_1, y_1) = (27, 11.4)
-$$
-
-Dann ist die Steigung:
-
-$$
-m = \frac{12 - 11.4}{28 - 27} = 0.6
-$$
-
-Der Achsenabschnitt lautet:
-
-$$
-b = -0.6 \cdot 27 + 11.4 = -4.8
-$$
-
-Also ergibt sich beispielhaft:
-
-$$
-f(x) = 0.6x - 4.8
-$$
-
-Je nach eingezeichneter Geraden sind leicht andere Lösungen möglich.
+(a)
+<img src="images/image84.5_s.png" width="550">
 :::
-
-### Übungen 8 – A4.6
 
 ::: {.webex .webex-box}
-Methode der kleinsten Quadrate:
-
-Die Zielfunktion lautet
-
-$$
-Q(m,b) = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} (y_i - m x_i - b)^2
-$$
-
-Bestimmen Sie
-
-1. die Ableitung nach $m$
-2. die Ableitung nach $b$
-
-Setzen Sie die Ableitungen jeweils gleich 0 und lösen Sie das Gleichungssystem.
-
-Hinweis aus der Vorlesung: Dies ist eine Knobelaufgabe und nicht klausurrelevant.
+(b) Bestimmen Sie (Zwei-Punkte Form) die Gleichung dieser Geraden.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Die ersten Ableitungen lauten:
+(b) **Beispiel** mit den Punkten $(x_1, y_1) = (27;\ 11.4)$ und $(x_2, y_2) = (28;\ 12)$:
 
-$$
-\frac{\partial Q}{\partial m} = 2 \sum_{i=1}^{n} (y_i - m x_i - b)(-x_i)
-$$
+	**Steigung:**
+	$$m = \frac{12 - 11.4}{28 - 27} = \frac{0.6}{1} = 0.6$$
 
-$$
-\frac{\partial Q}{\partial b} = 2 \sum_{i=1}^{n} (y_i - m x_i - b)(-1)
-$$
+	**y-Achsenabschnitt:**
+	$$b = -0.6 \cdot 27 + 11.4 = -4.8$$
 
-Nach dem Gleichsetzen mit 0 und Umformen erhält man schließlich:
+	**Geradengleichung:**
+	$$f(x) = 0.6 \cdot x - 4.8$$
 
-$$
-b = \bar{y} - m \bar{x}
-$$
-
-und
-
-$$
-m = \frac{s_{xy}}{s_x^2}
-$$
-
-Damit ist die Regressionsgerade durch die Methode der kleinsten Quadrate bestimmt.
+	> **Hinweis:** Sie werden wahrscheinlich andere Punkte gewählt haben und 
+	> erhalten daher eine leicht abweichende Lösung. Um die **beste** Gerade 
+	> für die Daten zu finden, verwendet man die **Methode der kleinsten Quadrate**.
 :::
 
 ### Übungen 8 – A4.7
+Der Zusammenhang zwischen Adiponectin und BMI soll untersucht werden.
+
+**Hintergrund:** Adiponectin stimuliert die Fettsäureoxidation in Muskeln und 
+Leber und führt zu einer Verbesserung der Insulinsensitivität. Bei adipösen 
+Patienten ist die Plasmakonzentration von Adiponectin erniedrigt. Vermutet wird 
+eine **negative Korrelation** mit dem BMI.
+
+Gegeben sind Daten von $n = 10$ Probanden sowie folgende Maße:
+
+$$\bar{x} = 28.6, \quad \bar{y} = 13.7, \quad s_x = 1.51, \quad s_y = 2.19, 
+\quad s_{xy} = -2.99$$
+
 
 ::: {.webex .webex-box}
-Der Zusammenhang zwischen Adiponectin und BMI soll untersucht werden. Es liegen Daten von 10 Probanden vor.
 
-Gegeben sind:
-
-$$
-\bar{x} = 28.6, \quad \bar{y} = 13.7, \quad s_x = 1.51, \quad s_y = 2.19, \quad s_{xy} = -2.99
-$$
-
-Aufgaben:
-
-1. Fertigen Sie eine Punktewolke zu den Daten an.
-2. Bestimmen Sie die Gleichung der Regressionsgeraden und zeichnen Sie diese in das Diagramm.
-3. Gibt es einen negativen Zusammenhang? Ermitteln Sie hierzu die Korrelation.
-4. Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis.
+(a) Fertigen Sie eine Punktewolke zu den Daten an. Anschließend bestimmen Sie die Gleichung der Regressionsgerade 
+	und zeichnen Sie diese in das Diagramm. <br><br>
+	<img src="images/image8A4.6.png" width="250">
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Die Steigung der Regressionsgeraden ist:
+(a)
+<img src="images/image84.6_s.png" width="550">
+**Regressionsgeraden:**
 
-$$
-m = \frac{-2.99}{1.51^2} = -1.31
-$$
+$$m = \frac{s_{xy}}{s_x^2} = \frac{-2.99}{1.51^2} = -1.31$$
 
-Der Achsenabschnitt ist:
+$$b = \bar{y} - m \cdot \bar{x} = 13.7 - (-1.31) \cdot 28.6 = 51.2$$
 
-$$
-b = 13.7 - (-1.31 \cdot 28.6) = 51.2
-$$
+> Notiz: Mittelwert in allg. Geradengl. einsetzen und b bestimmen
+> $\Rightarrow y =  m \cdot x + b \;\;\text{d.h.}\;\; b = y - m \cdot x$ Mittelwert liegt auf der Geraden.
+:::
 
-Damit lautet die Regressionsgerade:
+::: {.webex .webex-box}
+(b) Gibt es einen negativen Zusammenhang? Berechnen Sie die 
+Korrelation.<br><br>
+$r_{xy} =$ `r fitb(-0.904, tol = 0.005)`
+:::
 
-$$
-y = -1.31x + 51.2
-$$
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) **Korrelation:**
 
-Die Korrelation ist:
+	$$r_{xy} = \frac{s_{xy}}{s_x \cdot s_y} = \frac{-2.99}{1.51 \cdot 2.19} = -0.904$$
 
-$$
-r_{xy} = \frac{-2.99}{1.51 \cdot 2.19} = -0.904
-$$
+	$\Rightarrow$ **Starke negative Korrelation** zwischen BMI und Adiponectin.
+:::
 
-Also besteht eine starke negative Korrelation.
+::: {.webex .webex-box}
+(c) Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis.<br><br>
+$R^2 =$ `r fitb(0.817, tol = 0.005)`
+:::
 
-Das Bestimmtheitsmaß ist:
+::: {.callout-tip collapse="true" title="Lösung"}
 
-$$
-R^2 = (-0.904)^2 = 0.817
-$$
+(c) **Bestimmtheitsmaß:**
+	$$R^2 = (-0.904)^2 = 0.817$$
 
-Interpretation: Etwa $82\%$ der Variabilität der Adiponectin-Werte kann durch den BMI erklärt werden.
+	$\rightarrow$ **82% der Variabilität** der Adiponectin-Werte kann durch den 
+	BMI erklärt werden.
 :::
