@@ -223,6 +223,30 @@ longmcq(opts))
 	Damit liegt eine nichttriviale Linearkombination der Vektoren vor, die den Nullvektor ergibt. Also sind $v_{1}, \; v_{2},\; v_{3},\; v_{4}$ linear abhängig.
 :::
 
+::: {.webex .webex-box}
+(e) Betrachten Sie die folgenden linearen Teilräume von $\mathbb{R}^4$ <br> <br>
+$U := \{(x_1, x_2, x_3, x_4)\in \mathbb{R}^4 | x_1 - x_2 + x_3 - x_4 = 0\}$ <br><br>
+Bestimmen Sie eine Basis von $U$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) Der Untervektorraum U von $\mathbb{R}^4$ besteht aus allen Vektoren der Form
+	$$
+	\begin{pmatrix}x_2 - x_3 + x_4\\x_2\\x_3\\x_4\end{pmatrix} 
+	= x_2 \begin{pmatrix}1\\1\\0\\0\end{pmatrix}
+	+ x_3 \begin{pmatrix}-1\\0\\1\\0\end{pmatrix}
+	+ x_4 \begin{pmatrix}1\\0\\0\\1\end{pmatrix}
+	$$
+	<br>
+	Mit $x_2, x_3, x_4 \mathbb{R}^4$. Man sieht leicht, dass die Vektoren
+	$$
+	\begin{pmatrix}1\\1\\0\\0\end{pmatrix}, 
+	\begin{pmatrix}-1\\0\\1\\0\end{pmatrix} \text{und}
+	\begin{pmatrix}1\\0\\0\\1\end{pmatrix}
+	$$
+	linear unabhängig sind. Diese bilden somit eine Basis von U.
+:::
+
 ### Übungen 5 – A2
 
 ::: {.webex-check .webex-box}

@@ -498,7 +498,6 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 :::: {.columns}
 <p align="center"><img src="images/image8A4.3.png" width="250"></p>
 
-
 ::: {.column width="65%"}
 > **Hinweis:** Dies ist nur ein Datenausschnitt, damit Sie dies per Hand rechnen können. 
 > Bei $n = 100$ und quantitativen, normalverteilten Merkmalen 
