@@ -18,6 +18,7 @@ website:
     collapse-level: 2
     align: left
     contents:
+      - index.Rmd
       - exercises/block1.rmd
       - exercises/block2.rmd
       - exercises/block3.rmd
