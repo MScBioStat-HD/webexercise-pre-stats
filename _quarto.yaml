@@ -28,9 +28,6 @@ website:
       - exercises/block7.rmd
       - exercises/block8.rmd
       - exercises/final1_5.rmd
-html:
-  css: out/webex.css
-  include-after-body: out/webex.js
 format:
   html:
     theme: sandstone
