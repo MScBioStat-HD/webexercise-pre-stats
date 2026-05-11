@@ -1,5 +1,5 @@
 ---
-title: Z - Abschlussübung
+title: Abschlussübung
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
