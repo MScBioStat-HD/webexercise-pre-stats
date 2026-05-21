@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Block 4 – MScBioStat Pre-Stats Exercises</title>
+<title>Biometrie I – MScBioStat Pre-Stats Exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,179 +71,26 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li><li class="breadcrumb-item"><a href="../exercises/block4.html">Block 4</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">MScBioStat Pre-Stats Exercises</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../exercises/precourse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Statistik Vorkurs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Block 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 5</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 6</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 7</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/block8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 8</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/final1_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Abschlussübung</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../exercises/BiometrieI.rmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Biometrie I</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/biometrie_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">biometrie_1.html</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#integralrechnung" id="toc-integralrechnung" class="nav-link active" data-scroll-target="#integralrechnung">Integralrechnung</a>
-  <ul class="collapse">
-  <li><a href="#übungen-4-a1" id="toc-übungen-4-a1" class="nav-link" data-scroll-target="#übungen-4-a1">Übungen 4 – A1</a></li>
-  <li><a href="#übungen-4-a2" id="toc-übungen-4-a2" class="nav-link" data-scroll-target="#übungen-4-a2">Übungen 4 – A2</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li><li class="breadcrumb-item"><a href="../exercises/block4.html">Block 4</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Block 4</h1>
+<h1 class="title">Biometrie I</h1>
 </div>
 
 
@@ -260,178 +107,8 @@ window.Quarto = {
 </header>
 
 
-<section id="integralrechnung" class="level2">
-<h2 class="anchored" data-anchor-id="integralrechnung">Integralrechnung</h2>
-<section id="übungen-4-a1" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-4-a1">Übungen 4 – A1</h3>
-<p>Berechnen Sie die folgenden Integrale.</p>
-<div class="webex-check webex-box">
-<ol type="a">
-<li><span class="math inline">\(\int_{0}^{2} (x^{3} + 2x)dx\)</span>
-<div id="radio_OPREAGKBOW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OPREAGKBOW" value=""> <span><span class="math inline">\(6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_OPREAGKBOW" value=""> <span><span class="math inline">\(12\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_OPREAGKBOW" value="answer"> <span><span class="math inline">\(8\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><span class="math inline">\(\\ \int_{2}^{0} (x^{3} + 2x)dx = \frac{1}{4}x^{4} + x^{2} \big|_{0}^{2} = (\frac{16}{4} + 4) - 0 = 8\)</span></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="2" type="a">
-<li><span class="math inline">\(\int_{-2}^{2}\)</span> <span class="math inline">\(e^{2x} dx\)</span>
-<div id="radio_HLWQWZWCRH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HLWQWZWCRH" value=""> <span><span class="math inline">\(e^{4} - 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HLWQWZWCRH" value="answer"> <span><span class="math inline">\(27.29\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HLWQWZWCRH" value=""> <span><span class="math inline">\(23\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="2" type="a">
-<li><span class="math inline">\(\\ \int_{2}^{-2} e^{2x}dx = \frac{1}{2}e^{2x} \big|_{-2}^{2} = (\frac{1}{2} \cdot e^{4}) - (\frac{1}{2}e^{-4}) = 27.29\)</span></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="3" type="a">
-<li><span class="math inline">\(\int_{0}^{2}(x + 4 )^{2} dx\)</span>
-<div id="radio_GYHFCOACUF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GYHFCOACUF" value=""> <span><span class="math inline">\(\frac{152}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_GYHFCOACUF" value=""> <span><span class="math inline">\(50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_GYHFCOACUF" value="answer"> <span><span class="math inline">\(50\frac{2}{3}\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="3" type="a">
-<li><span class="math inline">\(\\ \int_{2}^{0} (x +4)^{2}dx = \int_{2}^{0}(x^{2} + 8x + 16)dx = \frac{1}{3}x^{3} + 4x^{2} + 16x\big|_{0}^{2}\)</span> <br> <br> <span class="math inline">\(\\ (\frac{8}{3} + 16 + 32) - 0 = 50\frac{2}{3}\)</span></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="4" type="a">
-<li><span class="math inline">\(\int_{}^{} 4x dx\)</span>
-<div id="radio_XDILOCLKLX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XDILOCLKLX" value=""> <span><span class="math inline">\(2x + c\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XDILOCLKLX" value="answer"> <span><span class="math inline">\(2x^{2} + c\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XDILOCLKLX" value=""> <span><span class="math inline">\(4x^{2} + c\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="4" type="a">
-<li><span class="math inline">\(\int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c\)</span></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="übungen-4-a2" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-4-a2">Übungen 4 – A2</h3>
-<p>Berechnen Sie die die Fläche unterhalb der Funktion im angegebenen Intervall. Skizzieren Sie die Funktion.</p>
-<div class="webex-check webex-box">
-<ol type="a">
-<li><span class="math inline">\(f(x) = -2x\)</span>, Fläche im Intervall <span class="math inline">\([-2,2]\)</span>
-<div id="radio_QJZDUGFMUM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QJZDUGFMUM" value="answer"> <span><span class="math inline">\(8\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QJZDUGFMUM" value=""> <span><span class="math inline">\(0\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QJZDUGFMUM" value=""> <span><span class="math inline">\(4\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p><span class="math inline">\(\\ f(x) = -2x\)</span>, Fläche im Intervall [-2,2] <br> Nullstelle: x = 0 <br> Stammfunktion: <span class="math inline">\(\\ F(x) = -x^{2} + c\)</span> <br><br> <img src="images/image_4A2_a.png" width="300"></p>
-<p>Fläche <span class="math inline">\(\int_{-2}^{2} -2x dx + \int_{0}^{2} -2x dx = |F(0) - F(-2)| + |F(2) - F(0)| = |(0 - (-4))| + |(-4 + 0)|\)</span> <br><br> <span class="math inline">\(= 4 + 4 = 8\)</span></p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="2" type="a">
-<li><br> <span class="math inline">\(\\ f(x) = \begin{cases} 0 &amp; \text{für} &amp; x&lt;0 \\
--x^{2} + \frac{4}{3} &amp; \text{für} &amp; 0 \le x\le 1 &amp; \text{im Intervall} &amp; [0,1] \\
-0 &amp; \text{für} &amp; x&gt;1 \end{cases}\)</span>
-<div id="radio_ZTUXFSVWKC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZTUXFSVWKC" value=""> <span><span class="math inline">\(\frac{1}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZTUXFSVWKC" value=""> <span><span class="math inline">\(\frac{4}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZTUXFSVWKC" value="answer"> <span><span class="math inline">\(1\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="2" type="a">
-<li><span class="math inline">\(\\ f(x) = \begin{cases} 0 &amp; \text{für} \; x &lt; 0 \\ -x^{2} + \frac{4}{3} &amp; \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 &amp; \text{für} \;x &gt; 1\end{cases}\)</span><br><br> <img src="images/image_4A2_b.png" width="300"> <br><br> Stammfunktion: <span class="math inline">\(\\(F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c\)</span> <br><br> Fäche: <span class="math inline">\(\\(F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1\)</span></li>
-</ol>
-</div>
-</div>
-</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script>
