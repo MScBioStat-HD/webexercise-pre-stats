@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Block 7 – MScBioStat Pre-Stats Exercises</title>
+<title>Statistik Vorkurs – MScBioStat Pre-Stats Exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
@@ -113,7 +84,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li><li class="breadcrumb-item"><a href="../exercises/block7.html">Block 7</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -140,7 +111,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../exercises/precourse.html" class="sidebar-item-text sidebar-link">
+            <a href="../exercises/precourse.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Statistik Vorkurs</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -185,7 +156,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/block7.html" class="sidebar-item-text sidebar-link active">
+  <a href="../exercises/block7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Block 7</span></a>
   </div>
 </li>
@@ -208,28 +179,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#lineare-gleichungssysteme" id="toc-lineare-gleichungssysteme" class="nav-link active" data-scroll-target="#lineare-gleichungssysteme">Lineare Gleichungssysteme</a>
-  <ul class="collapse">
-  <li><a href="#übungen-7-a1" id="toc-übungen-7-a1" class="nav-link" data-scroll-target="#übungen-7-a1">Übungen 7 – A1</a></li>
-  <li><a href="#übungen-7-a2" id="toc-übungen-7-a2" class="nav-link" data-scroll-target="#übungen-7-a2">Übungen 7 – A2</a></li>
-  <li><a href="#übungen-7-a3" id="toc-übungen-7-a3" class="nav-link" data-scroll-target="#übungen-7-a3">Übungen 7 – A3</a></li>
-  <li><a href="#übungen-7-a4" id="toc-übungen-7-a4" class="nav-link" data-scroll-target="#übungen-7-a4">Übungen 7 – A4</a></li>
-  <li><a href="#übungen-7-a5" id="toc-übungen-7-a5" class="nav-link" data-scroll-target="#übungen-7-a5">Übungen 7 – A5</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li><li class="breadcrumb-item"><a href="../exercises/block7.html">Block 7</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Block 7</h1>
+<h1 class="title">Statistik Vorkurs</h1>
 </div>
 
 
@@ -246,458 +204,9 @@ window.Quarto = {
 </header>
 
 
-<section id="lineare-gleichungssysteme" class="level2">
-<h2 class="anchored" data-anchor-id="lineare-gleichungssysteme">Lineare Gleichungssysteme</h2>
-<p><strong>Hinweis:</strong> Verwenden Sie <strong>t</strong> und <strong>s</strong> als Parameter für frei wählbare Variablen.</p>
-<section id="übungen-7-a1" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-7-a1">Übungen 7 – A1</h3>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Besitzt das lineare Gleichungssystem <br><br> <span class="math inline">\(\begin{array}{r r r l}
-x_{1} &amp; + &amp; x_{2} &amp; + &amp;  x_{3} &amp; = &amp; 1 \\\
-x_{1} &amp; + &amp; &amp;         &amp;  x_{3} &amp; = &amp; 1 \\\
-2x_{1} &amp; + &amp; x_{2} &amp; + &amp; 2x_{3} &amp; = &amp; 0
-\end{array}\)</span> <br><br> eine Lösung?
-<div id="radio_OLTBYNAHZY" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OLTBYNAHZY" value=""> <span>Das Gleichungssystem besitzt genau eine Lösung.</span></label><label><input type="radio" autocomplete="off" name="radio_OLTBYNAHZY" value="answer"> <span>Das Gleichungssystem besitzt keine Lösung</span></label><label><input type="radio" autocomplete="off" name="radio_OLTBYNAHZY" value=""> <span>Das Gleichungssystem besitzt unendlich viele Lösungen</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht</p>
-<p><span class="math display">\[
-\left(
-\begin{array}{ccc|c}
-1 &amp; 1 &amp; 1 &amp; 1\\
-1 &amp; 0 &amp; 1 &amp; 1\\
-2 &amp; 1 &amp; 2 &amp; 0\\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-\mathrm{I} - \mathrm{II} \Rightarrow \mathrm{II}\\
-\mathrm{III} - 2 \cdot \mathrm{I} \Rightarrow \mathrm{III}
-}}
-\left(
-\begin{array}{ccc|c}
-1 &amp; 1 &amp; 1 &amp; 1\\
-0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; -1 &amp; 0 &amp; -2\\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-\mathrm{I} - \mathrm{II} \Rightarrow \mathrm{I}\\
-\mathrm{III} + \mathrm{II} \Rightarrow \mathrm{III}
-}}
-\]</span></p>
-<p><br></p>
-<p><span class="math display">\[
-\left(
-\begin{array}{ccc|c}
-1 &amp; 0 &amp; 1 &amp; 1\\
-0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; -2\\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-\mathrm{III} : (-2) \Rightarrow \mathrm{III}
-}}
-\left(
-\begin{array}{ccc|c}
-1 &amp; 0 &amp; 1 &amp; 1\\
-0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 1\\
-\end{array}
-\right)
-\]</span></p>
-<p>Weil in Zeile III der Widerspruch 0 = 1 auftritt, besitzt das lineare Gleichungssystem keine Lösung.</p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="übungen-7-a2" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-7-a2">Übungen 7 – A2</h3>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Besitzt das lineare Gleichungssystem <br><br> <span class="math inline">\(\begin{array}{r r r l}
-x_{1} &amp; + &amp; 2x_{2} &amp; - &amp; 3x_{3} &amp; + &amp; x_{2} &amp; = &amp; 0 \\\
-x_{1} &amp; + &amp;  x_{2} &amp; + &amp;  x_{3} &amp; + &amp; x_{4} &amp; = &amp; 0
-\end{array}\)</span> <br><br> eine Lösung?
-<div id="radio_ADVQRZPLNG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ADVQRZPLNG" value=""> <span>Das Gleichungssystem besitzt genau eine Lösung.</span></label><label><input type="radio" autocomplete="off" name="radio_ADVQRZPLNG" value=""> <span>Das Gleichungssystem besitzt keine Lösung</span></label><label><input type="radio" autocomplete="off" name="radio_ADVQRZPLNG" value="answer"> <span>Das Gleichungssystem besitzt unendlich viele Lösungen</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht <span class="math display">\[
-\left(
-\begin{array}{cccc|c}
-1 &amp; 2 &amp; -3 &amp; 1 &amp; 0\\
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-\mathrm{I} - \mathrm{II} \Rightarrow \mathrm{II}
-}}
-\left(
-\begin{array}{cccc|c}
-1 &amp; 2 &amp; -3 &amp; 1 &amp; 0\\
-0 &amp; 1 &amp; -4 &amp; 0 &amp; 0 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-\mathrm{I} - 2 \cdot \mathrm{II} \Rightarrow \mathrm{I}
-}}
-\left(
-\begin{array}{cccc|c}
-1 &amp; 0 &amp; 5 &amp; 1 &amp; 0\\
-0 &amp; 1 &amp; -4 &amp; 0 &amp; 0 \\
-\end{array}
-\right)
-\]</span> Da kein Widerspruch auftritt, ist das lineare Gleichungssystem lösbar.<br>
-Außerdem gibt es nur in den Spalten von <span class="math inline">\(x_{1}\)</span> und <span class="math inline">\(x_{2}\)</span> Pivotstellen. Daher sind <span class="math inline">\(x_{3}\)</span> und <span class="math inline">\(x_{4}\)</span> freie Variablen.</p>
-<p>Setze <span class="math display">\[
-x_3=s,\qquad x_4=t \qquad \text{mit } s,t\in\mathbb{R}.
-\]</span></p>
-<p>Dann folgt aus der Zeilen-Stufen-Form: <span class="math display">\[
-\begin{aligned}
-x_1 + 5s + t &amp;= 0 \\
-x_2 - 4s &amp;= 0
-\end{aligned}
-\]</span></p>
-<p>also <span class="math display">\[
-x_1=-5s-t,\qquad x_2=4s.
-\]</span></p>
-<p>Damit besitzt das Gleichungssystem unendlich viele Lösungen und die Lösungsmenge lautet: <span class="math display">\[
-x_1=-5s-t,\qquad x_2=4s,\qquad x_3=s,\qquad x_4=t,
-\qquad s,t\in\mathbb{R}.
-\]</span></p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="übungen-7-a3" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-7-a3">Übungen 7 – A3</h3>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Ist das lineare Gleichungssystem <br><br><span class="math inline">\(\begin{array}{r r r l}
--3x_{1} &amp; + &amp; x_{2} &amp; + &amp; 4x_{3} &amp; = &amp; 1 \\\
-  x_{1} &amp; + &amp; x_{2} &amp; + &amp; x_{3} &amp; = &amp; 0 \\\
--2x_{1} &amp; + &amp; &amp;         &amp; x_{3} &amp; = &amp;-1 \\\
-x_{1} &amp; + &amp; x_{2} &amp; - &amp; 2x_{3} &amp; = &amp; 0
-\end{array}\)</span> <br> <br>lösbar?
-<div id="radio_WHOBMAZNZX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WHOBMAZNZX" value=""> <span>Das Gleichungssystem besitzt genau eine Lösung.</span></label><label><input type="radio" autocomplete="off" name="radio_WHOBMAZNZX" value="answer"> <span>Das Gleichungssystem besitzt keine Lösung</span></label><label><input type="radio" autocomplete="off" name="radio_WHOBMAZNZX" value=""> <span>Das Gleichungssystem besitzt unendlich viele Lösungen</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht <span class="math display">\[
-\left(
-\begin{array}{ccc|c}
--3 &amp; 1 &amp; 4 &amp; 1 \\
-1 &amp; 1 &amp; 1 &amp; 0 \\
--2 &amp; 0 &amp; 1 &amp; -1 \\
-1 &amp; 1 &amp; -2 &amp; 0 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-3 \cdot \mathrm{II} + \mathrm{I} \Rightarrow \mathrm{II} \\
-3 \cdot \mathrm{III}  - 2 \cdot \mathrm{I} \Rightarrow \mathrm{III} \\
-3 \cdot \mathrm{IV} + \ mathrm{I} \Rightarrow \mathrm{IV}
-}}
-\left(
-\begin{array}{ccc|c}
--3 &amp; 1 &amp; 4 &amp; 1 \\
-0 &amp; 4 &amp; 7 &amp; 1 \\
-0 &amp; -2 &amp; -5 &amp; -5 \\
-0 &amp; 4 &amp; -2 &amp; 1 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-4 \cdot \mathrm{I} \Rightarrow \mathrm{I} \\
-2 \cdot \mathrm{III} + \mathrm{II} \Rightarrow \mathrm{III} \\
-\mathrm{IV} - \mathrm{II} \Rightarrow \mathrm{VI}
-}}
-\]</span> <span class="math display">\[
-\left(
-\begin{array}{ccc|c}
--12 &amp; 0 &amp; 9 &amp; 3 \\
-0 &amp; 4 &amp; 7 &amp; 1 \\
-0 &amp; 0 &amp; -3 &amp; -9 \\
-0 &amp; 0 &amp; -9 &amp; 0 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-\mathrm{I} + 3 \cdot \mathrm{III} \Rightarrow \mathrm{I} \\
-3 \cdot \mathrm{II} + 7 \cdot \mathrm{III} \Rightarrow \mathrm{II} \\
-\mathrm{IV} - 3 \cdot \mathrm{III} \Rightarrow \mathrm{IV}
-}}
-\left(
-\begin{array}{ccc|c}
--12 &amp; 0 &amp; 0 &amp; -24 \\
-0 &amp; 12 &amp; 0 &amp; -60 \\
-0 &amp; 0 &amp; -3 &amp; -9 \\
-0 &amp; 0 &amp; 0 &amp; 27 \\
-\end{array}
-\right)
-\]</span></p>
-<p>Weil in Zeile IV der Widerspruch 0 = 27 auftritt, besitzt das lineare Gleichungssystem keine Lösung.</p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="übungen-7-a4" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-7-a4">Übungen 7 – A4</h3>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Für welche Werte von a hat das folgende Gleichungssystem eine Lösung? Geben Sie die Lösung an. <br><br> <span class="math inline">\(\begin{array}{r r r l}
-x &amp; + &amp; y &amp; + &amp; z &amp; = &amp; a \\\
-x &amp; + &amp; y &amp; &amp;     &amp; = &amp; 2 \\\
-&amp;     &amp; y &amp; + &amp; z &amp; = &amp; 2
-\end{array}\)</span>
-<div id="radio_ZCINOSRCYS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZCINOSRCYS" value=""> <span>Das Gleichungssystem besitzt nur für <span class="math inline">\(a = 2\)</span> eine Lösung.</span></label><label><input type="radio" autocomplete="off" name="radio_ZCINOSRCYS" value="answer"> <span>Für alle <span class="math inline">\(a \in \mathbb{R}\)</span> existiert genau eine Lösung mit <span class="math inline">\(x = a - 2, y = 4 - a, z = a - 2\)</span>.</span></label><label><input type="radio" autocomplete="off" name="radio_ZCINOSRCYS" value=""> <span>Das Gleichungssystem besitzt für alle <span class="math inline">\(a \in \mathbb{R}\)</span> unendlich viele Lösungen.</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht <span class="math display">\[
-\left(
-\begin{array}{ccc|c}
-1 &amp; 1 &amp; 1 &amp; a \\
-1 &amp; 1 &amp; 0 &amp; 2 \\
-0 &amp; 1 &amp; 1 &amp; 2 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-II - I \Rightarrow II \\
-}}
-\left(
-\begin{array}{ccc|c}
-1 &amp; 1 &amp; 1 &amp; a \\
-0 &amp; 0 &amp; -1 &amp; 2 - a \\
-0 &amp; 1 &amp; 1 &amp; 2 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-(-1) \cdot II \leftrightarrow III \\
-}}
-\]</span></p>
-<p><span class="math display">\[
-\left(
-\begin{array}{ccc|c}
-1 &amp; 1 &amp; 1 &amp; a \\
-0 &amp; 1 &amp; 1 &amp; 2 \\
-0 &amp; 0 &amp; 1 &amp; a - 2 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-I - II \Rightarrow I \\
-}}
-\left(
-\begin{array}{ccc|c}
-1 &amp; 0 &amp; 0 &amp; a - 2 \\
-0 &amp; 1 &amp; 1 &amp; 2 \\
-0 &amp; 0 &amp; 1 &amp; a - 2 \\
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-II - III \Rightarrow II \\
-}}
-\left(
-\begin{array}{ccc|c}
-1 &amp; 0 &amp; 0 &amp; a - 2 \\
-0 &amp; 1 &amp; 0 &amp; 4 - a \\
-0 &amp; 0 &amp; 1 &amp; a - 2 \\
-\end{array}
-\right)
-\]</span> <br> Da in der Zeilen-Stufen-Form in jeder Zeile eine Pivotvariable vorkommt und kein Widerspruch entsteht, besitzt das lineare Gleichungssystem für jedes <span class="math inline">\(a\)</span> a genau eine Lösung. Diese kann direkt aus der Matrix abgelesen werden: <span class="math inline">\(x = a \,–\, 2 \qquad
-y = 4 \,–\, a \; \text{und} \qquad
-z = a \,–\, 2\)</span>.</p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="übungen-7-a5" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-7-a5">Übungen 7 – A5</h3>
-<p>Lösen Sie das folgende Gleichungssystem, wobei <span class="math inline">\(a \neq 1\)</span> eine reelle Zahl ist. <br><br> <span class="math inline">\(\begin{array}{r r r l}
-    3x_{1} &amp; - &amp; 2x_{2} &amp; - &amp; ax_{3} &amp; = 1\\
-    3x_{1} &amp; - &amp; x_{2} &amp; + &amp;  x_{3} &amp; = 5
-    \end{array}\)</span> <br></p>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Welche Lösungsdarstellung ist korrekt?<br><br>
-<div id="radio_YIOTAGEQFR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YIOTAGEQFR" value=""> <span><span class="math inline">\(x_{1} = \frac{5}{a - 1}\)</span> <br> <span class="math inline">\(x_{2} = 0\)</span> <br> <span class="math inline">\(x_{3} = \frac{4}{a - 1}t\)</span> <br><br></span></label><label><input type="radio" autocomplete="off" name="radio_YIOTAGEQFR" value="answer"> <span><span class="math inline">\(x_{1} = \frac{5a - 1}{3a - 3} +  \frac{1}{3} t\)</span> <br> <span class="math inline">\(x_{2} = t\)</span> <br> <span class="math inline">\(x_{3} = \frac{4}{1 - a}t\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_YIOTAGEQFR" value=""> <span><span class="math inline">\(x_{1} = \frac{5}{a - 1}\)</span> <br> <span class="math inline">\(x_{2} = t\)</span> <br> <span class="math inline">\(x_{3} = \frac{3}{a - 1} t\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht <span class="math display">\[
-\left(
-\begin{array}{ccc|c}
-3 &amp; -1 &amp; a &amp; 1 \\
-3 &amp; -1 &amp; 1 &amp; 5
-\end{array}
-\right)
-\xrightarrow{\,I - II \to II\,}
-\left(
-\begin{array}{ccc|c}
-3 &amp; -1 &amp; a &amp; 1 \\
-0 &amp; 0 &amp; a-1 &amp; -4
-\end{array}
-\right)
-\]</span></p>
-<p>Jetzt kann man nach den Variablen umstellen.</p>
-<p><span class="math display">\[
-\begin{aligned}
-\text{II}\quad &amp; ax_3 - x_3 = -4 \\
-\text{II}\quad &amp; (a-1)x_3 = -4 \\
-\text{II}\quad &amp; x_3 = \frac{4}{1-a}
-\end{aligned}
-\]</span></p>
-<p>Nun werden <span class="math inline">\(x_{2}\)</span> und <span class="math inline">\(x_{3}\)</span> in die erste Gleichung eingesetzt:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\text{I}\quad &amp; 3x_1 - x_2 + ax_3 = 1 \\
-\text{I}\quad &amp; 3x_1 - x_2 + a \cdot \frac{4}{1-a} = 1 \\
-\text{I}\quad &amp; 3x_1 - x_2 = 1 - \frac{4a}{1-a} \\
-                        &amp; = \frac{1(1-a)-4a}{1-a} \\
-                        &amp; = \frac{1-a-4a}{1-a} \\
-                        &amp; = \frac{1-5a}{1-a}
-\end{aligned}
-\]</span></p>
-<p>Da <span class="math inline">\(x_{2}\)</span> frei gewählt werden kann, setzen wir</p>
-<p><span class="math display">\[
-x_2 = t \qquad \text{mit } t \in \mathbb{R}.
-\]</span></p>
-<p>Dann gilt:</p>
-<p><span class="math display">\[
-\begin{aligned}
-3x_1 - t &amp;= \frac{1-5a}{1-a} \\
-3x_1 &amp;= \frac{1-5a}{1-a} + t \\
-x_1 &amp;= \frac{1-5a}{3(1-a)} + \frac13 t \\
-&amp;= \frac{5a-1}{3a-3} + \frac13 t
-\end{aligned}
-\]</span></p>
-<p>Damit lautet die Lösungsmenge:</p>
-<p><span class="math display">\[
-x_1 = \frac{5a-1}{3a-3} + \frac13 t,
-\qquad
-x_2 = t,
-\qquad
-x_3 = \frac{4}{1-a},
-\qquad
-t \in \mathbb{R}.
-\]</span></p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="2" type="a">
-<li>Wie viele Lösungen besitzt das System für <span class="math inline">\(a \neq 1\)</span>?<br><br>
-<div id="radio_AJYYMURQHG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_AJYYMURQHG" value=""> <span>Das Gleichungssystem hat genau eine Lösung.</span></label><label><input type="radio" autocomplete="off" name="radio_AJYYMURQHG" value=""> <span>Das Gleichungssystem hat keine Lösung</span></label><label><input type="radio" autocomplete="off" name="radio_AJYYMURQHG" value="answer"> <span>Das Gleichungssystem besitzt unendlich viele Lösungen</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Das Gleichungssystem ist für <span class="math inline">\(a \neq 1\)</span> lösbar. Da eine Variable frei gewählt werden kann, besitzt es unendlich viele Lösungen.</p>
-</div>
-</div>
-</div>
+<p>Hallo test</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script>
