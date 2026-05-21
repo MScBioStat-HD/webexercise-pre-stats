@@ -28,6 +28,11 @@ website:
             - exercises/block7.rmd
             - exercises/block8.rmd
             - exercises/final1_5.rmd
+      contents:
+        - section: "Biometrie I"
+          href: exercises/Biometrie I.rmd
+          contents:
+            - exercises/biometrie_1.rmd
 
 html:
   css: out/webex.css
