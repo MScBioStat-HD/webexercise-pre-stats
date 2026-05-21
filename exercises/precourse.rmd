@@ -1,4 +1,5 @@
 ---
 title: Statistik Vorkurs
 ---
-Hallo test
+# Statistik Vorkurs
+Willkommen zum Statistik Vorkurs. Hier finden Sie Übungen, mit denen SIe wichtige mathematische und statistische Grundlagen wiederholen und festigen kannst.
