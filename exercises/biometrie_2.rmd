@@ -1,0 +1,166 @@
+---
+title: Block 2
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## z- und t-Test
+
+### Aufgabe 1 – Semaglutid Studie (gepaarter t-Test)
+
+Semaglutid wird als „Abnehmspritze" bei Adipositas eingesetzt. Bei n=60 Probanden wurde das Körpergewicht vor Therapie (Baseline) und nach 6 Monaten (T1) gemessen.
+
+| | Baseline | T1 | Differenz (T1 - Baseline) |
+|---|---|---|---|
+| Semaglutid Gruppe | 80,5 kg ± 8,5 kg | 75,5 kg ± 7,5 kg | -5 kg ± 5,4 kg |
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    answer = "$H_0$: Die wahre erwartete Gewichts-Differenz $\\mu$ ist gleich 0. $H_1$: Die wahre erwartete Gewichts-Differenz $\\mu$ ist ungleich 0.",
+    "$H_0$: Die wahre erwartete Gewichts-Differenz $\\mu$ ist ungleich 0. $H_1$: Die wahre erwartete Gewichts-Differenz $\\mu$ ist gleich 0.",
+    "$H_0$: Das Gewicht nimmt ab. $H_1$: Das Gewicht nimmt nicht ab."
+)
+cat("(a) Welche Null- und Alternativhypothese ist korrekt?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) **$H_0$:** Die wahre erwartete Gewichts-Differenz $\mu$ in der Semaglutid Gruppe ist gleich 0.
+
+**$H_1$:** Die wahre erwartete Gewichts-Differenz $\mu$ in der Semaglutid Gruppe ist ungleich 0.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "$Z = -5.74$",
+    "$Z = -5.00$",
+    answer = "$Z = -7.74$"
+)
+cat("(b) Wie lautet die Z-Statistik? (bekannte Varianz $\\sigma^2 = 25$)", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $$Z = \frac{-5 - 0}{5} \cdot \sqrt{60} = -7.74$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(c) Kann die Nullhypothese zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden? (kritischer Wert: |Z| = 1.96)",
+    torf(TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) **Ja.** Da $|Z| = 7.74 > 1.96$ gilt $p < 5\%$, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz unterscheidet sich signifikant von 0 — es gibt eine Gewichtsabnahme nach der Therapie.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "$t = -5.04$",
+    answer = "$t = -7.04$",
+    "$t = -9.04$"
+)
+cat("(d) Wie lautet die t-Statistik?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $$t = \frac{-5 - 0}{5.4} \cdot \sqrt{60} = -7.04$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "$[-5.4; -3.6]$",
+    "$[-7.4; -2.6]$",
+    answer = "$[-6.4; -3.6]$"
+)
+cat("(e) Wie lautet das 95%-Konfidenzintervall für den Effekt? ($t_{59; 0.975} = 2.0$)", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) Das 95%-Konfidenzintervall berechnet sich mit:
+
+$$\left[\bar{X} - t_{n-1;1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}};\; \bar{X} + t_{n-1;1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}\right]$$
+
+Somit:
+
+$$\left[-5 - 2 \cdot \frac{5.4}{\sqrt{60}};\; -5 + 2 \cdot \frac{5.4}{\sqrt{60}}\right] = [-6.4;\; -3.6]$$
+:::
+
+---
+
+### Aufgabe 2 – Semaglutid vs. TAU (ungepaarter t-Test)
+
+Sie vergleichen die Gewichtsdifferenz zwischen der Semaglutid Gruppe und einer „treatment as usual" (TAU) Gruppe.
+
+| | Baseline | T1 | Differenz (T1 - Baseline) |
+|---|---|---|---|
+| Semaglutid (n=60) | 80,5 kg ± 8,5 kg | 75,5 kg ± 7,5 kg | -5,0 kg ± 5,4 kg |
+| TAU (n=50) | 81,5 kg ± 9,5 kg | 78,5 kg ± 7,0 kg | -3,0 kg ± 4,8 kg |
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    answer = "$s_{pool} = 5.14$",
+    "$s_{pool} = 4.80$",
+    "$s_{pool} = 5.40$"
+)
+cat("(a) Wie groß ist die gepoolte Standardabweichung $s_{pool}$?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Die gepoolte Standardabweichung berechnet sich als:
+
+$$s_{pool} = \sqrt{\frac{(n_1-1) \cdot s_1^2 + (n_2-1) \cdot s_2^2}{n_1 + n_2 - 2}}$$
+
+```r
+n1 <- 60
+n2 <- 50
+s1 <- 5.4
+s2 <- 4.8
+spool <- sqrt(((n1-1)*s1^2 + (n2-1)*s2^2)/(n1+n2-2))
+spool  # = 5.14
+```
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "$t = -1.03$",
+    "$t = -3.03$",
+    answer = "$t = -2.03$"
+)
+cat("(b) Wie lautet die Teststatistik?", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $$t = \frac{-5 - (-3)}{s_{pool} \cdot \sqrt{\frac{1}{60} + \frac{1}{50}}} = -2.03$$
+
+Der t-Test für ungepaarte Stichproben prüft allgemein:
+
+$$H_0: \mu_X = \mu_Y \quad \text{vs.} \quad H_1: \mu_X \neq \mu_Y$$
+
+anhand der Teststatistik:
+
+$$T := \frac{\bar{X} - \bar{Y}}{s \cdot \sqrt{\frac{1}{n_x} + \frac{1}{n_y}}} \sim t_{n_x + n_y - 2} \quad \text{unter } H_0$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(c) Kann die Nullhypothese $H_0: \\mu_{TAU} = \\mu_{SEM}$ zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden? (kritischer Wert: $t_{108; 0.975} = 1.98$)",
+    torf(TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) **Ja.** Da $|t| = 2.03 > 1.98$ gilt $p < 5\%$, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz zwischen den beiden Gruppen ist statistisch signifikant.
+:::

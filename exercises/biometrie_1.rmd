@@ -1,3 +1,162 @@
 ---
 title: Block 1
 ---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## Grundprinzipien des statistischen Testens
+
+### Aufgabe 1 – Richtig oder Falsch
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("Der p-Wert ist die Wahrscheinlichkeit für die Nullhypothese.",
+    torf(FALSE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Falsch.** Der p-Wert ist die Wahrscheinlichkeit für die beobachteten Daten, wenn die Nullhypothese in Wahrheit zutrifft. Also $P(\text{Daten}|H_0)$ und **nicht** $P(H_0|\text{Daten})$.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("Der statistische Test entscheidet, ob die Nullhypothese wahr ist.",
+    torf(FALSE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Falsch.** Der statistische Test entscheidet, ob die Nullhypothese **abgelehnt werden kann** — nicht ob sie wahr ist.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("Der Fehler 1. Art ist unabhängig von der Fallzahl.",
+    torf(TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Richtig.** Der Fehler 1. Art (Signifikanzniveau $\alpha$) wird vorab festgelegt und ist unabhängig von der Fallzahl. Der Fehler 2. Art hingegen hängt von der Fallzahl ab.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("Die Aussage, die gezeigt werden soll, muss als Alternativhypothese formuliert sein.",
+    torf(TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Richtig.**
+:::
+
+---
+
+### Aufgabe 2 – Hypothesen formulieren
+
+In einer klinischen Studie wollen Sie untersuchen, ob Cannabidiol bei Alkoholabhängigkeit das Rückfallrisiko reduziert gegenüber der Standardtherapie. Unter der Standardtherapie ist die Rückfallrate 50% (0.5). Formulieren Sie eine Null- und eine Alternativhypothese.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "Die Rückfallrate unter Cannabidiol ist gleich 0.5 und die Rückfallrate unter Standardtherapie ist größer als 0.5.",
+    answer = "Der Anteil der Patienten mit Rückfall unter Cannabidiol ist genauso hoch wie unter Standardtherapie (= 0.5).",
+    "Der Anteil der Patienten mit Rückfall unter Cannabidiol ist kleiner als 0.5."
+)
+cat("(a) Welche der folgenden Aussagen beschreibt die **Nullhypothese** korrekt?",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Nullhypothese:** Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, genauso hoch wie unter Standardtherapie (= 0.5).
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "Der Anteil der Patienten mit Rückfall unter Cannabidiol ist kleiner als 0.5.",
+    "Der Anteil der Patienten mit Rückfall unter Cannabidiol ist größer als 0.5.",
+    answer = "Der Anteil der Patienten mit Rückfall unter Cannabidiol ist ungleich 0.5 (also höher oder niedriger als unter Standardtherapie)."
+)
+cat("(b) Welche der folgenden Aussagen beschreibt die **Alternativhypothese** korrekt?",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Alternativhypothese:** Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, höher oder niedriger (also ungleich 0.5) wie unter Standardtherapie.
+:::
+
+---
+
+### Aufgabe 3 – Konfidenzintervall
+
+Es soll der Frage nachgegangen werden, ob mehr als 70% der Kinder in BaWü gegen FSME geimpft sind. In einer Stichprobe von 860 Kindern sind 645 Kinder geimpft.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "$645 / 860 = 0.70$",
+    answer = "$645 / 860 = 0.75$",
+    "$645 / 860 = 0.80$"
+)
+cat("(a) Wie groß ist der Anteil der geimpften Kinder (Punktschätzung)?",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\hat{p} = 645 / 860 = 0.75$
+
+```r
+p <- 645/860
+p
+```
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "$[0.70, 0.80]$",
+    "$[0.73, 0.79]$",
+    answer = "$[0.72, 0.77]$"
+)
+cat("(b) Wie lautet das approximative, zweiseitige 95%-Konfidenzintervall für den Anteil?",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Das Konfidenzintervall lautet $[0.72, 0.77]$.
+
+Das Konfidenzintervall wird berechnet mit der Formel:
+
+$$\hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
+
+Berechnung in R:
+```r
+p <- 645/860
+p + qnorm(0.025) * sqrt((p*(1-p))/860)
+p - qnorm(0.025) * sqrt((p*(1-p))/860)
+```
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "Der wahre Anteil liegt bei genau 75%. Der Wert 70% liegt im Konfidenzintervall.",
+    "Das Konfidenzintervall ist sehr breit, daher ist der Informationsgehalt gering.",
+    answer = "Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. Der Wert 70% liegt nicht im Konfidenzintervall, der wahre Wert ist vermutlich größer."
+)
+cat("(c) Interpretieren Sie das Ergebnis.",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. Durch die geringe Breite des Konfidenzintervalls ist der Informationsgehalt groß. Der Wert 70% liegt insbesondere **nicht** im Konfidenzintervall, und somit ist der wahre Wert vermutlich größer als dieser Wert.
+:::

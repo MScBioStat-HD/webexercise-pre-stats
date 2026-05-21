@@ -5,13 +5,13 @@ project:
 #   freeze: auto # re-render only changed chapters
 
 website:
-  title: "MScBioStat Pre-Stats Exercises"
+  title: "MSc Medical Biometry/Biostatistics"
   # navbar:
   #   left:
   #   - index.qmd
   sidebar:
     - id: exercises
-      title: "MScBioStat Pre-Stats Exercises"
+      title: "MSc Medical Biometry/Biostatistics"
       style: "floating"
       collapse-level: 2
       align: left
@@ -32,6 +32,7 @@ website:
           href: exercises/biometrie_I.rmd
           contents:
             - exercises/biometrie_1.rmd
+            - exercises/biometrie_2.rmd
 
 html:
   css: out/webex.css
@@ -39,7 +40,7 @@ html:
 
 format:
   html:
-    theme: sandstone
+    theme: cosmo  
     toc: true
     css:
       - include/webex.css
