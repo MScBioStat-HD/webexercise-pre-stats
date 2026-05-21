@@ -4,8 +4,52 @@
   --correct: #59935B;
   --correct_alpha: #c0edc2;
   --highlight: #467AAC;
+  --brand-blue: #2c5282;
+  --brand-teal: #2c7a7b;
 }
 
+/* ── Banner oben ── */
+body::before {
+  content: "IMBI Institut für Medizinische Biometrie • Übungsplattform";
+  display: block;
+  background: linear-gradient(135deg, #2c5282, #2c7a7b);
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  background-color: #f0f4f8 !important;
+	padding-left: 0.5rem;
+}
+
+.sidebar-section .sidebar-section-item {
+  font-weight: bold;
+  color: var(--brand-blue) !important;
+}
+
+/* ── Überschriften ── */
+h1 {
+  color: var(--brand-blue);
+  border-bottom: 2px solid var(--brand-blue);
+  padding-bottom: 8px;
+}
+
+h2 { color: var(--brand-teal); }
+h3 { color: #444; }
+
+/* ── Lösungs-Callout ── */
+.callout-tip {
+  background-color: #f0fff4 !important;
+  border-left: 4px solid var(--brand-teal) !important;
+}
+
+/* ── webex styles ── */
 .webex-check {}
 
 .webex-box {
@@ -33,27 +77,28 @@
 /* styles for webex-solveme */
 .webex-select, input.webex-solveme,
 .unchecked .webex-radiogroup label.webex-incorrect,
-.unchecked .webex-radiogroup label.webex-correct{
-    border: 2px dotted grey;
-    background-color: white;
-    border-radius: 0.25em;
+.unchecked .webex-radiogroup label.webex-correct {
+  border: 2px dotted grey;
+  background-color: white;
+  border-radius: 0.25em;
 }
 
 .webex-incorrect,
 input.webex-solveme.webex-incorrect,
 .webex-radiogroup label.webex-incorrect {
-    border: 2px dotted var(--incorrect);
-    background-color: var(--incorrect_alpha);
-    color: black;
-    border-radius: 0.25em;
+  border: 2px dotted var(--incorrect);
+  background-color: var(--incorrect_alpha);
+  color: black;
+  border-radius: 0.25em;
 }
+
 .webex-correct,
 input.webex-solveme.webex-correct,
 .webex-radiogroup label.webex-correct {
-    border: 2px solid var(--correct);
-    background-color: var(--correct_alpha);
-    color: black;
-    border-radius: 0.25em;
+  border: 2px solid var(--correct);
+  background-color: var(--correct_alpha);
+  color: black;
+  border-radius: 0.25em;
 }
 
 .unchecked .webex-incorrect span::before,
@@ -73,29 +118,31 @@ input.webex-solveme.webex-correct,
   content: "\2705  ";
 }
 
-
 /* styles for hidden solutions */
 .webex-solution {
-    height: 2.5em;
-    overflow-y: hidden;
-    padding: 0.5em;
-    margin-bottom: 10px;
+  height: 2.5em;
+  overflow-y: hidden;
+  padding: 0.5em;
+  margin-bottom: 10px;
 }
+
 .webex-solution.open {
-    height: auto;
-    border: 2px solid var(--highlight);
-    border-radius: 5px;
+  height: auto;
+  border: 2px solid var(--highlight);
+  border-radius: 5px;
 }
+
 .webex-solution button, .webex-check-button {
-    height: 2em;
-    margin-bottom: 0.5em;
-    border-radius: 0.5em;
-    background-color: var(--highlight);
-    color: white;
-    padding: 0 0.5em;
+  height: 2em;
+  margin-bottom: 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--highlight);
+  color: white;
+  padding: 0 0.5em;
 }
+
 .webex-solution pre.sourceCode {
-    border-color: var(--correct);
+  border-color: var(--correct);
 }
 
 .webex-radiogroup label {
@@ -117,4 +164,3 @@ input.webex-solveme.webex-correct,
 .webex-radiogroup {
   margin: 1em 0;
 }
-

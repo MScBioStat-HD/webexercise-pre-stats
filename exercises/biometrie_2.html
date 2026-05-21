@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -113,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li><li class="breadcrumb-item"><a href="../exercises/block2.html">Block 2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/biometrie_I.html">Biometrie I</a></li><li class="breadcrumb-item"><a href="../exercises/biometrie_2.html">Block 2</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -155,7 +190,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/block2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../exercises/block2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Block 2</span></a>
   </div>
 </li>
@@ -220,7 +255,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/biometrie_2.html" class="sidebar-item-text sidebar-link">
+  <a href="../exercises/biometrie_2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Block 2</span></a>
   </div>
 </li>
@@ -236,21 +271,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rechnen-mit-funktionen" id="toc-rechnen-mit-funktionen" class="nav-link active" data-scroll-target="#rechnen-mit-funktionen">Rechnen mit Funktionen</a>
+  <li><a href="#z--und-t-test" id="toc-z--und-t-test" class="nav-link active" data-scroll-target="#z--und-t-test">z- und t-Test</a>
   <ul class="collapse">
-  <li><a href="#übungen-2-a1" id="toc-übungen-2-a1" class="nav-link" data-scroll-target="#übungen-2-a1">Übungen 2 – A1</a></li>
-  <li><a href="#übungen-2-a2" id="toc-übungen-2-a2" class="nav-link" data-scroll-target="#übungen-2-a2">Übungen 2 – A2</a></li>
-  <li><a href="#übungen-2-a3" id="toc-übungen-2-a3" class="nav-link" data-scroll-target="#übungen-2-a3">Übungen 2 – A3</a></li>
+  <li><a href="#aufgabe-1-semaglutid-studie-gepaarter-t-test" id="toc-aufgabe-1-semaglutid-studie-gepaarter-t-test" class="nav-link" data-scroll-target="#aufgabe-1-semaglutid-studie-gepaarter-t-test">Aufgabe 1 – Semaglutid Studie (gepaarter t-Test)</a></li>
+  <li><a href="#aufgabe-2-semaglutid-vs.-tau-ungepaarter-t-test" id="toc-aufgabe-2-semaglutid-vs.-tau-ungepaarter-t-test" class="nav-link" data-scroll-target="#aufgabe-2-semaglutid-vs.-tau-ungepaarter-t-test">Aufgabe 2 – Semaglutid vs.&nbsp;TAU (ungepaarter t-Test)</a></li>
   </ul></li>
-  <li><a href="#übungen-2-a4" id="toc-übungen-2-a4" class="nav-link" data-scroll-target="#übungen-2-a4">Übungen 2 – A4</a></li>
-  <li><a href="#übungen-2-a5" id="toc-übungen-2-a5" class="nav-link" data-scroll-target="#übungen-2-a5">Übungen 2 – A5</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/precourse.html">Statistik Vorkurs</a></li><li class="breadcrumb-item"><a href="../exercises/block2.html">Block 2</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/biometrie_I.html">Biometrie I</a></li><li class="breadcrumb-item"><a href="../exercises/biometrie_2.html">Block 2</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Block 2</h1>
 </div>
@@ -269,24 +301,41 @@ window.Quarto = {
 </header>
 
 
-<section id="rechnen-mit-funktionen" class="level2">
-<h2 class="anchored" data-anchor-id="rechnen-mit-funktionen">Rechnen mit Funktionen</h2>
-<section id="übungen-2-a1" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-2-a1">Übungen 2 – A1</h3>
-<p>Zeichnen Sie die folgenden Geraden in ein Koordinatensystem mit <span class="math inline">\(x\)</span> ∈ <span class="math inline">\([-5, 5]\)</span> und <span class="math inline">\(y\)</span> ∈ <span class="math inline">\([-5, 5]\)</span> ein. Geben Sie die Geraden jeweils in der Form <span class="math inline">\(y = mx + b\)</span> an.”</p>
-<div class="webex webex-box">
+<section id="z--und-t-test" class="level2">
+<h2 class="anchored" data-anchor-id="z--und-t-test">z- und t-Test</h2>
+<section id="aufgabe-1-semaglutid-studie-gepaarter-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-1-semaglutid-studie-gepaarter-t-test">Aufgabe 1 – Semaglutid Studie (gepaarter t-Test)</h3>
+<p>Semaglutid wird als „Abnehmspritze” bei Adipositas eingesetzt. Bei n=60 Probanden wurde das Körpergewicht vor Therapie (Baseline) und nach 6 Monaten (T1) gemessen.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Baseline</th>
+<th>T1</th>
+<th>Differenz (T1 - Baseline)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Semaglutid Gruppe</td>
+<td>80,5 kg ± 8,5 kg</td>
+<td>75,5 kg ± 7,5 kg</td>
+<td>-5 kg ± 5,4 kg</td>
+</tr>
+</tbody>
+</table>
+<div class="webex-check webex-box">
 <ol type="a">
-<li>Zeichnen Sie die Gerade <span class="math inline">\(y = 2x - 1\)</span></li>
-</ol>
-</div>
-<div class="webex webex-box">
-<ol start="2" type="a">
-<li>Zeichnen Sie die Gerade, die durch die Punkte <span class="math inline">\((1, -3)\)</span> und <span class="math inline">\((-2,4)\)</span> geht</li>
-</ol>
-</div>
-<div class="webex webex-box">
-<ol start="3" type="a">
-<li>Zeichnen Sie die Gerade die Gerade durch den Punkt <span class="math inline">\((1,1)\)</span> und mit der Steigung <span class="math inline">\(m = -0.5\)</span></li>
+<li>Welche Null- und Alternativhypothese ist korrekt?
+<div id="radio_PRQGMIDIPO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PRQGMIDIPO" value="answer"> <span><span class="math inline">\(H_0\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist gleich 0. <span class="math inline">\(H_1\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist ungleich 0.</span></label><label><input type="radio" autocomplete="off" name="radio_PRQGMIDIPO" value=""> <span><span class="math inline">\(H_0\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist ungleich 0. <span class="math inline">\(H_1\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist gleich 0.</span></label><label><input type="radio" autocomplete="off" name="radio_PRQGMIDIPO" value=""> <span><span class="math inline">\(H_0\)</span>: Das Gewicht nimmt ab. <span class="math inline">\(H_1\)</span>: Das Gewicht nimmt nicht ab.</span></label>
+</div></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -301,19 +350,18 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><img src="images/image.png" width="300"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="übungen-2-a2" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-2-a2">Übungen 2 – A2</h3>
-<p>Das Wachstum einer Population sei durch die Funktion <span class="math inline">\(u(t) = u_{0} \cdot e^{\alpha t}, \alpha &gt; 0\)</span> (exponentielles Wachstum) beschrieben (\(u_{0}\) = Anfangspopulation, also t = 0).</p>
-<div class="webex-check webex-box">
 <ol type="a">
-<li>Wie groß ist die Zeitspanne <span class="math inline">\(\delta\)</span>, innerhalb derer sich <span class="math inline">\(u(t)\)</span> verdoppelt hat?
-<div id="radio_MCCTFRGJNC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MCCTFRGJNC" value=""> <span><span class="math inline">\(\alpha \cdot \ln2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MCCTFRGJNC" value=""> <span><span class="math inline">\(\ln 2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MCCTFRGJNC" value="answer"> <span><span class="math inline">\(\frac{\ln 2}{\alpha}\)</span></span></label>
+<li><strong><span class="math inline">\(H_0\)</span>:</strong> Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> in der Semaglutid Gruppe ist gleich 0.</li>
+</ol>
+<p><strong><span class="math inline">\(H_1\)</span>:</strong> Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> in der Semaglutid Gruppe ist ungleich 0.</p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Wie lautet die Z-Statistik? (bekannte Varianz <span class="math inline">\(\sigma^2 = 25\)</span>)
+<div id="radio_HAHANHTLAE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HAHANHTLAE" value=""> <span><span class="math inline">\(Z = -5.74\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HAHANHTLAE" value=""> <span><span class="math inline">\(Z = -5.00\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HAHANHTLAE" value="answer"> <span><span class="math inline">\(Z = -7.74\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -329,19 +377,15 @@ window.Quarto = {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Für die Verdoppelungszeit <span class="math inline">\(\delta\)</span> muss gelten <span class="math inline">\(\ u \delta = 2 \cdot u(0)\)</span>. Eingesetzt in die Funktionsgleichung ergibt sich</p>
-<p><span class="math inline">\(\ u(\delta) = u_{0} \cdot e^{\alpha \cdot \delta} = 2 \cdot u_{0}\)</span> <br> <span class="math inline">\(\Leftrightarrow e^{\alpha \cdot \delta} = 2\)</span> <br> <span class="math inline">\(\Leftrightarrow \alpha \cdot \delta = \ln2\)</span> <br> <span class="math inline">\(\Leftrightarrow \delta = \frac{\ln2}{\alpha}\)</span> <br> Damit verdoppelt sich die Anfangspopulation in einer Zeitspanne <span class="math inline">\(\ln2 / \alpha\)</span>.</p></li>
+<ol start="2" type="a">
+<li><span class="math display">\[Z = \frac{-5 - 0}{5} \cdot \sqrt{60} = -7.74\]</span></li>
 </ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
-<ol start="2" type="a">
-<li>Verdoppeln sich kleine oder große Populationen schneller?
-<div id="radio_DOTNBTCBYC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DOTNBTCBYC" value=""> <span>Große Populationen verdoppeln sich schneller.</span></label><label><input type="radio" autocomplete="off" name="radio_DOTNBTCBYC" value="answer"> <span>Die Verdoppelungszeit ist nicht von der Anfangspopulation <span class="math inline">\(u_{0}\)</span> abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich schnell</span></label><label><input type="radio" autocomplete="off" name="radio_DOTNBTCBYC" value=""> <span>Kleine Populationen verdoppeln sich schneller.</span></label>
-</div></li>
+<ol start="3" type="a">
+<li>Kann die Nullhypothese zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden? (kritischer Wert: |Z| = 1.96) <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -356,21 +400,17 @@ window.Quarto = {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol start="2" type="a">
-<li>Die Verdoppelungszeit ist nicht von der Anfangspopulation <span class="math inline">\(u_{0}\)</span> abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich schnell</li>
+<ol start="3" type="a">
+<li><strong>Ja.</strong> Da <span class="math inline">\(|Z| = 7.74 &gt; 1.96\)</span> gilt <span class="math inline">\(p &lt; 5\%\)</span>, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz unterscheidet sich signifikant von 0 — es gibt eine Gewichtsabnahme nach der Therapie.</li>
 </ol>
 </div>
 </div>
 </div>
-</section>
-<section id="übungen-2-a3" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-2-a3">Übungen 2 – A3</h3>
-<p>Die Einwohnerzahl von Mexiko-City betrug 5.5 Millionen im Jahre 1960 und stieg bis 1975 auf 8.1 Millionen an. Unter Annahme eines exponentiellen Wachstums soll die Entwicklung der Einwohnerzahl <span class="math inline">\(y\)</span> beschrieben werden.</p>
 <div class="webex-check webex-box">
-<ol type="a">
-<li>Wohin legen Sie den Nullpunkt, um wenig Arbeit mit dem rechnen zu haben?
-<div id="radio_FTBMNMPEJR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FTBMNMPEJR" value="answer"> <span>Der Nullpunkt sollte in das Jahr 1960 gelegt werden.</span></label><label><input type="radio" autocomplete="off" name="radio_FTBMNMPEJR" value=""> <span>Der Nullpunkt sollte in das Jahr 19675 gelegt werden.</span></label>
+<ol start="4" type="a">
+<li>Wie lautet die t-Statistik?
+<div id="radio_LOANEUBNIM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LOANEUBNIM" value=""> <span><span class="math inline">\(t = -5.04\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_LOANEUBNIM" value="answer"> <span><span class="math inline">\(t = -7.04\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_LOANEUBNIM" value=""> <span><span class="math inline">\(t = -9.04\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -386,17 +426,17 @@ window.Quarto = {
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li>Der Nullpunkt sollte in das Jahr 1960 gelegt werden.</li>
+<ol start="4" type="a">
+<li><span class="math display">\[t = \frac{-5 - 0}{5.4} \cdot \sqrt{60} = -7.04\]</span></li>
 </ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
-<ol start="2" type="a">
-<li>Geben Sie <span class="math inline">\(y(0)\)</span> und <span class="math inline">\(y(15)\)</span> an.
-<div id="radio_XJOYZKHYSQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XJOYZKHYSQ" value=""> <span><span class="math inline">\(y(0) = \ \ 3, \ \ y(15) = 23\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XJOYZKHYSQ" value="answer"> <span><span class="math inline">\(y(0) = 5.5, \ y(15) = 8.1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XJOYZKHYSQ" value=""> <span><span class="math inline">\(y(0) = 8.1, \ y(15) = 5.5\)</span></span></label>
+<ol start="5" type="a">
+<li>Wie lautet das 95%-Konfidenzintervall für den Effekt? (<span class="math inline">\(t_{59; 0.975} = 2.0\)</span>)
+<div id="radio_CKJTQZELZN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_CKJTQZELZN" value=""> <span><span class="math inline">\([-5.4; -3.6]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_CKJTQZELZN" value=""> <span><span class="math inline">\([-7.4; -2.6]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_CKJTQZELZN" value="answer"> <span><span class="math inline">\([-6.4; -3.6]\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -412,17 +452,55 @@ window.Quarto = {
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol start="2" type="a">
-<li>Mit dem Nullpunkt aus Teilaufgabe (a) erhält man <span class="math inline">\(y(0) = 5.5\)</span> und <span class="math inline">\(y(15) = 8.1\)</span></li>
+<ol start="5" type="a">
+<li>Das 95%-Konfidenzintervall berechnet sich mit:</li>
 </ol>
+<p><span class="math display">\[\left[\bar{X} - t_{n-1;1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}};\; \bar{X} + t_{n-1;1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}\right]\]</span></p>
+<p>Somit:</p>
+<p><span class="math display">\[\left[-5 - 2 \cdot \frac{5.4}{\sqrt{60}};\; -5 + 2 \cdot \frac{5.4}{\sqrt{60}}\right] = [-6.4;\; -3.6]\]</span></p>
 </div>
 </div>
 </div>
+<hr>
+</section>
+<section id="aufgabe-2-semaglutid-vs.-tau-ungepaarter-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-2-semaglutid-vs.-tau-ungepaarter-t-test">Aufgabe 2 – Semaglutid vs.&nbsp;TAU (ungepaarter t-Test)</h3>
+<p>Sie vergleichen die Gewichtsdifferenz zwischen der Semaglutid Gruppe und einer „treatment as usual” (TAU) Gruppe.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Baseline</th>
+<th>T1</th>
+<th>Differenz (T1 - Baseline)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Semaglutid (n=60)</td>
+<td>80,5 kg ± 8,5 kg</td>
+<td>75,5 kg ± 7,5 kg</td>
+<td>-5,0 kg ± 5,4 kg</td>
+</tr>
+<tr class="even">
+<td>TAU (n=50)</td>
+<td>81,5 kg ± 9,5 kg</td>
+<td>78,5 kg ± 7,0 kg</td>
+<td>-3,0 kg ± 4,8 kg</td>
+</tr>
+</tbody>
+</table>
 <div class="webex-check webex-box">
-<ol start="3" type="a">
-<li>Bestimmen Sie nun <span class="math inline">\(y_{0}\)</span> und <span class="math inline">\(\lambda\)</span> so, dass <span class="math inline">\(y = y_0 \cdot e^{\lambda t}\)</span> korrekt für die angegebenen Werte ist.
-<div id="radio_OBMYQXFIUB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OBMYQXFIUB" value=""> <span><span class="math inline">\(y_{0} = 5.5\)</span>, <span class="math inline">\(\lambda = 0.002\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_OBMYQXFIUB" value=""> <span><span class="math inline">\(y_{0} = 8.1\)</span>, <span class="math inline">\(\lambda = 0.12\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_OBMYQXFIUB" value="answer"> <span><span class="math inline">\(y_{0} = 0.0258\)</span>, <span class="math inline">\(\lambda = 5.5\)</span></span></label>
+<ol type="a">
+<li>Wie groß ist die gepoolte Standardabweichung <span class="math inline">\(s_{pool}\)</span>?
+<div id="radio_LONNGJSXJV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LONNGJSXJV" value="answer"> <span><span class="math inline">\(s_{pool} = 5.14\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_LONNGJSXJV" value=""> <span><span class="math inline">\(s_{pool} = 4.80\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_LONNGJSXJV" value=""> <span><span class="math inline">\(s_{pool} = 5.40\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -438,24 +516,24 @@ window.Quarto = {
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol start="3" type="a">
-<li><p>Mit den Angaben aus Teilaufgabe (b) und dem Wachstumsmodell <span class="math inline">\(\gamma = \gamma_0 \cdot e^{\lambda t}\)</span> erhält man:</p>
-<p><span class="math inline">\(y(0) = 5.5 = y_{0} \cdot e^{\lambda 0} \Rightarrow y_{0} = 5.5\)</span> <br> <br> <span class="math inline">\(y(15) = 8.1 = 5.5 \cdot e^{\lambda \cdot 15} \Leftrightarrow e^{\lambda \cdot 15} = \frac{8.1}{5.5} \Leftrightarrow \lambda = \frac{1}{15} \cdot \ln(\frac{8.1}{5.5}) = 0.0258\)</span></p>
-<p>Wichtig zu merken: <span class="math inline">\(e^{0} = 1\)</span></p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="übungen-2-a4" class="level2">
-<h2 class="anchored" data-anchor-id="übungen-2-a4">Übungen 2 – A4</h2>
-<p>Bestimmen Sie die Steigung folgender Geraden:</p>
-<div class="webex-check webex-box">
 <ol type="a">
-<li>Die Gerade <span class="math inline">\(y = 2x - 1\)</span>
-<div id="radio_TIXNWDTHJC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TIXNWDTHJC" value=""> <span><span class="math inline">\(m = -2\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TIXNWDTHJC" value="answer"> <span><span class="math inline">\(m = 2\)</span></span></label>
+<li>Die gepoolte Standardabweichung berechnet sich als:</li>
+</ol>
+<p><span class="math display">\[s_{pool} = \sqrt{\frac{(n_1-1) \cdot s_1^2 + (n_2-1) \cdot s_2^2}{n_1 + n_2 - 2}}\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="ot">&lt;-</span> <span class="dv">60</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fl">5.4</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> <span class="fl">4.8</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>spool <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(((n1<span class="dv">-1</span>)<span class="sc">*</span>s1<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (n2<span class="dv">-1</span>)<span class="sc">*</span>s2<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n1<span class="sc">+</span>n2<span class="dv">-2</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>spool  <span class="co"># = 5.14</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Wie lautet die Teststatistik?
+<div id="radio_ZBUJDLEWAU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZBUJDLEWAU" value=""> <span><span class="math inline">\(t = -1.03\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZBUJDLEWAU" value=""> <span><span class="math inline">\(t = -3.03\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZBUJDLEWAU" value="answer"> <span><span class="math inline">\(t = -2.03\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -471,19 +549,19 @@ window.Quarto = {
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Bei einer Geraden der Form <span class="math inline">\(y = mx + b\)</span> ist <span class="math inline">\(m\)</span> direkt die Steigung.</p>
-<p>Für <span class="math inline">\(y = 2x - 1\)</span> gilt also: <span class="math inline">\(m = 2\)</span></p></li>
+<ol start="2" type="a">
+<li><span class="math display">\[t = \frac{-5 - (-3)}{s_{pool} \cdot \sqrt{\frac{1}{60} + \frac{1}{50}}} = -2.03\]</span></li>
 </ol>
+<p>Der t-Test für ungepaarte Stichproben prüft allgemein:</p>
+<p><span class="math display">\[H_0: \mu_X = \mu_Y \quad \text{vs.} \quad H_1: \mu_X \neq \mu_Y\]</span></p>
+<p>anhand der Teststatistik:</p>
+<p><span class="math display">\[T := \frac{\bar{X} - \bar{Y}}{s \cdot \sqrt{\frac{1}{n_x} + \frac{1}{n_y}}} \sim t_{n_x + n_y - 2} \quad \text{unter } H_0\]</span></p>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
-<ol start="2" type="a">
-<li>Die Gerade, die durch die Punkte <span class="math inline">\((-2, 4)\)</span> und <span class="math inline">\((1, 1)\)</span> geht
-<div id="radio_AOHJEVUROV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_AOHJEVUROV" value="answer"> <span><span class="math inline">\(m = -1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AOHJEVUROV" value=""> <span><span class="math inline">\(m = 1\)</span></span></label>
-</div></li>
+<ol start="3" type="a">
+<li>Kann die Nullhypothese <span class="math inline">\(H_0: \mu_{TAU} = \mu_{SEM}\)</span> zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden? (kritischer Wert: <span class="math inline">\(t_{108; 0.975} = 1.98\)</span>) <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -498,56 +576,15 @@ window.Quarto = {
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol start="2" type="a">
-<li><p>Für die Steigung einer Geraden durch zwei Punkte verwendet man:</p>
-<p><span class="math display">\[
-m = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}
-\]</span></p>
-<p>Mit den Punkten <span class="math inline">\((-2,4)\)</span> und <span class="math inline">\((1,1)\)</span> ergibt sich:</p>
-<p><span class="math display">\[
-m = \frac{1-4}{1-(-2)}
-\]</span></p>
-<p><span class="math display">\[
-= \frac{-3}{3}
-\]</span></p>
-<p><span class="math display">\[
-= -1
-\]</span></p></li>
+<ol start="3" type="a">
+<li><strong>Ja.</strong> Da <span class="math inline">\(|t| = 2.03 &gt; 1.98\)</span> gilt <span class="math inline">\(p &lt; 5\%\)</span>, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz zwischen den beiden Gruppen ist statistisch signifikant.</li>
 </ol>
 </div>
 </div>
 </div>
+
+
 </section>
-<section id="übungen-2-a5" class="level2">
-<h2 class="anchored" data-anchor-id="übungen-2-a5">Übungen 2 – A5</h2>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Es ist die Funktion <span class="math inline">\(y = x^{2} - 3\)</span> gegeben. Welche Aussage trifft zu?
-<div id="radio_FLGPNBOSAW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FLGPNBOSAW" value=""> <span>Die Funktion ist für alle <span class="math inline">\(x \in [-1,2]\)</span> streng monoton wachsend</span></label><label><input type="radio" autocomplete="off" name="radio_FLGPNBOSAW" value=""> <span>Die Funktion ist für alle <span class="math inline">\(x \in [-1,2]\)</span> streng monoton fallend</span></label><label><input type="radio" autocomplete="off" name="radio_FLGPNBOSAW" value=""> <span>Die Funktion ist für alle <span class="math inline">\(x \in [0,4]\)</span> streng monoton fallend</span></label><label><input type="radio" autocomplete="off" name="radio_FLGPNBOSAW" value="answer"> <span>Keine der oben genannten</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li>Richtige Antwort: <strong>Keine der oben genannten</strong> <br> Erklärung: Der Scheitel der Parabel liegt bei <span class="math inline">\((0, -3)\)</span>. Die Parabel ist nach oben geöffnet und daher streng monoton wachsend im Bereich <span class="math inline">\(x &gt; 0\)</span> und im Bereich <span class="math inline">\(x &lt; 0\)</span>.</li>
-</ol>
-</div>
-</div>
-</div>
-
-
 </section>
 
 </main> <!-- /main -->
