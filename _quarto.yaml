@@ -17,15 +17,16 @@ website:
     collapse-level: 2
     align: left
     contents:
-      - exercises/block1.rmd
-      - exercises/block2.rmd
-      - exercises/block3.rmd
-      - exercises/block4.rmd
-      - exercises/block5.rmd
-      - exercises/block6.rmd
-      - exercises/block7.rmd
-      - exercises/block8.rmd
-      - exercises/final1_5.rmd
+    - precourse
+        - exercises/block1.rmd
+        - exercises/block2.rmd
+        - exercises/block3.rmd
+        - exercises/block4.rmd
+        - exercises/block5.rmd
+        - exercises/block6.rmd
+        - exercises/block7.rmd
+        - exercises/block8.rmd
+        - exercises/final1_5.rmd
 html:
   css: out/webex.css
   include-after-body: out/webex.js
