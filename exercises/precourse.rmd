@@ -1,6 +1,4 @@
 ---
 title: Block 7
 ---
-```{r, echo = FALSE, results='asis'}
-library(webexercises)
-```
+Hallo test
