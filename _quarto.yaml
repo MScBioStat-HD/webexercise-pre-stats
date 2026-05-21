@@ -29,7 +29,7 @@ website:
             - exercises/block8.rmd
             - exercises/final1_5.rmd
         - section: "Biometrie I"
-          href: exercises/BiometrieI.rmd
+          href: exercises/biometrie_I.rmd
           contents:
             - exercises/biometrie_1.rmd
 
