@@ -16,7 +16,7 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - section: "Pre-Stats Course"
+        - section: "Statistik Vorkurs"
           href: exercises/precourse.rmd
           contents:
             - exercises/block1.rmd
