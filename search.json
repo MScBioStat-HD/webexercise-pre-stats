@@ -2,9 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Willkommen",
+    "title": "Willkommen auf der Übungsplattform des MSc Medical Biometry/Biostatistics",
     "section": "",
-    "text": "Hallo!"
+    "text": "Diese Plattform begleitet Sie durch die mathematisch-statistischen Grundlagen des Masterstudiengangs Medical Biometry/Biostatistics der Medizinischen Fakultät der Universität Heidelberg."
+  },
+  {
+    "objectID": "index.html#statistik-vorkurs",
+    "href": "index.html#statistik-vorkurs",
+    "title": "Willkommen auf der Übungsplattform des MSc Medical Biometry/Biostatistics",
+    "section": "Statistik Vorkurs",
+    "text": "Statistik Vorkurs\nFür Studierende ohne ausreichende statistische Vorkenntnisse bietet der Studiengang einen vorbereitenden Statistikvorkurs an. Die Übungen auf dieser Plattform helfen Ihnen, die vermittelten Inhalte zu vertiefen und sich optimal auf das Studium vorzubereiten. Die Aufgaben sind nach Blöcken gegliedert und decken die zentralen Themen des Vorkurses ab. Jeder Block enthält interaktive Übungsaufgaben mit automatischer Überprüfung Ihrer Antworten."
+  },
+  {
+    "objectID": "index.html#biometrie-i",
+    "href": "index.html#biometrie-i",
+    "title": "Willkommen auf der Übungsplattform des MSc Medical Biometry/Biostatistics",
+    "section": "Biometrie I",
+    "text": "Biometrie I\nDie Übungen zu Biometrie I begleiten den gleichnamigen Kurs im Masterstudiengang und dienen der Vertiefung der Studieninhalte."
   },
   {
     "objectID": "exercises/block8.html",

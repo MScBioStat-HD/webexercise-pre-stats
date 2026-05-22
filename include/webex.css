@@ -34,12 +34,10 @@ a:hover {
 }
 
 .sidebar-logo {
-  width: 120px;
-  display: block;
+  width: 125px;
   position: fixed;
-  bottom: 20px;
-  right: 12.5%;
-  transform: translateX(-50%);
+  bottom: 24px;
+  left: 15.5%;
 }
 
 .sidebar-section .sidebar-section-item {
