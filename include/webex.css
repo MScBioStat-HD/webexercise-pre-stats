@@ -38,7 +38,7 @@ a:hover {
   display: block;
   position: fixed;
   bottom: 20px;
-  left: 19%;
+  right: 12.5%;
   transform: translateX(-50%);
 }
 
