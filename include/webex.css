@@ -22,10 +22,24 @@ body::before {
   width: 100%;
 }
 
+a:hover {
+	text-decoration: underline !important;
+	color:  #467AAC !important;
+}
+
 /* ── Sidebar ── */
 .sidebar {
   background-color: #f0f4f8 !important;
 	padding-left: 0.5rem;
+}
+
+.sidebar-logo {
+  width: 120px;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  left: 19%;
+  transform: translateX(-50%);
 }
 
 .sidebar-section .sidebar-section-item {

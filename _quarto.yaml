@@ -13,6 +13,7 @@ website:
     - id: exercises
       title: "MSc Medical Biometry/Biostatistics"
       style: "floating"
+      logo: image002.png
       collapse-level: 2
       align: left
       contents:
