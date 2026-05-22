@@ -6,9 +6,6 @@ project:
 
 website:
   title: "MSc Medical Biometry/Biostatistics"
-  # navbar:
-  #   left:
-  #   - index.qmd
   sidebar:
     - id: exercises
       title: "MSc Medical Biometry/Biostatistics"
@@ -34,6 +31,14 @@ website:
           contents:
             - exercises/biometrie_1.rmd
             - exercises/biometrie_2.rmd
+            - exercises/biometrie_3.rmd
+            - exercises/biometrie_4.rmd
+            - exercises/biometrie_5.rmd
+            - exercises/biometrie_6.rmd
+            - exercises/biometrie_7.rmd
+            - exercises/biometrie_8.rmd
+            - exercises/biometrie_9.rmd
+
 
 html:
   css: out/webex.css

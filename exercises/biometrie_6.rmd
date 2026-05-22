@@ -1,0 +1,6 @@
+---
+title: Block 6
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```

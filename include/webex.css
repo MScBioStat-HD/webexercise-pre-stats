@@ -30,14 +30,11 @@ a:hover {
 /* ── Sidebar ── */
 .sidebar {
   background-color: #f0f4f8 !important;
-	padding-left: 0.5rem;
 }
 
 .sidebar-logo {
-  width: 125px;
-  position: fixed;
-  bottom: 24px;
-  left: 15.5%;
+  width: 90px;
+  left: 18%;
 }
 
 .sidebar-section .sidebar-section-item {
