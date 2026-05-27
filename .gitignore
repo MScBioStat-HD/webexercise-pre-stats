@@ -4,7 +4,6 @@
 .Ruserdata
 tool/
 
-*.png
 _site/
 /.quarto/
 **/*.quarto_ipynb
