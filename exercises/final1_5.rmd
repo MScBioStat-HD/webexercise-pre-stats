@@ -1,11 +1,10 @@
 ---
-title: Abschlussübung
+title: Abschlussübungen
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
-
-Abschlussübung von Block 1 bis Block 5
+Gemischte Übungen aus allen Blöcken
 
 ### Übung 1
 Betrachten Sie die Funktion \\(f(x) = (x - 1 )^{2} \\cdot x \\) im Intervall [-1, 3].

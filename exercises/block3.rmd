@@ -7,6 +7,9 @@ library(webexercises)
 
 ## Differentialrechnung
 
+<small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
+
 ### Übungen 3 – A1
 Bestimmen Sie die Ableitung zu
 
@@ -23,7 +26,7 @@ cat("(a) ${f}(x) = 3 x^{4} + x^{2} + 5$",
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a) $\\f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} = 2x$
+(a) $\\f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} + 2x$
 :::
 
 ::: {.webex-check .webex-box}
@@ -80,9 +83,9 @@ cat("(d) ${f}(x) = \\sqrt{1 - x^{2}}$",
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"$f^{\\prime}(x)$ = $e^{x}$ ($\\frac{1}{x} + \\ln(x))$",
-	answer = "$f^{\\prime}(x)$  = $e^{x}$ $\\cdot$ $\\frac{1}{x}$ + $e^{x}$ $\\cdot \\ln(x)$",
-	"$f^{\\prime}(x) = e^{x} \\cdot \\frac{1}{x}$"
+  "$f^{\\prime}(x) = e^{x}(\\frac{1}{x} + \\ln(x))$",
+  answer = "$f^{\\prime}(x) = e^{x} \\cdot \\frac{1}{x} + e^{x} \\cdot \\ln(x)$",
+  "$f^{\\prime}(x) = e^{x} \\cdot \\frac{1}{x} - e^{x} \\cdot \\ln(x)$"
 )
 
 cat("(e) ${f}(x) = e^{x} \\cdot ln(x)$",
@@ -114,9 +117,9 @@ cat("(f) ${f}(x) =  \\frac{(x+4)}{x^{2}}$",
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"$f^{\\prime}(x) = (x + 4) \\cdot e^{x}$",
-	"$f^{\\prime}(x) = 1 + e^{x}$",
-	answer = "$f^{\\prime}(x) = (x + 4) \\cdot e^{x} + 1 \\cdot e^{x}$"
+  "$(x + 4) \\cdot e^{x}$",
+  "$1 + e^{x}$",
+  answer = "$(x + 5) \\cdot e^{x}$"
 )
 
 cat("(g) ${f}(x) = (x + 4) \\cdot e^{x}$",
@@ -125,7 +128,7 @@ cat("(g) ${f}(x) = (x + 4) \\cdot e^{x}$",
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(g) $\\f(x) = (x + 4) \cdot e^{x} \Rightarrow f'(x) = (x + 4) \cdot e^{x} + 1 \cdot e^{x}$
+(g) $f'(x) = (x+4) \cdot e^x + 1 \cdot e^x = (x+5) \cdot e^x$
 :::
 
 ::: {.webex-check .webex-box}
@@ -176,7 +179,8 @@ cat("(j) ${f}(x) = e^{-2x^{2}}$",
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(j) $\\f(x) = e^{-2x} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}$
+(j) $f(x) = e^{-2x^{2}} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}$
+:::
 :::
 
 ### Übungen 3 – A2
@@ -205,33 +209,21 @@ longmcq(opts))
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-
-cat("(b) Bestimmen Sie die Nullstellen der Ableitung sowie die lokalen Extremstellen der Funktion im Intervall $[-1,1]$.
+cat("(b) Bestimmen Sie die lokalen Extremstellen der Funktion im Intervall $[-1,1]$.
 Skizzieren Sie die Funktion zunächst auf dem Intervall $[-1,1]$.<br><br>",
-"**Nullstellen der Ableitung:** <br><br>",
-"$x_{1} =$ ", fitb(-0.5), "<br>",
-"$x_{2} =$ ", fitb(0.25), "<br><br>",
-"**Lokale Extremstellen:** <br><br>",
-"$f(x_{1}) =$ ", fitb(1.25), "<br>",
-"$f(x_{2}) =$ ", fitb(-0.4375), "<br>"
+"**Lokale Extremstellen:**<br>",
+"$x_{1} =$ ", fitb(-0.5), "<br><br>",
+"$x_{2} =$ ", fitb(0.25)
 )
 ```
 :::
-
 ::: {.callout-tip collapse="true" title="Lösung"}
 (b) Von der Ableitung aus Teilaufgabe (a) müssen nun die Nullstellen bestimmt werden: <br><br>
-	$\\0 = 24x^{2} + 6x - 3 \Leftrightarrow 0 = 8x^{2} + 2x -1$ <br><br>
-	$\\ \Leftrightarrow x_{1,2} = \frac{-2 \pm \sqrt{4 - 4 \cdot 8 \cdot (-1)}}{16} = \frac{-2 \pm \sqrt{36}}{16}$ <br><br>
-	Nullstellen der Ableitung:
-	$$x_{1} = - 0.5$$ $$x_{2} = 0.25$$
+	$0 = 24x^{2} + 6x - 3 \Leftrightarrow 0 = 8x^{2} + 2x - 1$ <br><br>
+	$\Leftrightarrow x_{1,2} = \frac{-2 \pm \sqrt{4 - 4 \cdot 8 \cdot (-1)}}{16} = \frac{-2 \pm \sqrt{36}}{16}$ <br><br>
+	Lokale Extremstellen (= Nullstellen der Ableitung):<br><br>
+	$x_{1} = -0.5 \qquad x_{2} = 0.25$
 
 	<img src="images/image_3A2.png" width="300">
-
-	Eine Auswertung der Funktion an den möglichen Extremstellen ergibt:
-	$$f(-0.5) = 1.25$$
-	$$f(0.25) = -0.4375$$
-
-	Damit liegen die lokalen Extrempunkte bei:
-	$$(−0.5,1.25)$$ $$(0.25, −0.4375)$$
 
 :::

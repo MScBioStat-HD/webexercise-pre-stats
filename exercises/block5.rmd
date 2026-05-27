@@ -12,18 +12,36 @@ library(webexercises)
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
+  "Nein",
+  answer = "Ja"
+)
+cat("(a) Sind die zwei Vektoren 
+  $x = \\begin{pmatrix} 1 \\\\ 1 \\\\ 2 \\end{pmatrix}$ und 
+  $y = \\begin{pmatrix} 2 \\\\ 2 \\\\ 8 \\end{pmatrix}$ linear unabhängig?",
+  longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Die Vektoren sind linear unabhängig, denn es gibt kein $\alpha \in \mathbb{R}$, so dass
+  $$\begin{pmatrix}1\\1\\2\end{pmatrix} = \alpha \begin{pmatrix}2\\2\\8\end{pmatrix}$$
+  Da I. und II. $1 = 0.5 \cdot 2$, aber III. $2 \neq 0.5 \cdot 8$.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
 	answer = "Nein",
 	"Ja"
 )
 
-cat("(a) Sind die drei Vektoren 
+cat("(b) Sind die drei Vektoren 
 	$x = \\begin{pmatrix} 1 \\\\\\ 0 \\\\\\ 0 \\end{pmatrix}$, $y = \\begin{pmatrix} 1 \\\\\\ 2 \\\\\\ 3 \\end{pmatrix}$ und $z = \\begin{pmatrix} 2 \\\\\\ 2 \\\\\\ 3 \\end{pmatrix}$ linear unabhängig?",
 	longmcq(opts))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a) Mit $x = (1\,0\,0)^{T}$, $y = (1\,2\,3)^{T}$ und $z = (2\,2\,3)^{T}$ gilt
+(b) Mit $x = (1\,0\,0)^{T}$, $y = (1\,2\,3)^{T}$ und $z = (2\,2\,3)^{T}$ gilt
 	$$
 	x + y - z
 	=
@@ -35,27 +53,7 @@ cat("(a) Sind die drei Vektoren
 	=
 	\begin{pmatrix}0\\0\\0\end{pmatrix}
 	$$
-	Außerdem ist:
-	$$
-	\det
-	\begin{pmatrix}
-	1 & 1 & 2 \\
-	0 & 2 & 2 \\
-	0 & 3 & 3
-	\end{pmatrix}
-	=
-	1 \cdot
-	\det
-	\begin{pmatrix}
-	2 & 2 \\
-	3 & 3
-	\end{pmatrix}
-	=
-	2\cdot 3 - 3\cdot 2
-	=
-	0
-	$$
-
+	
 	Die Vektoren sind linear abhängig.
 <br>
 :::
@@ -67,14 +65,14 @@ opts <- c(
 	answer = "Ja"
 )
 
-cat("(b) Sind die drei Vektoren 
+cat("(c) Sind die drei Vektoren 
 	$x = \\begin{pmatrix} 1 \\\\\\ 1 \\\\\\ 1 \\end{pmatrix}$, $y = \\begin{pmatrix} 2 \\\\\\ 0 \\\\\\ 1 \\end{pmatrix}$ und $z = \\begin{pmatrix} 3 \\\\\\ 3 \\\\\\ 2 \\end{pmatrix}$ linear unabhängig?",
 	longmcq(opts))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(b) Gesucht sind $\alpha, \beta$ und $\gamma$ mit \alpha \cdot x + \beta \cdot y + \gamma \cdot z = 0. Man erhält das folgende Gleichungssystem:
+(c) Gesucht sind $\alpha, \beta$ und $\gamma$ mit \alpha \cdot x + \beta \cdot y + \gamma \cdot z = 0. Man erhält das folgende Gleichungssystem:
 	$$
 	\begin{cases}
 	\alpha + 2\beta + 3\gamma = 0 \\
@@ -83,7 +81,7 @@ cat("(b) Sind die drei Vektoren
 	\end{cases}
 	$$
 
-	Aus der zweiten Gleichung folgt \alpha = -3\gamma. Setzt man dies in die erste Gleichung ein, so erhält man
+	Aus der zweiten Gleichung folgt  $\alpha = -3\gamma$. Setzt man dies in die erste Gleichung ein, so erhält man
 	$$
 	-3\gamma + 2\beta + 3\gamma = 2\beta = 0,
 	$$
@@ -91,7 +89,7 @@ cat("(b) Sind die drei Vektoren
 	$$
 	-3\gamma + 0 + 2\gamma = -\gamma = 0,
 	$$
-	also $\gamma = 0$ und damit auch $\alpha = 0$. Andere Lösungen für $\alpha, \beta$ und $\gamma$ gibt es nicht.
+	also $\gamma = 0$ und damit auch $\alpha = 0$. Somit ist $\alpha = \beta = \gamma = 0$. Andere Lösungen für $\alpha, \beta$ und $\gamma$ gibt es nicht.
 
 	Zusätzlich gilt:
 	$$
@@ -119,7 +117,7 @@ opts <- c(
   answer = "Ja"
 )
 
-cat("(c) Sind die drei Vektoren 
+cat("(d) Sind die drei Vektoren 
 $x = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$, 
 $y = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$ und 
 $z = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ linear unabhängig?",
@@ -128,57 +126,27 @@ longmcq(opts))
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(c) Die drei Vektoren
+(d) Die drei Vektoren
 	$$
 	x =\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
 	y =\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
 	z =\begin{pmatrix}1\\1\\0\end{pmatrix}
 	$$
-	sind linear unabhängig.
+	sind linear unabhängig. Zum Nachweis betrachten wir
+	$\lambda_1 x + \lambda_2 y + \lambda_3 z = \begin{pmatrix}0\\0\\0\end{pmatrix}.$
 
-	Zum Nachweis betrachten wir
-	$\lambda_1 x +\lambda_2 y +\lambda_3 z =\begin{pmatrix}0\\0\\0\end{pmatrix}.$
-
+	Dies liefert das Gleichungssystem:
 	$$
 	\begin{aligned}
-		\lambda_2+\lambda_3&=0\\
-		\lambda_1+\lambda_3&=0\\
-		\lambda_1+\lambda_2&=0
-	\end{aligned}
-	\overset{\substack{I \leftrightarrow III\\ II-I\to II}}{\Longrightarrow}
-	\begin{aligned}
-		\lambda_1+\lambda_2&=0\\
-		-\lambda_2+\lambda_3&=0\\
-		\lambda_2+\lambda_3&=0
-	\end{aligned}
-	\overset{II + III \to III}{\Longrightarrow}
-	\begin{aligned}
-		\lambda_1+\lambda_2&=0\\
-		-\lambda_2+\lambda_3&=0\\
-		2\lambda_3&=0
+		\lambda_2 + \lambda_3 &= 0 \\
+		\lambda_1 + \lambda_3 &= 0 \\
+		\lambda_1 + \lambda_2 &= 0
 	\end{aligned}
 	$$
 
+	Aus II. folgt $\lambda_3 = -\lambda_1$ und aus III. folgt $\lambda_2 = -\lambda_1$. Eingesetzt in die erste Gleichung folgt $\lambda_1 = 0$.
 
-	Dies liefert das Gleichungssystem
-	$$
-	\begin{aligned}
-		\lambda_1+\lambda_2&=0\\
-		-\lambda_2+\lambda_3&=0\\
-		2\lambda_3&=0
-	\end{aligned}
-	$$
-
-	Aus der ersten Gleichung folgt $\lambda_{2} = - \lambda_{3}$, aus der zweiten $\lambda_{1} = - \lambda_{3}$. In die dritte Gleichung eingesetzt ergibt sich
-	$$
-	-\lambda_3-\lambda_3=0
-	\quad\Rightarrow\quad
-	-2\lambda_3=0
-	\quad\Rightarrow\quad
-	\lambda_3=0.
-	$$
-
-	Daraus folgen auch $\lambda_2 = 0$ und $\lambda_1 = 0$. Also sind $x,\; y \; \text{und} \; z$ linear unabhängig.
+	Daraus folgen auch $\lambda_2 = 0$ und $\lambda_3 = 0$. Also sind $x$, $y$ und $z$ linear unabhängig.
 :::
 
 ::: {.webex-check .webex-box}
@@ -188,7 +156,7 @@ opts <- c(
   "Ja"
 )
 
-cat("(d) Sind die vier Vektoren 
+cat("(e) Sind die vier Vektoren 
 $v_1 = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$, 
 $v_2 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$, 
 $v_3 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ und 
@@ -199,7 +167,7 @@ longmcq(opts))
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(d) Die vier Vektoren
+(e) Die vier Vektoren
 	$$
 	v_1=\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
 	v_2=\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
@@ -221,30 +189,6 @@ longmcq(opts))
 	$$
 
 	Damit liegt eine nichttriviale Linearkombination der Vektoren vor, die den Nullvektor ergibt. Also sind $v_{1}, \; v_{2},\; v_{3},\; v_{4}$ linear abhängig.
-:::
-
-::: {.webex .webex-box}
-(e) Betrachten Sie die folgenden linearen Teilräume von $\mathbb{R}^4$ <br> <br>
-$U := \{(x_1, x_2, x_3, x_4)\in \mathbb{R}^4 | x_1 - x_2 + x_3 - x_4 = 0\}$ <br><br>
-Bestimmen Sie eine Basis von $U$.
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-(e) Der Untervektorraum U von $\mathbb{R}^4$ besteht aus allen Vektoren der Form
-	$$
-	\begin{pmatrix}x_2 - x_3 + x_4\\x_2\\x_3\\x_4\end{pmatrix} 
-	= x_2 \begin{pmatrix}1\\1\\0\\0\end{pmatrix}
-	+ x_3 \begin{pmatrix}-1\\0\\1\\0\end{pmatrix}
-	+ x_4 \begin{pmatrix}1\\0\\0\\1\end{pmatrix}
-	$$
-	<br>
-	Mit $x_2, x_3, x_4 \mathbb{R}^4$. Man sieht leicht, dass die Vektoren
-	$$
-	\begin{pmatrix}1\\1\\0\\0\end{pmatrix}, 
-	\begin{pmatrix}-1\\0\\1\\0\end{pmatrix} \text{und}
-	\begin{pmatrix}1\\0\\0\\1\end{pmatrix}
-	$$
-	linear unabhängig sind. Diese bilden somit eine Basis von U.
 :::
 
 ### Übungen 5 – A2

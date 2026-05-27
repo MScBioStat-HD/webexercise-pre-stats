@@ -7,44 +7,9 @@ library(webexercises)
 
 ## Mathematische Grundlagen
 
+<small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
 ### Übungen 1 – A1
-Überlegen Sie anhand eines Venn-Diagramms:
-
-Notiz: Die symmetrische Differenz A$\Delta$ B von zwei Mengen ist definiert als die Menge aller
-Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen.
-
-::: {.webex .webex-box}
-(a) Welche Elemente gehören zur symmetrischen Differenz $A \Delta B$ ?
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-<img src="images/image_1A_a.png" width="300"> <br>
-Die symmetrische Differenz ist der schraffierte Bereich <br>
-:::
-
-::: {.webex .webex-box}
-(b) Die symmetrische Differenz lässt sich $\sigma$ auch ausdrücken als $A \Delta B = (A \setminus B) \cup (B \setminus A)$
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-
-
-<img src="images/image_1A_b.png" width="300"> <br>
-$A \setminus B$ ist der von links oben schraffierte Bereich. B\A ist der von rechts oben schraffierte Bereich. Die
-Vereinigung sind beide schraffierten Bereiche. Ein Vergleich mit Teilaufgabe (a) liefert die gewünschte
-Aussage.<br>
-:::
-
-::: {.webex .webex-box}
-(c) $A \cap B = B$ heißt dasselbe wie $B \subset A$
-:::
-
-::: {.callout-tip collapse="true" title="Lösung"}
-<img src="images/image_1A_c.png" width="300"> <br>
-$B$ ist die schraffierte Menge. $A \cap B = B$  und $B \subset A$
-:::
-
-### Übungen 1 – A2
 
 Gegeben sind folgende Mengen $A = \{6, 4, 3, 15, 9\}$, $B = \{4, 12, 6, 9\}$ und $C = \{4\}$
 
@@ -90,6 +55,44 @@ cat("(d) Ist die unter c) bestimmte Menge gleich der Menge $A \\setminus (C \\ca
 ```
 :::
 
+### Übungen 1 – A2
+Notiz: Die symmetrische Differenz A$\Delta$ B von zwei Mengen ist definiert als die Menge aller
+Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen.
+
+Zeichen Sie sich dafür das Venn-Diagramm.
+
+::: {.webex .webex-box}
+(a) Welche Elemente gehören zur symmetrischen Differenz $A \Delta B$ ?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+<img src="images/image_1A_a.png" width="300"> <br>
+Die symmetrische Differenz ist der schraffierte Bereich <br>
+:::
+
+::: {.webex .webex-box}
+(b) Die symmetrische Differenz lässt sich $\sigma$ auch ausdrücken als $A \Delta B = (A \setminus B) \cup (B \setminus A)$
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+
+<img src="images/image_1A_b.png" width="300"> <br>
+$A \setminus B$ ist der von links oben schraffierte Bereich. B\A ist der von rechts oben schraffierte Bereich. Die
+Vereinigung sind beide schraffierten Bereiche. Ein Vergleich mit Teilaufgabe (a) liefert die gewünschte
+Aussage.<br>
+:::
+
+::: {.webex .webex-box}
+(c) $A \cap B = B$ heißt dasselbe wie $B \subset A$
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+<img src="images/image_1A_c.png" width="300"> <br>
+$B$ ist die schraffierte Menge. $A \cap B = B$  und $B \subset A$
+:::
+
+
 ::: {.callout-tip collapse="true" title="Lösung"}
 (d) Nein, da  $(C \cap B) = \{4\}$ und somit A ohne $\{4\} = \{3, 6, 9, 15\}$
 :::
@@ -99,41 +102,29 @@ cat("(d) Ist die unter c) bestimmte Menge gleich der Menge $A \\setminus (C \\ca
 Bei einem Spiel mit Münzen wird eine Münze 4 Mal hintereinander geworfen. Dabei wird jedes Mal notiert, ob
 Wappen (W) oder Zahl (Z) gefallen ist.
 
-
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-library(webexercises)
-opts <- c(
-	answer = "$\\Omega = {(x_{1}, x_{2}, x_{3}, x_{4}) \\ | \\ x_{i} \\in \\{W, Z\\}, \\ i = 1, …,4} =$ <br> 
-	$\\{(W, W, W, W), (W, W, W, Z), (W, W, Z, W),$ <br> 
-	$(W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)\\}$",
-	"$\\Omega = {W, Z}$"
-)
-
-cat("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
-    longmcq(opts))
-```
+::: {.webex .webex-box}
+(a) Geben Sie eine geeignete Menge $\Omega$ an, in der alle möglichen Ergebnisse liegen.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
-die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
+	die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
 
-$\Omega = {(x_{1}, x_{2}, x_{3}, x_{4}) | x_{i} \in \{W, Z\}, i = 1, …,4} =$ <br> $\{(W, W, W, W), (W, W, W, Z),$
-$(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)\}$
+	$\Omega = \{(x_{1}, x_{2}, x_{3}, x_{4}) | x_{i} \in \{W, Z\}, i = 1, …,4\} =$ <br> $\{(W, W, W, W), (W, W, W, Z),$
+	$(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)\}$
 :::
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-library(webexercises)
-cat("(b) Wie viel Elemente enthält die Menge $\\Omega$ aus Aufgabe (a)? <br>")
-cat("$\\Omega =$ ", fitb(16, num=TRUE))
+	library(webexercises)
+	cat("(b) Wie viel Elemente enthält die Menge $\\Omega$ aus Aufgabe (a)? <br>")
+	cat("$\\Omega =$ ", fitb(16, num=TRUE))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (b) Die Anzahl der Elemente von $\Omega$ ist $\#\Omega = 2 \cdot 2 \cdot 2 \cdot 2 = 16$, da es für jeden Wurf
-zwei mögliche Ergebnisse gibt.
+	zwei mögliche Ergebnisse gibt.
 :::
 
 ::: {.webex-check .webex-box}
@@ -141,7 +132,8 @@ zwei mögliche Ergebnisse gibt.
 opts <- c(
 	answer = "$A = \\{(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z),$
 	$(Z, W, Z, W), (Z, Z, W, W)\\}$",
-	"$A = \\{(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z), (Z, Z, W, W)\\}$"
+	"$A = \\{(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z), (Z, Z, W, W)\\}$",
+	"$A = \\{(W, W, W, Z), (W, W, Z, W), (W, Z, W, W), (Z, W, W, W)\\}$"
 )
 cat("c) Geben Sie für das Ereignis A: „es ist genau zweimal
 	Wappen gefallen“ die Ereignismenge an.", longmcq(opts))
@@ -155,18 +147,8 @@ W), (Z, Z, W, W)} beschreiben.
 :::
 
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-opts <- c(
-	answer = paste0(
-	"$B = \\{(W, W, x_{3}, x_{4}) | x_{3}, x_{4} \\in \\{W, Z\\}\\} =$ 
-	$\\{(W, W, W, W),(W, W, W, Z),(W, W, Z, W),(W, W, Z, Z)\\}$"),
-	"$B = \\{ (W, W, W, W), (W, W, Z, Z) \\}$"
-)
-
-cat("(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
-	longmcq(opts))
-```
+::: {.webex .webex-box}
+(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -178,8 +160,9 @@ $\{(W, W, W, W), (W, W, W, Z),(W, W, Z, W), (W, W, Z, Z)\}$ beschrieben werden.
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"$A \\cap B = \\{(W, W, W, Z), (W, W, Z, W)\\}$",
-	answer = "$A \\cap B = \\{(W, W, Z, Z)\\}$"
+	  "$A \\cap B = \\{(W, W, W, Z), (W, W, Z, W)\\}$",
+  answer = "$A \\cap B = \\{(W, W, Z, Z)\\}$",
+  "$A \\cap B = \\{(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z)\\}$"
 )
 cat("(e) Bestimmen Sie die Schnittmenge A $\\cap$ B, wobei A das Ergebnis aus Teil (c) und B das Ergebnis aus Teil (d) ist", longmcq(opts))
 ```

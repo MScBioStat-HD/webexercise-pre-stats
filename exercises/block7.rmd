@@ -193,7 +193,7 @@ cat("(a) Ist das lineare Gleichungssystem <br><br>$\\begin{array}{r r r l}
 	\substack{
 	3 \cdot \mathrm{II} + \mathrm{I} \Rightarrow \mathrm{II} \\
 	3 \cdot \mathrm{III}  - 2 \cdot \mathrm{I} \Rightarrow \mathrm{III} \\
-	3 \cdot \mathrm{IV} + \ mathrm{I} \Rightarrow \mathrm{IV}
+	3 \cdot \mathrm{IV} + \mathrm{I} \Rightarrow \mathrm{IV}
 	}}
 	\left(
 	\begin{array}{ccc|c}
@@ -320,7 +320,7 @@ cat("(a) Für welche Werte von a hat das folgende Gleichungssystem eine
 	$$
 	<br>
 	Da in der Zeilen-Stufen-Form in jeder Zeile eine Pivotvariable vorkommt und kein Widerspruch entsteht, besitzt das lineare Gleichungssystem für jedes $a$
-	a genau eine Lösung. Diese kann direkt aus der Matrix abgelesen werden: 
+	genau eine Lösung. Diese kann direkt aus der Matrix abgelesen werden: 
 	$x = a \,–\, 2 \qquad 
 	y = 4 \,–\, a \; \text{und}	\qquad 
 	z = a \,–\, 2$.
@@ -328,115 +328,54 @@ cat("(a) Für welche Werte von a hat das folgende Gleichungssystem eine
 
 ### Übungen 7 – A5
 
-Lösen Sie das folgende Gleichungssystem, wobei $a \neq 1$ eine reelle Zahl ist. <br><br> 
-$\begin{array}{r r r l}
-	3x_{1} & - & 2x_{2} & - & ax_{3} & = 1\\
-	3x_{1} & - & x_{2} & + &  x_{3} & = 5
-	\end{array}$ <br>
+Gegeben ist das folgende Gleichungssystem:
+
+$$x_1 + x_2 + x_3 + x_4 = 1$$
+$$x_1 + 3x_4 = 2$$
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"$x_{1} = \\frac{5}{a - 1}$ <br>
-	$x_{2} = 0$ <br>
-	$x_{3} = \\frac{4}{a - 1}t$ <br><br>",
-	answer = "$x_{1} = \\frac{5a - 1}{3a - 3} +  \\frac{1}{3} t$ <br>
-	$x_{2} = t$ <br> 
-	$x_{3} = \\frac{4}{1 - a}t$<br><br>",
-	"$x_{1} = \\frac{5}{a - 1}$ <br>
-	$x_{2} = t$ <br>
-	$x_{3} = \\frac{3}{a - 1} t$"
+  "$p = 1, q = 0$",
+  "$p = 0, q = 1$",
+  answer = "$p = 0, q = 0$"
 )
-cat("(a) Welche Lösungsdarstellung ist korrekt?<br><br>",
-	longmcq(opts))
+cat("(a) Wie lauten $p$ und $q$ für das Gleichungssystem?", longmcq(opts))
 ```
 :::
-
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a) Die erweiterte Matrix wird umgeformt und in Zeilen-Stufen-Form gebracht
-	$$
-	\left(
-	\begin{array}{ccc|c}
-	3 & -1 & a & 1 \\
-	3 & -1 & 1 & 5
-	\end{array}
-	\right)
-	\xrightarrow{\,I - II \to II\,}
-	\left(
-	\begin{array}{ccc|c}
-	3 & -1 & a & 1 \\
-	0 & 0 & a-1 & -4
-	\end{array}
-	\right)
-	$$
-
-	Jetzt kann man nach den Variablen umstellen.  
-
-	$$
-	\begin{aligned}
-	\text{II}\quad & ax_3 - x_3 = -4 \\
-	\text{II}\quad & (a-1)x_3 = -4 \\
-	\text{II}\quad & x_3 = \frac{4}{1-a}
-	\end{aligned}
-	$$
-
-	Nun werden $x_{2}$ und $x_{3}$ in die erste Gleichung eingesetzt:
-
-	$$
-	\begin{aligned}
-	\text{I}\quad & 3x_1 - x_2 + ax_3 = 1 \\
-	\text{I}\quad & 3x_1 - x_2 + a \cdot \frac{4}{1-a} = 1 \\
-	\text{I}\quad & 3x_1 - x_2 = 1 - \frac{4a}{1-a} \\
-							& = \frac{1(1-a)-4a}{1-a} \\
-							& = \frac{1-a-4a}{1-a} \\
-							& = \frac{1-5a}{1-a}
-	\end{aligned}
-	$$
-
-	Da $x_{2}$ frei gewählt werden kann, setzen wir
-
-	$$
-	x_2 = t \qquad \text{mit } t \in \mathbb{R}.
-	$$
-
-	Dann gilt:
-
-	$$
-	\begin{aligned}
-	3x_1 - t &= \frac{1-5a}{1-a} \\
-	3x_1 &= \frac{1-5a}{1-a} + t \\
-	x_1 &= \frac{1-5a}{3(1-a)} + \frac13 t \\
-	&= \frac{5a-1}{3a-3} + \frac13 t
-	\end{aligned}
-	$$
-
-	Damit lautet die Lösungsmenge:
-
-	$$
-	x_1 = \frac{5a-1}{3a-3} + \frac13 t,
-	\qquad
-	x_2 = t,
-	\qquad
-	x_3 = \frac{4}{1-a},
-	\qquad
-	t \in \mathbb{R}.
-	$$
+(a) $p = 0, q = 0$, da es keine Nullzeilen für die Koeffizientenmatrix und die erweiterte Koeffizientenmatrix gibt.
 :::
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"Das Gleichungssystem hat genau eine Lösung.",
-	"Das Gleichungssystem hat keine Lösung",
-	answer = "Das Gleichungssystem besitzt unendlich viele Lösungen"
+  "$k = 0$",
+  "$k = 1$",
+  answer = "$k = 2$"
 )
-
-cat("(b)  Wie viele Lösungen besitzt das System für $a \\neq 1$?<br><br>",
-	longmcq(opts))
+cat("(b) Was ist der Defekt $k$ des Gleichungssystems?", longmcq(opts))
 ```
 :::
-
-
 ::: {.callout-tip collapse="true" title="Lösung"}
-Das Gleichungssystem ist für $a \neq 1$ lösbar. Da eine Variable frei gewählt werden kann, besitzt es unendlich viele Lösungen.
+(b) $k = n - (m - p) = 4 - (2 - 0) = 2$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Das Gleichungssystem hat keine Lösung.",
+  "Das Gleichungssystem hat genau eine Lösung.",
+  answer = "Das Gleichungssystem hat unendlich viele Lösungen; zwei Variablen können frei gewählt werden."
+)
+cat("(c) Was ist die Interpretation in Bezug auf die Lösungen des linearen Gleichungssystems?", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Wegen $p = q = 0$ besitzt das Gleichungssystem Lösungen. Wegen $k = 2$ können zwei Variablen frei gewählt werden. Wähle $x_3 = s$ und $x_4 = t$, dann lauten die Lösungen:
+$$x_1 = 2 - 3t$$
+$$x_2 = -1 - s + 2t$$
+$$x_3 = s$$
+$$x_4 = t$$
+mit $s, t \in \mathbb{R}$.
 :::

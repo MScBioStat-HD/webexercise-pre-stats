@@ -8,37 +8,64 @@ library(webexercises)
 ## Matrizen
 
 ### Übungen 6 – A1
+Gegeben seien die beiden Matrizen
+
+$$A = \begin{pmatrix} 1 & 2 & -3 \\ 0 & 1 & -1 \\ 2 & -2 & 0 \end{pmatrix} \quad \text{und} \quad B = \begin{pmatrix} 0 & -1 & 1 \\ 1 & 2 & -3 \\ 0 & 2 & -2 \end{pmatrix}$$
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"$A \\cdot B = \\begin{pmatrix} 2 & 3 & -1 \\\\\\ 1 & 0 & -1 \\\\\\ 2 & -6 & 8 \\end{pmatrix}\\\\$
-	$A^{T} = \\begin{pmatrix} 2 & 0 & 1 \\\\\\ -2 & 1 & 2 \\\\\\ 0 & -1 & -3 \\end{pmatrix}$ <br><br>
-	$\\\\ B^{T} = \\begin{pmatrix} 0 & 1 & 0 \\\\\\ 2 & 2 & -1 \\\\\\ -2 & -3 & 1 \\end{pmatrix}$ <br><br>
-	$B^{T} \\cdot A^{T} = (AB)^{T} = \\begin{pmatrix} -2 & 1 & 2 \\\\\\ -6 & 0 & -3 \\\\\\ 8 & -1 & 1 \\end{pmatrix}$ <br><br><br><br> ",
-
-	answer = "$A \\cdot B = \\begin{pmatrix} 2 & -3 & 1 \\\\\\ 1 & 0 & -1 \\\\\\ -2 & -6 & 8 \\end{pmatrix}\\\\$
-	$A^{T} = \\begin{pmatrix} 1 & 0 & 2 \\\\\\ 2 & 1 & -2 \\\\\\ -3 & -1 & 0 \\end{pmatrix}$ <br><br>
-	$\\\\B^{T} = \\begin{pmatrix} 0 & 1 & 0 \\\\\\ -1 & 2 & 2 \\\\\\ 1 & -3 & -2 \\end{pmatrix}$ <br><br>
-	$B^{T} \\cdot A^{T} = (AB)^{T} = \\begin{pmatrix} 2 & 1 & -2 \\\\\\ -3 & 0 & -6 \\\\\\ 1 & -1 & 8 \\end{pmatrix}$<br><br><br><br>",
-
-	"$A \\cdot B = \\begin{pmatrix} 2 & -3 & -1 \\\\\\ 1 & 0 & -1 \\\\\\ 2 & -6 & 8 \\end{pmatrix}\\\\$
-	$A^{T} = \\begin{pmatrix} -3 & -1 & 0 \\\\\\ 2 & 1 & -2 \\\\\\ 1 & 0 & 2 \\end{pmatrix}$ <br><br>
-	$\\\\B^{T} = \\begin{pmatrix} 1 & -3 & -2 \\\\\\ -1 & 2 & 2 \\\\\\ 0 & 1 & 0 \\end{pmatrix}$ <br><br>
-	$B^{T} \\cdot A^{T} = (AB)^{T} = \\begin{pmatrix} 1 & -1 & 8 \\\\\\ -3 & 0 & -6 \\\\\\ 2 & 1 & -2 \\end{pmatrix}$ <br><br>"
+  "$A \\cdot B = \\begin{pmatrix} 2 & 3 & -1 \\\\\\ 1 & 0 & -1 \\\\\\ 2 & -6 & 8 \\end{pmatrix}$<br><br>",
+  answer = "$A \\cdot B = \\begin{pmatrix} 2 & -3 & 1 \\\\\\ 1 & 0 & -1 \\\\\\ -2 & -6 & 8 \\end{pmatrix}$<br><br>",
+  "$A \\cdot B = \\begin{pmatrix} 2 & -3 & -1 \\\\\\ 1 & 0 & -1 \\\\\\ 2 & -6 & 8 \\end{pmatrix}$"
 )
-cat("(a) Gegeben seien die beiden Matrizen <br> <br>
-	$A =\\begin{pmatrix} 1 & 2 & -3 \\\\\\ 0 & 1 & -1 \\\\\\ 2 & -2 & 0 \\\\\\ \\end{pmatrix}$ und $B =\\begin{pmatrix} 0 & -1 & 1 \\\\\\ 1 & 2 & -3 \\\\\\ 0 & 2 & -2 \\\\\\ \\end{pmatrix}$.
-	<br><br> Berechnen Sie A · B, $A^{T}$, $B^{T}$, sowie $B^{T}$ $\\cdot$ $A^{T}$.<br><br>",
-	longmcq(opts))
+cat("(a) Berechnen Sie $A \\cdot B$.", longmcq(opts))
 ```
 :::
-
 ::: {.callout-tip collapse="true" title="Lösung"}
-$$ AB = \begin{pmatrix}2 & -3 & 1\\ 1 & 0 & -1\\ -2 & -6 & 8 \end{pmatrix}$$
-$$ A^{T} = \begin{pmatrix}1 & 0 & 2\\ 2 & 1 & -2\\ -3 & -1 & 0 \end{pmatrix}$$
-$$ B^{T} = \begin{pmatrix}0 & 1 & 0\\ -1 & 2 & 2\\ 1 & -3 & -2 \end{pmatrix}$$
-$$ B^{T}A^{T} = (AB)^{T} = \begin{pmatrix}2 & 1 & -2\\ -3 & 0 & -6\\ 1 & -1 & 8 \end{pmatrix}$$
+(a) $$AB = \begin{pmatrix}2 & -3 & 1\\ 1 & 0 & -1\\ -2 & -6 & 8 \end{pmatrix}$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$A^{T} = \\begin{pmatrix} 2 & 0 & 1 \\\\\\ -2 & 1 & 2 \\\\\\ 0 & -1 & -3 \\end{pmatrix}$<br><br>",
+  answer = "$A^{T} = \\begin{pmatrix} 1 & 0 & 2 \\\\\\ 2 & 1 & -2 \\\\\\ -3 & -1 & 0 \\end{pmatrix}$<br><br>",
+  "$A^{T} = \\begin{pmatrix} -3 & -1 & 0 \\\\\\ 2 & 1 & -2 \\\\\\ 1 & 0 & 2 \\end{pmatrix}$"
+)
+cat("(b) Berechnen Sie $A^{T}$.", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $$A^{T} = \begin{pmatrix}1 & 0 & 2\\ 2 & 1 & -2\\ -3 & -1 & 0 \end{pmatrix}$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$B^{T} = \\begin{pmatrix} 0 & 1 & 0 \\\\\\ 2 & 2 & -1 \\\\\\ -2 & -3 & 1 \\end{pmatrix}$<br><br>",
+  answer = "$B^{T} = \\begin{pmatrix} 0 & 1 & 0 \\\\\\ -1 & 2 & 2 \\\\\\ 1 & -3 & -2 \\end{pmatrix}$<br><br>",
+  "$B^{T} = \\begin{pmatrix} 1 & -3 & -2 \\\\\\ -1 & 2 & 2 \\\\\\ 0 & 1 & 0 \\end{pmatrix}$"
+)
+cat("(c) Berechnen Sie $B^{T}$.", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) $$B^{T} = \begin{pmatrix}0 & 1 & 0\\ -1 & 2 & 2\\ 1 & -3 & -2 \end{pmatrix}$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$B^{T} \\cdot A^{T} = \\begin{pmatrix} -2 & 1 & 2 \\\\\\ -6 & 0 & -3 \\\\\\ 8 & -1 & 1 \\end{pmatrix}$<br><br>",
+  answer = "$B^{T} \\cdot A^{T} = (AB)^{T} = \\begin{pmatrix} 2 & 1 & -2 \\\\\\ -3 & 0 & -6 \\\\\\ 1 & -1 & 8 \\end{pmatrix}$<br><br>",
+  "$B^{T} \\cdot A^{T} = \\begin{pmatrix} 1 & -1 & 8 \\\\\\ -3 & 0 & -6 \\\\\\ 2 & 1 & -2 \\end{pmatrix}$"
+)
+cat("(d) Berechnen Sie $B^{T} \\cdot A^{T}$.", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $$B^{T} \cdot A^{T} = (AB)^{T} = \begin{pmatrix}2 & 1 & -2\\ -3 & 0 & -6\\ 1 & -1 & 8 \end{pmatrix}$$
 :::
 
 ### Übungen 6 – A2
@@ -88,8 +115,8 @@ cat("$A = \\biggl($", paste0(fitb(-4, num=TRUE), fitb(-1, num=TRUE), fitb(-4, nu
 
 ### Übungen 6 – A3
 
-Es sei die Matrix $A =\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \\ \end{pmatrix}$
-gegeben:
+Es sei die Matrix $A =\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \\ \end{pmatrix}$ und es sei die Matrix 
+$B =\begin{pmatrix} 1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{pmatrix}$ gegeben:
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -117,14 +144,13 @@ opts <- c(
 	answer = "$BB^{T} =\\begin{pmatrix} 3 & 0 & 2 \\\\\\ 0 & 2 & 0 \\\\\\ 2 & 0 & 2 \\\\\\ \\end{pmatrix}$<br><br>",
 	"$BB^{T} =\\begin{pmatrix} 2 & 0 & 2 \\\\\\ 1 & 2 & 0 \\\\\\ 2 & 0 & 2 \\\\\\ \\end{pmatrix}$"
 )
-cat("(b) Es sei die Matrix $B =\\begin{pmatrix} 1 & 1 & 1 \\\\\\ -1 & 1 & 0 \\\\\\ 1 & 1 & 0 \\\\\\ \\end{pmatrix}$ <br><br>
-	gegeben. Berechnen Sie B $\\cdot$ $B^{T}$.<br><br>",
+cat("(b) Berechnen Sie B $\\cdot$ $B^{T}$.<br><br>",
 	longmcq(opts))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(b) $$ BB^{T}\begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
+(b) $$ BB^{T} = \begin{pmatrix}1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix}1 & -1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 0\end{pmatrix} = \begin{pmatrix}3 & 0 & 2 \\ 0 & 2 & 0 \\ 2 & 0 & 2\end{pmatrix}$$
 :::
 
 
@@ -201,79 +227,93 @@ cat("(b) Berechnen Sie $det \\; A^{-1}$:<br><br>", longmcq(opts))
 $$ \det A^{-1} = \frac{1}{detA} = \frac{1}{12}$$
 :::
 
-::: {.webex .webex-box}
-(c) Berechnen Sie die Inverse der Matrix $A =\begin{pmatrix} 1 & -1 & 1 \\ 2 & 1 & -1 \\ -1 & 2 & 2 \end{pmatrix}$
+### Übungen 6 – A6
+Gegeben ist die Matrix $X = \begin{pmatrix} 3 & -6 \\ 1 & -2 \end{pmatrix}$
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$\\det(X) = 6$",
+  "$\\det(X) = -6$",
+  answer = "$\\det(X) = 0$"
+)
+cat("(a) Bestimmen Sie die Determinante von $X$.", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $\det(X) = 3 \cdot (-2) - 1 \cdot (-6) = -6 + 6 = 0$
 :::
 
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  answer = "Nein",
+  "Ja"
+)
+cat("(b) Ist die Matrix $X$ invertierbar?", longmcq(opts))
+```
+:::
 ::: {.callout-tip collapse="true" title="Lösung"}
-(c) Zur Berechnung der Inversen schreibt man auf die rechte Seite der erweiterten Matrix die passende
-Einheitsmatrix und formt auf Zeilen-Stufen-Form um.
-<br>
-$$ 
-\left(
-\begin{array}{ccc|ccc}
-1 & -1 & 1 & 1 & 0 & 0 \\
-2 & 1 & -1 & 0 & 1 & 0 \\
--1 & 2 & 2 & 0 & 0 & 1
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-II - 2\cdot I \Rightarrow II \\
-III + I \Rightarrow III
-}}
-$$
-<br><br>
-$$
-\left(
-\begin{array}{ccc|ccc}
-1 & -1 & 1 & 1 & 0 & 0 \\
-0 & 3 & -3 & -2 & 1 & 0 \\
-0 & 1 & 3 & 1 & 0 & 1
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-3 \cdot I +  II \Rightarrow I \\
-3 \cdot III - II \Rightarrow III
-}}
-$$
-<br><br>
-$$
-\left(
-\begin{array}{ccc|ccc}
-3 & 0 & 0 & 1 & 1 & 0 \\
-0 & 3 & -3 & -2 & 1 & 0 \\
-0 & 0 & 12 & 5 & -1 & 3
-\end{array}
-\right)
-\xrightarrow{4 \cdot II + III \Rightarrow II}
-\left(
-\begin{array}{ccc|ccc}
-3 & 0 & 0 & 1 & 1 & 0 \\
-0 & 12 & 0 & -3 & 3 & 3 \\
-0 & 0 & 12 & 5 & -1 & 3
-\end{array}
-\right)
-\xrightarrow{
-\substack{
-I : 3 \Rightarrow II \\
-II : 12 \Rightarrow II \\
-III : 12 \Rightarrow III
-}} 
-$$
-<br>
-$$
-\\
-\left(
-\begin{array}{ccc|ccc}
-1 & 0 & 0 & 1/3 & 1/3 & 0 \\
-0 & 3 & -3 & -1/4 & 1/4 & 1/4 \\
-0 & 0 & 12 & 5/12 & -1/12 & 1/4
-\end{array}
-\right)
-$$
+(b) Nein, weil $\det(X) = 0$.
+:::
 
-Daraus lässt sich nun die Inverse ablesen
-$$ A^{-1} =\frac{1}{12} \begin{pmatrix} 4 & 4 & 0 \\ -3 & 3 & 3 \\ 5 & -1 & 3 \end{pmatrix}$$
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  answer = "Nein, die Matrix ist singulär.",
+  "Ja, die Matrix ist regulär."
+)
+cat("(c) Ist die Matrix $X$ regulär?", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Nein, die Matrix ist singulär.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$\\text{Rang}(X) = 0$",
+  answer = "$\\text{Rang}(X) = 1$",
+  "$\\text{Rang}(X) = 2$"
+)
+cat("(d) Was ist der Rang der Matrix $X$?", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Der Rang ist 1, da erste und zweite Zeile linear abhängig sind mit
+  $$\begin{pmatrix} 3 \\ -6 \end{pmatrix} = 3 \cdot \begin{pmatrix} 1 \\ -2 \end{pmatrix}$$
+:::
+
+### Übungen 6 – A7
+Gegeben ist die Matrix $A = \begin{pmatrix} 4 & 2 & -1 \\ -2 & 0 & 0 \\ -1 & 1 & 2 \end{pmatrix}$
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$A^{T} = \\begin{pmatrix} 4 & 2 & -1 \\\\\\ -2 & 0 & 0 \\\\\\ -1 & 1 & 2 \\end{pmatrix}$",
+  answer = "$A^{T} = \\begin{pmatrix} 4 & -2 & -1 \\\\\\ 2 & 0 & 1 \\\\\\ -1 & 0 & 2 \\end{pmatrix}$",
+  "$A^{T} = \\begin{pmatrix} 4 & -1 & -2 \\\\\\ 2 & 0 & 0 \\\\\\ -1 & 2 & 1 \\end{pmatrix}$"
+)
+cat("(a) Berechnen Sie die transponierte Matrix $A^{T}$.", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) $$A^{T} = \begin{pmatrix} 4 & 2 & -1 \\ -2 & 0 & 0 \\ -1 & 1 & 2 \end{pmatrix}^{T} = \begin{pmatrix} 4 & -2 & -1 \\ 2 & 0 & 1 \\ -1 & 0 & 2 \end{pmatrix}$$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Nein, $\\text{trace}(A) \\neq \\text{trace}(A^{T})$",
+  answer = "Ja, $\\text{trace}(A) = \\text{trace}(A^{T}) = 6$",
+  "$\\text{trace}(A) = 4$ und $\\text{trace}(A^{T}) = 6$"
+)
+cat("(b) Bestimmen Sie die Spur der Matrix $A$. Ist diese gleich der Spur von $A^{T}$?", longmcq(opts))
+```
+:::
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Ja, $\text{trace}(A) = \text{trace}(A^{T}) = 6$ <br>
+	$\text{trace}(A) = 4 + 0 + 2 = 6$ <br>
+	$\text{trace}(A^{T}) = 4 + 0 + 2 = 6 = \text{trace}(A)$
 :::

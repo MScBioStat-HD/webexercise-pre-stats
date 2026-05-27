@@ -48,7 +48,7 @@ cat("(b) $\\int_{-2}^{2}$ $e^{2x} dx$",
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-	"$\\frac{152}{3}$",
+	"$\\frac{155}{3}$",
 	"$50$",
 	answer = "$50\\frac{2}{3}$"
 )
@@ -106,7 +106,7 @@ cat("(a) $f(x) = -2x$, Fläche im Intervall $[-2,2]$",
 <img src="images/image_4A2_a.png" width="300">
 
 	Fläche 
-	$\int_{-2}^{2} -2x dx + \int_{0}^{2} -2x dx = |F(0) - F(-2)| + |F(2) - F(0)| = |(0 - (-4))| + |(-4 + 0)|$ <br><br>
+	$\int_{-2}^{0} -2x dx + \int_{0}^{2} -2x dx = |F(0) - F(-2)| + |F(2) - F(0)| = |(0 - (-4))| + |(-4 + 0)|$ <br><br>
 	$= 4 + 4 = 8$
 :::
 
@@ -128,6 +128,6 @@ cat("(b) <br> $\\\\ f(x) = \\begin{cases} 0 & \\text{für} & x<0 \\\\
 ::: {.callout-tip collapse="true" title="Lösung"}
 (b) $\\ f(x) = \begin{cases} 0 & \text{für} \; x < 0 \\ -x^{2} + \frac{4}{3} & \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 & \text{für} \;x > 1\end{cases}$<br><br>
 <img src="images/image_4A2_b.png" width="300"> <br><br>
-Stammfunktion: $\\(F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c$ <br><br>
-Fäche: $\\(F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1$
+Stammfunktion: $\\F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c$ <br><br>
+Fäche: $\\F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1$
 :::

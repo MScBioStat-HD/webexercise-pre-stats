@@ -7,6 +7,9 @@ library(webexercises)
 
 ## Deskriptive Statistik
 
+<small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen 
+als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
 ### Übungen 8 – A1.1
 
 ::: {.webex-check .webex-box}
@@ -299,7 +302,7 @@ cat("(7) Infektion: ", mcq(opts_qualitativ))
 
 ::: {.webex .webex-box}
 (a) Bestimmen Sie **Median** und **$0.8$-Quantil** für das Merkmal BBS score bei $n=100$ mit folgender Häufigkeitstabelle:
-	<br><br><img src="images/image8A3.2.png" width="650"> <br><br>
+	<br><br><img src="images/image8A3.2_2.png" width="650"> <br><br>
 	**Median** $(\tilde{x}_{0.5})=$ `r fitb(52, num = TRUE)`
 
 	**0.8-Quantil** $(\tilde{x}_{0.8})=$ `r fitb(54, num = TRUE)`
@@ -341,6 +344,8 @@ cat("(7) Infektion: ", mcq(opts_qualitativ))
 	$$
 	\textbf{0.8-Quantil} (\tilde{x}_{0.8}) = 54
 $$
+
+<br><br><img src="images/image8A3.2.png" width="650"> <br><br>
 :::
 
 ### Übungen 8 – A3.3
@@ -373,20 +378,21 @@ $$
 ## Korrelation, Lineare Regression
 
 ### Übungen 8 – A4.1
+
 Gegeben ist folgende Kovarianzmatrix (n=100): <br><br>
-$\begin{pmatrix}
-S_{x}^{2} & S_{xy} \\
-S_{xy} & S_{y}^{2}
-\end{pmatrix}
-=
-\begin{pmatrix}
-7.6 & 4.5 \\
-4.5 & 3.4
-\end{pmatrix}
-$
+	$$\begin{pmatrix}
+	S_{x}^{2} & S_{xy} \\
+	S_{xy} & S_{y}^{2}
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+	7.6 & 4.5 \\
+	4.5 & 3.4
+	\end{pmatrix}
+	$$
 
 ::: {.webex-check .webex-box}
-(a) Berechnen Sie damit den Korrelationskoeffizienten.<br>
+(a) Berechnen Sie den Korrelationskoeffizienten. Geben Sie das Ergebnis mit zwei Nachkommastellen an. <br>
 	```{r, results='asis', echo = FALSE}
 
 	cat("Korrelationskoeffizient $=$ ", fitb("0.88", num = TRUE))
@@ -409,8 +415,17 @@ $
 	$$
 :::
 
-::: {.webex .webex-box}
-(b) Wie interpretieren Sie das Ergebnis?
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+    "Kein Zusammenhang",
+    "Niedriger positiver Zusammenhang",
+    answer = "Hoher positiver Zusammenhang",
+		"Hoher negativer Zusammenhang"
+)
+cat("(b) Wie interpretieren Sie das Ergebnis?", longmcq(opts))
+```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -428,7 +443,6 @@ $
 	- Merkmal $Y$ = FES-I-Score
 
 	**Notiz:** Merkmale sind mind. ordinalskaliert.
-
 	<br><img src="images/image8A4.2.png" width="450"> <br><br>
 
 	**Schritt 1:** Vergeben Sie die Ränge für $x_i$ und $y_i$.
@@ -459,11 +473,11 @@ $
 
 	<br><br>**Schritt 3:** Berechnen Sie die Summe $\sum (d_i)^{2} =$ `r fitb(10)`
 
-	**Schritt 4:** Berechnen Sie die Rangkorrelation nach Spearman:
+	**Schritt 4:** Berechnen Sie die Rangkorrelation nach Spearman (Ergebnis auf zwei Nachkommastelle runden):
 
 	$$\rho = 1 - \frac{6 \cdot \sum d_i^2}{n(n^2 - 1)}$$
 
-	$\rho =$ `r fitb(0.881, tol = 0.001)`
+	$\rho =$ `r fitb(0.88, tol = 0.001)`
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -481,7 +495,7 @@ $
 
 	$$\sum (d_i)^2 = 10$$
 
-	$$\rho = 1 - \frac{6 \cdot 10}{8 \cdot (64 - 1)} = 1 - \frac{60}{504} \approx 0.881$$
+	$$\rho = 1 - \frac{6 \cdot 10}{8 \cdot (64 - 1)} = 1 - \frac{60}{504} \approx 0.88$$
 
 	Es besteht ein **starker positiver Zusammenhang** zwischen TUG und FES-I-Score.
 :::
@@ -513,21 +527,21 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 
 	`r mcq(c("Nominalskaliert", "Ordinalskaliert", answer = "Intervallskaliert", "Verhältnisskaliert"))`
 
-	**Schritt 2:** Berechnen Sie die Mittelwerte.
+	**Schritt 2:** Berechnen Sie die Mittelwerte (Ergebnis auf eine Nachkommastelle runden).
 
 	$\bar{x} =$ `r fitb(59.9, tol = 0.05)` &nbsp; $\bar{y} =$ `r fitb(8.6, tol = 0.05)`
 
-	**Schritt 3:** Berechnen Sie die Standardabweichungen.
+	**Schritt 3:** Berechnen Sie die Standardabweichungen (Ergebnis auf eine Nachkommastelle runden).
 
 	$s_x =$ `r fitb(7.8, tol = 0.05)` &nbsp; $s_y =$ `r fitb(1.8, tol = 0.05)`
 
-	**Schritt 4:** Berechnen Sie die Kovarianz.
+	**Schritt 4:** Berechnen Sie die Kovarianz (Ergebnis auf eine Nachkommastelle runden).
 
 	$$s_{xy} = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})$$
 
 	$s_{xy} =$ `r fitb(10.4, tol = 0.05)`
 
-	**Schritt 5:** Berechnen Sie den Pearson-Korrelationskoeffizienten.
+	**Schritt 5:** Berechnen Sie den Pearson-Korrelationskoeffizienten (Ergebnis auf zwei Nachkommastelle runden).
 
 	$$r_{xy} = \frac{s_{xy}}{s_x \cdot s_y}$$
 
@@ -560,7 +574,8 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 	des Alters und der Dauer der Frakturheilung vornimmt?
 
 	<img src="images/image8A4.4.png" width="350"> <br><br>
-	$\varphi =$ `r fitb(0.263, tol = 0.005)`
+	$\varphi =$ `r fitb(0.26, tol = 0.005)` <br>
+<small style="color: gray;">(Ergebnis auf zwei Nachkommastellen runden)</small>
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -573,7 +588,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 	| 45–57 | $a = 28$                       | $b = 15$                    |
 	| 58–70 | $c = 22$                       | $d = 35$                    |
 
-	$$\varphi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = \frac{980 - 330}{\sqrt{6\,149\,250}} = \frac{650}{2\,479.8} \approx 0.263$$
+	$$\varphi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = \frac{980 - 330}{\sqrt{6\,149\,250}} = \frac{650}{2\,479.8} \approx 0.26$$
 :::
 
 ### Übungen 8 – A4.5
@@ -586,7 +601,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a)
-<img src="images/image84.5_s.png" width="550">
+<img src="images/image84.6_s.png" width="550">
 :::
 
 ::: {.webex .webex-box}
@@ -633,7 +648,7 @@ $$\bar{x} = 28.6, \quad \bar{y} = 13.7, \quad s_x = 1.51, \quad s_y = 2.19,
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a)
-<img src="images/image84.6_s.png" width="550">
+<img src="images/image8_4_7.png" width="550"> <br><br>
 **Regressionsgeraden:**
 
 $$m = \frac{s_{xy}}{s_x^2} = \frac{-2.99}{1.51^2} = -1.31$$
@@ -659,14 +674,14 @@ $r_{xy} =$ `r fitb(-0.904, tol = 0.005)`
 :::
 
 ::: {.webex .webex-box}
-(c) Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis.<br><br>
-$R^2 =$ `r fitb(0.817, tol = 0.005)`
+(c) Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis (Ergebnis auf zwei Nachkommastellen runden).<br><br>
+$R^2 =$ `r fitb(0.81, tol = 0.005)`
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 
 (c) **Bestimmtheitsmaß:**
-	$$R^2 = (-0.904)^2 = 0.817$$
+	$$R^2 = (-0.904)^2 = 0.81$$
 
 	$\rightarrow$ **82% der Variabilität** der Adiponectin-Werte kann durch den 
 	BMI erklärt werden.
