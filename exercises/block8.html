@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3e7735b7b22659e5fa437aca0bb49075.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-94b323657c735dfe3b1bf6ebb2c33a55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -202,7 +202,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/final1_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Abschlussübung</span></a>
+ <span class="menu-text">Abschlussübungen</span></a>
   </div>
 </li>
       </ul>
@@ -333,6 +333,7 @@ window.Quarto = {
 
 <section id="deskriptive-statistik" class="level2">
 <h2 class="anchored" data-anchor-id="deskriptive-statistik">Deskriptive Statistik</h2>
+<p><small style="color: gray;"><strong>Hinweis:</strong> Verwenden Sie bei Ergebnissen mit Nachkommastellen als Dezimaltrennzeichen den Punkt (Bsp.: <span class="math inline">\(5.24\)</span>)</small></p>
 <section id="übungen-8-a1.1" class="level3">
 <h3 class="anchored" data-anchor-id="übungen-8-a1.1">Übungen 8 – A1.1</h3>
 <div class="webex-check webex-box">
@@ -634,7 +635,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="übungen-8-a3.2">Übungen 8 – A3.2</h3>
 <div class="webex webex-box">
 <ol type="a">
-<li><p>Bestimmen Sie <strong>Median</strong> und <strong><span class="math inline">\(0.8\)</span>-Quantil</strong> für das Merkmal BBS score bei <span class="math inline">\(n=100\)</span> mit folgender Häufigkeitstabelle: <br><br><img src="images/image8A3.2.png" width="650"> <br><br> <strong>Median</strong> <span class="math inline">\((\tilde{x}_{0.5})=\)</span> <input class="webex-solveme nospaces" size="2" data-answer="[&quot;52&quot;]"></p>
+<li><p>Bestimmen Sie <strong>Median</strong> und <strong><span class="math inline">\(0.8\)</span>-Quantil</strong> für das Merkmal BBS score bei <span class="math inline">\(n=100\)</span> mit folgender Häufigkeitstabelle: <br><br><img src="images/image8A3.2_2.png" width="650"> <br><br> <strong>Median</strong> <span class="math inline">\((\tilde{x}_{0.5})=\)</span> <input class="webex-solveme nospaces" size="2" data-answer="[&quot;52&quot;]"></p>
 <p><strong>0.8-Quantil</strong> <span class="math inline">\((\tilde{x}_{0.8})=\)</span> <input class="webex-solveme nospaces" size="2" data-answer="[&quot;54&quot;]"></p></li>
 </ol>
 </div>
@@ -676,6 +677,7 @@ window.Quarto = {
 \textbf{0.8-Quantil} (\tilde{x}_{0.8}) = 54
 \]</span></p></li>
 </ol>
+<p><br><br><img src="images/image8A3.2.png" width="650"> <br><br></p>
 </div>
 </div>
 </div>
@@ -752,18 +754,19 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="korrelation-lineare-regression">Korrelation, Lineare Regression</h2>
 <section id="übungen-8-a4.1" class="level3">
 <h3 class="anchored" data-anchor-id="übungen-8-a4.1">Übungen 8 – A4.1</h3>
-<p>Gegeben ist folgende Kovarianzmatrix (n=100): <br><br> <span class="math inline">\(\begin{pmatrix}
-S_{x}^{2} &amp; S_{xy} \\
-S_{xy} &amp; S_{y}^{2}
-\end{pmatrix}
-=
-\begin{pmatrix}
-7.6 &amp; 4.5 \\
-4.5 &amp; 3.4
-\end{pmatrix}\)</span></p>
+<p>Gegeben ist folgende Kovarianzmatrix (n=100): <br><br> <span class="math display">\[\begin{pmatrix}
+    S_{x}^{2} &amp; S_{xy} \\
+    S_{xy} &amp; S_{y}^{2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    7.6 &amp; 4.5 \\
+    4.5 &amp; 3.4
+    \end{pmatrix}
+    \]</span></p>
 <div class="webex-check webex-box">
 <ol type="a">
-<li>Berechnen Sie damit den Korrelationskoeffizienten.<br> Korrelationskoeffizient <span class="math inline">\(=\)</span> <input class="webex-solveme nospaces" size="4" data-answer="[&quot;0.88&quot;,&quot;.88&quot;]"></li>
+<li>Berechnen Sie den Korrelationskoeffizienten. Geben Sie das Ergebnis mit zwei Nachkommastellen an. <br> Korrelationskoeffizient <span class="math inline">\(=\)</span> <input class="webex-solveme nospaces" size="4" data-answer="[&quot;0.88&quot;,&quot;.88&quot;]"></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -793,9 +796,12 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 </div>
 </div>
 </div>
-<div class="webex webex-box">
+<div class="webex-check webex-box">
 <ol start="2" type="a">
-<li>Wie interpretieren Sie das Ergebnis?</li>
+<li>Wie interpretieren Sie das Ergebnis?
+<div id="radio_DENGTGIBRR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DENGTGIBRR" value=""> <span>Kein Zusammenhang</span></label><label><input type="radio" autocomplete="off" name="radio_DENGTGIBRR" value=""> <span>Niedriger positiver Zusammenhang</span></label><label><input type="radio" autocomplete="off" name="radio_DENGTGIBRR" value="answer"> <span>Hoher positiver Zusammenhang</span></label><label><input type="radio" autocomplete="off" name="radio_DENGTGIBRR" value=""> <span>Hoher negativer Zusammenhang</span></label>
+</div></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -829,8 +835,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 <li>Merkmal <span class="math inline">\(X\)</span> = TUG [s]</li>
 <li>Merkmal <span class="math inline">\(Y\)</span> = FES-I-Score</li>
 </ul>
-<p><strong>Notiz:</strong> Merkmale sind mind. ordinalskaliert.</p>
-<p><br><img src="images/image8A4.2.png" width="450"> <br><br></p>
+<p><strong>Notiz:</strong> Merkmale sind mind. ordinalskaliert. <br><img src="images/image8A4.2.png" width="450"> <br><br></p>
 <p><strong>Schritt 1:</strong> Vergeben Sie die Ränge für <span class="math inline">\(x_i\)</span> und <span class="math inline">\(y_i\)</span>.</p>
 <table class="caption-top table">
 <colgroup>
@@ -976,9 +981,9 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 </tbody>
 </table>
 <p><br><br><strong>Schritt 3:</strong> Berechnen Sie die Summe <span class="math inline">\(\sum (d_i)^{2} =\)</span> <input class="webex-solveme nospaces" size="2" data-answer="[&quot;10&quot;]"></p>
-<p><strong>Schritt 4:</strong> Berechnen Sie die Rangkorrelation nach Spearman:</p>
+<p><strong>Schritt 4:</strong> Berechnen Sie die Rangkorrelation nach Spearman (Ergebnis auf zwei Nachkommastelle runden):</p>
 <p><span class="math display">\[\rho = 1 - \frac{6 \cdot \sum d_i^2}{n(n^2 - 1)}\]</span></p>
-<p><span class="math inline">\(\rho =\)</span> <input class="webex-solveme nospaces" data-tol="0.001" size="5" data-answer="[&quot;0.881&quot;,&quot;.881&quot;]"></p></li>
+<p><span class="math inline">\(\rho =\)</span> <input class="webex-solveme nospaces" data-tol="0.001" size="4" data-answer="[&quot;0.88&quot;,&quot;.88&quot;]"></p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -1064,7 +1069,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 </tbody>
 </table>
 <p><span class="math display">\[\sum (d_i)^2 = 10\]</span></p>
-<p><span class="math display">\[\rho = 1 - \frac{6 \cdot 10}{8 \cdot (64 - 1)} = 1 - \frac{60}{504} \approx 0.881\]</span></p>
+<p><span class="math display">\[\rho = 1 - \frac{6 \cdot 10}{8 \cdot (64 - 1)} = 1 - \frac{60}{504} \approx 0.88\]</span></p>
 <p>Es besteht ein <strong>starker positiver Zusammenhang</strong> zwischen TUG und FES-I-Score.</p></li>
 </ol>
 </div>
@@ -1084,14 +1089,14 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 <li><p>Untersuchen Sie für diesen Ausschnitt von den Daten den Zusammenhang.</p>
 <p><strong>Schritt 1:</strong> Welches Skalenniveau haben die Merkmale?</p>
 <p><select class="webex-select"><option value="blank"></option><option value="">Nominalskaliert</option><option value="">Ordinalskaliert</option><option value="answer">Intervallskaliert</option><option value="">Verhältnisskaliert</option></select></p>
-<p><strong>Schritt 2:</strong> Berechnen Sie die Mittelwerte.</p>
+<p><strong>Schritt 2:</strong> Berechnen Sie die Mittelwerte (Ergebnis auf eine Nachkommastelle runden).</p>
 <p><span class="math inline">\(\bar{x} =\)</span> <input class="webex-solveme nospaces" data-tol="0.05" size="4" data-answer="[&quot;59.9&quot;]"> &nbsp; <span class="math inline">\(\bar{y} =\)</span> <input class="webex-solveme nospaces" data-tol="0.05" size="3" data-answer="[&quot;8.6&quot;]"></p>
-<p><strong>Schritt 3:</strong> Berechnen Sie die Standardabweichungen.</p>
+<p><strong>Schritt 3:</strong> Berechnen Sie die Standardabweichungen (Ergebnis auf eine Nachkommastelle runden).</p>
 <p><span class="math inline">\(s_x =\)</span> <input class="webex-solveme nospaces" data-tol="0.05" size="3" data-answer="[&quot;7.8&quot;]"> &nbsp; <span class="math inline">\(s_y =\)</span> <input class="webex-solveme nospaces" data-tol="0.05" size="3" data-answer="[&quot;1.8&quot;]"></p>
-<p><strong>Schritt 4:</strong> Berechnen Sie die Kovarianz.</p>
+<p><strong>Schritt 4:</strong> Berechnen Sie die Kovarianz (Ergebnis auf eine Nachkommastelle runden).</p>
 <p><span class="math display">\[s_{xy} = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})\]</span></p>
 <p><span class="math inline">\(s_{xy} =\)</span> <input class="webex-solveme nospaces" data-tol="0.05" size="4" data-answer="[&quot;10.4&quot;]"></p>
-<p><strong>Schritt 5:</strong> Berechnen Sie den Pearson-Korrelationskoeffizienten.</p>
+<p><strong>Schritt 5:</strong> Berechnen Sie den Pearson-Korrelationskoeffizienten (Ergebnis auf zwei Nachkommastelle runden).</p>
 <p><span class="math display">\[r_{xy} = \frac{s_{xy}}{s_x \cdot s_y}\]</span></p>
 <p><span class="math inline">\(r_{xy} =\)</span> <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;0.75&quot;,&quot;.75&quot;]"></p></li>
 </ol>
@@ -1125,7 +1130,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 </div>
 <ol type="a">
 <li><p>Wie stellt sich der Zusammenhang dar, wenn man eine Kategorisierung des Alters und der Dauer der Frakturheilung vornimmt?</p>
-<p><img src="images/image8A4.4.png" width="350"> <br><br> <span class="math inline">\(\varphi =\)</span> <input class="webex-solveme nospaces" data-tol="0.005" size="5" data-answer="[&quot;0.263&quot;,&quot;.263&quot;]"></p></li>
+<p><img src="images/image8A4.4.png" width="350"> <br><br> <span class="math inline">\(\varphi =\)</span> <input class="webex-solveme nospaces" data-tol="0.005" size="4" data-answer="[&quot;0.26&quot;,&quot;.26&quot;]"> <br> <small style="color: gray;">(Ergebnis auf zwei Nachkommastellen runden)</small></p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -1163,7 +1168,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 </tr>
 </tbody>
 </table>
-<p><span class="math display">\[\varphi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = \frac{980 - 330}{\sqrt{6\,149\,250}} = \frac{650}{2\,479.8} \approx 0.263\]</span></p></li>
+<p><span class="math display">\[\varphi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = \frac{980 - 330}{\sqrt{6\,149\,250}} = \frac{650}{2\,479.8} \approx 0.26\]</span></p></li>
 </ol>
 </div>
 </div>
@@ -1189,7 +1194,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><img src="images/image84.5_s.png" width="550"></li>
+<li><img src="images/image84.6_s.png" width="550"></li>
 </ol>
 </div>
 </div>
@@ -1248,7 +1253,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><img src="images/image84.6_s.png" width="550"> <strong>Regressionsgeraden:</strong></li>
+<li><img src="images/image8_4_7.png" width="550"> <br><br> <strong>Regressionsgeraden:</strong></li>
 </ol>
 <p><span class="math display">\[m = \frac{s_{xy}}{s_x^2} = \frac{-2.99}{1.51^2} = -1.31\]</span></p>
 <p><span class="math display">\[b = \bar{y} - m \cdot \bar{x} = 13.7 - (-1.31) \cdot 28.6 = 51.2\]</span></p>
@@ -1285,7 +1290,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 </div>
 <div class="webex webex-box">
 <ol start="3" type="a">
-<li>Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis.<br><br> <span class="math inline">\(R^2 =\)</span> <input class="webex-solveme nospaces" data-tol="0.005" size="5" data-answer="[&quot;0.817&quot;,&quot;.817&quot;]"></li>
+<li>Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis (Ergebnis auf zwei Nachkommastellen runden).<br><br> <span class="math inline">\(R^2 =\)</span> <input class="webex-solveme nospaces" data-tol="0.005" size="4" data-answer="[&quot;0.81&quot;,&quot;.81&quot;]"></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -1301,7 +1306,7 @@ r_{xy} = \frac{4.5}{\sqrt{7.6 \cdot 3.4}} = 0.88
 <div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="3" type="a">
-<li><p><strong>Bestimmtheitsmaß:</strong> <span class="math display">\[R^2 = (-0.904)^2 = 0.817\]</span></p>
+<li><p><strong>Bestimmtheitsmaß:</strong> <span class="math display">\[R^2 = (-0.904)^2 = 0.81\]</span></p>
 <p><span class="math inline">\(\rightarrow\)</span> <strong>82% der Variabilität</strong> der Adiponectin-Werte kann durch den BMI erklärt werden.</p></li>
 </ol>
 </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3e7735b7b22659e5fa437aca0bb49075.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-94b323657c735dfe3b1bf6ebb2c33a55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -202,7 +202,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/final1_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Abschlussübung</span></a>
+ <span class="menu-text">Abschlussübungen</span></a>
   </div>
 </li>
       </ul>
@@ -318,9 +318,9 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="übungen-5-a1">Übungen 5 – A1</h3>
 <div class="webex-check webex-box">
 <ol type="a">
-<li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\\ 0 \\\ 0 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 1 \\\ 2 \\\ 3 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 2 \\\ 2 \\\ 3 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_RARSJUZKYD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RARSJUZKYD" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_RARSJUZKYD" value=""> <span>Ja</span></label>
+<li>Sind die zwei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix}\)</span> und <span class="math inline">\(y = \begin{pmatrix} 2 \\ 2 \\ 8 \end{pmatrix}\)</span> linear unabhängig?
+<div id="radio_OSGADXXLLU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OSGADXXLLU" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_OSGADXXLLU" value="answer"> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -337,45 +337,16 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p>Mit <span class="math inline">\(x = (1\,0\,0)^{T}\)</span>, <span class="math inline">\(y = (1\,2\,3)^{T}\)</span> und <span class="math inline">\(z = (2\,2\,3)^{T}\)</span> gilt <span class="math display">\[
-x + y - z
-=
-\begin{pmatrix}1\\0\\0\end{pmatrix}
-+
-\begin{pmatrix}1\\2\\3\end{pmatrix}
--
-\begin{pmatrix}2\\2\\3\end{pmatrix}
-=
-\begin{pmatrix}0\\0\\0\end{pmatrix}
-\]</span> Außerdem ist: <span class="math display">\[
-\det
-\begin{pmatrix}
-1 &amp; 1 &amp; 2 \\
-0 &amp; 2 &amp; 2 \\
-0 &amp; 3 &amp; 3
-\end{pmatrix}
-=
-1 \cdot
-\det
-\begin{pmatrix}
-2 &amp; 2 \\
-3 &amp; 3
-\end{pmatrix}
-=
-2\cdot 3 - 3\cdot 2
-=
-0
-\]</span></p>
-<p>Die Vektoren sind linear abhängig. <br></p></li>
+<li>Die Vektoren sind linear unabhängig, denn es gibt kein <span class="math inline">\(\alpha \in \mathbb{R}\)</span>, so dass <span class="math display">\[\begin{pmatrix}1\\1\\2\end{pmatrix} = \alpha \begin{pmatrix}2\\2\\8\end{pmatrix}\]</span> Da I. und II. <span class="math inline">\(1 = 0.5 \cdot 2\)</span>, aber III. <span class="math inline">\(2 \neq 0.5 \cdot 8\)</span>.</li>
 </ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="2" type="a">
-<li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\\ 1 \\\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 2 \\\ 0 \\\ 1 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 3 \\\ 3 \\\ 2 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_TDKDNTLXXK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TDKDNTLXXK" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_TDKDNTLXXK" value="answer"> <span>Ja</span></label>
+<li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\\ 0 \\\ 0 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 1 \\\ 2 \\\ 3 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 2 \\\ 2 \\\ 3 \end{pmatrix}\)</span> linear unabhängig?
+<div id="radio_VNBJBOVEPI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VNBJBOVEPI" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_VNBJBOVEPI" value=""> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -392,6 +363,43 @@ x + y - z
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="2" type="a">
+<li><p>Mit <span class="math inline">\(x = (1\,0\,0)^{T}\)</span>, <span class="math inline">\(y = (1\,2\,3)^{T}\)</span> und <span class="math inline">\(z = (2\,2\,3)^{T}\)</span> gilt <span class="math display">\[
+x + y - z
+=
+\begin{pmatrix}1\\0\\0\end{pmatrix}
++
+\begin{pmatrix}1\\2\\3\end{pmatrix}
+-
+\begin{pmatrix}2\\2\\3\end{pmatrix}
+=
+\begin{pmatrix}0\\0\\0\end{pmatrix}
+\]</span></p>
+<p>Die Vektoren sind linear abhängig. <br></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\\ 1 \\\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 2 \\\ 0 \\\ 1 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 3 \\\ 3 \\\ 2 \end{pmatrix}\)</span> linear unabhängig?
+<div id="radio_ACXUDGPCLB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ACXUDGPCLB" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_ACXUDGPCLB" value="answer"> <span>Ja</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
 <li><p>Gesucht sind <span class="math inline">\(\alpha, \beta\)</span> und <span class="math inline">\(\gamma\)</span> mit x + y + z = 0. Man erhält das folgende Gleichungssystem: <span class="math display">\[
 \begin{cases}
 \alpha + 2\beta + 3\gamma = 0 \\
@@ -399,11 +407,11 @@ x + y - z
 \alpha + \beta + 2\gamma = 0
 \end{cases}
 \]</span></p>
-<p>Aus der zweiten Gleichung folgt = -3. Setzt man dies in die erste Gleichung ein, so erhält man <span class="math display">\[
+<p>Aus der zweiten Gleichung folgt <span class="math inline">\(\alpha = -3\gamma\)</span>. Setzt man dies in die erste Gleichung ein, so erhält man <span class="math display">\[
 -3\gamma + 2\beta + 3\gamma = 2\beta = 0,
 \]</span> d.h. <span class="math inline">\(\beta = 0\)</span>. Setzt man beides in die dritte Gleichung ein, so ergibt sich <span class="math display">\[
 -3\gamma + 0 + 2\gamma = -\gamma = 0,
-\]</span> also <span class="math inline">\(\gamma = 0\)</span> und damit auch <span class="math inline">\(\alpha = 0\)</span>. Andere Lösungen für <span class="math inline">\(\alpha, \beta\)</span> und <span class="math inline">\(\gamma\)</span> gibt es nicht.</p>
+\]</span> also <span class="math inline">\(\gamma = 0\)</span> und damit auch <span class="math inline">\(\alpha = 0\)</span>. Somit ist <span class="math inline">\(\alpha = \beta = \gamma = 0\)</span>. Andere Lösungen für <span class="math inline">\(\alpha, \beta\)</span> und <span class="math inline">\(\gamma\)</span> gibt es nicht.</p>
 <p>Zusätzlich gilt: <span class="math display">\[
 \det
 \begin{pmatrix}
@@ -425,75 +433,10 @@ x + y - z
 </div>
 </div>
 <div class="webex-check webex-box">
-<ol start="3" type="a">
-<li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_YGTQCCGEMK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YGTQCCGEMK" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_YGTQCCGEMK" value="answer"> <span>Ja</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="3" type="a">
-<li><p>Die drei Vektoren <span class="math display">\[
-x =\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
-y =\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
-z =\begin{pmatrix}1\\1\\0\end{pmatrix}
-\]</span> sind linear unabhängig.</p>
-<p>Zum Nachweis betrachten wir <span class="math inline">\(\lambda_1 x +\lambda_2 y +\lambda_3 z =\begin{pmatrix}0\\0\\0\end{pmatrix}.\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    \lambda_2+\lambda_3&amp;=0\\
-    \lambda_1+\lambda_3&amp;=0\\
-    \lambda_1+\lambda_2&amp;=0
-\end{aligned}
-\overset{\substack{I \leftrightarrow III\\ II-I\to II}}{\Longrightarrow}
-\begin{aligned}
-    \lambda_1+\lambda_2&amp;=0\\
-    -\lambda_2+\lambda_3&amp;=0\\
-    \lambda_2+\lambda_3&amp;=0
-\end{aligned}
-\overset{II + III \to III}{\Longrightarrow}
-\begin{aligned}
-    \lambda_1+\lambda_2&amp;=0\\
-    -\lambda_2+\lambda_3&amp;=0\\
-    2\lambda_3&amp;=0
-\end{aligned}
-\]</span></p>
-<p>Dies liefert das Gleichungssystem <span class="math display">\[
-\begin{aligned}
-    \lambda_1+\lambda_2&amp;=0\\
-    -\lambda_2+\lambda_3&amp;=0\\
-    2\lambda_3&amp;=0
-\end{aligned}
-\]</span></p>
-<p>Aus der ersten Gleichung folgt <span class="math inline">\(\lambda_{2} = - \lambda_{3}\)</span>, aus der zweiten <span class="math inline">\(\lambda_{1} = - \lambda_{3}\)</span>. In die dritte Gleichung eingesetzt ergibt sich <span class="math display">\[
--\lambda_3-\lambda_3=0
-\quad\Rightarrow\quad
--2\lambda_3=0
-\quad\Rightarrow\quad
-\lambda_3=0.
-\]</span></p>
-<p>Daraus folgen auch <span class="math inline">\(\lambda_2 = 0\)</span> und <span class="math inline">\(\lambda_1 = 0\)</span>. Also sind <span class="math inline">\(x,\; y \; \text{und} \; z\)</span> linear unabhängig.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
 <ol start="4" type="a">
-<li>Sind die vier Vektoren <span class="math inline">\(v_1 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(v_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(v_3 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span> und <span class="math inline">\(v_4 = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_ORMHJUNSNP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ORMHJUNSNP" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_ORMHJUNSNP" value=""> <span>Ja</span></label>
+<li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span> linear unabhängig?
+<div id="radio_NHJADDHFBH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NHJADDHFBH" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_NHJADDHFBH" value="answer"> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -510,6 +453,45 @@ z =\begin{pmatrix}1\\1\\0\end{pmatrix}
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="4" type="a">
+<li><p>Die drei Vektoren <span class="math display">\[
+x =\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
+y =\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
+z =\begin{pmatrix}1\\1\\0\end{pmatrix}
+\]</span> sind linear unabhängig. Zum Nachweis betrachten wir <span class="math inline">\(\lambda_1 x + \lambda_2 y + \lambda_3 z = \begin{pmatrix}0\\0\\0\end{pmatrix}.\)</span></p>
+<p>Dies liefert das Gleichungssystem: <span class="math display">\[
+\begin{aligned}
+    \lambda_2 + \lambda_3 &amp;= 0 \\
+    \lambda_1 + \lambda_3 &amp;= 0 \\
+    \lambda_1 + \lambda_2 &amp;= 0
+\end{aligned}
+\]</span></p>
+<p>Aus II. folgt <span class="math inline">\(\lambda_3 = -\lambda_1\)</span> und aus III. folgt <span class="math inline">\(\lambda_2 = -\lambda_1\)</span>. Eingesetzt in die erste Gleichung folgt <span class="math inline">\(\lambda_1 = 0\)</span>.</p>
+<p>Daraus folgen auch <span class="math inline">\(\lambda_2 = 0\)</span> und <span class="math inline">\(\lambda_3 = 0\)</span>. Also sind <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> und <span class="math inline">\(z\)</span> linear unabhängig.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="5" type="a">
+<li>Sind die vier Vektoren <span class="math inline">\(v_1 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(v_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(v_3 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span> und <span class="math inline">\(v_4 = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}\)</span> linear unabhängig?
+<div id="radio_RTNVTDSMME" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RTNVTDSMME" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_RTNVTDSMME" value=""> <span>Ja</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="5" type="a">
 <li><p>Die vier Vektoren <span class="math display">\[
 v_1=\begin{pmatrix}0\\1\\1\end{pmatrix},\qquad
 v_2=\begin{pmatrix}1\\0\\1\end{pmatrix},\qquad
@@ -527,38 +509,6 @@ v_1+v_2+v_3-2v_4
 \begin{pmatrix}0\\0\\0\end{pmatrix}.
 \]</span></p>
 <p>Damit liegt eine nichttriviale Linearkombination der Vektoren vor, die den Nullvektor ergibt. Also sind <span class="math inline">\(v_{1}, \; v_{2},\; v_{3},\; v_{4}\)</span> linear abhängig.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="webex webex-box">
-<ol start="5" type="a">
-<li>Betrachten Sie die folgenden linearen Teilräume von <span class="math inline">\(\mathbb{R}^4\)</span> <br> <br> <span class="math inline">\(U := \{(x_1, x_2, x_3, x_4)\in \mathbb{R}^4 | x_1 - x_2 + x_3 - x_4 = 0\}\)</span> <br><br> Bestimmen Sie eine Basis von <span class="math inline">\(U\)</span>.</li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="5" type="a">
-<li>Der Untervektorraum U von <span class="math inline">\(\mathbb{R}^4\)</span> besteht aus allen Vektoren der Form <span class="math display">\[
-\begin{pmatrix}x_2 - x_3 + x_4\\x_2\\x_3\\x_4\end{pmatrix}
-= x_2 \begin{pmatrix}1\\1\\0\\0\end{pmatrix}
-+ x_3 \begin{pmatrix}-1\\0\\1\\0\end{pmatrix}
-+ x_4 \begin{pmatrix}1\\0\\0\\1\end{pmatrix}
-\]</span> <br> Mit <span class="math inline">\(x_2, x_3, x_4 \mathbb{R}^4\)</span>. Man sieht leicht, dass die Vektoren <span class="math display">\[
-\begin{pmatrix}1\\1\\0\\0\end{pmatrix},
-\begin{pmatrix}-1\\0\\1\\0\end{pmatrix} \text{und}
-\begin{pmatrix}1\\0\\0\\1\end{pmatrix}
-\]</span> linear unabhängig sind. Diese bilden somit eine Basis von U.</li>
 </ol>
 </div>
 </div>
@@ -592,8 +542,8 @@ v_1+v_2+v_3-2v_4
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Interpretieren Sie das Ergebnis geometrisch:
-<div id="radio_MOOULOMVAP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MOOULOMVAP" value=""> <span>Der Winkel zwischen x und y ist stumpf.</span></label><label><input type="radio" autocomplete="off" name="radio_MOOULOMVAP" value=""> <span>Die Vektoren zeigen überwiegend in die gleiche Richtung.</span></label><label><input type="radio" autocomplete="off" name="radio_MOOULOMVAP" value="answer"> <span>Die beiden Vektoren stehen senkrecht zueinander.</span></label>
+<div id="radio_LHPNBOMCNW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LHPNBOMCNW" value=""> <span>Der Winkel zwischen x und y ist stumpf.</span></label><label><input type="radio" autocomplete="off" name="radio_LHPNBOMCNW" value=""> <span>Die Vektoren zeigen überwiegend in die gleiche Richtung.</span></label><label><input type="radio" autocomplete="off" name="radio_LHPNBOMCNW" value="answer"> <span>Die beiden Vektoren stehen senkrecht zueinander.</span></label>
 </div></li>
 </ol>
 </div>
