@@ -5,7 +5,7 @@ title: Block 1
 library(webexercises)
 ```
 
-## Mathematische Grundlagen
+## Mathematische Grundlagen - Test
 
 <small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
