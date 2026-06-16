@@ -7,7 +7,7 @@ library(webexercises)
 
 ## z- und t-Test
 
-### Aufgabe 1 – Semaglutid Studie (gepaarter t-Test)
+### Übung 1 – Semaglutid Studie (gepaarter t-Test)
 
 Semaglutid wird als „Abnehmspritze" bei Adipositas eingesetzt. Bei n=60 Probanden wurde das Körpergewicht vor Therapie (Baseline) und nach 6 Monaten (T1) gemessen.
 
@@ -96,7 +96,7 @@ $$\left[-5 - 2 \cdot \frac{5.4}{\sqrt{60}};\; -5 + 2 \cdot \frac{5.4}{\sqrt{60}}
 
 ---
 
-### Aufgabe 2 – Semaglutid vs. TAU (ungepaarter t-Test)
+### Übung 2 – Semaglutid vs. TAU (ungepaarter t-Test)
 
 Sie vergleichen die Gewichtsdifferenz zwischen der Semaglutid Gruppe und einer „treatment as usual" (TAU) Gruppe.
 

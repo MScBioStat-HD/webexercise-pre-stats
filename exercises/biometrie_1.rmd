@@ -7,7 +7,7 @@ library(webexercises)
 
 ## Grundprinzipien des statistischen Testens
 
-### Aufgabe 1 – Richtig oder Falsch
+### Übung 1 – Richtig oder Falsch
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -55,7 +55,7 @@ cat("Die Aussage, die gezeigt werden soll, muss als Alternativhypothese formulie
 
 ---
 
-### Aufgabe 2 – Hypothesen formulieren
+### Übung 2 – Hypothesen formulieren
 
 In einer klinischen Studie wollen Sie untersuchen, ob Cannabidiol bei Alkoholabhängigkeit das Rückfallrisiko reduziert gegenüber der Standardtherapie. Unter der Standardtherapie ist die Rückfallrate 50% (0.5). Formulieren Sie eine Null- und eine Alternativhypothese.
 
@@ -93,7 +93,7 @@ cat("(b) Welche der folgenden Aussagen beschreibt die **Alternativhypothese** ko
 
 ---
 
-### Aufgabe 3 – Konfidenzintervall
+### Übung 3 – Konfidenzintervall
 
 Es soll der Frage nachgegangen werden, ob mehr als 70% der Kinder in BaWü gegen FSME geimpft sind. In einer Stichprobe von 860 Kindern sind 645 Kinder geimpft.
 
