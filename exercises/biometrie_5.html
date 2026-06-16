@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-94b323657c735dfe3b1bf6ebb2c33a55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
@@ -248,8 +277,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#übungen-1-a1" id="toc-übungen-1-a1" class="nav-link active" data-scroll-target="#übungen-1-a1">Übungen 1 – A1</a></li>
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2">Aufgabe 2</a></li>
+  <li><a href="#aufgabe-3" id="toc-aufgabe-3" class="nav-link" data-scroll-target="#aufgabe-3">Aufgabe 3</a></li>
+  <li><a href="#aufgabe-4" id="toc-aufgabe-4" class="nav-link" data-scroll-target="#aufgabe-4">Aufgabe 4</a></li>
+  <li><a href="#aufgabe-5" id="toc-aufgabe-5" class="nav-link" data-scroll-target="#aufgabe-5">Aufgabe 5</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -273,8 +313,294 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><small style="color: gray;"><strong>Hinweis:</strong> Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen. </small></p>
+<section id="übungen-1-a1" class="level3">
+<h3 class="anchored" data-anchor-id="übungen-1-a1">Übungen 1 – A1</h3>
+</section>
+<section id="aufgabe-1" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h3>
+<p>In der Normalbevölkerung gesunder Erwachsener ist der Hämoglobinwert bei Männern im Mittel bei 14.0 g/dl mit Standardabweichung 1.8 g/dl.</p>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Wie groß ist der Anteil in der männlichen Bevölkerung mit einem Hämoglobinwert über 16.0 g/dl?
+<div id="radio_PHIUMHKUGS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PHIUMHKUGS" value=""> <span><span class="math inline">\(P(X &gt; 16) = 0.87\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_PHIUMHKUGS" value=""> <span><span class="math inline">\(P(X &gt; 16) = 0.50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_PHIUMHKUGS" value="answer"> <span><span class="math inline">\(P(X &gt; 16) = 0.13\)</span></span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Der Anteil ist <span class="math inline">\(P(X &gt; 16) = 0.13\)</span>. Rechnung: <span class="math display">\[P(X &gt; 16) = 1 - P(X \leq 16) = 1 - P\left(Z \leq \frac{16 - 14}{1.8}\right) = 1 - P(Z \leq 1.11) = 1 - 0.8665 = 0.13\]</span></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Welches ist die untere Hämoglobinwertgrenze für Personen, die zu der Gruppe mit den 5% niedrigsten Hämoglobinwerten gehören?
+<div id="radio_TZREBPXERK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TZREBPXERK" value=""> <span><span class="math inline">\(X \leq 12.50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TZREBPXERK" value=""> <span><span class="math inline">\(X \leq 14.00\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TZREBPXERK" value="answer"> <span><span class="math inline">\(X \leq 11.04\)</span></span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li>Die Grenze ist 11.04. Rechnung: Betrachte <span class="math inline">\(z_{0.05} \rightarrow P(Z \leq -1.645)\)</span>. Z in X transformieren: <span class="math display">\[X \leq -1.645 \cdot 1.8 + 14 = 11.04\]</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Welche der folgenden Aussagen sind richtig? <br><br>(<strong>Hinweis:</strong> Mehrere Aussagen können richtig sein.) <br><br><strong>1.</strong> Die Binomialverteilung ist die Grenzverteilung der Normalverteilung. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Die Binomialverteilung beschreibt die Anzahl der Erfolge in einer Serie von unabhängigen Versuchen. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>3.</strong> Der Zentrale Grenzwertsatz greift, wenn <span class="math inline">\(n\)</span> gegen <span class="math inline">\(0\)</span> konvergiert. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>4.</strong> Um den t-Test anwenden zu können, muss vorher immer ein Test auf Normalverteilung durchgeführt werden. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>5.</strong> Voraussetzung für den Zentralen Grenzwertsatz ist, dass <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> eine Folge von unabhängig und identisch verteilten Zufallsvariablen ist. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Richtig: Nr. 2 und Nr. 5</strong></p>
+<p>Erklärungen:</p>
+<ol type="1">
+<li>Falsch – Die Normalverteilung ist die Grenzverteilung der Binomialverteilung.</li>
+<li>Richtig.</li>
+<li>Falsch – Der Grenzwertsatz greift, wenn <span class="math inline">\(n \rightarrow \infty\)</span> konvergiert.</li>
+<li>Falsch – Ein Vortest auf Normalverteilung ist nicht immer zu empfehlen.</li>
+<li>Richtig.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-3" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-3">Aufgabe 3</h3>
+<p>Sie interessieren sich für die Veränderung im Cholesterinwert nach einer speziellen Diät. Folgende Verteilung der Daten beobachten Sie (n=50)</p>
+<p><img src="images/biometri_1_b5_3.png" width="400"> <br><br></p>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Welche Aussage bezüglich der Verteilung passt am besten?
+<div id="radio_ACJWHBENOY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ACJWHBENOY" value=""> <span>Die Daten sind normalverteilt.</span></label><label><input type="radio" autocomplete="off" name="radio_ACJWHBENOY" value=""> <span>Die Verteilung ist multimodal.</span></label><label><input type="radio" autocomplete="off" name="radio_ACJWHBENOY" value="answer"> <span>Die Daten sind schief verteilt.</span></label><label><input type="radio" autocomplete="off" name="radio_ACJWHBENOY" value=""> <span>Die Daten sind normalverteilt mit deutlichen Ausreißern.</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Die Daten sind schief verteilt (rechtsschief bzw. linkssteil).</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Ist hier eine logarithmische Transformation sinnvoll?
+<div id="radio_KHSZOHUTXV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KHSZOHUTXV" value=""> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_KHSZOHUTXV" value="answer"> <span>Nein</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li>Nein, weil y &lt; 0 beobachtet wird und damit nicht definiert.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Sie möchten die Veränderung im Cholesterinwert zwischen der Gruppe mit der speziellen Diät und einer Kontrollgruppe (“normale” Diät) in einer randomisierten Studie vergleichen. Die Fallzahl pro Gruppe beträgt n=15. Wie planen Sie die statistische Analyse? <br><br> (<strong>Hinweis:</strong> Mehrere Aussagen können richtig sein.) <br><br> <strong>1.</strong> Ich wende den z-Test an. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Ich wende den t-Test und den z-Test an und vergleiche die Ergebnisse. Stimmen die Ergebnisse überein, dann ist der t-Test valide. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>3.</strong> Ich wähle einen nichtparametrischen Test und berichte Median mit Interquartilsabstand. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>4.</strong> Ich nehme den t-Test, falls die Daten normalverteilt sind, und einen nichtparametrischen Test, falls die Daten schief verteilt sind. Dazu teste ich vorher auf Normalverteilung. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>5.</strong> Ich schaue die Verteilung der Daten grafisch an (z.B. Histogramm) und berichte beides: Median mit Interquartilsabstand sowie Mittelwert mit Standardabweichung stratifiziert nach Gruppe. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>6.</strong> Ich logarithmiere die Daten und wende dann den t-Test an. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li><strong>Richtig: Nr. 3 und Nr. 5</strong></li>
+</ol>
+<p>Wir haben gesehen, dass die Daten schief verteilt angenommen werden können (aus vorheriger Stichprobe, siehe Aufgabe a). Eine logarithmische Transformation ist nicht sinnvoll, da y &lt; 0 vorkommen kann. Zudem ist die Fallzahl pro Gruppe eher im unteren Bereich. Daher würde man hier empfehlen, einen nichtparametrischen Test für den Gruppenvergleich anzuwenden. Zudem würde man die Verteilung der Daten grafisch darstellen und Median mit Interquartilsabstand berichten. Mittelwert mit Standardabweichung kann zusätzlich berichtet werden.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-4" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-4">Aufgabe 4</h3>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Frau Dr.&nbsp;Schmidt, Leiterin einer Arztpraxis auf dem Land, möchte in ihrer Praxis die Bereitschaft zur Organspende untersuchen. Sie rechnet damit, dass Sie innerhalb der nächsten 4 Wochen 57 Patienten dazu befragen kann. Erfahrungsgemäß liegt die Bereitschaft zur Organspende bei einer Wahrscheinlichkeit von 80%. <br><br> Welcher Verteilung folgt die Bereitschaft zur Organspende? <br> (N = Normalverteilung, Bin = Binomialverteilung) <br><br> <strong>1.</strong> <span class="math inline">\(N(0,1)\)</span> <br> <strong>2.</strong> <span class="math inline">\(Bin(n,p)\)</span> <br> <strong>3.</strong> <span class="math inline">\(N(57, 4)\)</span> <br> <strong>4.</strong> <span class="math inline">\(Bernoulli(p)\)</span> <br> <strong>5.</strong> <span class="math inline">\(N(\mu, 4)\)</span> <br><br>
+<div id="radio_JWIKFRYZJV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JWIKFRYZJV" value=""> <span><span class="math inline">\(N(0,1)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JWIKFRYZJV" value="answer"> <span><span class="math inline">\(Bin(n,p)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JWIKFRYZJV" value=""> <span><span class="math inline">\(N(57, 4)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JWIKFRYZJV" value=""> <span><span class="math inline">\(Bernoulli(p)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JWIKFRYZJV" value=""> <span><span class="math inline">\(N(\mu, 4)\)</span></span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Dies ist eine Binomialverteilung. Es gibt zwei mögliche Ausgänge (Bereitschaft = ja oder nein) und eine feste Anzahl an Versuchen (hier 57 Patienten).</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Aufgrund der dörflichen Lage ihrer Praxis und damit großen Entfernungen zu größeren Kliniken ist Dr.&nbsp;Schmidt auf Organspenden ihrer eigenen Patienten angewiesen. Daher ist sie an der Wahrscheinlichkeit interessiert, dass von den 57 Patienten mindestens 55 Patienten der Organspende zustimmen. <br><br> (<strong>Hinweis:</strong> Mehrere Aussagen können richtig sein.) <br><br> <strong>1.</strong> Exakte Berechnung über die Binomialverteilung (Summe über Einzelwahrscheinlichkeiten). <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>2.</strong> Approximative Berechnung über die Normalverteilung unter der Voraussetzung, dass <span class="math inline">\(n \cdot p \cdot (1-p) &gt; 9\)</span>. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li><strong>Richtig: Nr. 1 und Nr. 2</strong></li>
+</ol>
+<ul>
+<li>Exakte Berechnung über die Binomialverteilung (Summe über Einzelwahrscheinlichkeiten).</li>
+<li>Approximative Berechnung über die Normalverteilung unter der Voraussetzung, dass <span class="math inline">\(n \cdot p \cdot (1-p) &gt; 9\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Ist die Voraussetzung für den zweiten Ansatz hier erfüllt?
+<div id="radio_DEVAHTVLYC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DEVAHTVLYC" value="answer"> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_DEVAHTVLYC" value=""> <span>Nein</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li>Ja, sie ist erfüllt. Die Voraussetzung für eine Normalapproximation ist <span class="math inline">\(n \cdot p \cdot (1-p) &gt; 9\)</span>. Es gilt: <span class="math display">\[n \cdot p \cdot (1-p) = 57 \cdot 0.8 \cdot 0.2 = 9.12 &gt; 9\]</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-5" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-5">Aufgabe 5</h3>
+<p><strong>Gegeben sind folgende Daten (dargestellt durch Histogram, Streudiagramm und Q-Q-Plot):</strong></p>
+<p><img src="images/daten.png" width="750"> <br><br></p>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Welcher Boxplot passt zu den Daten oben? <br><br>
+<div id="radio_UZAEURXQBE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UZAEURXQBE" value="answer"> <span><img src="images/boxplot_a.png" width="400"> <br></span></label><label><input type="radio" autocomplete="off" name="radio_UZAEURXQBE" value=""> <span><img src="images/boxplot_b.png" width="400"> <br></span></label><label><input type="radio" autocomplete="off" name="radio_UZAEURXQBE" value=""> <span><img src="images/boxplot_c.png" width="400"> <br></span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>A ist richtig. Die Daten sind schief verteilt und liegen in einem Range von 0–25.</li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
