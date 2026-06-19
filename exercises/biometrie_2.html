@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -351,7 +316,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="z--und-t-test">z- und t-Test</h2>
 <section id="übung-1-semaglutid-studie-gepaarter-t-test" class="level3">
 <h3 class="anchored" data-anchor-id="übung-1-semaglutid-studie-gepaarter-t-test">Übung 1 – Semaglutid Studie (gepaarter t-Test)</h3>
-<p>Semaglutid wird als „Abnehmspritze” bei Adipositas eingesetzt. Bei n=60 Probanden wurde das Körpergewicht vor Therapie (Baseline) und nach 6 Monaten (T1) gemessen.</p>
+<p>Semaglutid wird als „Abnehmspritze“ bei Adipositas eingesetzt. Sie möchten untersuchen, ob Semaglutid Gewichtsreduktion bewirkt und messen bei n=60 Probanden vor Therapie mit Semaglutid (Baseline) und nach 6 Monaten (T1) das Körpergewicht. Folgende Werte beobachten Sie</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -369,19 +334,17 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Semaglutid Gruppe</td>
-<td>80,5 kg ± 8,5 kg</td>
-<td>75,5 kg ± 7,5 kg</td>
-<td>-5 kg ± 5,4 kg</td>
+<td>Semaglutid Gruppe Mittelwert <span class="math inline">\(\pm\)</span> Standardabweichung</td>
+<td>80.5 kg <span class="math inline">\(\pm\)</span> 8.5 kg</td>
+<td>75.5 kg <span class="math inline">\(\pm\)</span> 7.5 kg</td>
+<td>-5 kg <span class="math inline">\(\pm\)</span> 5.4 kg</td>
 </tr>
 </tbody>
 </table>
-<div class="webex-check webex-box">
+<p><br> Sie möchten der Frage nachgehen, ob sich das Gewicht nach 6 Monaten tatsächlich oder nur zufällig von den Baseline-Werten unterscheiden.</p>
+<div class="webex webex-box">
 <ol type="a">
-<li>Welche Null- und Alternativhypothese ist korrekt?
-<div id="radio_CEXBBYUGPP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CEXBBYUGPP" value="answer"> <span><span class="math inline">\(H_0\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist gleich 0. <span class="math inline">\(H_1\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist ungleich 0.</span></label><label><input type="radio" autocomplete="off" name="radio_CEXBBYUGPP" value=""> <span><span class="math inline">\(H_0\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist ungleich 0. <span class="math inline">\(H_1\)</span>: Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> ist gleich 0.</span></label><label><input type="radio" autocomplete="off" name="radio_CEXBBYUGPP" value=""> <span><span class="math inline">\(H_0\)</span>: Das Gewicht nimmt ab. <span class="math inline">\(H_1\)</span>: Das Gewicht nimmt nicht ab.</span></label>
-</div></li>
+<li>Formulieren Sie die Null- und die Alternativhypothese zu dieser Fragestellung</li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -397,18 +360,14 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><strong><span class="math inline">\(H_0\)</span>:</strong> Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> in der Semaglutid Gruppe ist gleich 0.</li>
+<li><strong><span class="math inline">\(H_0\)</span>:</strong> Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> in der Semaglutid Gruppe ist gleich 0. <br> <strong><span class="math inline">\(H_1\)</span>:</strong> Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> in der Semaglutid Gruppe ist ungleich 0.</li>
 </ol>
-<p><strong><span class="math inline">\(H_1\)</span>:</strong> Die wahre erwartete Gewichts-Differenz <span class="math inline">\(\mu\)</span> in der Semaglutid Gruppe ist ungleich 0.</p>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="2" type="a">
-<li>Wie lautet die Z-Statistik? (bekannte Varianz <span class="math inline">\(\sigma^2 = 25\)</span>)
-<div id="radio_BSTYFSITNW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BSTYFSITNW" value=""> <span><span class="math inline">\(Z = -5.74\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_BSTYFSITNW" value=""> <span><span class="math inline">\(Z = -5.00\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_BSTYFSITNW" value="answer"> <span><span class="math inline">\(Z = -7.74\)</span></span></label>
-</div></li>
+<li>Berechnen Sie die Z-Statistik, wobei angenommen wird, dass die Varianz der Gewichtsdifferenz bekannt ist mit <span class="math inline">\(\sigma^2 = 25\)</span> <br><br>Z = <input class="webex-solveme nospaces" size="5" data-answer="[&quot;-7.74&quot;]"> <br></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -431,7 +390,7 @@ window.Quarto = {
 </div>
 <div class="webex-check webex-box">
 <ol start="3" type="a">
-<li>Kann die Nullhypothese zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden? (kritischer Wert: |Z| = 1.96) <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></li>
+<li>Können Sie die Nullhypothese zu einem Signifikanzniveau von 5% (zweiseitig) ablehnen (kritischer Wert für |Z| = 1.96)<br><br> <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -447,17 +406,14 @@ window.Quarto = {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="3" type="a">
-<li><strong>Ja.</strong> Da <span class="math inline">\(|Z| = 7.74 &gt; 1.96\)</span> gilt <span class="math inline">\(p &lt; 5\%\)</span>, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz unterscheidet sich signifikant von 0 — es gibt eine Gewichtsabnahme nach der Therapie.</li>
+<li><strong>TRUE.</strong> Da <span class="math inline">\(|Z| = 7.74 &gt; 1.96\)</span> d.h., die Nullhypothese kann zu einem Signifikanzniveau von <span class="math inline">\(5\%\)</span> abgelehnt werden. Die Gewichts-Differenz unterscheidet sich signifikant von 0; es gibt also eine Gewichtsabnahme nach der Therapie im Vergleich zur Baseline-Messung.</li>
 </ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="4" type="a">
-<li>Wie lautet die t-Statistik?
-<div id="radio_ZDLWGWCOHH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZDLWGWCOHH" value=""> <span><span class="math inline">\(t = -5.04\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZDLWGWCOHH" value="answer"> <span><span class="math inline">\(t = -7.04\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZDLWGWCOHH" value=""> <span><span class="math inline">\(t = -9.04\)</span></span></label>
-</div></li>
+<li>Wie lautet die t-Statistik? <br><br>t = <input class="webex-solveme nospaces" size="5" data-answer="[&quot;-7.04&quot;]"> <br></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -480,9 +436,9 @@ window.Quarto = {
 </div>
 <div class="webex-check webex-box">
 <ol start="5" type="a">
-<li>Wie lautet das 95%-Konfidenzintervall für den Effekt? (<span class="math inline">\(t_{59; 0.975} = 2.0\)</span>)
-<div id="radio_NTQYIELUOT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NTQYIELUOT" value=""> <span><span class="math inline">\([-5.4; -3.6]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_NTQYIELUOT" value=""> <span><span class="math inline">\([-7.4; -2.6]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_NTQYIELUOT" value="answer"> <span><span class="math inline">\([-6.4; -3.6]\)</span></span></label>
+<li>Berechnen Sie das 95% Konfidenzintervall für den Effekt. Das t-Quantil <span class="math inline">\(t_{n - 1;0.975}\;\)</span> ist <span class="math inline">\(\;t_{59;0.975} = 2\)</span>
+<div id="radio_UAQCJOZWHP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UAQCJOZWHP" value=""> <span><span class="math inline">\([-5.4; -3.6]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_UAQCJOZWHP" value=""> <span><span class="math inline">\([-7.4; -2.6]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_UAQCJOZWHP" value="answer"> <span><span class="math inline">\([-6.4; -3.6]\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -499,11 +455,11 @@ window.Quarto = {
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="5" type="a">
-<li>Das 95%-Konfidenzintervall berechnet sich mit:</li>
-</ol>
+<li><p>Das 95%-Konfidenzintervall berechnet sich mit:</p>
 <p><span class="math display">\[\left[\bar{X} - t_{n-1;1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}};\; \bar{X} + t_{n-1;1-\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}\right]\]</span></p>
 <p>Somit:</p>
-<p><span class="math display">\[\left[-5 - 2 \cdot \frac{5.4}{\sqrt{60}};\; -5 + 2 \cdot \frac{5.4}{\sqrt{60}}\right] = [-6.4;\; -3.6]\]</span></p>
+<p><span class="math display">\[\left[-5 - 2 \cdot \frac{5.4}{\sqrt{60}};\; -5 + 2 \cdot \frac{5.4}{\sqrt{60}}\right] = [-6.4;\; -3.6]\]</span></p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -511,7 +467,7 @@ window.Quarto = {
 </section>
 <section id="übung-2-semaglutid-vs.-tau-ungepaarter-t-test" class="level3">
 <h3 class="anchored" data-anchor-id="übung-2-semaglutid-vs.-tau-ungepaarter-t-test">Übung 2 – Semaglutid vs.&nbsp;TAU (ungepaarter t-Test)</h3>
-<p>Sie vergleichen die Gewichtsdifferenz zwischen der Semaglutid Gruppe und einer „treatment as usual” (TAU) Gruppe.</p>
+<p>Sie möchten der Frage nachgehen, ob sich die Gewichtsdifferenz zwischen der Semaglutid Gruppe zu einer „treatment as usual“ (TAU) Gruppe unterscheidet. Dafür messen Sie bei 50 Patienten wieder das Gewicht zu Baseline und nach 6 Monaten. Folgende Werte beobachten Sie.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -530,23 +486,23 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Semaglutid (n=60)</td>
-<td>80,5 kg ± 8,5 kg</td>
-<td>75,5 kg ± 7,5 kg</td>
-<td>-5,0 kg ± 5,4 kg</td>
+<td>80.5 kg <span class="math inline">\(\pm\)</span> 8.5 kg</td>
+<td>75.5 kg <span class="math inline">\(\pm\)</span> 7.5 kg</td>
+<td>-5.0 kg <span class="math inline">\(\pm\)</span> 5.4 kg</td>
 </tr>
 <tr class="even">
 <td>TAU (n=50)</td>
-<td>81,5 kg ± 9,5 kg</td>
-<td>78,5 kg ± 7,0 kg</td>
-<td>-3,0 kg ± 4,8 kg</td>
+<td>81.5 kg <span class="math inline">\(\pm\)</span> 9.5 kg</td>
+<td>78.5 kg <span class="math inline">\(\pm\)</span> 7.0 kg</td>
+<td>-3.0 kg <span class="math inline">\(\pm\)</span> 4.8 kg</td>
 </tr>
 </tbody>
 </table>
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Wie groß ist die gepoolte Standardabweichung <span class="math inline">\(s_{pool}\)</span>?
-<div id="radio_VVKXEIRDDS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VVKXEIRDDS" value="answer"> <span><span class="math inline">\(s_{pool} = 5.14\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VVKXEIRDDS" value=""> <span><span class="math inline">\(s_{pool} = 4.80\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VVKXEIRDDS" value=""> <span><span class="math inline">\(s_{pool} = 5.40\)</span></span></label>
+<div id="radio_HOCLUFKNWY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HOCLUFKNWY" value="answer"> <span><span class="math inline">\(s_{pool} = 5.14\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HOCLUFKNWY" value=""> <span><span class="math inline">\(s_{pool} = 4.80\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HOCLUFKNWY" value=""> <span><span class="math inline">\(s_{pool} = 5.40\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -563,23 +519,19 @@ window.Quarto = {
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li>Die gepoolte Standardabweichung berechnet sich als:</li>
+<li><p>Die gepoolte Standardabweichung berechnet sich als:</p>
+<p><span class="math inline">\(n_1 = 60\)</span> <br> <span class="math inline">\(n_2 = 50\)</span> <br> <span class="math inline">\(s_1 = 5.4\)</span> <br> <span class="math inline">\(s_2 = 4.8\)</span> <br></p>
+<p><span class="math inline">\(s_{pool} = \sqrt{\frac{(n_1-1) \cdot s_1^2 + (n_2-1) \cdot s_2^2}{n_1 + n_2 - 2}}\)</span></p>
+<p><span class="math inline">\(s_{pool} = \sqrt{\frac{59 \cdot 29.16 + 49 \cdot 23.04}{108}} = \sqrt{26.34} = 5.14\)</span></p></li>
 </ol>
-<p><span class="math display">\[s_{pool} = \sqrt{\frac{(n_1-1) \cdot s_1^2 + (n_2-1) \cdot s_2^2}{n_1 + n_2 - 2}}\]</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n1 <span class="ot">&lt;-</span> <span class="dv">60</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>n2 <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fl">5.4</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> <span class="fl">4.8</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>spool <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(((n1<span class="dv">-1</span>)<span class="sc">*</span>s1<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (n2<span class="dv">-1</span>)<span class="sc">*</span>s2<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n1<span class="sc">+</span>n2<span class="dv">-2</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>spool  <span class="co"># = 5.14</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Wie lautet die Teststatistik?
-<div id="radio_OUZHMTFSCC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OUZHMTFSCC" value=""> <span><span class="math inline">\(t = -1.03\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_OUZHMTFSCC" value=""> <span><span class="math inline">\(t = -3.03\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_OUZHMTFSCC" value="answer"> <span><span class="math inline">\(t = -2.03\)</span></span></label>
+<div id="radio_GXVOHYYYLC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GXVOHYYYLC" value=""> <span><span class="math inline">\(t = -1.03\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_GXVOHYYYLC" value=""> <span><span class="math inline">\(t = -3.03\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_GXVOHYYYLC" value="answer"> <span><span class="math inline">\(t = -2.03\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -596,18 +548,18 @@ window.Quarto = {
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="2" type="a">
-<li><span class="math display">\[t = \frac{-5 - (-3)}{s_{pool} \cdot \sqrt{\frac{1}{60} + \frac{1}{50}}} = -2.03\]</span></li>
-</ol>
+<li><p><span class="math display">\[t = \frac{-5 - (-3)}{s_{pool} \cdot \sqrt{\frac{1}{60} + \frac{1}{50}}} = -2.03\]</span></p>
 <p>Der t-Test für ungepaarte Stichproben prüft allgemein:</p>
 <p><span class="math display">\[H_0: \mu_X = \mu_Y \quad \text{vs.} \quad H_1: \mu_X \neq \mu_Y\]</span></p>
 <p>anhand der Teststatistik:</p>
-<p><span class="math display">\[T := \frac{\bar{X} - \bar{Y}}{s \cdot \sqrt{\frac{1}{n_x} + \frac{1}{n_y}}} \sim t_{n_x + n_y - 2} \quad \text{unter } H_0\]</span></p>
+<p><span class="math display">\[T := \frac{\bar{X} - \bar{Y}}{s \cdot \sqrt{\frac{1}{n_x} + \frac{1}{n_y}}} \sim t_{n_x + n_y - 2} \quad \text{unter } H_0\]</span></p></li>
+</ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
 <ol start="3" type="a">
-<li>Kann die Nullhypothese <span class="math inline">\(H_0: \mu_{TAU} = \mu_{SEM}\)</span> zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden? (kritischer Wert: <span class="math inline">\(t_{108; 0.975} = 1.98\)</span>) <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></li>
+<li>Kann die Nullhypothese <span class="math inline">\(H_0: \mu_{TAU} = \mu_{SEM}\)</span> zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden (kritischer Wert: <span class="math inline">\(t_{108; 0.975} = 1.98\)</span>)?<br><br> <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -623,7 +575,8 @@ window.Quarto = {
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="3" type="a">
-<li><strong>Ja.</strong> Da <span class="math inline">\(|t| = 2.03 &gt; 1.98\)</span> gilt <span class="math inline">\(p &lt; 5\%\)</span>, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz zwischen den beiden Gruppen ist statistisch signifikant.</li>
+<li><p><strong>TRUE.</strong> Da <span class="math inline">\(|t| = 2.03 &gt; 1.98\)</span> gilt <span class="math inline">\(p &lt; 5\%\)</span>, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz zwischen den beiden Gruppen ist statistisch signifikant. <br><br> Der t-Test für ungepaarte Stichproben prüft allgemein die Hypothesen: <br></p>
+<p><span class="math inline">\(H_0: \mu_X = \mu_Y \quad \text{vs.} \quad H_1: \mu_X \neq \mu_Y\)</span> <br><br> anhand der Teststatistik <br> <span class="math inline">\(T := \frac{\bar{X} - \bar{Y}}{s \cdot \sqrt{\frac{1}{n_x} + \frac{1}{n_y}}} \sim t_{n_x+n_y-2}\)</span> unter <span class="math inline">\(H_0\)</span> <br><br> wobei <span class="math inline">\(s = \sqrt{\frac{(n_x - 1)s_x^2 + (n_y - 1)s_y^2}{n_x + n_y - 2}}\)</span> = gepoolte emp. SD. <br><br> Ist <span class="math inline">\(|t| &gt; t_{n_x+n_y-2,1 - \alpha /2}\)</span>, so kann die Nullhypothese zu einem Signifikanzniveau von <span class="math inline">\(\alpha\)</span> abgelehnt werden.</p></li>
 </ol>
 </div>
 </div>
