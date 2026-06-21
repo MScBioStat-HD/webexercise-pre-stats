@@ -68,15 +68,15 @@ cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-**Richtig: Nr. 2 und Nr. 5**
+a) **Richtig: Nr. 2 und Nr. 5** <br>
 
-Erklärungen:
+	**Erklärungen:**
 
-1. Falsch – Die Normalverteilung ist die Grenzverteilung der Binomialverteilung.
-2. Richtig.
-3. Falsch – Der Grenzwertsatz greift, wenn $n \rightarrow \infty$ konvergiert.
-4. Falsch – Ein Vortest auf Normalverteilung ist nicht immer zu empfehlen.
-5. Richtig.
+	1. Falsch – Die Normalverteilung ist die Grenzverteilung der Binomialverteilung.
+	2. Richtig.
+	3. Falsch – Der Grenzwertsatz greift, wenn $n \rightarrow \infty$ konvergiert.
+	4. Falsch – Ein Vortest auf Normalverteilung ist nicht immer zu empfehlen.
+	5. Richtig.
 :::
 
 
