@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -353,7 +318,9 @@ window.Quarto = {
 <section id="übung-1-richtig-oder-falsch" class="level3">
 <h3 class="anchored" data-anchor-id="übung-1-richtig-oder-falsch">Übung 1 – Richtig oder Falsch</h3>
 <div class="webex-check webex-box">
-<p>Der p-Wert ist die Wahrscheinlichkeit für die Nullhypothese. <select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select></p>
+<ol type="a">
+<li>Welche der folgenden Aussagen sind richtig? <br><br> <strong>(Hinweis: Mehrere Aussagen können richtig sein.)</strong> <br><br><strong>1.</strong> Der p-Wert ist die Wahrscheinlichkeit für die Nullhypothese. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Der statistische Test entscheidet, ob die Nullhypothese wahr ist. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>3.</strong> Der Fehler 1. Art ist unabhängig von der Fallzahl. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>4.</strong> Die Aussage, die gezeigt werden soll, muss als Alternativhypothese formuliert sein. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -367,12 +334,26 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Falsch.</strong> Der p-Wert ist die Wahrscheinlichkeit für die beobachteten Daten, wenn die Nullhypothese in Wahrheit zutrifft. Also <span class="math inline">\(P(\text{Daten}|H_0)\)</span> und <strong>nicht</strong> <span class="math inline">\(P(H_0|\text{Daten})\)</span>.</p>
+<ol type="a">
+<li><p><strong>Richtig: Nr. 3 und Nr. 4</strong> <br><br> <strong>Erklärungen:</strong></p>
+<ol type="1">
+<li>Falsch – Der p-Wert ist die Wahrscheinlichkeit für die beobachteten Daten, wenn die Nullhypothese in Wahrheit zutrifft. Also <span class="math inline">\(P(\text{Daten}|H_0)\)</span>. und NICHT <span class="math inline">\(P(H_0|\text{Daten})\)</span>.</li>
+<li>Falsch – Der statistische Test entscheidet, ob die Nullhypothese abgelehnt werden kann.</li>
+<li>Richtig – Das ist richtig. Der Fehler 2. Art hängt von der Fallzahl ab.</li>
+<li>Richtig.</li>
+</ol></li>
+</ol>
 </div>
 </div>
 </div>
-<div class="webex-check webex-box">
-<p>Der statistische Test entscheidet, ob die Nullhypothese wahr ist. <select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select></p>
+</section>
+<section id="übung-2-hypothesen-formulieren" class="level3">
+<h3 class="anchored" data-anchor-id="übung-2-hypothesen-formulieren">Übung 2 – Hypothesen formulieren</h3>
+<p>In einer klinischen Studie wollen Sie untersuchen, ob Cannabidiol bei Alkoholabhängigkeit das Rückfallrisiko reduziert gegenüber der Standardtherapie. Unter der Standardtherapie ist die Rückfallrate 50% (0.5).</p>
+<div class="webex webex-box">
+<ol type="a">
+<li>Formulieren Sie eine Null- und eine Alternativhypothese.</li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -386,12 +367,20 @@ window.Quarto = {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Falsch.</strong> Der statistische Test entscheidet, ob die Nullhypothese <strong>abgelehnt werden kann</strong> — nicht ob sie wahr ist.</p>
+<ol type="a">
+<li><strong>Nullhypothese:</strong> Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, genauso hoch wie unter Standardtherapie (= 0.5). <br> <strong>Alternativhypothese:</strong> Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, höher oder niedriger (also ungleich 0.5) wie unter Standardtherapie (=0.5).</li>
+</ol>
 </div>
 </div>
 </div>
+</section>
+<section id="übung-3-konfidenzintervall" class="level3">
+<h3 class="anchored" data-anchor-id="übung-3-konfidenzintervall">Übung 3 – Konfidenzintervall</h3>
+<p>s soll der Frage nachgegangen werden, ob mehr als 70% der Kinder in BaWü gegen FSME geimpft sind. In einer Stichprobe von 860 Kindern, sind 645 Kinder geimpft.</p>
 <div class="webex-check webex-box">
-<p>Der Fehler 1. Art ist unabhängig von der Fallzahl. <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></p>
+<ol type="a">
+<li>Wie groß ist der Anteil der geimpften Kinder (Punktschätzung)? <br> <br>Anteil = <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;0.75&quot;,&quot;.75&quot;]"></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -405,12 +394,19 @@ window.Quarto = {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Richtig.</strong> Der Fehler 1. Art (Signifikanzniveau <span class="math inline">\(\alpha\)</span>) wird vorab festgelegt und ist unabhängig von der Fallzahl. Der Fehler 2. Art hingegen hängt von der Fallzahl ab.</p>
+<ol type="a">
+<li><span class="math inline">\(645 / 860 = 0.75\)</span></li>
+</ol>
 </div>
 </div>
 </div>
 <div class="webex-check webex-box">
-<p>Die Aussage, die gezeigt werden soll, muss als Alternativhypothese formuliert sein. <select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select></p>
+<ol start="2" type="a">
+<li>Wie lautet das approximative, zweiseitige 95%-Konfidenzintervall für den Anteil?
+<div id="radio_WSRSXEJWSP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WSRSXEJWSP" value=""> <span><span class="math inline">\([0.70, 0.80]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WSRSXEJWSP" value=""> <span><span class="math inline">\([0.73, 0.79]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WSRSXEJWSP" value="answer"> <span><span class="math inline">\([0.72, 0.77]\)</span></span></label>
+</div></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -424,21 +420,15 @@ window.Quarto = {
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Richtig.</strong></p>
+<ol start="2" type="a">
+<li>Das Konfidenzintervall wird berechnet mit: <span class="math display">\[\hat{p} \pm z_{\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}\]</span> <span class="math display">\[z_{0.025} \approx 1.96\]</span> <span class="math display">\[\hat p - 1.96\sqrt{\frac{\hat p(1-\hat p)}{860}}\]</span> <span class="math display">\[\hat p + 1.96\sqrt{\frac{\hat p(1-\hat p)}{860}}\]</span> <strong>95%-Konfidenzintervall: [0.72, 0.78]</strong></li>
+</ol>
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="übung-2-hypothesen-formulieren" class="level3">
-<h3 class="anchored" data-anchor-id="übung-2-hypothesen-formulieren">Übung 2 – Hypothesen formulieren</h3>
-<p>In einer klinischen Studie wollen Sie untersuchen, ob Cannabidiol bei Alkoholabhängigkeit das Rückfallrisiko reduziert gegenüber der Standardtherapie. Unter der Standardtherapie ist die Rückfallrate 50% (0.5). Formulieren Sie eine Null- und eine Alternativhypothese.</p>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Welche der folgenden Aussagen beschreibt die <strong>Nullhypothese</strong> korrekt?
-<div id="radio_BIUAXITSBI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BIUAXITSBI" value=""> <span>Die Rückfallrate unter Cannabidiol ist gleich 0.5 und die Rückfallrate unter Standardtherapie ist größer als 0.5.</span></label><label><input type="radio" autocomplete="off" name="radio_BIUAXITSBI" value="answer"> <span>Der Anteil der Patienten mit Rückfall unter Cannabidiol ist genauso hoch wie unter Standardtherapie (= 0.5).</span></label><label><input type="radio" autocomplete="off" name="radio_BIUAXITSBI" value=""> <span>Der Anteil der Patienten mit Rückfall unter Cannabidiol ist kleiner als 0.5.</span></label>
-</div></li>
+<div class="webex webex-box">
+<ol start="3" type="a">
+<li>Interpretieren Sie das Ergebnis.</li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -453,121 +443,8 @@ window.Quarto = {
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Nullhypothese:</strong> Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, genauso hoch wie unter Standardtherapie (= 0.5).</p>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="2" type="a">
-<li>Welche der folgenden Aussagen beschreibt die <strong>Alternativhypothese</strong> korrekt?
-<div id="radio_PFAFMINRPO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PFAFMINRPO" value=""> <span>Der Anteil der Patienten mit Rückfall unter Cannabidiol ist kleiner als 0.5.</span></label><label><input type="radio" autocomplete="off" name="radio_PFAFMINRPO" value=""> <span>Der Anteil der Patienten mit Rückfall unter Cannabidiol ist größer als 0.5.</span></label><label><input type="radio" autocomplete="off" name="radio_PFAFMINRPO" value="answer"> <span>Der Anteil der Patienten mit Rückfall unter Cannabidiol ist ungleich 0.5 (also höher oder niedriger als unter Standardtherapie).</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Alternativhypothese:</strong> Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, höher oder niedriger (also ungleich 0.5) wie unter Standardtherapie.</p>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="übung-3-konfidenzintervall" class="level3">
-<h3 class="anchored" data-anchor-id="übung-3-konfidenzintervall">Übung 3 – Konfidenzintervall</h3>
-<p>Es soll der Frage nachgegangen werden, ob mehr als 70% der Kinder in BaWü gegen FSME geimpft sind. In einer Stichprobe von 860 Kindern sind 645 Kinder geimpft.</p>
-<div class="webex-check webex-box">
-<ol type="a">
-<li>Wie groß ist der Anteil der geimpften Kinder (Punktschätzung)?
-<div id="radio_MOOOQXNFTX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MOOOQXNFTX" value=""> <span><span class="math inline">\(645 / 860 = 0.70\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MOOOQXNFTX" value="answer"> <span><span class="math inline">\(645 / 860 = 0.75\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MOOOQXNFTX" value=""> <span><span class="math inline">\(645 / 860 = 0.80\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><span class="math inline">\(\hat{p} = 645 / 860 = 0.75\)</span></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">645</span><span class="sc">/</span><span class="dv">860</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
-<ol start="2" type="a">
-<li>Wie lautet das approximative, zweiseitige 95%-Konfidenzintervall für den Anteil?
-<div id="radio_PIQOMTBRWI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PIQOMTBRWI" value=""> <span><span class="math inline">\([0.70, 0.80]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_PIQOMTBRWI" value=""> <span><span class="math inline">\([0.73, 0.79]\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_PIQOMTBRWI" value="answer"> <span><span class="math inline">\([0.72, 0.77]\)</span></span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="2" type="a">
-<li>Das Konfidenzintervall lautet <span class="math inline">\([0.72, 0.77]\)</span>.</li>
-</ol>
-<p>Das Konfidenzintervall wird berechnet mit der Formel:</p>
-<p><span class="math display">\[\hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</span></p>
-<p>Berechnung in R:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">645</span><span class="sc">/</span><span class="dv">860</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="fl">0.025</span>) <span class="sc">*</span> <span class="fu">sqrt</span>((p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p))<span class="sc">/</span><span class="dv">860</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="fl">0.025</span>) <span class="sc">*</span> <span class="fu">sqrt</span>((p<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p))<span class="sc">/</span><span class="dv">860</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div class="webex-check webex-box">
 <ol start="3" type="a">
-<li>Interpretieren Sie das Ergebnis.
-<div id="radio_BCHJMNSDVN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BCHJMNSDVN" value=""> <span>Der wahre Anteil liegt bei genau 75%. Der Wert 70% liegt im Konfidenzintervall.</span></label><label><input type="radio" autocomplete="off" name="radio_BCHJMNSDVN" value=""> <span>Das Konfidenzintervall ist sehr breit, daher ist der Informationsgehalt gering.</span></label><label><input type="radio" autocomplete="off" name="radio_BCHJMNSDVN" value="answer"> <span>Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. Der Wert 70% liegt nicht im Konfidenzintervall, der wahre Wert ist vermutlich größer.</span></label>
-</div></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol start="3" type="a">
-<li>Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. Durch die geringe Breite des Konfidenzintervalls ist der Informationsgehalt groß. Der Wert 70% liegt insbesondere <strong>nicht</strong> im Konfidenzintervall, und somit ist der wahre Wert vermutlich größer als dieser Wert.</li>
+<li><strong>Lösung:</strong> Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. <br> Durch die geringe Breite des Konfidenzintervalls ist der Informationsgehalt groß. <br> Der Wert 70% liegt insbesondere NICHT im Konfidenzintervall, und somit ist der wahre Wert vermutlich größer als dieser Wert.</li>
 </ol>
 </div>
 </div>
