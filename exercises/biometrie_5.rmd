@@ -147,46 +147,42 @@ Wir haben gesehen, dass die Daten schief verteilt angenommen werden können (aus
 
 ### Aufgabe 4
 
+Frau Dr. Schmidt, Leiterin einer Arztpraxis auf dem Land, möchte in ihrer Praxis die Bereitschaft zur 
+Organspende untersuchen. Sie rechnet damit, dass Sie innerhalb der nächsten 4 Woche 57 Patienten dazu befragen kann. 
+Erfahrungsgemäß liegt die Bereitschaft zur Organspende bei einer Wahrscheinlichkeit von 80%.
+
+Aufgrund der dörflichen Lage ihrer Praxis und damit großen Entfernungen zu größeren Kliniken ist Dr. Schmidt auf Organspenden ihrer 
+eigenen Patienten angewiesen. Daher ist sie an der Wahrscheinlichkeit interessiert, 
+dass von den 57 Patienten mindestens 55 Patienten der Organspende zustimmen
+
 ::: {.webex-check .webex-box}
+(a) Welcher Verteilung folgt die Bereitschaft zur Organspende?<br> N = Normalverteilung, Bin = Binomialverteilung
 ```{r, results='asis', echo=FALSE}
-opts <- c(
-  "$N(0,1)$",
-  answer = "$Bin(n,p)$",
-  "$N(57, 4)$",
-  "$Bernoulli(p)$",
-  "$N(\\mu, 4)$"
-)
-cat("(a) Frau Dr. Schmidt, Leiterin einer Arztpraxis auf dem Land, möchte in ihrer Praxis die Bereitschaft zur Organspende untersuchen. Sie rechnet damit, dass Sie innerhalb der nächsten 4 Wochen 57 Patienten dazu befragen kann. Erfahrungsgemäß liegt die Bereitschaft zur Organspende bei einer Wahrscheinlichkeit von 80%. <br><br>
-  Welcher Verteilung folgt die Bereitschaft zur Organspende? <br>
-  (N = Normalverteilung, Bin = Binomialverteilung) <br><br>
-  **1.** $N(0,1)$ <br>
-  **2.** $Bin(n,p)$ <br>
-  **3.** $N(57, 4)$ <br>
-  **4.** $Bernoulli(p)$ <br>
-  **5.** $N(\\mu, 4)$ <br><br>",
-  longmcq(opts))
+opts <- c("$N(0,1)$", answer = "$Bin(n,p)$", "$N(57, 4)$", "$Bernoulli(p)$", "$N(\\mu, 4)$")
+cat(longmcq(opts))
 ```
 :::
+
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a) Dies ist eine Binomialverteilung. Es gibt zwei mögliche Ausgänge (Bereitschaft = ja oder nein) und eine feste Anzahl an Versuchen (hier 57 Patienten).
+(a) Dies ist eine **Binomialverteilung**. Es gibt zwei mögliche Ausgänge (Bereitschaft = ja oder nein) und eine feste Anzahl an Versuchen (hier 57 Patienten).
 :::
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) Aufgrund der dörflichen Lage ihrer Praxis und damit großen Entfernungen zu größeren Kliniken ist Dr. Schmidt auf Organspenden ihrer eigenen Patienten angewiesen. Daher ist sie an der Wahrscheinlichkeit interessiert, dass von den 57 Patienten mindestens 55 Patienten der Organspende zustimmen. <br><br>
-  (**Hinweis:** Mehrere Aussagen können richtig sein.) <br><br>
-  **1.** Exakte Berechnung über die Binomialverteilung (Summe über Einzelwahrscheinlichkeiten). <br>")
-cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
-
-cat("**2.** Approximative Berechnung über die Normalverteilung unter der Voraussetzung, dass $n \\cdot p \\cdot (1-p) > 9$. <br>")
-cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+cat("(b) Welche zwei Möglichkeiten gibt es diese Wahrscheinlichkeit zu berechnen? <br><br>
+	1. Exakte Berechnung über die ...", fitb("Binomialverteilung", ignore_case = TRUE)," <br><br>
+	2. Approximative Berechnung über die ... ", fitb("Normalverteilung", ignore_case = TRUE))
 ```
 :::
-::: {.callout-tip collapse="true" title="Lösung"}
-(b) **Richtig: Nr. 1 und Nr. 2**
 
-- Exakte Berechnung über die Binomialverteilung (Summe über Einzelwahrscheinlichkeiten).
-- Approximative Berechnung über die Normalverteilung unter der Voraussetzung, dass $n \cdot p \cdot (1-p) > 9$.
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(b) Es gibt zwei Möglichkeiten:<br>
+	**1. Exakte Berechnung**
+	Berechnung über die **Binomialverteilung** (Summe über Einzelwahrscheinlichkeiten).
+
+	**2. Approximative Berechnung**
+	Berechnung über die **Normalverteilung** unter der Voraussetzung, dass $n \cdot p \cdot (1-p) > 9$.
 :::
 
 ::: {.webex-check .webex-box}
@@ -207,7 +203,7 @@ $$n \cdot p \cdot (1-p) = 57 \cdot 0.8 \cdot 0.2 = 9.12 > 9$$
 
 ### Aufgabe 5
 
-**Gegeben sind folgende Daten (dargestellt durch Histogram, Streudiagramm und Q-Q-Plot):**
+Gegeben sind folgende Daten (dargestellt durch Histogram, Streudiagramm und Q-Q-Plot):
 
 <img src="images/daten.png" width="750"> <br><br>
 
