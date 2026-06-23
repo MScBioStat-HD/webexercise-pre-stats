@@ -35,25 +35,25 @@ opts_verhaeltnis <- c(
 	answer = "Verhältnisskala"
 )
 cat("(a) Bestimmen Sie das Skalenniveau der folgenden Merkmale:<br><br>")
-cat("(1) Augenfarbe: ", mcq(opts_nominal), "<br><br>")
-cat("(2) Telefonnummern: ", mcq(opts_nominal), "<br><br>")
-cat("(3) Anzahl Operationen pro Monat: ", mcq(opts_verhaeltnis), "<br><br>")
-cat("(4) Tumorausdehnung (mm): ", mcq(opts_verhaeltnis), "<br><br>")
-cat("(5) Blutdruck: ", mcq(opts_verhaeltnis), "<br><br>")
-cat("(6) Schmerzen (gering, mittel, hoch): ", mcq(opts_ordinal), "<br><br>")
-cat("(7) Intelligenzquotient: ", mcq(opts_ordinal))
+cat("**1.** Augenfarbe: ", mcq(opts_nominal), "<br><br>")
+cat("**2.** Telefonnummern: ", mcq(opts_nominal), "<br><br>")
+cat("**3.** Anzahl Operationen pro Monat: ", mcq(opts_verhaeltnis), "<br><br>")
+cat("**4.** Tumorausdehnung (mm): ", mcq(opts_verhaeltnis), "<br><br>")
+cat("**5.** Blutdruck: ", mcq(opts_verhaeltnis), "<br><br>")
+cat("**6.** Schmerzen (gering, mittel, hoch): ", mcq(opts_ordinal), "<br><br>")
+cat("**7.** Intelligenzquotient: ", mcq(opts_ordinal))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a)
-- Augenfarbe $\rightarrow$ Nominalskala
-- Telefonnummern $\rightarrow$ Nominalskala
-- Anzahl Operationen pro Monat $\rightarrow$ Verhältnisskala
-- Tumorausdehnung (mm) $\rightarrow$ Verhältnisskala
-- Blutdruck $\rightarrow$ Verhältnisskala
-- Schmerzen (gering, mittel, hoch) $\rightarrow$ Ordinalskala
-- Intelligenzquotient $\rightarrow$ Ordinalskala
+(a) <br> 
+	1. Augenfarbe $\rightarrow$ Nominalskala
+	2. Telefonnummern $\rightarrow$ Nominalskala
+	3. Anzahl Operationen pro Monat $\rightarrow$ Verhältnisskala
+	4. Tumorausdehnung (mm) $\rightarrow$ Verhältnisskala
+	5. Blutdruck $\rightarrow$ Verhältnisskala
+	6. Schmerzen (gering, mittel, hoch) $\rightarrow$ Ordinalskala
+	7. Intelligenzquotient $\rightarrow$ Ordinalskala
 :::
 
 ### Übungen 8 – A1.2
@@ -121,21 +121,21 @@ cat("(7) Intelligenzquotient: ", mcq(opts_ordinal))
 	)
 
 	cat("<br><strong>Wählen Sie zu jedem Begriff den passenden Oberbegriff:</strong><br><br>")
-	cat("(1) Patient Müller: ", mcq(opts_beobachtungseinheit), "<br><br>")
-	cat("(2) 180 mmHg: ", mcq(opts_auspraegung), "<br><br>")
-	cat("(3) Blutdruck: ", mcq(opts_merkmal), "<br><br>")
-	cat("(4) Menge aller hypertonen Patienten: ", mcq(opts_grundgesamtheit), "<br><br>")
-	cat("(5) Hypertonie: ", mcq(opts_keiner))
+	cat("**1.** Patient Müller: ", mcq(opts_beobachtungseinheit), "<br><br>")
+	cat("**2.** 180 mmHg: ", mcq(opts_auspraegung), "<br><br>")
+	cat("**3.** Blutdruck: ", mcq(opts_merkmal), "<br><br>")
+	cat("**4.** Menge aller hypertonen Patienten: ", mcq(opts_grundgesamtheit), "<br><br>")
+	cat("**5.** Hypertonie: ", mcq(opts_keiner))
 	```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a)
-- (1) Patient Müller $\rightarrow$ Beobachtungseinheit
-- (2) 180 mmHg $\rightarrow$ Ausprägung
-- (3) Blutdruck $\rightarrow$ Merkmal
-- (4) Menge aller hypertonen Patienten $\rightarrow$ Grundgesamtheit
-- (5) Hypertonie $\rightarrow$ kein passender Oberbegriff aus der Liste
+(a) <br> 
+	1. Patient Müller $\rightarrow$ Beobachtungseinheit 
+	2. 180 mmHg $\rightarrow$ Ausprägung
+	3. Blutdruck $\rightarrow$ Merkmal
+	4. Menge aller hypertonen Patienten $\rightarrow$ Grundgesamtheit
+	5. Hypertonie $\rightarrow$ kein passender Oberbegriff aus der Liste
 :::
 
 ### Übungen 8 – A1.3
@@ -154,29 +154,29 @@ opts_quantitativ <- c(
 	answer = "quantitativ"
 )
 cat("(a) Welche der folgenden Merkmale sind qualitativ und welche quantitativ? <br><br>")
-cat("(1) Herzfrequenz: ", mcq(opts_quantitativ), "<br><br>")
-cat("(2) Schlaganfall: ", mcq(opts_qualitativ), "<br><br>")
-cat("(3) Blutgruppe: ", mcq(opts_qualitativ), "<br><br>")
-cat("(4) Zufriedenheit: ", mcq(opts_qualitativ), "<br><br>")
-cat("(5) BMI: ", mcq(opts_quantitativ), "<br><br>")
-cat("(6) Nüchternblutzucker: ", mcq(opts_quantitativ), "<br><br>")
-cat("(7) Infektion: ", mcq(opts_qualitativ))
+cat("**1.** Herzfrequenz: ", mcq(opts_quantitativ), "<br><br>")
+cat("**2.** Schlaganfall: ", mcq(opts_qualitativ), "<br><br>")
+cat("**3.** Blutgruppe: ", mcq(opts_qualitativ), "<br><br>")
+cat("**4.** Zufriedenheit: ", mcq(opts_qualitativ), "<br><br>")
+cat("**5.** BMI: ", mcq(opts_quantitativ), "<br><br>")
+cat("**6.** Nüchternblutzucker: ", mcq(opts_quantitativ), "<br><br>")
+cat("**7.** Infektion: ", mcq(opts_qualitativ))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) **Qualitativ:**
 
-	- Schlaganfall (ja/nein)
-	- Blutgruppe (A, B, AB, 0)
-	- Zufriedenheit (z.B. niedrig, mittel, hoch)
-	- Infektion (ja/nein)
+	**2.** Schlaganfall (ja/nein) <br>
+	**3.** Blutgruppe (A, B, AB, 0) <br>
+	**4.** Zufriedenheit (z.B. niedrig, mittel, hoch)<br>
+	**7.** Infektion (ja/nein)<br>
 
 	**Quantitativ:**
 
-	- Herzfrequenz
-	- BMI
-	- Nüchternblutzucker
+	**1.** Herzfrequenz<br>
+	**5.** BMI<br>
+	**6.** Nüchternblutzucker<br>
 :::
 
 ## Lage- und Streuungsmaße
@@ -367,12 +367,12 @@ $$
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a)
-- Median $= 24$
-- $Q1 = 21$
-- $Q3 = 25$
-- IQA $= Q3 - Q1 = 4$
-- Range $= 27 - 18 = 9$
+(a) <br>
+	- Median $= 24$
+	- $Q1 = 21$
+	- $Q3 = 25$
+	- IQA $= Q3 - Q1 = 4$
+	- Range $= 27 - 18 = 9$
 :::
 
 ## Korrelation, Lineare Regression

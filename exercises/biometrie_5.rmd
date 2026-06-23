@@ -25,7 +25,7 @@ cat("(a) Wie groß ist der Anteil in der männlichen Bevölkerung mit einem Häm
 :::
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) Der Anteil ist $P(X > 16) = 0.13$. Rechnung:
-$$P(X > 16) = 1 - P(X \leq 16) = 1 - P\left(Z \leq \frac{16 - 14}{1.8}\right) = 1 - P(Z \leq 1.11) = 1 - 0.8665 = 0.13$$
+$$P(X > 16) = 1 - P(X \leq 16) = 1 - P\left(Z \leq \frac{16 - 14}{1.8}\right)$$ $$= 1 - P(Z \leq 1.11) = 1 - 0.8665 = 0.13$$
 :::
 
 ::: {.webex-check .webex-box}
@@ -141,7 +141,11 @@ cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
 ::: {.callout-tip collapse="true" title="Lösung"}
 (c) **Richtig: Nr. 3 und Nr. 5**
 
-Wir haben gesehen, dass die Daten schief verteilt angenommen werden können (aus vorheriger Stichprobe, siehe Aufgabe a). Eine logarithmische Transformation ist nicht sinnvoll, da y < 0 vorkommen kann. Zudem ist die Fallzahl pro Gruppe eher im unteren Bereich. Daher würde man hier empfehlen, einen nichtparametrischen Test für den Gruppenvergleich anzuwenden. Zudem würde man die Verteilung der Daten grafisch darstellen und Median mit Interquartilsabstand berichten. Mittelwert mit Standardabweichung kann zusätzlich berichtet werden.
+	Wir haben gesehen, dass die Daten schief verteilt angenommen werden können (aus vorheriger Stichprobe, siehe Aufgabe a). 
+	Eine logarithmische Transformation ist nicht sinnvoll, da y < 0 vorkommen kann. Zudem ist die Fallzahl pro Gruppe eher 
+	im unteren Bereich. Daher würde man hier empfehlen, einen nichtparametrischen Test für den Gruppenvergleich anzuwenden. 
+	Zudem würde man die Verteilung der Daten grafisch darstellen und Median mit Interquartilsabstand berichten. Mittelwert mit 
+	Standardabweichung kann zusätzlich berichtet werden.
 :::
 
 

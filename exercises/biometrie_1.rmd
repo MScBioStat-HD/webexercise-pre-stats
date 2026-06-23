@@ -27,7 +27,7 @@ library(webexercises)
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-a) **Richtig: Nr. 3 und Nr. 4** <br><br>
+(a) **Richtig: Nr. 3 und Nr. 4** <br><br>
 	**Erklärungen:**
 
 	1. Falsch – Der p-Wert ist die Wahrscheinlichkeit für die beobachteten Daten, wenn die Nullhypothese in Wahrheit zutrifft. Also $P(\text{Daten}|H_0)$. und NICHT $P(H_0|\text{Daten})$.
@@ -42,11 +42,11 @@ a) **Richtig: Nr. 3 und Nr. 4** <br><br>
 In einer klinischen Studie wollen Sie untersuchen, ob Cannabidiol bei Alkoholabhängigkeit das Rückfallrisiko reduziert gegenüber der Standardtherapie. Unter der Standardtherapie ist die Rückfallrate 50% (0.5). 
 
 ::: {.webex .webex-box}
-a) Formulieren Sie eine Null- und eine Alternativhypothese.
+(a) Formulieren Sie eine Null- und eine Alternativhypothese.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-a) **Nullhypothese:** Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, genauso hoch wie unter Standardtherapie (= 0.5). <br>
+(a) **Nullhypothese:** Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, genauso hoch wie unter Standardtherapie (= 0.5). <br>
 	**Alternativhypothese:** Bei Behandlung mit Cannabidiol ist der Anteil der Patienten, die einen Rückfall erleiden, höher oder niedriger (also ungleich 0.5) wie unter Standardtherapie (=0.5).
 :::
 
@@ -91,11 +91,11 @@ cat("(b) Wie lautet das approximative, zweiseitige 95%-Konfidenzintervall für d
 :::
 
 ::: {.webex .webex-box}
-c) Interpretieren Sie das Ergebnis.
+(c) Interpretieren Sie das Ergebnis.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(c) **Lösung:** Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. <br>
+(c) Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. <br>
 	Durch die geringe Breite des Konfidenzintervalls ist der Informationsgehalt groß. <br>
 	Der Wert 70% liegt insbesondere NICHT im Konfidenzintervall, und somit ist der wahre Wert vermutlich größer 
 	als dieser Wert.
