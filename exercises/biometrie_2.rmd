@@ -44,13 +44,13 @@ Sie möchten der Frage nachgehen, ob sich das Gewicht nach 6 Monaten tatsächlic
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(c) Können Sie die Nullhypothese zu einem Signifikanzniveau von 5% (zweiseitig) ablehnen (kritischer Wert für |Z| = 1.96)<br><br>",
-	torf(TRUE))
+	cat("(c) Können Sie die Nullhypothese zu einem Signifikanzniveau von 5% (zweiseitig) ablehnen (kritischer Wert für |Z| = 1.96)<br><br>")
+	cat(mcq(c(answer = "Ja", "Nein")), "<br><br>")
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(c) **TRUE.** Da $|Z| = 7.74 > 1.96$ d.h., die Nullhypothese kann zu einem Signifikanzniveau von $5\%$ abgelehnt werden. Die Gewichts-Differenz unterscheidet sich signifikant von 0; es gibt also eine Gewichtsabnahme nach der Therapie im Vergleich zur Baseline-Messung.
+(c) **Ja.** Da $|Z| = 7.74 > 1.96$ d.h., die Nullhypothese kann zu einem Signifikanzniveau von $5\%$ abgelehnt werden. Die Gewichts-Differenz unterscheidet sich signifikant von 0; es gibt also eine Gewichtsabnahme nach der Therapie im Vergleich zur Baseline-Messung.
 
 :::
 
@@ -146,13 +146,13 @@ cat("(b) Wie lautet die Teststatistik?", longmcq(opts))
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(c) Kann die Nullhypothese $H_0: \\mu_{TAU} = \\mu_{SEM}$ zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden (kritischer Wert: $t_{108; 0.975} = 1.98$)?<br><br>",
-	torf(TRUE))
+	cat("(c) Kann die Nullhypothese $H_0: \\mu_{TAU} = \\mu_{SEM}$ zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden (kritischer Wert: $t_{108; 0.975} = 1.98$)?<br><br>")
+	cat(mcq(c(answer = "Ja", "Nein")), "<br><br>")
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(c) **TRUE.** Da $|t| = 2.03 > 1.98$ gilt $p < 5\%$, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz zwischen den beiden Gruppen ist statistisch signifikant. <br>
+(c) **Ja.** Da $|t| = 2.03 > 1.98$ gilt $p < 5\%$, d.h. die Nullhypothese kann zum Signifikanzniveau von 5% abgelehnt werden. Die Gewichtsdifferenz zwischen den beiden Gruppen ist statistisch signifikant. <br>
 	Der t-Test für ungepaarte Stichproben prüft allgemein die Hypothesen: <br>
 	
 	$$H_0: \mu_X = \mu_Y \quad \text{vs.} \quad H_1: \mu_X \neq \mu_Y	$$ <br>anhand der Teststatistik

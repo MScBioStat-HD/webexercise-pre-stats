@@ -1,0 +1,141 @@
+---
+title: Block 10 ANOVA
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+### Aufgabe 1
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Für welche Zielvariablen eignet sich eine ANOVA? Mehrfachantwort.<br><br>")
+	cat("**1.** Hypertonie (ja/nein) <br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**2.** Serum-Konzentration des Biomarkers Troponin [ng\\L] <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+	cat("**3.** HIV Diagnose (negativ/ positiv) <br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**4.** Tumor-Response nach RECIST (Partial Response, Stable Disease, Progressive Disease) <br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**5.** HDL-Cholesterin [mg/dl] <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+	cat("**6.** Zeit bis zum Erst-Wiederauftreten eines Tumors <br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br>")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) **Richtig: 2 + 5** <br><br>
+	**Erklärung:** Die Zielvariable muss stetig (quantitativ) sein. 1. und 3. sind binäre Variablen (kategoriell/qualitativ). 4. ist eine ordinale Variable mit 3 Ausprägungen (kategoriell/qualitativ). 6. ist eine Ereigniszeitvariable.
+
+:::
+
+### Aufgabe 2
+
+Sie wollen untersuchen, ob es einen Unterschied zwischen drei verschiedene Medikamenten (M1, M2, M3) 
+auf den mittleren abendlichen Cortisol-Spiegel bei Personen mit Schlafstörungen gibt. 
+Es liegen Ihnen Daten von jeweils 30 Probanden pro Gruppe vor und Sie 
+wenden eine Varianzanalyse an, um dies statistisch zu untersuchen.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Wie lautet der/die Faktor/en (unabhängige Variablen)? <br><br>
+  Antwort: ", fitb("Gruppenvariable", ignore_case = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Antwort: Gruppenvariable
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Wie lautet die Zielvariable (abhängige Variable)? <br><br>
+  Antwort: ", fitb("Cortisol-Level", ignore_case = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Antwort: Cortisol-Level
+:::
+
+::: {.webex .webex-box}
+(c) Wie lautet die Nullhypothese zur oben genannten Forschungsfrage?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Es gibt keinen Unterschied im mittleren Cortisol-Level zwischen den drei Medikamenten-Gruppen d.h. $\mu_{M1} = \mu_{M2} = \mu_{M3}$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	answer = "$(2.87)$",
+	"",
+	""
+	)
+
+cat("(d) Wie lauten die Freiheitsgrade für die F-Statistik? <br>", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) $DF = (2.87)$ <br>
+	$I = 3, J = 30$ <br>
+	d.h. $(2.3 \cdot 29) = (2.87)$
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(e) Sie haben folgenden Ergebnis-Output zur Analyse der Daten (aus R): <br><br>
+  Df Sum Sq Mean Sq F value Pr(>F) <br>
+  Gruppe  2  4.67  2.333 <br>
+  Residuals 87 96.08  1.104 <br><br>
+  Wie lauten die Abweichungsquadrate ('between' SS_B und 'within' SS_W)? <br><br>
+  SS_B = ", fitb(4.67, tol = 0.01), "<br>
+  SS_W = ", fitb(96.08, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) 
+
+**SS_B = 4.67** (Sum of Squares Between – Varianz zwischen den Gruppen)
+
+**SS_W = 96.08** (Sum of Squares Within – Varianz innerhalb der Gruppen)
+
+:::
+
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(h) Der p-Wert ist $p = 0.127$. Welche Aussage(n) ist (sind) richtig?<br><br>")
+	cat("**1.** Das Ergebnis ist statistisch signifikant auf dem 5% Signifikanzniveau.<br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**2.** Die Nullhypothese wird auf dem 5% Signifikanzniveau beibehalten.<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+	cat("**3.** Es wurde bewiesen, dass es keine Unterschiede zwischen den Gruppen gibt.<br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**4.** Die Gruppen unterscheiden sich im Mittel nicht statistisch signifikant voneinander.<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+	cat("**5.** Es gibt systematische Unterschiede zwischen den Gruppen.<br>")
+	cat(mcq(c(answer = "Falsch","Richtig")), "<br><br>")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(h) **Richtig: 2 + 4** <br><br>
+	**Erklärung:** Der p-Wert ist größer 0.05 und damit ist der Unterschied zwischen den Gruppen statistisch nicht signifikant und die Nullhypothese wird beibehalten. 
+	Jedoch ist „Absence of evidence no evidence of absence“ somit ist 3. so nicht richtig.
+:::

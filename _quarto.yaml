@@ -38,6 +38,7 @@ website:
             - exercises/biometrie_7.rmd
             - exercises/biometrie_8.rmd
             - exercises/biometrie_9.rmd
+            - exercises/biometrie_10.rmd
 
 
 html:
