@@ -5,6 +5,9 @@ title: Block 10 ANOVA
 library(webexercises)
 ```
 
+<small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen 
+als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
 ### Aufgabe 1
 
 ::: {.webex-check .webex-box}
@@ -92,23 +95,51 @@ cat("(d) Wie lauten die Freiheitsgrade für die F-Statistik? <br>", longmcq(opts
 :::
 
 ::: {.webex-check .webex-box}
+(e) Sie haben folgenden Ergebnis-Output zur Analyse der Daten (aus R)
+
+	| | Df | Sum Sq | Mean Sq | F value | Pr(>F) |
+	|---|---:|---:|---:|---:|---:|
+	| Gruppe | 2 | 4.67 | 2.333 | — | — |
+	| Residuals | 87 | 96.08 | 1.104 | — | — |
+<br>
+	Wie lauten die Abweichungsquadrate („between“ $\text{SS}_\text{B}$ und „within“ $\text{SS}_\text{W}$)? <br><br>
+
+	$\text{SS}_\text{B}$ = `r fitb(4.67, tol = 0.01)` <br>
+	$\text{SS}_\text{W}$ = `r fitb(96.08, tol = 0.01)`
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(e) $\text{SS}_\text{B} = 4.67$ (Sum Sq von Gruppe)<br>
+	$\text{SS}_\text{W} = 96.08$ (Sum Sq von Residuals)
+:::
+
+::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(e) Sie haben folgenden Ergebnis-Output zur Analyse der Daten (aus R): <br><br>
-  Df Sum Sq Mean Sq F value Pr(>F) <br>
-  Gruppe  2  4.67  2.333 <br>
-  Residuals 87 96.08  1.104 <br><br>
-  Wie lauten die Abweichungsquadrate ('between' SS_B und 'within' SS_W)? <br><br>
-  SS_B = ", fitb(4.67, tol = 0.01), "<br>
-  SS_W = ", fitb(96.08, tol = 0.01))
+cat("(f) Berechnen Sie mit den Werten unter e) den Wert der F-Statistik. <br>
+  <small style=\"color: gray;\">(den Wert auf drei Nachkommastellen runden)</small><br><br>
+  F = ", fitb(2.114, tol = 0.005))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(e) 
+(f) 
 
-**SS_B = 4.67** (Sum of Squares Between – Varianz zwischen den Gruppen)
+$$F = \frac{4.67/(3-1)}{96.08/(3 \cdot (30-1))} = 2.114$$
 
-**SS_W = 96.08** (Sum of Squares Within – Varianz innerhalb der Gruppen)
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(g) Wie viel Prozent der Gesamtvariation kann auf die Unterschiede zwischen den Gruppen zurückgeführt werden? <br>
+  <small style=\"color: gray;\">(den Prozentwert auf eine Nachkommastellen runden)</small><br><br>
+  Anteil = ", fitb(4.6, tol = 0.1), " %")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(g) 
+
+$$4.67/(4.67 + 96.08) = 0.046 \;\text{ also }\; 4.6\%$$
 
 :::
 
@@ -139,3 +170,4 @@ cat("(h) Der p-Wert ist $p = 0.127$. Welche Aussage(n) ist (sind) richtig?<br><b
 	**Erklärung:** Der p-Wert ist größer 0.05 und damit ist der Unterschied zwischen den Gruppen statistisch nicht signifikant und die Nullhypothese wird beibehalten. 
 	Jedoch ist „Absence of evidence no evidence of absence“ somit ist 3. so nicht richtig.
 :::
+

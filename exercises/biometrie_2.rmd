@@ -5,6 +5,8 @@ title: Block 2
 library(webexercises)
 ```
 
+<small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
 ## z- und t-Test
 
 ### Übung 1 – Semaglutid Studie (gepaarter t-Test)
@@ -44,8 +46,11 @@ Sie möchten der Frage nachgehen, ob sich das Gewicht nach 6 Monaten tatsächlic
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-	cat("(c) Können Sie die Nullhypothese zu einem Signifikanzniveau von 5% (zweiseitig) ablehnen (kritischer Wert für |Z| = 1.96)<br><br>")
-	cat(mcq(c(answer = "Ja", "Nein")), "<br><br>")
+opts <- c(
+    answer = "Ja",
+	"Nein"
+)
+	cat("(c) Können Sie die Nullhypothese zu einem Signifikanzniveau von 5% (zweiseitig) ablehnen (kritischer Wert für |Z| = 1.96)<br>", longmcq(opts))
 ```
 :::
 
@@ -146,8 +151,11 @@ cat("(b) Wie lautet die Teststatistik?", longmcq(opts))
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-	cat("(c) Kann die Nullhypothese $H_0: \\mu_{TAU} = \\mu_{SEM}$ zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden (kritischer Wert: $t_{108; 0.975} = 1.98$)?<br><br>")
-	cat(mcq(c(answer = "Ja", "Nein")), "<br><br>")
+opts <- c(
+    answer = "Ja",
+	"Nein"
+)
+	cat("(c) Kann die Nullhypothese $H_0: \\mu_{TAU} = \\mu_{SEM}$ zum Signifikanzniveau von 5% (zweiseitig) abgelehnt werden (kritischer Wert: $t_{108; 0.975} = 1.98$)?<br>", longmcq(opts))
 ```
 :::
 
