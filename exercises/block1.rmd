@@ -55,6 +55,10 @@ cat("(d) Ist die unter c) bestimmte Menge gleich der Menge $A \\setminus (C \\ca
 ```
 :::
 
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Nein, da  $(C \cap B) = \{4\}$ und somit A ohne $\{4\} = \{3, 6, 9, 15\}$
+:::
+
 ### Übungen 1 – A2
 Notiz: Die symmetrische Differenz A$\Delta$ B von zwei Mengen ist definiert als die Menge aller
 Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen.
@@ -90,11 +94,6 @@ Aussage.<br>
 ::: {.callout-tip collapse="true" title="Lösung"}
 <img src="images/image_1A_c.png" width="300"> <br>
 $B$ ist die schraffierte Menge. $A \cap B = B$  und $B \subset A$
-:::
-
-
-::: {.callout-tip collapse="true" title="Lösung"}
-(d) Nein, da  $(C \cap B) = \{4\}$ und somit A ohne $\{4\} = \{3, 6, 9, 15\}$
 :::
 
 ### Übungen 1 – A3
