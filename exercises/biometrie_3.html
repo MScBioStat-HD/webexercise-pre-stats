@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
@@ -254,8 +283,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link active" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2">Aufgabe 2</a></li>
+  <li><a href="#aufgabe-3" id="toc-aufgabe-3" class="nav-link" data-scroll-target="#aufgabe-3">Aufgabe 3</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -279,8 +316,358 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><small style="color: gray;"><strong>Hinweis:</strong> Verwenden Sie bei Ergebnissen mit Nachkommastellen als Dezimaltrennzeichen den Punkt (Bsp.: <span class="math inline">\(5.24\)</span>)</small></p>
+<section id="aufgabe-1" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h3>
+<p>Berechnen Sie die erwarteten Häufigkeiten für folgenden Fall: In einer klinischen Studie wird die Wirksamkeit eines neuen oralen Medikaments (MedA) gegen mittelschwere Schuppenflechte gegen geprüft. Dafür werden 50 Patienten in die MedA Gruppe und 50 Patienten in die Kontrollgruppe (Placebo) randomisiert. Der primäre Endpunkt ist das Erreichen des PASI-75-Werts nach 8 Wochen mit Ja, Ziel erreicht = 1 und Nein, Ziel nicht erreicht = 0. In der MedA Gruppe haben 50% das Ziel erreicht und in der Placebo Gruppe nur 30%.</p>
+<div class="webex-check webex-box">
+<ol type="a">
+<li><p>Erstellen Sie eine Kontingenztabelle mit den beobachteten Häufigkeiten und berechnen Sie die erwarteten Häufigkeiten pro Zelle unter der Annahme, dass der Anteil für das Erreichen des PASI-75-Werts in beiden Gruppen gleich groß ist (Nullhypothese).</p>
+<p><strong>Beobachtete Häufigkeiten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>MedA</th>
+<th>Placebo</th>
+<th>Summe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ziel erreicht</td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;25&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;15&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;40&quot;]"></td>
+</tr>
+<tr class="even">
+<td>Ziel nicht erreicht</td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;25&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;35&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;60&quot;]"></td>
+</tr>
+<tr class="odd">
+<td>Summe</td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;50&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;50&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="3" data-answer="[&quot;100&quot;]"></td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<p><strong>Erwartete Häufigkeiten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>MedA</th>
+<th>Placebo</th>
+<th>Summe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ziel erreicht</td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;20&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;20&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;40&quot;]"></td>
+</tr>
+<tr class="even">
+<td>Ziel nicht erreicht</td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;30&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;30&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;60&quot;]"></td>
+</tr>
+<tr class="odd">
+<td>Summe</td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;50&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="2" data-answer="[&quot;50&quot;]"></td>
+<td><input class="webex-solveme nospaces" size="3" data-answer="[&quot;100&quot;]"></td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><br></p>
+<p><strong>Beobachtete Häufigkeiten:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">MedA</th>
+<th style="text-align: right;">Placebo</th>
+<th style="text-align: right;">Summe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ziel erreicht</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td>Ziel nicht erreicht</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr class="odd">
+<td>Summe</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Erwartete Häufigkeiten:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">MedA</th>
+<th style="text-align: right;">Placebo</th>
+<th style="text-align: right;">Summe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ziel erreicht</td>
+<td style="text-align: right;"><span class="math inline">\(\frac{40 \times 50}{100} = 20\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac{40 \times 50}{100} = 20\)</span></td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td>Ziel nicht erreicht</td>
+<td style="text-align: right;"><span class="math inline">\(\frac{60 \times 50}{100} = 30\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac{60 \times 50}{100} = 30\)</span></td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr class="odd">
+<td>Summe</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Berechnen Sie die Teststatistik. <br> <small style="color: gray;">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br> Teststatistik = <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;4.17&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li><span class="math display">\[\text{Teststatistik} = \frac{100 \cdot (25 \cdot 35 - 15 \cdot 25)^2}{40 \cdot 60 \cdot 50 \cdot 50} = 4.17\]</span></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Welcher Verteilung folgt die Teststatistik approximativ?
+<div id="radio_AXYHQIOHBG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AXYHQIOHBG" value=""> <span>Die Teststatistik folgt approximativ der Normalverteilung.</span></label><label><input type="radio" autocomplete="off" name="radio_AXYHQIOHBG" value=""> <span>Die Teststatistik folgt approximativ der <span class="math inline">\(X^2\)</span>-Verteilung mit 2 Freiheitsgraden.</span></label><label><input type="radio" autocomplete="off" name="radio_AXYHQIOHBG" value=""> <span>Die Teststatistik folgt approximativ der t-Verteilung mit 2 Freiheitsgraden.</span></label><label><input type="radio" autocomplete="off" name="radio_AXYHQIOHBG" value="answer"> <span>Die Teststatistik folgt approximativ der <span class="math inline">\(X^2\)</span>-Verteilung mit 1 Freiheitsgrad.</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li>Die vierte Aussage ist richtig.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="4" type="a">
+<li>Wie lautet die Testentscheidung, wenn der kritische Wert 3.841 ist zum zweiseitigen Signifikanzniveau <span class="math inline">\(\alpha\)</span>=5%?
+<div id="radio_LDDSGYLOVC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LDDSGYLOVC" value="answer"> <span>Da der Wert der Teststatistik &gt; 3.841 ist, kann die Nullhypothese zu einem zweiseitigen Signifikanzniveau <span class="math inline">\(\alpha\)</span>=5% abgelehnt werden.</span></label><label><input type="radio" autocomplete="off" name="radio_LDDSGYLOVC" value=""> <span>Da der Wert der Teststatistik &gt; 3.841 ist, muss die Nullhypothese beibehalten werden.</span></label><label><input type="radio" autocomplete="off" name="radio_LDDSGYLOVC" value=""> <span>Da der Wert der Teststatistik &lt; 3.841 ist, muss die Nullhypothese zu einem zweiseitigen Signifikanzniveau <span class="math inline">\(\alpha\)</span>=5% beibehalten werden.</span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="4" type="a">
+<li>Die erste Aussage ist richtig. Es ist Teststatistik = 4.17 und damit größer dem kritischen Wert 3.841. Somit kann die Nullhypothese abgelehnt werden.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
+<p>Berechnen Sie die folgenden Maße für das Beispiel aus Aufgabe 1, wo der Anteil für das Erreichen des PASI-75-Werts in der Gruppe MedA bei 0.5 und in der Kontrollgruppe bei 0.3 liegt.</p>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Berechnen Sie die absolute Risikoreduktion (auf zwei Nachkommastellen runden). <br> <small style="color: gray;">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br> ARR = <input class="webex-solveme nospaces" data-tol="0.01" size="3" data-answer="[&quot;0.2&quot;,&quot;.2&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Die absolute Risikoreduktion wird berechnet mit:</li>
+</ol>
+<p><span class="math display">\[\text{ARR} = p_1 - p_2 = 0.5 - 0.3 = 0.2\]</span></p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Berechnen Sie das relative Risiko RR. <br> <small style="color: gray;">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br> RR = <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;1.67&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li>Das relative Risiko wird berechnet mit:</li>
+</ol>
+<p><span class="math display">\[RR = \frac{(\frac{25}{50})}{(\frac{15}{50})} = \frac{0.5}{0.3} = 1.67\]</span></p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Berechnen Sie das Odds Ratio OR. <br> <small style="color: gray;">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br> OR = <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;2.33&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li>Das Odds Ratio wird berechnet mit:</li>
+</ol>
+<p><span class="math display">\[OR = \frac{25 \cdot 35}{25 \cdot 15} = \frac{875}{375} = 2.33\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-3" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-3">Aufgabe 3</h3>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Welche der folgenden Aussagen sind richtig? <br><br> <strong>1.</strong> Fisher’s exakter Test schöpft das vorgegebene Signifikanzniveau im Vergleich zu anderen Tests am besten aus. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Andere exakte Tests (z.B. Barnard-Test, Boschloo-Test) sind gegenüber Fisher’s exaktem Test bevorzugt. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>3.</strong> Der Chi-Quadrat Test ist ein sehr konservativer Test. <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>4.</strong> Fisher’s exakter Test ist ein sehr konservativer Test. <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><strong>Richtig: Nr. 2 und Nr. 4</strong> <br><br> <strong>Erklärungen:</strong></p>
+<p>Fisher’s exakter Test ist sehr konservativ. Im Verlgeich zu anderen Tests schöpft dieser das Niveau nicht optimal aus. Insbesondere bei kleinen Fallzahlen sind daher andere exakte Tests zu empfehlen.</p></li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
