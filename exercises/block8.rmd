@@ -300,7 +300,7 @@ cat("**7.** Infektion: ", mcq(opts_qualitativ))
 
 ### Übungen 8 – A3.2
 
-::: {.webex .webex-box}
+::: {.webex-check .webex-box}
 (a) Bestimmen Sie **Median** und **$0.8$-Quantil** für das Merkmal BBS score bei $n=100$ mit folgender Häufigkeitstabelle:
 	<br><br><img src="images/image8A3.2_2.png" width="650"> <br><br>
 	**Median** $(\tilde{x}_{0.5})=$ `r fitb(52, num = TRUE)`
@@ -436,7 +436,7 @@ cat("(b) Wie interpretieren Sie das Ergebnis?", longmcq(opts))
 
 ### Übungen – A4.2 Rangkorrelation
 
-::: {.webex .webex-box}
+::: {.webex-check .webex-box}
 (a) Gegeben sind folgende Messwerte von $n = 8$ Patienten:
 
 	- Merkmal $X$ = TUG [s]
@@ -520,7 +520,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 > **Rangkorrelationskoeffizienten** berechnen.
 :::
 
-::: {.webex .webex-box}
+::: {.webex-check .webex-box}
 (a) Untersuchen Sie für diesen Ausschnitt von den Daten den Zusammenhang.
 
 	**Schritt 1:** Welches Skalenniveau haben die Merkmale?
@@ -562,7 +562,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 
 ### Übungen 8 – A4.4
 
-::: {.webex .webex-box}
+::: {.webex-check .webex-box}
 ::: {.column width="65%"}
 > Teriparatide ist ein Medikament, welches die Aktivität in den Osteoblasten 
 > erhöht und somit die Knochenheilung anregt. In einer klinischen Studie wurde 
@@ -659,7 +659,7 @@ $$b = \bar{y} - m \cdot \bar{x} = 13.7 - (-1.31) \cdot 28.6 = 51.2$$
 > $\Rightarrow y =  m \cdot x + b \;\;\text{d.h.}\;\; b = y - m \cdot x$ Mittelwert liegt auf der Geraden.
 :::
 
-::: {.webex .webex-box}
+::: {.webex-check .webex-box}
 (b) Gibt es einen negativen Zusammenhang? Berechnen Sie die 
 Korrelation.<br><br>
 $r_{xy} =$ `r fitb(-0.904, tol = 0.005)`
@@ -673,7 +673,7 @@ $r_{xy} =$ `r fitb(-0.904, tol = 0.005)`
 	$\Rightarrow$ **Starke negative Korrelation** zwischen BMI und Adiponectin.
 :::
 
-::: {.webex .webex-box}
+::: {.webex-check .webex-box}
 (c) Bestimmen Sie das Bestimmtheitsmaß und deuten Sie das Ergebnis (Ergebnis auf zwei Nachkommastellen runden).<br><br>
 $R^2 =$ `r fitb(0.81, tol = 0.005)`
 :::

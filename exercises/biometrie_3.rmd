@@ -4,3 +4,188 @@ title: Block 3
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
+
+<small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen 
+als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
+### Aufgabe 1
+Berechnen Sie die erwarteten Häufigkeiten für folgenden Fall: In einer klinischen Studie wird die Wirksamkeit eines neuen oralen Medikaments (MedA) 
+gegen mittelschwere Schuppenflechte gegen geprüft. Dafür werden 50 Patienten in die MedA Gruppe und 50 Patienten in die Kontrollgruppe (Placebo) randomisiert. 
+Der primäre Endpunkt ist das Erreichen des PASI-75-Werts nach 8 Wochen mit Ja, Ziel erreicht = 1 und Nein, Ziel nicht erreicht = 0. 
+In der MedA Gruppe haben 50% das Ziel erreicht und in der Placebo Gruppe nur 30%.
+
+
+
+::: {.webex-check .webex-box}
+(a) Erstellen Sie eine Kontingenztabelle mit den beobachteten Häufigkeiten und berechnen Sie die erwarteten Häufigkeiten pro Zelle unter der Annahme, dass der Anteil für das Erreichen des PASI-75-Werts in beiden Gruppen gleich groß ist (Nullhypothese).
+
+	**Beobachtete Häufigkeiten:**
+
+	| | MedA | Placebo | Summe |
+	|---|---|---|---|
+	| Ziel erreicht | `r fitb(25)` | `r fitb(15)` | `r fitb(40)` |
+	| Ziel nicht erreicht | `r fitb(25)` | `r fitb(35)` | `r fitb(60)` |
+	| Summe | `r fitb(50)` | `r fitb(50)` | `r fitb(100)` |
+
+	<br><br>
+
+	**Erwartete Häufigkeiten:**
+
+	| | MedA | Placebo | Summe |
+	|---|---|---|---|
+	| Ziel erreicht | `r fitb(20)` | `r fitb(20)` | `r fitb(40)` |
+	| Ziel nicht erreicht | `r fitb(30)` | `r fitb(30)` | `r fitb(60)` |
+	| Summe | `r fitb(50)` | `r fitb(50)` | `r fitb(100)` |
+
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(a) <br>
+
+	**Beobachtete Häufigkeiten:**
+
+	| | MedA | Placebo | Summe |
+	|---|---:|---:|---:|
+	| Ziel erreicht | 25 | 15 | 40 |
+	| Ziel nicht erreicht | 25 | 35 | 60 |
+	| Summe | 50 | 50 | 100 |
+
+	<br>
+
+	**Erwartete Häufigkeiten:**
+
+	| | MedA | Placebo | Summe |
+	|---|---:|---:|---:|
+	| Ziel erreicht | $\frac{40 \times 50}{100} = 20$ | $\frac{40 \times 50}{100} = 20$ | 40 |
+	| Ziel nicht erreicht | $\frac{60 \times 50}{100} = 30$ | $\frac{60 \times 50}{100} = 30$ | 60 |
+	| Summe | 50 | 50 | 100 |
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Berechnen Sie die Teststatistik. <br> 
+	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+  Teststatistik = ", fitb(4.17, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) $$\text{Teststatistik} = \frac{100 \cdot (25 \cdot 35 - 15 \cdot 25)^2}{40 \cdot 60 \cdot 50 \cdot 50} = 4.17$$
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Die Teststatistik folgt approximativ der Normalverteilung.",
+  "Die Teststatistik folgt approximativ der $X^2$-Verteilung mit 2 Freiheitsgraden.",
+  "Die Teststatistik folgt approximativ der t-Verteilung mit 2 Freiheitsgraden.",
+  answer = "Die Teststatistik folgt approximativ der $X^2$-Verteilung mit 1 Freiheitsgrad."
+)
+cat("(c) Welcher Verteilung folgt die Teststatistik approximativ?",
+  longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Die vierte Aussage ist richtig.
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  answer = "Da der Wert der Teststatistik > 3.841 ist, kann die Nullhypothese zu einem zweiseitigen Signifikanzniveau $\\alpha$=5% abgelehnt werden.",
+  "Da der Wert der Teststatistik > 3.841 ist, muss die Nullhypothese beibehalten werden.",
+  "Da der Wert der Teststatistik < 3.841 ist, muss die Nullhypothese zu einem zweiseitigen Signifikanzniveau $\\alpha$=5% beibehalten werden."
+)
+cat("(d) Wie lautet die Testentscheidung, wenn der kritische Wert 3.841 ist zum zweiseitigen Signifikanzniveau $\\alpha$=5%?",
+  longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(d) Die erste Aussage ist richtig. Es ist Teststatistik = 4.17 
+	und damit größer dem kritischen Wert 3.841. Somit kann die Nullhypothese abgelehnt werden.
+
+
+:::
+
+### Aufgabe 2
+
+Berechnen Sie die folgenden Maße für das Beispiel aus Aufgabe 1, wo der Anteil für das Erreichen des PASI-75-Werts in der Gruppe MedA bei 0.5 und in der Kontrollgruppe bei 0.3 liegt.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Berechnen Sie die absolute Risikoreduktion (auf zwei Nachkommastellen runden). <br> 
+	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+  ARR = ", fitb(0.2, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) Die absolute Risikoreduktion wird berechnet mit:
+
+$$\text{ARR} = p_1 - p_2 = 0.5 - 0.3 = 0.2$$
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Berechnen Sie das relative Risiko RR. <br> 
+	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+  RR = ", fitb(1.67, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) Das relative Risiko wird berechnet mit:
+
+$$RR = \frac{(\frac{25}{50})}{(\frac{15}{50})} = \frac{0.5}{0.3} = 1.67$$
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(c) Berechnen Sie das Odds Ratio OR. <br> 
+	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+  OR = ", fitb(2.33, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Das Odds Ratio wird berechnet mit:
+
+$$OR = \frac{25 \cdot 35}{25 \cdot 15} = \frac{875}{375} = 2.33$$
+
+:::
+
+### Aufgabe 3
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("a) Welche der folgenden Aussagen sind richtig? <br><br>
+  **1.** Fisher's exakter Test schöpft das vorgegebene Signifikanzniveau im Vergleich zu anderen Tests am besten aus. <br>")
+cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**2.** Andere exakte Tests (z.B. Barnard-Test, Boschloo-Test) sind gegenüber Fisher's exaktem Test bevorzugt. <br>")
+cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+cat("**3.** Der Chi-Quadrat Test ist ein sehr konservativer Test. <br>")
+cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**4.** Fisher's exakter Test ist ein sehr konservativer Test. <br>")
+cat(mcq(c("Falsch", answer = "Richtig")), "<br>")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+a) **Richtig: Nr. 2 und Nr. 4** <br><br>
+	**Erklärungen:**
+
+	Fisher’s exakter Test ist sehr konservativ. Im Verlgeich zu anderen Tests schöpft dieser das Niveau nicht optimal aus. 
+	Insbesondere bei kleinen Fallzahlen sind daher andere exakte Tests zu empfehlen.
+
+:::
