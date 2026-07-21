@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Block 10 ANOVA – MSc Medical Biometry/Biostatistics</title>
+<title>Block 10 – MSc Medical Biometry/Biostatistics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/biometrie_I.html">Biometrie I</a></li><li class="breadcrumb-item"><a href="../exercises/biometrie_10.html">Block 10 ANOVA</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/biometrie_I.html">Biometrie I</a></li><li class="breadcrumb-item"><a href="../exercises/biometrie_10.html">Block 10</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -273,7 +273,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/biometrie_10.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Block 10 ANOVA</span></a>
+ <span class="menu-text">Block 10</span></a>
   </div>
 </li>
       </ul>
@@ -288,17 +288,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link active" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
+  <li><a href="#anova" id="toc-anova" class="nav-link active" data-scroll-target="#anova">ANOVA</a>
+  <ul class="collapse">
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
   <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2">Aufgabe 2</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/biometrie_I.html">Biometrie I</a></li><li class="breadcrumb-item"><a href="../exercises/biometrie_10.html">Block 10 ANOVA</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/biometrie_I.html">Biometrie I</a></li><li class="breadcrumb-item"><a href="../exercises/biometrie_10.html">Block 10</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Block 10 ANOVA</h1>
+<h1 class="title">Block 10</h1>
 </div>
 
 
@@ -315,12 +318,14 @@ window.Quarto = {
 </header>
 
 
+<section id="anova" class="level2">
+<h2 class="anchored" data-anchor-id="anova">ANOVA</h2>
 <p><small style="color: gray;"><strong>Hinweis:</strong> Verwenden Sie bei Ergebnissen mit Nachkommastellen als Dezimaltrennzeichen den Punkt (Bsp.: <span class="math inline">\(5.24\)</span>)</small></p>
 <section id="aufgabe-1" class="level3">
 <h3 class="anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h3>
 <div class="webex-check webex-box">
 <ol type="a">
-<li>Für welche Zielvariablen eignet sich eine ANOVA? Mehrfachantwort.<br><br><strong>1.</strong> Hypertonie (ja/nein) <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Serum-Konzentration des Biomarkers Troponin [ng] <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>3.</strong> HIV Diagnose (negativ/ positiv) <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>4.</strong> Tumor-Response nach RECIST (Partial Response, Stable Disease, Progressive Disease) <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>5.</strong> HDL-Cholesterin [mg/dl] <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>6.</strong> Zeit bis zum Erst-Wiederauftreten eines Tumors <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br></li>
+<li>Für welche Zielvariablen eignet sich eine ANOVA?<br><br><strong>1.</strong> Hypertonie (ja/nein) <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Serum-Konzentration des Biomarkers Troponin [ng] <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>3.</strong> HIV Diagnose (negativ/ positiv) <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>4.</strong> Tumor-Response nach RECIST (Partial Response, Stable Disease, Progressive Disease) <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>5.</strong> HDL-Cholesterin [mg/dl] <br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>6.</strong> Zeit bis zum Erst-Wiederauftreten eines Tumors <br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -417,8 +422,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="4" type="a">
 <li>Wie lauten die Freiheitsgrade für die F-Statistik? <br>
-<div id="radio_YIEUYOSHNF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YIEUYOSHNF" value="answer"> <span><span class="math inline">\((2.87)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YIEUYOSHNF" value=""> <span></span></label><label><input type="radio" autocomplete="off" name="radio_YIEUYOSHNF" value=""> <span></span></label>
+<div id="radio_BMLWRVKSJA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BMLWRVKSJA" value="answer"> <span><span class="math inline">\((2.87)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_BMLWRVKSJA" value=""> <span></span></label><label><input type="radio" autocomplete="off" name="radio_BMLWRVKSJA" value=""> <span></span></label>
 </div></li>
 </ol>
 </div>
@@ -568,6 +573,7 @@ window.Quarto = {
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
