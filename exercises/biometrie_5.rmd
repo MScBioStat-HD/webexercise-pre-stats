@@ -4,10 +4,8 @@ title: Block 5
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
-
+## Normalverteilung
 <small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen. </small>
-
-### Übungen 1 – A1
 
 ### Aufgabe 1
 In der Normalbevölkerung gesunder Erwachsener ist der Hämoglobinwert bei Männern im Mittel bei 14.0 g/dl mit Standardabweichung 1.8 g/dl.

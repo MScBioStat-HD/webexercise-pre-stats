@@ -7,7 +7,7 @@ library(webexercises)
 
 ## Integralrechnung
 
-### Übungen 4 – A1
+### Aufgabe 1
 
 Berechnen Sie die folgenden Integrale.
 
@@ -80,7 +80,7 @@ cat("(d) $\\int_{}^{} 4x dx$",
 (d) $\int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c$
 :::
 
-### Übungen 4 – A2
+### Aufgabe 2
 
 Berechnen Sie die die Fläche unterhalb der Funktion im
 angegebenen Intervall. Skizzieren Sie die Funktion.

@@ -7,7 +7,7 @@ library(webexercises)
 
 ## Matrizen
 
-### Übungen 6 – A1
+### Aufgabe 1
 Gegeben seien die beiden Matrizen
 
 $$A = \begin{pmatrix} 1 & 2 & -3 \\ 0 & 1 & -1 \\ 2 & -2 & 0 \end{pmatrix} \quad \text{und} \quad B = \begin{pmatrix} 0 & -1 & 1 \\ 1 & 2 & -3 \\ 0 & 2 & -2 \end{pmatrix}$$
@@ -68,7 +68,7 @@ cat("(d) Berechnen Sie $B^{T} \\cdot A^{T}$.", longmcq(opts))
 (d) $$B^{T} \cdot A^{T} = (AB)^{T} = \begin{pmatrix}2 & 1 & -2\\ -3 & 0 & -6\\ 1 & -1 & 8 \end{pmatrix}$$
 :::
 
-### Übungen 6 – A2
+### Aufgabe 2
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 cat("(a) Berechnen Sie <br> <br> $A =\\begin{pmatrix} -4 & -3 & 2 & 0 \\\\\\ 1 & 2 & -2 & 2 \\\\\\ 0 & 3 & 1 & -1 \\\\\\ 4 & 5 & 0 & 7 \\end{pmatrix}$ $\\begin{pmatrix} 1 \\\\\\ 1 \\\\\\ 0 \\\\\ 1 \\end{pmatrix} =$<br><br>")
@@ -100,7 +100,6 @@ cat("(b) Berechnen Sie <br> <br> $A =\\begin{pmatrix} 4 & -3 & 2 \\\\\\ 0 & 1 & 
 :::
 
 
-
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 cat("(c) Berechnen Sie <br> <br> $A =\\begin{pmatrix} 3 & -2 & 1 \\\\\\ 0 & 1 & 1 \\\\\\ 4 & -1 & 2 \\end{pmatrix}$ $\\begin{pmatrix} 1 \\\\\\ 2 \\\\\\ -3 \\end{pmatrix} =$<br><br>")
@@ -113,7 +112,7 @@ cat("$A = \\biggl($", paste0(fitb(-4, num=TRUE), fitb(-1, num=TRUE), fitb(-4, nu
 :::
 
 
-### Übungen 6 – A3
+### Aufgabe 3
 
 Es sei die Matrix $A =\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \\ \end{pmatrix}$ und es sei die Matrix 
 $B =\begin{pmatrix} 1 & 1 & 1 \\ -1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{pmatrix}$ gegeben:
@@ -154,7 +153,7 @@ cat("(b) Berechnen Sie B $\\cdot$ $B^{T}$.<br><br>",
 :::
 
 
-### Übungen 6 – A4
+### Aufgabe 4
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -178,7 +177,7 @@ cat("det $B =$ ", fitb(14, num=TRUE))
 (b) $$\det \, B = 2 \cdot 1 \cdot 7 = 14$$
 :::
 
-### Übungen 6 – A5
+### Aufgabe 5
 Gegeben ist die  Matrix $A =\begin{pmatrix} 1 & -1 & 1 \\ 2 & 1 & -1 \\ -1 & 2 & 2 \end{pmatrix}$
 
 ::: {.webex-check .webex-box}
@@ -227,7 +226,7 @@ cat("(b) Berechnen Sie $det \\; A^{-1}$:<br><br>", longmcq(opts))
 $$ \det A^{-1} = \frac{1}{detA} = \frac{1}{12}$$
 :::
 
-### Übungen 6 – A6
+### Aufgabe 6
 Gegeben ist die Matrix $X = \begin{pmatrix} 3 & -6 \\ 1 & -2 \end{pmatrix}$
 
 ::: {.webex-check .webex-box}
@@ -285,7 +284,7 @@ cat("(d) Was ist der Rang der Matrix $X$?", longmcq(opts))
   $$\begin{pmatrix} 3 \\ -6 \end{pmatrix} = 3 \cdot \begin{pmatrix} 1 \\ -2 \end{pmatrix}$$
 :::
 
-### Übungen 6 – A7
+### Aufgabe 7
 Gegeben ist die Matrix $A = \begin{pmatrix} 4 & 2 & -1 \\ -2 & 0 & 0 \\ -1 & 1 & 2 \end{pmatrix}$
 
 ::: {.webex-check .webex-box}

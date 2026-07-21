@@ -10,7 +10,7 @@ library(webexercises)
 <small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
 
-### Übung 3 – A1
+### Aufgabe 1
 Bestimmen Sie die Ableitung zu
 
 ::: {.webex-check .webex-box}
@@ -183,7 +183,7 @@ cat("(j) ${f}(x) = e^{-2x^{2}}$",
 :::
 :::
 
-### Übung 3 – A2
+### Aufgabe 2
 Gegeben ist die Funktion ${f}(x) = 8 x^{3} + 3 x^{2} – 3x$.
 <br><br> Verwenden Sie folgende Regel:<br> Nullstellen einer quadratischen Funktion $f(x) = ax^{2} + bx + c$ gegeben
 durch: $x_{1,2} = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$ <br><br> 

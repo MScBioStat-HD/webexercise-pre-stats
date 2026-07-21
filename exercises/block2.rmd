@@ -7,7 +7,7 @@ library(webexercises)
 
 ## Rechnen mit Funktionen
 
-### Übungen 2 – A1
+### Aufgabe 1
 
 Zeichnen Sie die folgenden Geraden in ein Koordinatensystem mit 
 $x$ &isin; $[-5, 5]$ und $y$ &isin; $[-5, 5]$ ein.
@@ -28,7 +28,7 @@ $x$ &isin; $[-5, 5]$ und $y$ &isin; $[-5, 5]$ ein.
 <img src="images/image.png" width="300">
 :::
 
-## Übungen 2 – A2
+### Aufgabe 2
 
 Bestimmen Sie die Steigung folgender Geraden:
 
@@ -82,7 +82,7 @@ cat("(b) Die  Gerade, die durch die Punkte $(-2, 4)$ und $(1, 1)$ geht", longmcq
 	$$
 :::
 
-### Übungen 2 – A3
+### Aufgabe 3
 Das Wachstum einer Population sei durch die Funktion
 $u(t) = u_{0} \cdot e^{\alpha t}, \alpha > 0$
 (exponentielles Wachstum) beschrieben (\\(u_{0}\\) = Anfangspopulation, also t = 0).
@@ -150,7 +150,7 @@ schnell. Dies wurde in Aufgabe a) gezeigt: die Verdopplungszeit hängt nur vom W
 
 :::
 
-### Übungen 2 – A4
+### Aufgabe 4
 
 Die Einwohnerzahl von Mexiko-City betrug 5.5 Millionen im Jahre 1960 
 und stieg bis 1975 auf 8.1 Millionen an. Unter Annahme eines exponentiellen Wachstums
@@ -214,7 +214,7 @@ cat("(c) Bestimmen Sie nun aus den Ergebnissen von a) und b) $y_0$ und $\\lambda
 :::
 
 
-## Übungen 2 – A5
+### Aufgabe 5
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo = FALSE}
 opts <- c(

@@ -10,7 +10,7 @@ library(webexercises)
 <small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen 
 als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
-### Übungen 8 – A1.1
+### Aufgabe 1
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -56,7 +56,7 @@ cat("**7.** Intelligenzquotient: ", mcq(opts_ordinal))
 	7. Intelligenzquotient $\rightarrow$ Ordinalskala
 :::
 
-### Übungen 8 – A1.2
+### Aufgabe 2
 
 ::: {.webex-check .webex-box}
 (a) Es wird eine Studie geplant, bei dem die Wirkung eines Medikaments auf den 
@@ -138,7 +138,7 @@ cat("**7.** Intelligenzquotient: ", mcq(opts_ordinal))
 	5. Hypertonie $\rightarrow$ kein passender Oberbegriff aus der Liste
 :::
 
-### Übungen 8 – A1.3
+### Aufgabe 3
 
 ::: {.webex-check .webex-box}
 
@@ -181,7 +181,7 @@ cat("**7.** Infektion: ", mcq(opts_qualitativ))
 
 ## Lage- und Streuungsmaße
 
-### Übungen 8 – A2.1
+### Aufgabe 1
 
 ::: {.webex-check .webex-box}
 (a) Bestimmen Sie **Mittelwert** und **Median** der folgenden Cholesterinwerte (mg/dl):
@@ -228,7 +228,7 @@ cat("**7.** Infektion: ", mcq(opts_qualitativ))
 	<img src="images/image8A2_s.png" width="250"> 
 :::
 
-### Übungen 8 – A2.2
+### Aufgabe 2
 
 ::: {.webex-check .webex-box}
 (a) Bestimmen Sie das 0.2-Quantil- 0.8-Quantil der folgenden Werte. <br><br>
@@ -265,7 +265,7 @@ cat("**7.** Infektion: ", mcq(opts_qualitativ))
 
 ## Graphische Darstellung
 
-### Übungen 8 – A3.1
+### Aufgabe 1
 
 ::: {.webex .webex-box}
 (a) Ordnen Sie zu den **Histogrammen** die folgenden **Begriffe** zu: <br><br>
@@ -298,7 +298,7 @@ cat("**7.** Infektion: ", mcq(opts_qualitativ))
 
 :::
 
-### Übungen 8 – A3.2
+### Aufgabe 2
 
 ::: {.webex-check .webex-box}
 (a) Bestimmen Sie **Median** und **$0.8$-Quantil** für das Merkmal BBS score bei $n=100$ mit folgender Häufigkeitstabelle:
@@ -348,7 +348,7 @@ $$
 <br><br><img src="images/image8A3.2.png" width="650"> <br><br>
 :::
 
-### Übungen 8 – A3.3
+### Aufgabe 3
 
 ::: {.webex-check .webex-box}
 (a) Bei einem Boxplot der **BMI-Verteilung** von $n=21$ Probanden sollen folgende **Kennwerte** abgelesen werden: <br><br>
@@ -377,7 +377,7 @@ $$
 
 ## Korrelation, Lineare Regression
 
-### Übungen 8 – A4.1
+### Aufgabe 1
 
 Gegeben ist folgende Kovarianzmatrix (n=100): <br><br>
 	$$\begin{pmatrix}
@@ -432,9 +432,10 @@ cat("(b) Wie interpretieren Sie das Ergebnis?", longmcq(opts))
 (b) Interpretation: hoher positiver Zusammenhang.
 :::
 
-### Übungen 8 – A4.2
 
-### Übungen – A4.2 Rangkorrelation
+## Übungen Rangkorrelation
+
+### Aufgabe 1
 
 ::: {.webex-check .webex-box}
 (a) Gegeben sind folgende Messwerte von $n = 8$ Patienten:
@@ -500,7 +501,7 @@ cat("(b) Wie interpretieren Sie das Ergebnis?", longmcq(opts))
 	Es besteht ein **starker positiver Zusammenhang** zwischen TUG und FES-I-Score.
 :::
 
-### Übungen 8 – A4.3
+### Aufgabe 2
 
 Teriparatide ist ein Medikament, welches die Aktivität in den
 Osteoblasten erhöht und somit die Knochenheilung anregt. In
@@ -560,7 +561,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 	Alter und der Frakturheilungszeit.
 :::
 
-### Übungen 8 – A4.4
+### Aufgabe 3
 
 ::: {.webex-check .webex-box}
 ::: {.column width="65%"}
@@ -591,7 +592,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 	$$\varphi = \frac{28 \cdot 35 - 15 \cdot 22}{\sqrt{43 \cdot 57 \cdot 50 \cdot 50}} = \frac{980 - 330}{\sqrt{6\,149\,250}} = \frac{650}{2\,479.8} \approx 0.26$$
 :::
 
-### Übungen 8 – A4.5
+### Aufgabe 4
 
 ::: {.webex .webex-box}
 (a) Zeichnen Sie eine Gerade ein, die die Daten repräsentiert.<br><br>
@@ -625,7 +626,7 @@ Frakturheilung (Zeit \[Wochen\]) gibt unter Gabe von Teriparatide.
 	> für die Daten zu finden, verwendet man die **Methode der kleinsten Quadrate**.
 :::
 
-### Übungen 8 – A4.7
+### Aufgabe 5
 Der Zusammenhang zwischen Adiponectin und BMI soll untersucht werden.
 
 **Hintergrund:** Adiponectin stimuliert die Fettsäureoxidation in Muskeln und 

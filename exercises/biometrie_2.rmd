@@ -4,12 +4,10 @@ title: Block 2
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
-
+## z- und t-Test
 <small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
-## z- und t-Test
-
-### Übung 1 – Semaglutid Studie (gepaarter t-Test)
+### Aufgabe 1 – Semaglutid Studie (gepaarter t-Test)
 
 Semaglutid wird als „Abnehmspritze“ bei Adipositas eingesetzt. 
 Sie möchten untersuchen, ob Semaglutid Gewichtsreduktion bewirkt und messen bei n=60 Probanden 
@@ -93,7 +91,7 @@ cat("(e) Berechnen Sie das 95% Konfidenzintervall für den Effekt. Das t-Quantil
 
 ---
 
-### Übung 2 – Semaglutid vs. TAU (ungepaarter t-Test)
+### Aufgabe 2 – Semaglutid vs. TAU (ungepaarter t-Test)
 Sie möchten der Frage nachgehen, ob sich die Gewichtsdifferenz zwischen der Semaglutid Gruppe zu einer „treatment as usual“ (TAU) Gruppe unterscheidet. Dafür messen Sie bei 50 Patienten wieder das Gewicht zu Baseline und nach 6 Monaten. 
 Folgende Werte beobachten Sie. 
 

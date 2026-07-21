@@ -9,7 +9,7 @@ library(webexercises)
 
 <small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
-### Übungen 1 – A1
+### Aufgabe 1
 
 Gegeben sind folgende Mengen $A = \{6, 4, 3, 15, 9\}$, $B = \{4, 12, 6, 9\}$ und $C = \{4\}$
 
@@ -59,7 +59,7 @@ cat("(d) Ist die unter c) bestimmte Menge gleich der Menge $A \\setminus (C \\ca
 (d) Nein, da  $(C \cap B) = \{4\}$ und somit A ohne $\{4\} = \{3, 6, 9, 15\}$
 :::
 
-### Übungen 1 – A2
+### Aufgabe 2
 Notiz: Die symmetrische Differenz A$\Delta$ B von zwei Mengen ist definiert als die Menge aller
 Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen.
 
@@ -96,7 +96,7 @@ Aussage.<br>
 $B$ ist die schraffierte Menge. $A \cap B = B$  und $B \subset A$
 :::
 
-### Übungen 1 – A3
+### Aufgabe 3
 
 Bei einem Spiel mit Münzen wird eine Münze 4 Mal hintereinander geworfen. Dabei wird jedes Mal notiert, ob
 Wappen (W) oder Zahl (Z) gefallen ist.
@@ -173,7 +173,7 @@ $A \cap B = \{(W, W, Z, Z)\}$.
 :::
 
 
-### Übungen 1 – A4
+### Aufgabe 4
 
 Bestimmen Sie die Mächtigkeit folgender Mengen
 
@@ -207,7 +207,7 @@ cat("(c) C = A $\\cup$ B $\\cup$ {1, . . . , 11} $\\Rightarrow$", fitb(14, num =
 (c) $|C| = 14$
 :::
 
-### Übungen 1 – A5
+### Aufgabe 5
 
 Geben Sie die Potenzmenge zu folgenden Mengen an. Bestimmen Sie vorher die Anzahl der Elemente in der
 Potenzmenge.
@@ -235,7 +235,7 @@ Potenzmenge $P(A) = \{\{\} , \{1\} , \{2\} , \{3\} , \{4\} , \{1, 2\} , \{1, 3\}
 $\{1,2,3\},\{1, 2, 4\} , \{1, 3, 4\} , \{2, 3, 4\} , \{1, 2, 3, 4\}\}$
 :::
 
-### Übungen 1 – A6
+### Aufgabe 6
 
 Lösen Sie folgende Gleichungen:
 

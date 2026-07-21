@@ -1,10 +1,10 @@
 ---
-title: Block 10 ANOVA
+title: Block 10
 ---
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
-
+## ANOVA
 <small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen 
 als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
@@ -12,7 +12,7 @@ als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(a) Für welche Zielvariablen eignet sich eine ANOVA? Mehrfachantwort.<br><br>")
+cat("(a) Für welche Zielvariablen eignet sich eine ANOVA?<br><br>")
 	cat("**1.** Hypertonie (ja/nein) <br>")
 	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
 

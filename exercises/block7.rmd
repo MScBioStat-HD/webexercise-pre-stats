@@ -9,7 +9,7 @@ library(webexercises)
 **Hinweis:**  Verwenden Sie **t** und **s** als Parameter für frei wählbare Variablen. 
 
 
-### Übungen 7 – A1
+### Aufgabe 1
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
@@ -83,7 +83,7 @@ cat("(a) Besitzt das lineare Gleichungssystem <br><br> $\\begin{array}{r r r l}
 	Weil in Zeile III der Widerspruch 0 = 1 auftritt, besitzt das lineare Gleichungssystem keine Lösung.
 :::
 
-### Übungen 7 – A2
+### Aufgabe 2
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -159,7 +159,7 @@ cat("(a) Besitzt das lineare Gleichungssystem <br><br>
 	$$
 :::
 
-### Übungen 7 – A3
+### Aufgabe 3
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -239,7 +239,7 @@ cat("(a) Ist das lineare Gleichungssystem <br><br>$\\begin{array}{r r r l}
 
 :::
 
-### Übungen 7 – A4
+### Aufgabe 4
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -326,7 +326,7 @@ cat("(a) Für welche Werte von a hat das folgende Gleichungssystem eine
 	z = a \,–\, 2$.
 :::
 
-### Übungen 7 – A5
+### Aufgabe 5
 
 Gegeben ist das folgende Gleichungssystem:
 

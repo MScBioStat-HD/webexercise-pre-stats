@@ -7,7 +7,7 @@ library(webexercises)
 
 ## Vektoren
 
-### Übungen 5 – A1
+### Aufgabe 1
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -191,7 +191,7 @@ longmcq(opts))
 	Damit liegt eine nichttriviale Linearkombination der Vektoren vor, die den Nullvektor ergibt. Also sind $v_{1}, \; v_{2},\; v_{3},\; v_{4}$ linear abhängig.
 :::
 
-### Übungen 5 – A2
+### Aufgabe 2
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
