@@ -6,7 +6,7 @@ library(webexercises)
 ```
 
 ## Lineare Gleichungssysteme
-**Hinweis:**  Verwenden Sie **t** und **s** als Parameter für frei wählbare Variablen. 
+<small style="color: gray;">**Hinweis:**  Verwenden Sie **t** und **s** als Parameter für frei wählbare Variablen.</small>
 
 
 ### Aufgabe 1
