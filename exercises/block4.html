@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -326,8 +329,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li><span class="math inline">\(\int_{0}^{2} (x^{3} + 2x)dx\)</span>
-<div id="radio_VQTCPWFIYS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VQTCPWFIYS" value=""> <span><span class="math inline">\(6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VQTCPWFIYS" value=""> <span><span class="math inline">\(12\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VQTCPWFIYS" value="answer"> <span><span class="math inline">\(8\)</span></span></label>
+<div id="radio_KNEEEVNGWI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KNEEEVNGWI" value=""> <span><span class="math inline">\(6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KNEEEVNGWI" value=""> <span><span class="math inline">\(12\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KNEEEVNGWI" value="answer"> <span><span class="math inline">\(8\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -352,8 +355,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li><span class="math inline">\(\int_{-2}^{2}\)</span> <span class="math inline">\(e^{2x} dx\)</span>
-<div id="radio_SPGJLCDPXV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SPGJLCDPXV" value=""> <span><span class="math inline">\(e^{4} - 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_SPGJLCDPXV" value="answer"> <span><span class="math inline">\(27.29\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_SPGJLCDPXV" value=""> <span><span class="math inline">\(23\)</span></span></label>
+<div id="radio_FRIZIQKDPV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FRIZIQKDPV" value=""> <span><span class="math inline">\(e^{4} - 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_FRIZIQKDPV" value="answer"> <span><span class="math inline">\(27.29\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_FRIZIQKDPV" value=""> <span><span class="math inline">\(23\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -378,8 +381,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li><span class="math inline">\(\int_{0}^{2}(x + 4 )^{2} dx\)</span>
-<div id="radio_ELJLKKYQOW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ELJLKKYQOW" value=""> <span><span class="math inline">\(\frac{155}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ELJLKKYQOW" value=""> <span><span class="math inline">\(50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ELJLKKYQOW" value="answer"> <span><span class="math inline">\(50\frac{2}{3}\)</span></span></label>
+<div id="radio_KUCKWZJUMG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KUCKWZJUMG" value=""> <span><span class="math inline">\(\frac{155}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KUCKWZJUMG" value=""> <span><span class="math inline">\(50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KUCKWZJUMG" value="answer"> <span><span class="math inline">\(50\frac{2}{3}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -404,8 +407,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="4" type="a">
 <li><span class="math inline">\(\int_{}^{} 4x dx\)</span>
-<div id="radio_YHPSZTJGFQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YHPSZTJGFQ" value=""> <span><span class="math inline">\(2x + c\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YHPSZTJGFQ" value="answer"> <span><span class="math inline">\(2x^{2} + c\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YHPSZTJGFQ" value=""> <span><span class="math inline">\(4x^{2} + c\)</span></span></label>
+<div id="radio_VVDADNRQUB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VVDADNRQUB" value=""> <span><span class="math inline">\(2x + c\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VVDADNRQUB" value="answer"> <span><span class="math inline">\(2x^{2} + c\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VVDADNRQUB" value=""> <span><span class="math inline">\(4x^{2} + c\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -434,8 +437,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li><span class="math inline">\(f(x) = -2x\)</span>, Fläche im Intervall <span class="math inline">\([-2,2]\)</span>
-<div id="radio_QNCEKYAAGM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QNCEKYAAGM" value="answer"> <span><span class="math inline">\(8\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QNCEKYAAGM" value=""> <span><span class="math inline">\(0\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QNCEKYAAGM" value=""> <span><span class="math inline">\(4\)</span></span></label>
+<div id="radio_YAXGONAGAJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YAXGONAGAJ" value="answer"> <span><span class="math inline">\(8\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YAXGONAGAJ" value=""> <span><span class="math inline">\(0\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YAXGONAGAJ" value=""> <span><span class="math inline">\(4\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -463,8 +466,8 @@ window.Quarto = {
 <li><br> <span class="math inline">\(\\ f(x) = \begin{cases} 0 &amp; \text{für} &amp; x&lt;0 \\
 -x^{2} + \frac{4}{3} &amp; \text{für} &amp; 0 \le x\le 1 &amp; \text{im Intervall} &amp; [0,1] \\
 0 &amp; \text{für} &amp; x&gt;1 \end{cases}\)</span>
-<div id="radio_GWUKAHNYRD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GWUKAHNYRD" value=""> <span><span class="math inline">\(\frac{1}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_GWUKAHNYRD" value=""> <span><span class="math inline">\(\frac{4}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_GWUKAHNYRD" value="answer"> <span><span class="math inline">\(1\)</span></span></label>
+<div id="radio_JVRPMWDGJE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JVRPMWDGJE" value=""> <span><span class="math inline">\(\frac{1}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JVRPMWDGJE" value=""> <span><span class="math inline">\(\frac{4}{3}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_JVRPMWDGJE" value="answer"> <span><span class="math inline">\(1\)</span></span></label>
 </div></li>
 </ol>
 </div>

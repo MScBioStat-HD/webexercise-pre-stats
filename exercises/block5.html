@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -325,8 +328,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Sind die zwei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix}\)</span> und <span class="math inline">\(y = \begin{pmatrix} 2 \\ 2 \\ 8 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_AXGORFCIEW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_AXGORFCIEW" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_AXGORFCIEW" value="answer"> <span>Ja</span></label>
+<div id="radio_PSBJDSRJOU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PSBJDSRJOU" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_PSBJDSRJOU" value="answer"> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -351,8 +354,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\\ 0 \\\ 0 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 1 \\\ 2 \\\ 3 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 2 \\\ 2 \\\ 3 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_KVANGKMGRU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KVANGKMGRU" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_KVANGKMGRU" value=""> <span>Ja</span></label>
+<div id="radio_CNAMRSPKQH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_CNAMRSPKQH" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_CNAMRSPKQH" value=""> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -388,8 +391,8 @@ x + y - z
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 1 \\\ 1 \\\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 2 \\\ 0 \\\ 1 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 3 \\\ 3 \\\ 2 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_TXXKPFFJFU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TXXKPFFJFU" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_TXXKPFFJFU" value="answer"> <span>Ja</span></label>
+<div id="radio_YMXGFAFIUQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YMXGFAFIUQ" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_YMXGFAFIUQ" value="answer"> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -441,8 +444,8 @@ x + y - z
 <div class="webex-check webex-box">
 <ol start="4" type="a">
 <li>Sind die drei Vektoren <span class="math inline">\(x = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(y = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span> und <span class="math inline">\(z = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_UUNZATQGUX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UUNZATQGUX" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_UUNZATQGUX" value="answer"> <span>Ja</span></label>
+<div id="radio_BWVWLZLPNR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BWVWLZLPNR" value=""> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_BWVWLZLPNR" value="answer"> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -480,8 +483,8 @@ z =\begin{pmatrix}1\\1\\0\end{pmatrix}
 <div class="webex-check webex-box">
 <ol start="5" type="a">
 <li>Sind die vier Vektoren <span class="math inline">\(v_1 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(v_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span>, <span class="math inline">\(v_3 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span> und <span class="math inline">\(v_4 = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}\)</span> linear unabhängig?
-<div id="radio_MVXUNNNFXW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MVXUNNNFXW" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_MVXUNNNFXW" value=""> <span>Ja</span></label>
+<div id="radio_NBHVLOXYSB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NBHVLOXYSB" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_NBHVLOXYSB" value=""> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -548,8 +551,8 @@ v_1+v_2+v_3-2v_4
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Interpretieren Sie das Ergebnis geometrisch:
-<div id="radio_DFZSXMLOUX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DFZSXMLOUX" value=""> <span>Der Winkel zwischen x und y ist stumpf.</span></label><label><input type="radio" autocomplete="off" name="radio_DFZSXMLOUX" value=""> <span>Die Vektoren zeigen überwiegend in die gleiche Richtung.</span></label><label><input type="radio" autocomplete="off" name="radio_DFZSXMLOUX" value="answer"> <span>Die beiden Vektoren stehen senkrecht zueinander.</span></label>
+<div id="radio_SXKLIXIATF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SXKLIXIATF" value=""> <span>Der Winkel zwischen x und y ist stumpf.</span></label><label><input type="radio" autocomplete="off" name="radio_SXKLIXIATF" value=""> <span>Die Vektoren zeigen überwiegend in die gleiche Richtung.</span></label><label><input type="radio" autocomplete="off" name="radio_SXKLIXIATF" value="answer"> <span>Die beiden Vektoren stehen senkrecht zueinander.</span></label>
 </div></li>
 </ol>
 </div>

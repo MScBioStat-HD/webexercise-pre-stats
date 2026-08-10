@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
@@ -254,8 +286,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#block-8-lineare-regression" id="toc-block-8-lineare-regression" class="nav-link active" data-scroll-target="#block-8-lineare-regression">Block 8 Lineare Regression</a>
+  <ul class="collapse">
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2">Aufgabe 2</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -279,8 +321,305 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="block-8-lineare-regression" class="level2">
+<h2 class="anchored" data-anchor-id="block-8-lineare-regression">Block 8 Lineare Regression</h2>
+<p><small style="color: gray;"><strong>Hinweis:</strong> Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: <span class="math inline">\(5.24\)</span>)</small></p>
+<section id="aufgabe-1" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h3>
+<p>Bei <strong>10 Studierenden</strong> wurde die <strong>Lernzeit (in Stunden)</strong> für eine Klausur sowie die <strong>erreichte Punktzahl (von 100 Punkten)</strong> erfasst. Untersucht werden soll der lineare Zusammenhang zwischen Lernzeit und Klausurpunktzahl.<br> Folgende Daten wurden beobachtet (<span class="math inline">\(\bar{x} = \text{Mittelwert}, s = \text{Standardabweichung}\)</span>)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Teilnehmer</th>
+<th style="text-align: right;"><span class="math inline">\(s_1\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_4\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_5\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_6\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_7\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_8\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_9\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s_{10}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\bar{x}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(s\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lernzeit (h)</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">2.5</td>
+</tr>
+<tr class="even">
+<td>Punktzahl</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">75.1</td>
+<td style="text-align: right;">14.2</td>
+</tr>
+</tbody>
+</table>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Entscheiden Sie, welches Merkmal die Einflussgröße und welches Merkmal die Zielgröße ist. <br><br> Einflussgröße: <input class="webex-solveme nospaces ignorecase" size="8" data-answer="[&quot;Lernzeit&quot;]"> <br> Zielgröße: <input class="webex-solveme nospaces ignorecase" size="9" data-answer="[&quot;Punktzahl&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li></li>
+</ol>
+<p><strong>Einflussgröße (unabhängige Variable):</strong> Lernzeit (X)</p>
+<p><strong>Zielgröße (abhängige Variable):</strong> Punktzahl (Y)</p>
+<p>Die Lernzeit beeinflusst die erreichter Punktzahl, nicht umgekehrt.</p>
+</div>
+</div>
+</div>
+<div class="webex webex-box">
+<ol start="2" type="a">
+<li>Erstellen Sie eine Punktwolke (Scatterplot) und beurteilen Sie diese hinsichtlich: Linearität, mögliche Ausreißer, Auffälligkeiten.</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li><img src="images/image_biometrieBlock8_1b.png" width="600"> <br> <br>
+<ul>
+<li><strong>Linearität:</strong> Es scheint einen linearen Zusammenhang zu geben. Je größer die Lernzeit desto höher die Punktzahl. <br></li>
+<li><strong>Ausreißer/Auffälligkeiten:</strong> Keine direkten Ausreißer erkennbar. Durch die kleine Stichprobe ist der beobachtete Zusammenhang mit viel Unsicherheit behaftet.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Berechnen Sie den Korrelationskoeffizienten nach Pearson (Die Kovarianz ist <span class="math inline">\(s_{xy} = 33.7\)</span>). <br> Geben Sie das Ergebnis auf zwei Nachkommastellen an.<br> <small style="color: gray;">(den Wert auf zwei Nachkommastellen runden)</small><br> <br> <span class="math inline">\(r =\)</span> <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;0.94&quot;,&quot;.94&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li>Der Korrelationskoeffizient nach Pearson wird berechnet mit:</li>
+</ol>
+<p><span class="math display">\[r = \frac{s_{xy}}{s_x \cdot s_y} = \frac{33.7}{2.5 \cdot 14.2} = 0.94\]</span></p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="4" type="a">
+<li>Bestimmen Sie die Regressionsgerade: <span class="math inline">\(\ y = \hat{\alpha} + \hat{\beta}x\)</span> <br> <small style="color: gray;">(den Wert auf zwei Nachkommastellen runden)</small><br> <br> Steigung <span class="math inline">\(\hat{\beta} =\)</span> <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;5.39&quot;]"> <br> <br> Intercept <span class="math inline">\(\hat{\alpha} =\)</span> <input class="webex-solveme nospaces" data-tol="0.1" size="5" data-answer="[&quot;42.75&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="4" type="a">
+<li>Die Parameter der Regressionsgeraden werden berechnet mit:</li>
+</ol>
+<p><span class="math display">\[\hat{\beta} = \frac{s_{xy}}{s_x^2} = \frac{33.7}{2.5^2} = 5.39\]</span></p>
+<p><span class="math display">\[\hat{\alpha} = \bar{y} - \hat{\beta} \cdot \bar{x} = 75.1 - 5.39 \cdot 6.0 = 42.75\]</span></p>
+<p><strong>Regressionsgerade:</strong> <span class="math inline">\(\hat{y} = 42.75 + 5.39x\)</span></p>
+</div>
+</div>
+</div>
+<div class="webex webex-box">
+<ol start="5" type="a">
+<li>Interpretieren Sie den Regressionskoeffizienten (Steigung der Regressionsgerade).</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="5" type="a">
+<li>Der Regressionskoeffizient (Steigung) gibt die mittlere Änderung in <span class="math inline">\(Y\)</span> an, wenn <span class="math inline">\(X\)</span> um eine Einheit ansteigt. Hier ist es somit, dass die Punktzahl im Mittel um <span class="math inline">\(5.39\)</span> Punkte steigt, wenn man 1h mehr lernt.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="6" type="a">
+<li>Berechnen Sie für eine Lernzeit von <span class="math inline">\(6.5\)</span> Stunden die erwartete Punktzahl. <br><small style="color: gray;">(den Wert auf eine Nachkommastellen runden)</small><br> <br> Erwartete Punktzahl = <input class="webex-solveme nospaces" data-tol="0.1" size="4" data-answer="[&quot;77.8&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="6" type="a">
+<li><span class="math display">\[ y = 42.75 + 5.39 \cdot 6.5 = 42.75 + 35.04 = 77.8\]</span> Für eine Lernzeit von 6.5 Stunden wird eine erwartete Punktzahl von <strong>77.8 Punkten</strong> prognostiziert.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="7" type="a">
+<li>Bestimmen Sie das Bestimmtheitsmaß <span class="math inline">\(R^2\)</span> und interpretieren Sie dessen Bedeutung.<br> <small style="color: gray;">(den Wert auf zwei Nachkommastellen runden)</small><br> <br> <span class="math inline">\(R^2 =\)</span> <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;0.88&quot;,&quot;.88&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="7" type="a">
+<li><p>Das Bestimmtheitsmaß wird berechnet mit:</p>
+<p><span class="math display">\[R^2 = 0.94^2 = 0.88\]</span></p>
+<p><strong>Interpretation:</strong> <span class="math inline">\(88\%\)</span> der Varianz in Y wird durch X erklärt.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex webex-box">
+<ol start="8" type="a">
+<li>Ist die lineare Regression für diese Daten geeignet? Begründen Sie Ihre Antwort anhand der Punktwolke und der berechneten Kennzahlen.</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="8" type="a">
+<li><strong>Begründung:</strong> Es scheint einen positiven, linearen, starken Zusammenhang zu geben. <br> Einschränkend zu sagen ist, dass die Fallzahl sehr klein ist und sich der Zusammenhang auf die beobachtete Zeitspanne für X = Lernzeit von 2 bis 10 Stunden bezieht. <br> Darüber hinaus kann keine Aussage getroffen werden.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Welche der folgenden Aussagen sind korrekt?<br><br><strong>1.</strong> Die Korrelation ist ein Maß für die Stärke der Übereinstimmung von zwei Merkmalen.<br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Der Bland Altman Plot eignet sich die Übereinstimmung von zwei Merkmalen zu veranschaulichen.<br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>3.</strong> Ein kausaler Zusammenhang (Ursache-Wirkungs-Beziehung) ist durch eine Korrelationsanalyse nachweisbar.<br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>4.</strong> Die Korrelationsanalyse untersucht die Richtung und die Stärke des Zusammenhangs von Merkmalen.<br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="8" type="a">
+<li><strong>Richtig: 2 + 4</strong></li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script>

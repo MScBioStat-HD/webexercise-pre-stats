@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -330,8 +333,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Wie groß ist der Anteil in der männlichen Bevölkerung mit einem Hämoglobinwert über 16.0 g/dl?
-<div id="radio_FRWPYXAAKF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FRWPYXAAKF" value=""> <span><span class="math inline">\(P(X &gt; 16) = 0.87\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_FRWPYXAAKF" value=""> <span><span class="math inline">\(P(X &gt; 16) = 0.50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_FRWPYXAAKF" value="answer"> <span><span class="math inline">\(P(X &gt; 16) = 0.13\)</span></span></label>
+<div id="radio_WMJIHOLCAX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WMJIHOLCAX" value=""> <span><span class="math inline">\(P(X &gt; 16) = 0.87\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WMJIHOLCAX" value=""> <span><span class="math inline">\(P(X &gt; 16) = 0.50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WMJIHOLCAX" value="answer"> <span><span class="math inline">\(P(X &gt; 16) = 0.13\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -356,8 +359,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Welches ist die untere Hämoglobinwertgrenze für Personen, die zu der Gruppe mit den 5% niedrigsten Hämoglobinwerten gehören?
-<div id="radio_AJZTWTWAKE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_AJZTWTWAKE" value=""> <span><span class="math inline">\(X \leq 12.50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AJZTWTWAKE" value=""> <span><span class="math inline">\(X \leq 14.00\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AJZTWTWAKE" value="answer"> <span><span class="math inline">\(X \leq 11.04\)</span></span></label>
+<div id="radio_QEIRASAIBJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QEIRASAIBJ" value=""> <span><span class="math inline">\(X \leq 12.50\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QEIRASAIBJ" value=""> <span><span class="math inline">\(X \leq 14.00\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QEIRASAIBJ" value="answer"> <span><span class="math inline">\(X \leq 11.04\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -421,8 +424,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Welche Aussage bezüglich der Verteilung passt am besten?
-<div id="radio_WZMOMOPGXV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WZMOMOPGXV" value=""> <span>Die Daten sind normalverteilt.</span></label><label><input type="radio" autocomplete="off" name="radio_WZMOMOPGXV" value=""> <span>Die Verteilung ist multimodal.</span></label><label><input type="radio" autocomplete="off" name="radio_WZMOMOPGXV" value="answer"> <span>Die Daten sind schief verteilt.</span></label><label><input type="radio" autocomplete="off" name="radio_WZMOMOPGXV" value=""> <span>Die Daten sind normalverteilt mit deutlichen Ausreißern.</span></label>
+<div id="radio_MMWDYIPISP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MMWDYIPISP" value=""> <span>Die Daten sind normalverteilt.</span></label><label><input type="radio" autocomplete="off" name="radio_MMWDYIPISP" value=""> <span>Die Verteilung ist multimodal.</span></label><label><input type="radio" autocomplete="off" name="radio_MMWDYIPISP" value="answer"> <span>Die Daten sind schief verteilt.</span></label><label><input type="radio" autocomplete="off" name="radio_MMWDYIPISP" value=""> <span>Die Daten sind normalverteilt mit deutlichen Ausreißern.</span></label>
 </div></li>
 </ol>
 </div>
@@ -447,8 +450,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Ist hier eine logarithmische Transformation sinnvoll?
-<div id="radio_ZVLUGKWPTL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZVLUGKWPTL" value=""> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_ZVLUGKWPTL" value="answer"> <span>Nein</span></label>
+<div id="radio_ELBPTSIZDT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ELBPTSIZDT" value=""> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_ELBPTSIZDT" value="answer"> <span>Nein</span></label>
 </div></li>
 </ol>
 </div>
@@ -502,8 +505,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Welcher Verteilung folgt die Bereitschaft zur Organspende?<br> N = Normalverteilung, Bin = Binomialverteilung
-<div id="radio_ZTJIQYVZBV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZTJIQYVZBV" value=""> <span><span class="math inline">\(N(0,1)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZTJIQYVZBV" value="answer"> <span><span class="math inline">\(Bin(n,p)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZTJIQYVZBV" value=""> <span><span class="math inline">\(N(57, 4)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZTJIQYVZBV" value=""> <span><span class="math inline">\(Bernoulli(p)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZTJIQYVZBV" value=""> <span><span class="math inline">\(N(\mu, 4)\)</span></span></label>
+<div id="radio_AHEWREKKLU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AHEWREKKLU" value=""> <span><span class="math inline">\(N(0,1)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AHEWREKKLU" value="answer"> <span><span class="math inline">\(Bin(n,p)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AHEWREKKLU" value=""> <span><span class="math inline">\(N(57, 4)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AHEWREKKLU" value=""> <span><span class="math inline">\(Bernoulli(p)\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AHEWREKKLU" value=""> <span><span class="math inline">\(N(\mu, 4)\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -556,8 +559,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li>Ist die Voraussetzung für den zweiten Ansatz hier erfüllt?
-<div id="radio_EIYPKIXETP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_EIYPKIXETP" value="answer"> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_EIYPKIXETP" value=""> <span>Nein</span></label>
+<div id="radio_EMOBXXJSFM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EMOBXXJSFM" value="answer"> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_EMOBXXJSFM" value=""> <span>Nein</span></label>
 </div></li>
 </ol>
 </div>
@@ -587,8 +590,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Welcher Boxplot passt zu den Daten oben? <br><br>
-<div id="radio_BHXBLPHVZB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BHXBLPHVZB" value="answer"> <span><img src="images/boxplot_a.png" width="400"> <br></span></label><label><input type="radio" autocomplete="off" name="radio_BHXBLPHVZB" value=""> <span><img src="images/boxplot_b.png" width="400"> <br></span></label><label><input type="radio" autocomplete="off" name="radio_BHXBLPHVZB" value=""> <span><img src="images/boxplot_c.png" width="400"> <br></span></label>
+<div id="radio_UMOAVOEMDG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UMOAVOEMDG" value="answer"> <span><img src="images/boxplot_a.png" width="400"> <br></span></label><label><input type="radio" autocomplete="off" name="radio_UMOAVOEMDG" value=""> <span><img src="images/boxplot_b.png" width="400"> <br></span></label><label><input type="radio" autocomplete="off" name="radio_UMOAVOEMDG" value=""> <span><img src="images/boxplot_c.png" width="400"> <br></span></label>
 </div></li>
 </ol>
 </div>

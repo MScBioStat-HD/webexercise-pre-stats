@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -332,8 +335,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Berechnen Sie <span class="math inline">\(A \cdot B\)</span>.
-<div id="radio_BBDTQUXZFW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BBDTQUXZFW" value=""> <span><span class="math inline">\(A \cdot B = \begin{pmatrix} 2 &amp; 3 &amp; -1 \\\ 1 &amp; 0 &amp; -1 \\\ 2 &amp; -6 &amp; 8 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_BBDTQUXZFW" value="answer"> <span><span class="math inline">\(A \cdot B = \begin{pmatrix} 2 &amp; -3 &amp; 1 \\\ 1 &amp; 0 &amp; -1 \\\ -2 &amp; -6 &amp; 8 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_BBDTQUXZFW" value=""> <span><span class="math inline">\(A \cdot B = \begin{pmatrix} 2 &amp; -3 &amp; -1 \\\ 1 &amp; 0 &amp; -1 \\\ 2 &amp; -6 &amp; 8 \end{pmatrix}\)</span></span></label>
+<div id="radio_JJSFNWWFWE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JJSFNWWFWE" value=""> <span><span class="math inline">\(A \cdot B = \begin{pmatrix} 2 &amp; 3 &amp; -1 \\\ 1 &amp; 0 &amp; -1 \\\ 2 &amp; -6 &amp; 8 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_JJSFNWWFWE" value="answer"> <span><span class="math inline">\(A \cdot B = \begin{pmatrix} 2 &amp; -3 &amp; 1 \\\ 1 &amp; 0 &amp; -1 \\\ -2 &amp; -6 &amp; 8 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_JJSFNWWFWE" value=""> <span><span class="math inline">\(A \cdot B = \begin{pmatrix} 2 &amp; -3 &amp; -1 \\\ 1 &amp; 0 &amp; -1 \\\ 2 &amp; -6 &amp; 8 \end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -358,8 +361,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Berechnen Sie <span class="math inline">\(A^{T}\)</span>.
-<div id="radio_KJMPKRGHAK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KJMPKRGHAK" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 2 &amp; 0 &amp; 1 \\\ -2 &amp; 1 &amp; 2 \\\ 0 &amp; -1 &amp; -3 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_KJMPKRGHAK" value="answer"> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\\ 2 &amp; 1 &amp; -2 \\\ -3 &amp; -1 &amp; 0 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_KJMPKRGHAK" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} -3 &amp; -1 &amp; 0 \\\ 2 &amp; 1 &amp; -2 \\\ 1 &amp; 0 &amp; 2 \end{pmatrix}\)</span></span></label>
+<div id="radio_VCBAXCBDQF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VCBAXCBDQF" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 2 &amp; 0 &amp; 1 \\\ -2 &amp; 1 &amp; 2 \\\ 0 &amp; -1 &amp; -3 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_VCBAXCBDQF" value="answer"> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\\ 2 &amp; 1 &amp; -2 \\\ -3 &amp; -1 &amp; 0 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_VCBAXCBDQF" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} -3 &amp; -1 &amp; 0 \\\ 2 &amp; 1 &amp; -2 \\\ 1 &amp; 0 &amp; 2 \end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -384,8 +387,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li>Berechnen Sie <span class="math inline">\(B^{T}\)</span>.
-<div id="radio_MNAWXXLWQQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MNAWXXLWQQ" value=""> <span><span class="math inline">\(B^{T} = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\\ 2 &amp; 2 &amp; -1 \\\ -2 &amp; -3 &amp; 1 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_MNAWXXLWQQ" value="answer"> <span><span class="math inline">\(B^{T} = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\\ -1 &amp; 2 &amp; 2 \\\ 1 &amp; -3 &amp; -2 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_MNAWXXLWQQ" value=""> <span><span class="math inline">\(B^{T} = \begin{pmatrix} 1 &amp; -3 &amp; -2 \\\ -1 &amp; 2 &amp; 2 \\\ 0 &amp; 1 &amp; 0 \end{pmatrix}\)</span></span></label>
+<div id="radio_SIBLQKMFKL" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SIBLQKMFKL" value=""> <span><span class="math inline">\(B^{T} = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\\ 2 &amp; 2 &amp; -1 \\\ -2 &amp; -3 &amp; 1 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_SIBLQKMFKL" value="answer"> <span><span class="math inline">\(B^{T} = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\\ -1 &amp; 2 &amp; 2 \\\ 1 &amp; -3 &amp; -2 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_SIBLQKMFKL" value=""> <span><span class="math inline">\(B^{T} = \begin{pmatrix} 1 &amp; -3 &amp; -2 \\\ -1 &amp; 2 &amp; 2 \\\ 0 &amp; 1 &amp; 0 \end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -410,8 +413,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="4" type="a">
 <li>Berechnen Sie <span class="math inline">\(B^{T} \cdot A^{T}\)</span>.
-<div id="radio_QRGXNAZBVA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QRGXNAZBVA" value=""> <span><span class="math inline">\(B^{T} \cdot A^{T} = \begin{pmatrix} -2 &amp; 1 &amp; 2 \\\ -6 &amp; 0 &amp; -3 \\\ 8 &amp; -1 &amp; 1 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_QRGXNAZBVA" value="answer"> <span><span class="math inline">\(B^{T} \cdot A^{T} = (AB)^{T} = \begin{pmatrix} 2 &amp; 1 &amp; -2 \\\ -3 &amp; 0 &amp; -6 \\\ 1 &amp; -1 &amp; 8 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_QRGXNAZBVA" value=""> <span><span class="math inline">\(B^{T} \cdot A^{T} = \begin{pmatrix} 1 &amp; -1 &amp; 8 \\\ -3 &amp; 0 &amp; -6 \\\ 2 &amp; 1 &amp; -2 \end{pmatrix}\)</span></span></label>
+<div id="radio_UDLLVFJHBD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UDLLVFJHBD" value=""> <span><span class="math inline">\(B^{T} \cdot A^{T} = \begin{pmatrix} -2 &amp; 1 &amp; 2 \\\ -6 &amp; 0 &amp; -3 \\\ 8 &amp; -1 &amp; 1 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_UDLLVFJHBD" value="answer"> <span><span class="math inline">\(B^{T} \cdot A^{T} = (AB)^{T} = \begin{pmatrix} 2 &amp; 1 &amp; -2 \\\ -3 &amp; 0 &amp; -6 \\\ 1 &amp; -1 &amp; 8 \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_UDLLVFJHBD" value=""> <span><span class="math inline">\(B^{T} \cdot A^{T} = \begin{pmatrix} 1 &amp; -1 &amp; 8 \\\ -3 &amp; 0 &amp; -6 \\\ 2 &amp; 1 &amp; -2 \end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -462,8 +465,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Berechnen Sie <br> <br> <span class="math inline">\(A =\begin{pmatrix} 4 &amp; -3 &amp; 2 \\\ 0 &amp; 1 &amp; -1 \\\ -2 &amp; 3 &amp; 0 \end{pmatrix}\)</span> <span class="math inline">\(\begin{pmatrix} x \\\ y \\\ z \end{pmatrix}\)</span><br><br>
-<div id="radio_ZQTDCJTWPD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZQTDCJTWPD" value=""> <span><span class="math inline">\(\begin{pmatrix} 4x &amp; + &amp; 3y &amp; + &amp; 2z \\\ &amp; &amp; y &amp; - &amp; z \\\ 2x &amp; + &amp; y\end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_ZQTDCJTWPD" value="answer"> <span><span class="math inline">\(\begin{pmatrix} 4x &amp; - &amp; 3y &amp; + &amp; 2z \\\ &amp; &amp; y &amp; - &amp; z \\\ -2x &amp; + &amp; 3y\end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_ZQTDCJTWPD" value=""> <span><span class="math inline">\(\begin{pmatrix} 4x &amp; + &amp; 3y &amp; - &amp; 2z \\\ x &amp; - &amp; y \\\ -2x &amp; + &amp; y\end{pmatrix}\)</span></span></label>
+<div id="radio_HFZIAJGQQF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HFZIAJGQQF" value=""> <span><span class="math inline">\(\begin{pmatrix} 4x &amp; + &amp; 3y &amp; + &amp; 2z \\\ &amp; &amp; y &amp; - &amp; z \\\ 2x &amp; + &amp; y\end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_HFZIAJGQQF" value="answer"> <span><span class="math inline">\(\begin{pmatrix} 4x &amp; - &amp; 3y &amp; + &amp; 2z \\\ &amp; &amp; y &amp; - &amp; z \\\ -2x &amp; + &amp; 3y\end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_HFZIAJGQQF" value=""> <span><span class="math inline">\(\begin{pmatrix} 4x &amp; + &amp; 3y &amp; - &amp; 2z \\\ x &amp; - &amp; y \\\ -2x &amp; + &amp; y\end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -515,8 +518,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Berechnen Sie <span class="math inline">\(A \cdot A\)</span>. Welche Aussage ist korrekt?
-<div id="radio_NGZVYYEIMZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NGZVYYEIMZ" value=""> <span><span class="math inline">\(A\)</span> ist nicht invertierbar</span></label><label><input type="radio" autocomplete="off" name="radio_NGZVYYEIMZ" value=""> <span><span class="math inline">\(A^{2} = A\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_NGZVYYEIMZ" value="answer"> <span><span class="math inline">\(A = A^{-1}\)</span></span></label>
+<div id="radio_AKGXHILHIQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AKGXHILHIQ" value=""> <span><span class="math inline">\(A\)</span> ist nicht invertierbar</span></label><label><input type="radio" autocomplete="off" name="radio_AKGXHILHIQ" value=""> <span><span class="math inline">\(A^{2} = A\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AKGXHILHIQ" value="answer"> <span><span class="math inline">\(A = A^{-1}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -541,8 +544,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Berechnen Sie B <span class="math inline">\(\cdot\)</span> <span class="math inline">\(B^{T}\)</span>.<br><br>
-<div id="radio_JSTQKQBYYW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JSTQKQBYYW" value=""> <span><span class="math inline">\(BB^{T} =\begin{pmatrix} 2 &amp; 0 &amp; 2 \\\ 0 &amp; 2 &amp; 0 \\\ 2 &amp; 1 &amp; 2 \\\ \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_JSTQKQBYYW" value="answer"> <span><span class="math inline">\(BB^{T} =\begin{pmatrix} 3 &amp; 0 &amp; 2 \\\ 0 &amp; 2 &amp; 0 \\\ 2 &amp; 0 &amp; 2 \\\ \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_JSTQKQBYYW" value=""> <span><span class="math inline">\(BB^{T} =\begin{pmatrix} 2 &amp; 0 &amp; 2 \\\ 1 &amp; 2 &amp; 0 \\\ 2 &amp; 0 &amp; 2 \\\ \end{pmatrix}\)</span></span></label>
+<div id="radio_SWNLXOVUEG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SWNLXOVUEG" value=""> <span><span class="math inline">\(BB^{T} =\begin{pmatrix} 2 &amp; 0 &amp; 2 \\\ 0 &amp; 2 &amp; 0 \\\ 2 &amp; 1 &amp; 2 \\\ \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_SWNLXOVUEG" value="answer"> <span><span class="math inline">\(BB^{T} =\begin{pmatrix} 3 &amp; 0 &amp; 2 \\\ 0 &amp; 2 &amp; 0 \\\ 2 &amp; 0 &amp; 2 \\\ \end{pmatrix}\)</span><br><br></span></label><label><input type="radio" autocomplete="off" name="radio_SWNLXOVUEG" value=""> <span><span class="math inline">\(BB^{T} =\begin{pmatrix} 2 &amp; 0 &amp; 2 \\\ 1 &amp; 2 &amp; 0 \\\ 2 &amp; 0 &amp; 2 \\\ \end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -620,8 +623,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Berechnen Sie die Determinante von <span class="math inline">\(A\)</span>:<br> <span class="math inline">\(det \; A =\)</span> <input class="webex-solveme nospaces" size="2" data-answer="[&quot;12&quot;]"> <br><br> Beantworten Sie die Frage: Ist <span class="math inline">\(A\)</span> invertierbar?
-<div id="radio_RQSIABUBOK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RQSIABUBOK" value="answer"> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_RQSIABUBOK" value=""> <span>Nein.</span></label>
+<div id="radio_LBXAEFGDXA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LBXAEFGDXA" value="answer"> <span>Ja</span></label><label><input type="radio" autocomplete="off" name="radio_LBXAEFGDXA" value=""> <span>Nein.</span></label>
 </div></li>
 </ol>
 </div>
@@ -655,8 +658,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Berechnen Sie <span class="math inline">\(det \; A^{-1}\)</span>:<br><br>
-<div id="radio_RVRRHXQBVL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RVRRHXQBVL" value=""> <span><span class="math inline">\(- \frac{1}{12}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_RVRRHXQBVL" value="answer"> <span><span class="math inline">\(\frac{1}{12}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_RVRRHXQBVL" value=""> <span>0</span></label>
+<div id="radio_XNDPMQZPUG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XNDPMQZPUG" value=""> <span><span class="math inline">\(- \frac{1}{12}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XNDPMQZPUG" value="answer"> <span><span class="math inline">\(\frac{1}{12}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_XNDPMQZPUG" value=""> <span>0</span></label>
 </div></li>
 </ol>
 </div>
@@ -685,8 +688,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Bestimmen Sie die Determinante von <span class="math inline">\(X\)</span>.
-<div id="radio_AGJXHHWHXD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_AGJXHHWHXD" value=""> <span><span class="math inline">\(\det(X) = 6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AGJXHHWHXD" value=""> <span><span class="math inline">\(\det(X) = -6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_AGJXHHWHXD" value="answer"> <span><span class="math inline">\(\det(X) = 0\)</span></span></label>
+<div id="radio_ZOTKPQLOQK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZOTKPQLOQK" value=""> <span><span class="math inline">\(\det(X) = 6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZOTKPQLOQK" value=""> <span><span class="math inline">\(\det(X) = -6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_ZOTKPQLOQK" value="answer"> <span><span class="math inline">\(\det(X) = 0\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -711,8 +714,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Ist die Matrix <span class="math inline">\(X\)</span> invertierbar?
-<div id="radio_LZBZEGFJEO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LZBZEGFJEO" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_LZBZEGFJEO" value=""> <span>Ja</span></label>
+<div id="radio_DUTABTNVJT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DUTABTNVJT" value="answer"> <span>Nein</span></label><label><input type="radio" autocomplete="off" name="radio_DUTABTNVJT" value=""> <span>Ja</span></label>
 </div></li>
 </ol>
 </div>
@@ -737,8 +740,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li>Ist die Matrix <span class="math inline">\(X\)</span> regulär?
-<div id="radio_TYRFHBNXKI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TYRFHBNXKI" value="answer"> <span>Nein, die Matrix ist singulär.</span></label><label><input type="radio" autocomplete="off" name="radio_TYRFHBNXKI" value=""> <span>Ja, die Matrix ist regulär.</span></label>
+<div id="radio_VNJOIVGXYY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VNJOIVGXYY" value="answer"> <span>Nein, die Matrix ist singulär.</span></label><label><input type="radio" autocomplete="off" name="radio_VNJOIVGXYY" value=""> <span>Ja, die Matrix ist regulär.</span></label>
 </div></li>
 </ol>
 </div>
@@ -763,8 +766,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="4" type="a">
 <li>Was ist der Rang der Matrix <span class="math inline">\(X\)</span>?
-<div id="radio_YIMBFJLVXJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YIMBFJLVXJ" value=""> <span><span class="math inline">\(\text{Rang}(X) = 0\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YIMBFJLVXJ" value="answer"> <span><span class="math inline">\(\text{Rang}(X) = 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YIMBFJLVXJ" value=""> <span><span class="math inline">\(\text{Rang}(X) = 2\)</span></span></label>
+<div id="radio_TKQKOGZTGV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TKQKOGZTGV" value=""> <span><span class="math inline">\(\text{Rang}(X) = 0\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TKQKOGZTGV" value="answer"> <span><span class="math inline">\(\text{Rang}(X) = 1\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_TKQKOGZTGV" value=""> <span><span class="math inline">\(\text{Rang}(X) = 2\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -793,8 +796,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol type="a">
 <li>Berechnen Sie die transponierte Matrix <span class="math inline">\(A^{T}\)</span>.
-<div id="radio_QHFFPKTIKE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QHFFPKTIKE" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 4 &amp; 2 &amp; -1 \\\ -2 &amp; 0 &amp; 0 \\\ -1 &amp; 1 &amp; 2 \end{pmatrix}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QHFFPKTIKE" value="answer"> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 4 &amp; -2 &amp; -1 \\\ 2 &amp; 0 &amp; 1 \\\ -1 &amp; 0 &amp; 2 \end{pmatrix}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_QHFFPKTIKE" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 4 &amp; -1 &amp; -2 \\\ 2 &amp; 0 &amp; 0 \\\ -1 &amp; 2 &amp; 1 \end{pmatrix}\)</span></span></label>
+<div id="radio_YNRDZNEQOA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YNRDZNEQOA" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 4 &amp; 2 &amp; -1 \\\ -2 &amp; 0 &amp; 0 \\\ -1 &amp; 1 &amp; 2 \end{pmatrix}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YNRDZNEQOA" value="answer"> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 4 &amp; -2 &amp; -1 \\\ 2 &amp; 0 &amp; 1 \\\ -1 &amp; 0 &amp; 2 \end{pmatrix}\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_YNRDZNEQOA" value=""> <span><span class="math inline">\(A^{T} = \begin{pmatrix} 4 &amp; -1 &amp; -2 \\\ 2 &amp; 0 &amp; 0 \\\ -1 &amp; 2 &amp; 1 \end{pmatrix}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -819,8 +822,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="2" type="a">
 <li>Bestimmen Sie die Spur der Matrix <span class="math inline">\(A\)</span>. Ist diese gleich der Spur von <span class="math inline">\(A^{T}\)</span>?
-<div id="radio_REOWGCMXRT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_REOWGCMXRT" value=""> <span>Nein, <span class="math inline">\(\text{trace}(A) \neq \text{trace}(A^{T})\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_REOWGCMXRT" value="answer"> <span>Ja, <span class="math inline">\(\text{trace}(A) = \text{trace}(A^{T}) = 6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_REOWGCMXRT" value=""> <span><span class="math inline">\(\text{trace}(A) = 4\)</span> und <span class="math inline">\(\text{trace}(A^{T}) = 6\)</span></span></label>
+<div id="radio_EBRMSHRHZB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EBRMSHRHZB" value=""> <span>Nein, <span class="math inline">\(\text{trace}(A) \neq \text{trace}(A^{T})\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_EBRMSHRHZB" value="answer"> <span>Ja, <span class="math inline">\(\text{trace}(A) = \text{trace}(A^{T}) = 6\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_EBRMSHRHZB" value=""> <span><span class="math inline">\(\text{trace}(A) = 4\)</span> und <span class="math inline">\(\text{trace}(A^{T}) = 6\)</span></span></label>
 </div></li>
 </ol>
 </div>
