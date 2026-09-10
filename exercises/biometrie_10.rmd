@@ -46,22 +46,16 @@ auf den mittleren abendlichen Cortisol-Spiegel bei Personen mit Schlafstörungen
 Es liegen Ihnen Daten von jeweils 30 Probanden pro Gruppe vor und Sie 
 wenden eine Varianzanalyse an, um dies statistisch zu untersuchen.
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(a) Wie lautet der/die Faktor/en (unabhängige Variablen)? <br><br>
-  Antwort: ", fitb("Gruppenvariable", ignore_case = TRUE))
-```
+::: {.webex .webex-box}
+(a) Wie lautet der/die Faktor/en (unabhängige Variablen)?
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) Antwort: Gruppenvariable
 :::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(b) Wie lautet die Zielvariable (abhängige Variable)? <br><br>
-  Antwort: ", fitb("Cortisol-Level", ignore_case = TRUE))
-```
+::: {.webex .webex-box}
+(b) Wie lautet die Zielvariable (abhängige Variable)?
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -77,14 +71,14 @@ cat("(b) Wie lautet die Zielvariable (abhängige Variable)? <br><br>
 :::
 
 ::: {.webex-check .webex-box}
-```{r, results='asis', echo = FALSE}
+```{r, results='asis', echo=FALSE}
 opts <- c(
-	answer = "$(2.87)$",
-	"",
-	""
-	)
-
-cat("(d) Wie lauten die Freiheitsgrade für die F-Statistik? <br>", longmcq(opts))
+  answer = "$(2, 87)$",
+  "$(3, 30)$",
+  "$(3, 87)$"
+)
+cat("(d) Wie lauten die Freiheitsgrade für die F-Statistik?",
+  longmcq(opts))
 ```
 :::
 
@@ -104,7 +98,7 @@ cat("(d) Wie lauten die Freiheitsgrade für die F-Statistik? <br>", longmcq(opts
 <br>
 	Wie lauten die Abweichungsquadrate („between“ $\text{SS}_\text{B}$ und „within“ $\text{SS}_\text{W}$)? <br><br>
 
-	$\text{SS}_\text{B}$ = `r fitb(4.67, tol = 0.01)` <br>
+	$\text{SS}_\text{B}$ = `r fitb(4.67, tol = 0.01)` <br><br>
 	$\text{SS}_\text{W}$ = `r fitb(96.08, tol = 0.01)`
 :::
 

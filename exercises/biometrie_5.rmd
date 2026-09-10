@@ -169,12 +169,10 @@ cat(longmcq(opts))
 (a) Dies ist eine **Binomialverteilung**. Es gibt zwei mögliche Ausgänge (Bereitschaft = ja oder nein) und eine feste Anzahl an Versuchen (hier 57 Patienten).
 :::
 
-::: {.webex-check .webex-box}
-```{r, results='asis', echo=FALSE}
-cat("(b) Welche zwei Möglichkeiten gibt es diese Wahrscheinlichkeit zu berechnen? <br><br>
-	1. Exakte Berechnung über die ...", fitb("Binomialverteilung", ignore_case = TRUE)," <br><br>
-	2. Approximative Berechnung über die ... ", fitb("Normalverteilung", ignore_case = TRUE))
-```
+::: {.webex .webex-box}
+(b) Welche zwei Möglichkeiten gibt es diese Wahrscheinlichkeit zu berechnen? <br><br>
+	1. Exakte Berechnung über die ...<br><br>
+	2. Approximative Berechnung über die ...
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
