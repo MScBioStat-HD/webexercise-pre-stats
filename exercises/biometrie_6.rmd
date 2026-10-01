@@ -4,7 +4,7 @@ title: Block 6
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
-
+## Erfolgsraten
 ### Block 6 Erfolgsraten
 <small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 

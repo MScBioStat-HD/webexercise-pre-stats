@@ -6,8 +6,7 @@ library(webexercises)
 ```
 ## Tests und Risikomaße für Vierfeldertafeln
 
-<small style="color: gray;">**Hinweis:** Verwenden Sie bei Ergebnissen mit Nachkommastellen 
-als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+<small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 
 ### Aufgabe 1
 Berechnen Sie die erwarteten Häufigkeiten für folgenden Fall: In einer klinischen Studie wird die Wirksamkeit eines neuen oralen Medikaments (MedA) 
@@ -66,8 +65,7 @@ In der MedA Gruppe haben 50% das Ziel erreicht und in der Placebo Gruppe nur 30%
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) Berechnen Sie die Teststatistik. <br> 
-	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+cat("(b) Berechnen Sie die Teststatistik. <br> <br>
   Teststatistik = ", fitb(4.17, tol = 0.01))
 ```
 :::
@@ -120,8 +118,7 @@ Berechnen Sie die folgenden Maße für das Beispiel aus Aufgabe 1, wo der Anteil
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(a) Berechnen Sie die absolute Risikoreduktion (auf zwei Nachkommastellen runden). <br> 
-	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+cat("(a) Berechnen Sie die absolute Risikoreduktion (auf zwei Nachkommastellen runden). <br> <br>
   ARR = ", fitb(0.2, tol = 0.01))
 ```
 :::
@@ -135,8 +132,7 @@ $$\text{ARR} = p_1 - p_2 = 0.5 - 0.3 = 0.2$$
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) Berechnen Sie das relative Risiko RR. <br> 
-	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+cat("(b) Berechnen Sie das relative Risiko RR. <br> <br>
   RR = ", fitb(1.67, tol = 0.01))
 ```
 :::
@@ -150,8 +146,7 @@ $$RR = \frac{(\frac{25}{50})}{(\frac{15}{50})} = \frac{0.5}{0.3} = 1.67$$
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(c) Berechnen Sie das Odds Ratio OR. <br> 
-	<small style=\"color: gray;\">(das Ergebnis auf zwei Nachkommastellen runden)</small><br><br>
+cat("(c) Berechnen Sie das Odds Ratio OR. <br> <br>
   OR = ", fitb(2.33, tol = 0.01))
 ```
 :::

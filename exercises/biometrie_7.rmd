@@ -4,3 +4,83 @@ title: Block 7
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
+## Nichtparametrik
+<small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf drei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.243$)</small>
+
+### Aufgabe 1
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("a) Ein Forscher möchte die Wirksamkeit einer neuen Therapie untersuchen. 
+	Er hat verschiedene Outcome-Variablen (abhängige Variablen) erhoben. 
+	Für welche der folgenden Variablen würden Sie eine nichtparametrische Auswertung 
+	(z. B. Mann-Whitney-U-Test) vorsehen?
+ <br><br>")
+
+cat("**1.** Die Reaktionszeit in einer computergestützten Aufgabe (gemessen in Millisekunden).br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**2.** Die subjektive Schmerzintensität (gemessen auf einer 5-stufigen Likert-Skala von $1 =$ „kein Schmerz“ bis $5 =$ „stärkster vorstellbarer Schmerz“).<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+cat("**3.** Herzfrequenz (Schläge pro Minute).<br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**4.** Tumorstadium (Stadium I, II, III, IV).<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+```
+:::
+
+### Aufgabe 2
+
+Ein Forscherteam möchte zur Wundheilung zwei verschiedene Pflaster (A, B) untersuchen. 
+Dabei wird nach 1 Woche die Wundheilung auf einer 4-stufigen Likert-Skala untersucht von 1 = "keine Heilung" bis <br>
+4 = "vollständige Heilung". Folgende Daten wurden beobachtet. Prüfen Sie, ob das Pflaster einen Einfluss auf die Wundheilung hat (Die Nullhypothese lautet hier $H_0: F_1 = F_2$).
+
+| Pflaster | 1 | 2 | 3 | 4 | N | Rangsumme |
+|---|---:|---:|---:|---:|---:|---:|
+| A | 4 | 6 | 5 | 5 | 20 | 378.5 |
+| B | 3 | 4 | 6 | 7 | 20 | 441.5 |
+
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Berechnen Sie den Mann-Whitney Effekt. Interpretieren Sie das Ergebnis.<br><br>
+  Lösung = ", fitb(0.579, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(a) Der Mann-Whitney Effekt wird berechnet mit:
+
+	$$\hat{\theta} = \frac{1}{40} \left(\frac{441.5}{20} - \frac{378.5}{20}\right) + \frac{1}{2}$$
+
+	$$= \frac{1}{40}(22.075 - 18.925) + \frac{1}{2} $$
+	$$ = 0.579$$
+
+	**Interpretation:** Interpretation: Der Wert liegt nahe an 0.5, was kein Effekt bedeutet. 
+	Der Mann-Whitney Effekt sagt, wenn ich zufällig eine Person aus Gruppe B und eine aus Gruppe A ziehe, wie 
+	hoch ist die Wahrscheinlichkeit, dass die Person aus Gruppe B einen höheren Wert hat als die aus Gruppe A.
+
+
+:::
+
+::: {.webex .webex-box}
+b) Die Teststatistik ist $W_N = 0.852$. Wie lautet die Testentscheidung in Bezug auf die Nullhypothese zum Niveau $\alpha=5\%$ (zweiseitig)? <br>
+:::
+
+
+::: {.callout-tip collapse="true" title="Lösung"}
+b) Die Teststatistik ist kleiner dem kritischen Wert d.h. $W_N = 0.852 < 1.96$. 
+	Damit kann die Nullhypothese auf dem 5% Niveau nicht abgelehnt werden. 
+
+:::
+
+::: {.webex .webex-box}
+c) Hätten Sie hier auch parametrisch testen können? Begründen Sie Ihre Antwort.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+c) Ein parametrischer Test eignet sich hier nicht, da das Outcome qualitativ ist (der Score-Wert steht nur für eine Kategorie; kein metrisches Outcome). 
+:::
