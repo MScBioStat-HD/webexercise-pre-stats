@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
@@ -257,8 +286,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nichtparametrik" id="toc-nichtparametrik" class="nav-link active" data-scroll-target="#nichtparametrik">Nichtparametrik</a>
+  <ul class="collapse">
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2">Aufgabe 2</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -282,8 +321,129 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="nichtparametrik" class="level2">
+<h2 class="anchored" data-anchor-id="nichtparametrik">Nichtparametrik</h2>
+<p><small style="color: gray;"><strong>Hinweis:</strong> Runden Sie das Ergebnis wenn nötig, auf drei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: <span class="math inline">\(5.243\)</span>)</small></p>
+<section id="aufgabe-1" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h3>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Ein Forscher möchte die Wirksamkeit einer neuen Therapie untersuchen. Er hat verschiedene Outcome-Variablen (abhängige Variablen) erhoben. Für welche der folgenden Variablen würden Sie eine nichtparametrische Auswertung (z. B. Mann-Whitney-U-Test) vorsehen? <br><br><strong>1.</strong> Die Reaktionszeit in einer computergestützten Aufgabe (gemessen in Millisekunden).br&gt;<select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>2.</strong> Die subjektive Schmerzintensität (gemessen auf einer 5-stufigen Likert-Skala von <span class="math inline">\(1 =\)</span> „kein Schmerz“ bis <span class="math inline">\(5 =\)</span> „stärkster vorstellbarer Schmerz“).<br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br><strong>3.</strong> Herzfrequenz (Schläge pro Minute).<br><select class="webex-select"><option value="blank"></option><option value="answer">Falsch</option><option value="">Richtig</option></select> <br><br><strong>4.</strong> Tumorstadium (Stadium I, II, III, IV).<br><select class="webex-select"><option value="blank"></option><option value="">Falsch</option><option value="answer">Richtig</option></select> <br><br></li>
+</ol>
+</div>
+</section>
+<section id="aufgabe-2" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
+<p>Ein Forscherteam möchte zur Wundheilung zwei verschiedene Pflaster (A, B) untersuchen. Dabei wird nach 1 Woche die Wundheilung auf einer 4-stufigen Likert-Skala untersucht von 1 = “keine Heilung” bis <br> 4 = “vollständige Heilung”. Folgende Daten wurden beobachtet. Prüfen Sie, ob das Pflaster einen Einfluss auf die Wundheilung hat (Die Nullhypothese lautet hier <span class="math inline">\(H_0: F_1 = F_2\)</span>).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pflaster</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Rangsumme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">378.5</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">441.5</td>
+</tr>
+</tbody>
+</table>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Berechnen Sie den Mann-Whitney Effekt. Interpretieren Sie das Ergebnis.<br><br> Lösung = <input class="webex-solveme nospaces" data-tol="0.01" size="5" data-answer="[&quot;0.579&quot;,&quot;.579&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Der Mann-Whitney Effekt wird berechnet mit:</p>
+<p><span class="math display">\[\hat{\theta} = \frac{1}{40} \left(\frac{441.5}{20} - \frac{378.5}{20}\right) + \frac{1}{2}\]</span></p>
+<p><span class="math display">\[= \frac{1}{40}(22.075 - 18.925) + \frac{1}{2} \]</span> <span class="math display">\[ = 0.579\]</span></p>
+<p><strong>Interpretation:</strong> Interpretation: Der Wert liegt nahe an 0.5, was kein Effekt bedeutet. Der Mann-Whitney Effekt sagt, wenn ich zufällig eine Person aus Gruppe B und eine aus Gruppe A ziehe, wie hoch ist die Wahrscheinlichkeit, dass die Person aus Gruppe B einen höheren Wert hat als die aus Gruppe A.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex webex-box">
+<ol start="2" type="a">
+<li>Die Teststatistik ist <span class="math inline">\(W_N = 0.852\)</span>. Wie lautet die Testentscheidung in Bezug auf die Nullhypothese zum Niveau <span class="math inline">\(\alpha=5\%\)</span> (zweiseitig)? <br></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li>Die Teststatistik ist kleiner dem kritischen Wert d.h. <span class="math inline">\(W_N = 0.852 &lt; 1.96\)</span>. Damit kann die Nullhypothese auf dem 5% Niveau nicht abgelehnt werden.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="webex webex-box">
+<ol start="3" type="a">
+<li>Hätten Sie hier auch parametrisch testen können? Begründen Sie Ihre Antwort.</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li>Ein parametrischer Test eignet sich hier nicht, da das Outcome qualitativ ist (der Score-Wert steht nur für eine Kategorie; kein metrisches Outcome).</li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script>
