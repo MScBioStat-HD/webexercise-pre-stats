@@ -4,3 +4,93 @@ title: Block 9
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
+
+
+## Logistische Regression
+
+### Aufgabe 1
+
+Ein Team von Endokrinologen möchte untersuchen, ob der HbA1c-Wert [%] bei Patienten mit Typ-2-Diabetes einen signifikanten Einfluss auf die Entstehung einer diabetischen Retinopathie (Netzhautschädigung) hat. Es wurden Daten von 400 Patienten erhoben.
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Wie lautet die Zielgröße? <br>
+  Antwort: ", fitb("diabetische Retinopathie", ignore_case = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) **Zielgröße (abhängige Variable):** Diabetische Retinopathie
+
+Dies ist ein **binärer Endpunkt** mit zwei möglichen Ausprägungen (0 = keine Retinopathie, 1 = Retinopathie vorhanden).
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Benennen Sie die Einflussgröße (unabhängige Variable). <br>
+  Antwort: ", fitb("HbA1c Wert", ignore_case = TRUE))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(b) **Einflussgröße (unabhängige Variable):** HbA1c-Wert [%]
+
+Dies ist die kontinuierliche Variable, die den Blutzuckerspiegel widerspiegelt und einen Einfluss auf die Entstehung einer Retinopathie haben kann.
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$\\log(p) = \\beta_0 + \\beta_1 \\cdot X$",
+  "$P(Y=1) = \\beta_0 + \\beta_1 \\cdot X$",
+  answer = "$\\text{Logit}(p) = \\beta_0 + \\beta_1 \\cdot X$",
+  "$P(Y=1|X) = \\frac{1}{1 + e^{-(\\beta_0 + \\beta_1 \\cdot X)}}$"
+)
+cat("(c) Schreiben Sie die Gleichung des logistischen Regressionsmodells auf.",
+  longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(c) Die korrekte Gleichung des logistischen Regressionsmodells lautet:
+
+$$\text{Logit}(p) = \beta_0 + \beta_1 \cdot X$$
+
+oder in der äquivalenten Form:
+
+$$\ln\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 \cdot X$$
+
+wobei:
+- $p$ = Wahrscheinlichkeit für das Auftreten der diabetischen Retinopathie
+- $X$ = HbA1c-Wert
+- $\beta_0$ = Intercept
+- $\beta_1$ = Regressionskoeffizient (Steigung)
+
+Die alternative Form mit der logistischen Funktion ist:
+$$P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}$$
+
+:::
+
+
+### Aufgabe 2
+
+Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br>
+[-] Intercept: $\beta_0 = -5.2$<br>
+[-] Regressionskoeffizient für $\text{HbA1c}\beta_0$ 
+
+::: {.webex .webex-box}
+a) Wie lautet nun die Gleichung des logistischen Regressionsmodells? 
+	Schreiben Sie die Logit-Funktion als auch die Wahrscheinlichkeitsfunktion auf.
+:::
+
+::: {.webex .webex-box}
+b) Interpretieren Sie den Regressionskoeffizienten $\beta_1$. <br>
+	Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet.
+:::
+
+::: {.webex .webex-box}
+c) Berechnen Sie die Wahrscheinlichkeit p eine diabetische Retinopathie zu entwickeln 
+	für eine Person mit einem **HbA1c** Wert von 10%.
+:::

@@ -4,3 +4,155 @@ title: Block 4
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
+
+### Aufgabe 1
+
+Welche der folgenden Variablen sind kategorielle (qualitative) Variablen? (Wählen Sie die richtige Kombination aus)
+
+1. Blutgruppe (A, B, AB, 0)
+2. Systolischer Blutdruck (gemessen in mmHg)
+3. Raucherstatus (Nichtraucher, Gelegenheitsraucher, starker Raucher)
+4. BMI (Body-Mass-Index, z. B. 24,5 kg/m²)
+5. Geschlecht (männlich, weiblich, divers)
+6. Anzahl der Krankenhausaufenthalte pro Jahr
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Nur 1, 2 und 5",
+  answer = "Nur 1, 3 und 5",
+  "Nur 3, 4 und 6",
+  "Nur 1, 3, 5 und 6",
+  "1, 2, 3, 4, 5 und 6"
+)
+cat("a) Welche Variablen sind kategorielle (qualitative) Variablen?",
+  longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+a) **Die richtige Antwort ist: B) Nur 1, 3 und 5**
+
+	**Erklärung:**
+
+	Kategorielle Variablen (auch qualitative Variablen genannt) ordnen Beobachtungen in Gruppen oder Kategorien ein. Man kann sie nicht auf einer kontinuierlichen numerischen Skala messen, mit der mathematische Operationen (wie ein Durchschnittswert) sinnvoll wären.
+
+	- **1. Blutgruppe:** Kategorisch ✓ (Kategorien: A, B, AB, 0)
+	- **2. Systolischer Blutdruck:** Numerisch/Metrisch ✗ (kontinuierliche Messgröße)
+	- **3. Raucherstatus:** Kategorisch ✓ (Kategorien: Nichtraucher, Gelegenheitsraucher, starker Raucher)
+	- **4. BMI:** Numerisch/Metrisch ✗ (kontinuierliche Messgröße in kg/m²)
+	- **5. Geschlecht:** Kategorisch ✓ (Kategorien: männlich, weiblich, divers)
+	- **6. Anzahl der Krankenhausaufenthalte:** Numerisch/Diskret ✗ (zählbare Größe)
+:::
+
+### Aufgabe 2
+
+Ein Krankenhaus untersucht die Wirksamkeit von zwei Behandlungen (Therapie A und Therapie B) bei Patienten mit chronischer Niereninsuffizienz. Es wird gemessen, wie viele Patienten unter der jeweiligen Therapie eine Verbesserung ihrer Nierenwerte (=Erfolg) zeigen. Die Patienten werden in zwei Gruppen unterteilt: Leichte Verläufe und Schwere Verläufe. Hier sind die Daten der Studie:
+
+| Patientengruppe | Therapie A (Erfolg / Gesamt) | Therapie B (Erfolg / Gesamt) |
+|---|---:|---:|
+| Leichte Verläufe | 9 / 10 | 80 / 100 |
+| Schwere Verläufe | 20 / 100 | 1 / 10 |
+
+---
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("a) Berechnen Sie die Erfolgsraten für Therapie A und Therapie B getrennt für die beiden Gruppen <br><br> 
+  <b>Leichte Verläufe:</b> <br>
+  Therapie A: ", fitb(0.9, tol = 0.01), " <br>
+  Therapie B: ", fitb(0.8, tol = 0.01), " <br><br>
+  <b>Schwere Verläufe:</b> <br>
+  Therapie A: ", fitb(0.2, tol = 0.01), " <br>
+  Therapie B: ", fitb(0.1, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+a)
+
+	| | Therapie A | Therapie B |
+	|---|---:|---:|
+	| Leichte Verläufe | $\frac{9}{10} = 0.90$ | $\frac{80}{100} = 0.80$ |
+	| Schwere Verläufe | $\frac{20}{100} = 0.20$ | $\frac{1}{10} = 0.10$ |
+
+	**Interpretation:** In **beiden Untergruppen** (leichte und schwere Verläufe) erzielt **Therapie A bessere Ergebnisse** als Therapie B.
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("b) Berechnen Sie die Erfolgsraten für beide Therapien insgesamt über alle Patienten hinweg. <br><br>
+  Therapie A (Gesamterfolgsrate): ", fitb(0.26, tol = 0.01), " oder ", fitb(0.264, tol = 0.01), " <br>
+  Therapie B (Gesamterfolgsrate): ", fitb(0.74, tol = 0.01), " oder ", fitb(0.736, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+b)
+	$$\text{Therapie A: } \frac{9 + 20}{10 + 100} = \frac{29}{110} = 0.264$$
+
+	$$\text{Therapie B: } \frac{80 + 1}{100 + 10} = \frac{81}{110} = 0.736$$
+
+	**Interpretation:** Insgesamt scheint **Therapie B viel besser** zu sein (73.6% vs. 26.4% Erfolgsrate).
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Das ist ein Paradoxon, das sich nicht erklären lässt.",
+  "Therapie B ist wirklich besser, Therapie A schneidet nur in Untergruppen besser ab.",
+  answer = "Dies ist das Simpson's Paradoxon. Die Störvariable 'Schweregrad der Erkrankung' verursacht diesen Effekt.",
+  "Es gibt einen Messfehler in den Daten."
+)
+cat("c) Wie erklären Sie, dass Therapie A in beiden Untergruppen besser ist, aber in der Gesamtgruppe schlechter?",
+  longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+c) Dies ist ein klassisches Beispiel des **Simpson's Paradoxons**. Obwohl Therapie A in **beiden Strata** (leichte und schwere Verläufe) bessere Erfolgsraten hat, kehrt sich der Trend um, wenn man die Daten zusammenfasst.
+
+	**Die Störvariable:** Der **Schweregrad der Erkrankung** ist hier der Confounder.
+
+	**Das Problem:** 
+	- **Therapie A** wird überwiegend bei **schweren Fällen** eingesetzt (100 von 110 Patienten)
+	- **Therapie B** wird überwiegend bei **leichten Fällen** eingesetzt (100 von 110 Patienten)
+	- Schwere Fälle haben generell schlechtere Prognosen, unabhängig von der Therapie
+
+	Deshalb sieht Therapie B in der Gesamtstichprobe besser aus, obwohl sie in den stratifizierten Analysen schlechter ist.
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Therapie A ist nicht signifikant besser, da 1.169 < 3.84.",
+  "Therapie A ist signifikant besser mit OR=2.25.",
+  answer = "Therapie A ist nicht signifikant besser. Die Teststatistik (1.169) ist kleiner als der kritische Wert (3.84), daher ist das Ergebnis statistisch nicht signifikant auf dem 5%-Niveau.",
+  "Das Odds Ratio von 2.25 zeigt, dass Therapie A definitiv besser ist."
+)
+cat("d) Adjusted OR = 2.25, Teststatistik = 1.169, kritischer Wert (α=5%, df=1) = 3.84 <br><br>
+  Wie interpretieren Sie dieses Ergebnis?",
+  longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+d) **Adjusted Odds Ratio:** $OR_{MH} = 2.25$
+
+	Dies bedeutet, dass Patienten unter Therapie A eine **2.25-mal höhere Chance auf Erfolg** haben als unter Therapie B, wenn man für den Schweregrad der Erkrankung adjustiert.
+
+	**Teststatistik:** $\chi^2 = 1.169$
+
+	**Kritischer Wert:** $\chi^2_{0.05, df=1} = 3.84$
+
+	**Interpretation:** 
+	- Da die Teststatistik (1.169) **kleiner ist als der kritische Wert (3.84)**, ist das Ergebnis **statistisch NICHT signifikant** auf dem 5%-Signifikanzniveau.
+	- Trotz des positiven Effekts (OR=2.25) zeigt die adjustierte Analyse, dass dieser Unterschied zufällig sein könnte.
+	- Wenn man den Confounder (Schweregrad) berücksichtigt, ist der Unterschied zwischen Therapie A und B nicht mehr statistisch signifikant.
+
+	**Fazit:** Die ursprüngliche Überlegenheit von Therapie B in der ungefilterten Analyse war auf die Imbalance des Schweregrades zurückzuführen (Simpson's Paradoxon). Nach Adjustierung zeigt sich kein signifikanter Unterschied zwischen den Therapien.
+
+:::

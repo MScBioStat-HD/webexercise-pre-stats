@@ -15,7 +15,8 @@ Gegeben sind folgende Mengen $A = \{6, 4, 3, 15, 9\}$, $B = \{4, 12, 6, 9\}$ und
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(a) Bestimmen Sie $A \\cup B = \\{$", fitb("3, 4, 6, 9, 12, 15", num = TRUE), "$\\}$")
+cat("(a) Bestimmen Sie $A \\cup B$ = $\\{$", fitb("3, 4, 6, 9, 12, 15"), "$\\}$ <br>
+<small style=\"color: gray;\"><strong>Hinweis:</strong> Lösung aufsteigend angeben (Bsp.: $2, 3, 4$)</small>")
 ```
 :::
 
@@ -25,7 +26,8 @@ cat("(a) Bestimmen Sie $A \\cup B = \\{$", fitb("3, 4, 6, 9, 12, 15", num = TRUE
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) Bestimmen Sie $A \\cap B = \\{$", fitb("4, 6, 9", num = TRUE), "$\\}$")
+cat("(b) Bestimmen Sie $A \\cap B = \\{$", fitb("4, 6, 9", num = TRUE), "$\\}$ <br>
+<small style=\"color: gray;\"><strong>Hinweis:</strong> Lösung aufsteigend angeben (Bsp.: $2, 3, 4$)</small>")
 ```
 :::
 
@@ -35,7 +37,8 @@ cat("(b) Bestimmen Sie $A \\cap B = \\{$", fitb("4, 6, 9", num = TRUE), "$\\}$")
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(c) Bestimmen Sie $(A \\setminus C) \\cap B = \\{$", fitb("6, 9", num = TRUE), "$\\}$")
+cat("(c) Bestimmen Sie $(A \\setminus C) \\cap B = \\{$", fitb(c("6, 9", "9, 6")), "$\\}$ <br>
+<small style=\"color: gray;\"><strong>Hinweis:</strong> Lösung aufsteigend angeben (Bsp.: $2, 3, 4$)</small>")
 ```
 :::
 

@@ -4,3 +4,124 @@ title: Block 6
 ```{r, echo = FALSE, results='asis'}
 library(webexercises)
 ```
+
+### Block 6 Erfolgsraten
+<small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
+## Aufgabe 1
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+	cat("(a) Welche der folgenden Konfidenzintervalle beruhen auf Approximation? <br><br> ")
+	cat("**1.** Agresti-Coull<br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**2.** Clopper-Pearson<br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**3.** Wilson<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+```
+:::
+
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+a) **Richtig: 1) Agresti-Coull und 3) Wilson**
+:::
+
+---
+
+### Aufgabe 2
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("a) Welche Aussagen sind richtig in Bezug auf das 95% Konfidenzintervall für eine Erfolgsrate? <br><br>")
+
+cat("**1.**  Das Wilson Konfidenzintervall liegt bei fast allen Kombinationen von n und p nahe am nominalen Niveau von 95%. <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+cat("**2.**  Das Wald-Konfidenzintervall eignet sich insbesondere für kleine Stichprobengrößen oder bei Erfolgsraten nahe 0. <br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**3.**  Das exakte Clopper-Pearson Interval ist oft zu konservativ. <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+cat("**4.**  Agresti-Coull liefert im Vergleich zu Wilson immer schmalere Intervalle. <br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**5.**  Das exakte Clopper-Pearson Interval unterschreitet die Coverage von 95% nicht. <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+a) **Richtig: 1), 3) und 5)**
+:::
+
+
+### Aufgabe 3
+
+In einer Pilotstudie wird die Wirksamkeit eines neuen Medikaments zur Behandlung einer seltenen Autoimmunerkrankung untersucht. 
+Es nehmen $n = 40$ Patienten an der Studie teil. Nach vier Wochen zeigen $k = 10$ Patienten eine vollständige Remission (Heilung).
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Berechnen Sie die Erfolgsrate. <br><br>
+  Erfolgsrate = ", fitb(0.25, tol = 0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(a) Die Erfolgsrate wird berechnet als:
+
+	$$\hat{p} = \frac{k}{n} = \frac{10}{40} = 0.25$$
+
+	Die Erfolgsrate beträgt **0.25**.
+
+:::
+
+---
+
+::: {.webex .webex-box}
+(b) Welches Konfidenzintervall für die Erfolgsrate würden Sie hier angeben und warum?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(b) **Wilson Konfidenzintervall** <br><br>
+	**Begründen:**
+	Da es sehr nahe am nominalen Niveau von 95% ist auch bei kleineren Stichproben. Wald hat oft schlechte Coverage, 
+	Clopper-Pearson ist zu konservativ, Agresti-Coull eignet sich noch gut aber hat im Vergleich zu Wilson meist ein etwas 
+	breiteres Intervall (leicht konservativ).
+
+
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("c) Das 95% Wilson Konfidenzintervall ist [0.142, 0.402]. <br>
+  Sie möchten die Nullhypothese $H_0: p = 0.3$ zum Niveau $\\alpha=5\\%$ untersuchen. <br><br>
+  Welche Aussagen sind richtig? <br><br>")
+
+cat("**1.** Da 0.3 außerhalb vom Konfidenzintervall liegt, wird die Nullhypothese beibehalten.<br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**2.** Die Nullhypothese kann zum Niveau α=0.03 abgelehnt werden.<br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**3.** Da 0.3 außerhalb vom Konfidenzintervall liegt, wird die Nullhypothese abgelehnt.<br>")
+	cat(mcq(c( answer = "Falsch", "Richtig")), "<br><br>")
+
+cat("**4.** Da 0.3 innerhalb vom Konfidenzintervall liegt, wird die Nullhypothese beibehalten.<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+
+(c) **Antwort 4) ist richtig.** Die Nullhypothese kann auf dem 5% Niveau nicht abgelehnt werden.
+:::

@@ -290,8 +290,8 @@ Gegeben ist die Matrix $A = \begin{pmatrix} 4 & 2 & -1 \\ -2 & 0 & 0 \\ -1 & 1 &
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-  "$A^{T} = \\begin{pmatrix} 4 & 2 & -1 \\\\\\ -2 & 0 & 0 \\\\\\ -1 & 1 & 2 \\end{pmatrix}$",
-  answer = "$A^{T} = \\begin{pmatrix} 4 & -2 & -1 \\\\\\ 2 & 0 & 1 \\\\\\ -1 & 0 & 2 \\end{pmatrix}$",
+  "$A^{T} = \\begin{pmatrix} 4 & 2 & -1 \\\\\\ -2 & 0 & 0 \\\\\\ -1 & 1 & 2 \\end{pmatrix}$<br><br>",
+  answer = "$A^{T} = \\begin{pmatrix} 4 & -2 & -1 \\\\\\ 2 & 0 & 1 \\\\\\ -1 & 0 & 2 \\end{pmatrix}$<br><br>",
   "$A^{T} = \\begin{pmatrix} 4 & -1 & -2 \\\\\\ 2 & 0 & 0 \\\\\\ -1 & 2 & 1 \\end{pmatrix}$"
 )
 cat("(a) Berechnen Sie die transponierte Matrix $A^{T}$.", longmcq(opts))
