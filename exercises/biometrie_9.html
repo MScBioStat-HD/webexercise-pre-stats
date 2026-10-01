@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3e9b1289f5f353c49b617ce48ad2bc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-55617497126496852ff9f5a59253c640.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../include/webex.css">
 </head>
@@ -257,8 +286,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#logistische-regression" id="toc-logistische-regression" class="nav-link active" data-scroll-target="#logistische-regression">Logistische Regression</a>
+  <ul class="collapse">
+  <li><a href="#aufgabe-1" id="toc-aufgabe-1" class="nav-link" data-scroll-target="#aufgabe-1">Aufgabe 1</a></li>
+  <li><a href="#aufgabe-2" id="toc-aufgabe-2" class="nav-link" data-scroll-target="#aufgabe-2">Aufgabe 2</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -282,8 +321,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="logistische-regression" class="level2">
+<h2 class="anchored" data-anchor-id="logistische-regression">Logistische Regression</h2>
+<section id="aufgabe-1" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h3>
+<p>Ein Team von Endokrinologen möchte untersuchen, ob der HbA1c-Wert [%] bei Patienten mit Typ-2-Diabetes einen signifikanten Einfluss auf die Entstehung einer diabetischen Retinopathie (Netzhautschädigung) hat. Es wurden Daten von 400 Patienten erhoben.</p>
+<div class="webex-check webex-box">
+<ol type="a">
+<li>Wie lautet die Zielgröße? <br> Antwort: <input class="webex-solveme nospaces ignorecase" size="24" data-answer="[&quot;diabetische Retinopathie&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><strong>Zielgröße (abhängige Variable):</strong> Diabetische Retinopathie</li>
+</ol>
+<p>Dies ist ein <strong>binärer Endpunkt</strong> mit zwei möglichen Ausprägungen (0 = keine Retinopathie, 1 = Retinopathie vorhanden).</p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="2" type="a">
+<li>Benennen Sie die Einflussgröße (unabhängige Variable). <br> Antwort: <input class="webex-solveme nospaces ignorecase" size="10" data-answer="[&quot;HbA1c Wert&quot;]"></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li><strong>Einflussgröße (unabhängige Variable):</strong> HbA1c-Wert [%]</li>
+</ol>
+<p>Dies ist die kontinuierliche Variable, die den Blutzuckerspiegel widerspiegelt und einen Einfluss auf die Entstehung einer Retinopathie haben kann.</p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<ol start="3" type="a">
+<li>Schreiben Sie die Gleichung des logistischen Regressionsmodells auf.
+<div id="radio_RKHDJLWBWH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RKHDJLWBWH" value=""> <span><span class="math inline">\(\log(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_RKHDJLWBWH" value=""> <span><span class="math inline">\(P(Y=1) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_RKHDJLWBWH" value="answer"> <span><span class="math inline">\(\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_RKHDJLWBWH" value=""> <span><span class="math inline">\(P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}\)</span></span></label>
+</div></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="3" type="a">
+<li>Die korrekte Gleichung des logistischen Regressionsmodells lautet:</li>
+</ol>
+<p><span class="math display">\[\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\]</span></p>
+<p>oder in der äquivalenten Form:</p>
+<p><span class="math display">\[\ln\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 \cdot X\]</span></p>
+<p>wobei: - <span class="math inline">\(p\)</span> = Wahrscheinlichkeit für das Auftreten der diabetischen Retinopathie - <span class="math inline">\(X\)</span> = HbA1c-Wert - <span class="math inline">\(\beta_0\)</span> = Intercept - <span class="math inline">\(\beta_1\)</span> = Regressionskoeffizient (Steigung)</p>
+<p>Die alternative Form mit der logistischen Funktion ist: <span class="math display">\[P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-2" class="level3">
+<h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
+<p>Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br> [-] Intercept: <span class="math inline">\(\beta_0 = -5.2\)</span><br> [-] Regressionskoeffizient für <span class="math inline">\(\text{HbA1c}\beta_0\)</span></p>
+<div class="webex webex-box">
+<ol type="a">
+<li>Wie lautet nun die Gleichung des logistischen Regressionsmodells? Schreiben Sie die Logit-Funktion als auch die Wahrscheinlichkeitsfunktion auf.</li>
+</ol>
+</div>
+<div class="webex webex-box">
+<ol start="2" type="a">
+<li>Interpretieren Sie den Regressionskoeffizienten <span class="math inline">\(\beta_1\)</span>. <br> Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet.</li>
+</ol>
+</div>
+<div class="webex webex-box">
+<ol start="3" type="a">
+<li>Berechnen Sie die Wahrscheinlichkeit p eine diabetische Retinopathie zu entwickeln für eine Person mit einem <strong>HbA1c</strong> Wert von 10%.</li>
+</ol>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script>
