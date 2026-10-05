@@ -115,7 +115,7 @@ c) Wir haben hier ein Simpson-Paradoxon vorliegen. Obwohl Therapie A jeweils in 
 
 ::: {.webex .webex-box}
 d) Betrachtet man jetzt eine adjustierte Analyse (Therapie A versus Therapie B in der Gesamtstichprobe adjustiert für die Stratifizierungsvariable) über den Mantel-Haenszel-Test ergibt sich ein adjustiertes Odds Ratio (OR_MH) von $2.25$ und eine Teststatistik von $1.169$. 
-	Der kritische Wert für $\alpha = 5\%$ und $df = 1$ liegt bei $3.84$. <br><br>Wie interpretieren Sie dieses Ergebnis?
+	Der kritische Wert für $\alpha$ 5% und $df = 1$ liegt bei $3.84$. <br><br>Wie interpretieren Sie dieses Ergebnis?
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
