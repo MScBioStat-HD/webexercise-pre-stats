@@ -16,7 +16,7 @@ opts <- c(
   "Nur 1, 3, 5 und 6",
   "1, 2, 3, 4, 5 und 6"
 )
-cat("a) Welche der folgenden Variablen sind kategorielle (qualitative) Variablen? (Wählen Sie die richtige Kombination aus)<br><br>
+cat("a) Welche der folgenden Variablen sind kategorielle (qualitative) Variablen? (Wählen Sie die richtige Kombination aus)<br>
 	1. Blutgruppe (A, B, AB, 0)
 	2. Systolischer Blutdruck (gemessen in mmHg)
 	3. Raucherstatus (Nichtraucher, Gelegenheitsraucher, starker Raucher)
