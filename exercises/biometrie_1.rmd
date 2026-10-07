@@ -74,7 +74,7 @@ cat("Anteil = ", fitb(0.75, tol = 0.01))
 opts <- c(
     "$[0.70, 0.80]$",
     "$[0.73, 0.79]$",
-    answer = "$[0.72, 0.77]$"
+    answer = "$[0.72, 0.78]$"
 )
 cat("(b) Wie lautet das approximative, zweiseitige 95%-Konfidenzintervall für den Anteil?",
     longmcq(opts))
