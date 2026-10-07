@@ -14,18 +14,18 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - section: "Statistik Vorkurs"
-          href: exercises/precourse.rmd
-          contents:
-            - exercises/block1.rmd
-            - exercises/block2.rmd
-            - exercises/block3.rmd
-            - exercises/block4.rmd
-            - exercises/block5.rmd
-            - exercises/block6.rmd
-            - exercises/block7.rmd
-            - exercises/block8.rmd
-            - exercises/final1_5.rmd
+     #   - section: "Statistik Vorkurs"
+     #     href: exercises/precourse.rmd
+     #     contents:
+     #      - exercises/block1.rmd
+    #      - exercises/block2.rmd
+      #      - exercises/block3.rmd
+     #       - exercises/block4.rmd
+     #       - exercises/block5.rmd
+      #      - exercises/block6.rmd
+     #       - exercises/block7.rmd
+     #       - exercises/block8.rmd
+      #      - exercises/final1_5.rmd
         - section: "Biometrie I"
           href: exercises/biometrie_I.rmd
           contents:
