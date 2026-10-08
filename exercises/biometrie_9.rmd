@@ -95,7 +95,7 @@ $$p = \frac{1}{1 + \exp(-(-5.2 + 0.4 \cdot HbA1c))}$$
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) Interpretieren Sie den Regressionskoeffizienten $\\beta_1$. Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br>
+cat("(b) Interpretieren Sie den Regressionskoeffizienten \\(\\beta_1\\). Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br>
     <small style=\"color: gray;\">(den Wert auf zwei Nachkommastellen runden)</small><br>
     <br> OR = ", fitb(1.49, tol = 0.01))
 ```
