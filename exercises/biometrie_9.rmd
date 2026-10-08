@@ -46,7 +46,7 @@ opts <- c(
   "$\\log(p) = \\beta_0 + \\beta_1 \\cdot X$",
   "$P(Y=1) = \\beta_0 + \\beta_1 \\cdot X$",
   answer = "$\\text{Logit}(p) = \\beta_0 + \\beta_1 \\cdot X$",
-  "$P(Y=1|X) = \\frac{1}{1 + e^{-(\\beta_0 + \\beta_1 \\cdot X)}}$"
+  "$P(Y=1|X) = \\frac{4}{1 + e^{(\\beta_0 + \\beta_1 \\cdot X)}}$"
 )
 cat("(c) Schreiben Sie die Gleichung des logistischen Regressionsmodells auf.",
   longmcq(opts))
@@ -63,13 +63,11 @@ oder in der äquivalenten Form:
 $$\ln\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 \cdot X$$
 
 wobei:
+
 - $p$ = Wahrscheinlichkeit für das Auftreten der diabetischen Retinopathie
 - $X$ = HbA1c-Wert
 - $\beta_0$ = Intercept
 - $\beta_1$ = Regressionskoeffizient (Steigung)
-
-Die alternative Form mit der logistischen Funktion ist:
-$$P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}$$
 
 :::
 
@@ -77,20 +75,46 @@ $$P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}$$
 ### Aufgabe 2
 
 Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br>
-[-] Intercept: $\beta_0 = -5.2$<br>
-[-] Regressionskoeffizient für $\text{HbA1c}\beta_0$ 
+- Intercept: $\beta_0 = -5.2$<br>
+- Regressionskoeffizient für $\text{HbA1c}\beta_0$ 
 
 ::: {.webex .webex-box}
 a) Wie lautet nun die Gleichung des logistischen Regressionsmodells? 
 	Schreiben Sie die Logit-Funktion als auch die Wahrscheinlichkeitsfunktion auf.
 :::
 
-::: {.webex .webex-box}
-b) Interpretieren Sie den Regressionskoeffizienten $\beta_1$. <br>
-	Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet.
+::: {.callout-tip collapse="true" title="Lösung"}
+Die Gleichung des logistischen Regressionsmodells lautet:
+
+$$\text{Logit}(p) = -5.2 + 0.4 \cdot HbA1c$$
+
+Die Wahrscheinlichkeitsfunktion ist:
+
+$$p = \\frac{1}{1 + exp(-(-5.2 + 0.4 \\cdot HbA1c))} $$
 :::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) Interpretieren Sie den Regressionskoeffizienten $\beta_1$. <br>
+	Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br>
+  Antwort: ", fitb("1.49", ignore_case = TRUE))
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Odds Ratio: $$ OR = exp(\beta_1) = exp(0.4) = 1.49 $$
+
+Interpretation: Pro Anstieg des HbA1c Wertes um einen Prozentpunkt steigt die Odds (die Chance) eine diabetische Retinopathie zu entwickeln um den Faktor 1.49 (also um 49%).
+:::
+
 
 ::: {.webex .webex-box}
 c) Berechnen Sie die Wahrscheinlichkeit p eine diabetische Retinopathie zu entwickeln 
 	für eine Person mit einem **HbA1c** Wert von 10%.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+HbA1c=10% in die Wahrscheinlichkeitsfunktion einsetzen ergibt: 
+
+$$p = \\frac{1}{1 + exp(-(-5.2 + 0.4 \\cdot 10))} = \\frac{1}{1 + exp(1.2)} = 0.232$$
+
 :::
