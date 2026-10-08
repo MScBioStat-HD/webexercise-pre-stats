@@ -22,7 +22,7 @@ cat("**1.** Die Reaktionszeit in einer computergestützten Aufgabe (gemessen in 
 cat("**2.** Die subjektive Schmerzintensität (gemessen auf einer 5-stufigen Likert-Skala von $1 =$ „kein Schmerz“ bis $5 =$ „stärkster vorstellbarer Schmerz“).<br>")
 	cat(mcq(c("Nein", answer = "Ja")), "<br><br>")
 
-cat("**3.** Herzfrequenz (Schläge pro Minute).<br>")
+cat("**3.** Hypertonie (1=Ja, 0=Nein).<br>")
 	cat(mcq(c( answer = "Nein", "Ja")), "<br><br>")
 
 cat("**4.** Tumorstadium (Stadium I, II, III, IV).<br>")
