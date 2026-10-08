@@ -45,7 +45,7 @@ Dabei wird nach 1 Woche die Wundheilung auf einer 4-stufigen Likert-Skala unters
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(a) Berechnen Sie den Mann-Whitney Effekt. Interpretieren Sie das Ergebnis.<br><br>
+cat("(a) Berechnen Sie den Mann-Whitney Effekt (Runden auf drei Nachkommastellen). Interpretieren Sie das Ergebnis.<br><br>
   Lösung = ", fitb(0.579, tol = 0.01))
 ```
 :::
