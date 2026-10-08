@@ -76,7 +76,7 @@ wobei:
 
 Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br>
 - Intercept: $\beta_0 = -5.2$<br>
-- Regressionskoeffizient für $\text{HbA1c}\beta_0$ 
+- Regressionskoeffizient für $\text{HbA1c}$ ist $\beta_1 = 0.4$ 
 
 ::: {.webex .webex-box}
 a) Wie lautet nun die Gleichung des logistischen Regressionsmodells? 
@@ -95,7 +95,7 @@ $$p = \frac{1}{1 + \exp(-(-5.2 + 0.4 \cdot HbA1c))}$$
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) Interpretieren Sie den Regressionskoeffizienten $\\beta_1$. Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br>
+cat("(b) Interpretieren Sie den Regressionskoeffizienten $\beta_1$. Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br>
     <small style=\"color: gray;\">(den Wert auf zwei Nachkommastellen runden)</small><br>
     <br> OR = ", fitb(1.49, tol = 0.01))
 ```
@@ -119,6 +119,6 @@ cat("(c) Berechnen Sie die Wahrscheinlichkeit p eine diabetische Retinopathie zu
 ::: {.callout-tip collapse="true" title="Lösung"}
 HbA1c=10% in die Wahrscheinlichkeitsfunktion einsetzen ergibt: 
 
-$$p = \frac{1}{1 + exp(-(-5.2 + 0.4 \cdot 10))} = \frac{1}{1 + exp(1.2)} = 0.232$$
+$$p = \frac{1}{1 + \exp(-(-5.2 + 0.4 \cdot 10))} = \frac{1}{1 + exp(1.2)} = 0.232$$
 
 :::
