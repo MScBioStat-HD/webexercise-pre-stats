@@ -312,8 +312,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li>Schreiben Sie die Gleichung des logistischen Regressionsmodells auf.
-<div id="radio_UFPFDCJWSL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UFPFDCJWSL" value=""> <span><span class="math inline">\(\log(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_UFPFDCJWSL" value=""> <span><span class="math inline">\(P(Y=1) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_UFPFDCJWSL" value="answer"> <span><span class="math inline">\(\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_UFPFDCJWSL" value=""> <span><span class="math inline">\(P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}\)</span></span></label>
+<div id="radio_HGPEGYUQRZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HGPEGYUQRZ" value=""> <span><span class="math inline">\(\log(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HGPEGYUQRZ" value=""> <span><span class="math inline">\(P(Y=1) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HGPEGYUQRZ" value="answer"> <span><span class="math inline">\(\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_HGPEGYUQRZ" value=""> <span><span class="math inline">\(P(Y=1|X) = \frac{4}{1 + e^{(\beta_0 + \beta_1 \cdot X)}}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -335,29 +335,85 @@ window.Quarto = {
 <p><span class="math display">\[\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\]</span></p>
 <p>oder in der äquivalenten Form:</p>
 <p><span class="math display">\[\ln\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 \cdot X\]</span></p>
-<p>wobei: - <span class="math inline">\(p\)</span> = Wahrscheinlichkeit für das Auftreten der diabetischen Retinopathie - <span class="math inline">\(X\)</span> = HbA1c-Wert - <span class="math inline">\(\beta_0\)</span> = Intercept - <span class="math inline">\(\beta_1\)</span> = Regressionskoeffizient (Steigung)</p>
-<p>Die alternative Form mit der logistischen Funktion ist: <span class="math display">\[P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot X)}}\]</span></p>
+<p>wobei:</p>
+<ul>
+<li><span class="math inline">\(p\)</span> = Wahrscheinlichkeit für das Auftreten der diabetischen Retinopathie</li>
+<li><span class="math inline">\(X\)</span> = HbA1c-Wert</li>
+<li><span class="math inline">\(\beta_0\)</span> = Intercept</li>
+<li><span class="math inline">\(\beta_1\)</span> = Regressionskoeffizient (Steigung)</li>
+</ul>
 </div>
 </div>
 </div>
 </section>
 <section id="aufgabe-2" class="level3">
 <h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
-<p>Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br> [-] Intercept: <span class="math inline">\(\beta_0 = -5.2\)</span><br> [-] Regressionskoeffizient für <span class="math inline">\(\text{HbA1c}\beta_0\)</span></p>
+<p>Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br> - Intercept: <span class="math inline">\(\beta_0 = -5.2\)</span><br> - Regressionskoeffizient für <span class="math inline">\(\text{HbA1c}\beta_0\)</span></p>
 <div class="webex webex-box">
 <ol type="a">
 <li>Wie lautet nun die Gleichung des logistischen Regressionsmodells? Schreiben Sie die Logit-Funktion als auch die Wahrscheinlichkeitsfunktion auf.</li>
 </ol>
 </div>
-<div class="webex webex-box">
-<ol start="2" type="a">
-<li>Interpretieren Sie den Regressionskoeffizienten <span class="math inline">\(\beta_1\)</span>. <br> Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet.</li>
-</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Die Gleichung des logistischen Regressionsmodells lautet:</p>
+<p><span class="math display">\[\text{Logit}(p) = -5.2 + 0.4 \cdot HbA1c\]</span></p>
+<p>Die Wahrscheinlichkeitsfunktion ist:</p>
+<p><span class="math display">\[p = \\frac{1}{1 + exp(-(-5.2 + 0.4 \\cdot HbA1c))} \]</span></p>
+</div>
+</div>
+</div>
+<div class="webex-check webex-box">
+<p>cat(“(b) Interpretieren Sie den Regressionskoeffizienten <span class="math inline">\(\beta_1\)</span>. <br> Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br> Antwort:”, fitb(“1.49”, ignore_case = TRUE))</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Odds Ratio: <span class="math display">\[ OR = exp(\beta_1) = exp(0.4) = 1.49 \]</span></p>
+<p>Interpretation: Pro Anstieg des HbA1c Wertes um einen Prozentpunkt steigt die Odds (die Chance) eine diabetische Retinopathie zu entwickeln um den Faktor 1.49 (also um 49%).</p>
+</div>
+</div>
 </div>
 <div class="webex webex-box">
 <ol start="3" type="a">
 <li>Berechnen Sie die Wahrscheinlichkeit p eine diabetische Retinopathie zu entwickeln für eine Person mit einem <strong>HbA1c</strong> Wert von 10%.</li>
 </ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>HbA1c=10% in die Wahrscheinlichkeitsfunktion einsetzen ergibt:</p>
+<p><span class="math display">\[p = \\frac{1}{1 + exp(-(-5.2 + 0.4 \\cdot 10))} = \\frac{1}{1 + exp(1.2)} = 0.232\]</span></p>
+</div>
+</div>
 </div>
 
 
