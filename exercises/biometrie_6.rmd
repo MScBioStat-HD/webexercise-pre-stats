@@ -14,7 +14,7 @@ library(webexercises)
 ```{r, results='asis', echo=FALSE}
 	cat("(a) Welche der folgenden Konfidenzintervalle beruhen auf Approximation? <br><br> ")
 	cat("**1.** Agresti-Coull<br>")
-	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
 
 	cat("**2.** Clopper-Pearson<br>")
 	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
