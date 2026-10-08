@@ -82,9 +82,7 @@ a) Erfolgsraten stratifiziert nach Verlauf
 cat("b) Berechnen Sie die Gesamterfolgsrate (aggregierte/gepoolte Daten) für Therapie A und Therapie B über alle Patienten hinweg. 
 	Welche Therapie scheint nun insgesamt besser zu sein? <br><br>
 	 <small style=\"color: gray;\"><strong>Hinweis:</strong> Runden Sie das Ergebnis wenn nötig, auf drei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.246$)</small> <br><br>
-  <b>Leichte Verläufe:</b> <br>
-  Therapie A: ", fitb(0.9, tol = 0.01), " <br>
-  Therapie B: ", fitb(0.8, tol = 0.01), " <br><br>
+
 	**Gesamterfolgsrate**<br><br>
   Therapie A: ",  fitb(0.264, tol = 0.01), " <br>
   Therapie B: ",  fitb(0.736, tol = 0.01))
