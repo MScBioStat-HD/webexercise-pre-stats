@@ -10,7 +10,7 @@ library(webexercises)
 
 ### Aufgabe 1
 
-Ein Team von Endokrinologen möchte untersuchen, ob der HbA1c-Wert [%] bei Patienten mit Typ-2-Diabetes einen signifikanten Einfluss auf die Entstehung einer diabetischen Retinopathie (Netzhautschädigung) hat. Es wurden Daten von 400 Patienten erhoben.
+Ein Team von Endokrinologen möchte untersuchen, ob der HbA1c Wert [%] bei Patienten mit Typ-2-Diabetes einen signifikanten Einfluss auf die Entstehung einer diabetischen Retinopathie (Netzhautschädigung) hat. Es wurden Daten von 400 Patienten erhoben.
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -29,12 +29,12 @@ Dies ist ein **binärer Endpunkt** mit zwei möglichen Ausprägungen (0 = keine 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 cat("(b) Benennen Sie die Einflussgröße (unabhängige Variable). <br>
-  Antwort: ", fitb("HbA1c Wert", ignore_case = TRUE))
+  Antwort: ", fitb("HbA1c", "HbA1c Wert", "hba1c", "HbA1c-Wert", ignore_case = TRUE))
 ```
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(b) **Einflussgröße (unabhängige Variable):** HbA1c-Wert [%]
+(b) **Einflussgröße (unabhängige Variable):** HbA1c Wert
 
 Dies ist die kontinuierliche Variable, die den Blutzuckerspiegel widerspiegelt und einen Einfluss auf die Entstehung einer Retinopathie haben kann.
 
