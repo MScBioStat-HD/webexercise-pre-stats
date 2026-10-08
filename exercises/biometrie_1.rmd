@@ -96,7 +96,7 @@ cat("(b) Wie lautet das approximative, zweiseitige 95%-Konfidenzintervall für d
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(c) Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 77% vermutet. <br>
+(c) Bei 860 beobachteten Kindern wird der wahre Anteil zwischen 72% und 78% vermutet. <br>
 	Durch die geringe Breite des Konfidenzintervalls ist der Informationsgehalt groß. <br>
 	Der Wert 70% liegt insbesondere NICHT im Konfidenzintervall, und somit ist der wahre Wert vermutlich größer 
 	als dieser Wert.
