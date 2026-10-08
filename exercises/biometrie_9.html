@@ -312,8 +312,8 @@ window.Quarto = {
 <div class="webex-check webex-box">
 <ol start="3" type="a">
 <li>Schreiben Sie die Gleichung des logistischen Regressionsmodells auf.
-<div id="radio_KIRALYXWBD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KIRALYXWBD" value=""> <span><span class="math inline">\(\log(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KIRALYXWBD" value=""> <span><span class="math inline">\(P(Y=1) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KIRALYXWBD" value="answer"> <span><span class="math inline">\(\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_KIRALYXWBD" value=""> <span><span class="math inline">\(P(Y=1|X) = \frac{4}{1 + e^{(\beta_0 + \beta_1 \cdot X)}}\)</span></span></label>
+<div id="radio_VZPZIIWRPO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VZPZIIWRPO" value=""> <span><span class="math inline">\(\log(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VZPZIIWRPO" value=""> <span><span class="math inline">\(P(Y=1) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VZPZIIWRPO" value="answer"> <span><span class="math inline">\(\text{Logit}(p) = \beta_0 + \beta_1 \cdot X\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_VZPZIIWRPO" value=""> <span><span class="math inline">\(P(Y=1|X) = \frac{4}{1 + e^{(\beta_0 + \beta_1 \cdot X)}}\)</span></span></label>
 </div></li>
 </ol>
 </div>
@@ -348,7 +348,7 @@ window.Quarto = {
 </section>
 <section id="aufgabe-2" class="level3">
 <h3 class="anchored" data-anchor-id="aufgabe-2">Aufgabe 2</h3>
-<p>Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br> - Intercept: <span class="math inline">\(\beta_0 = -5.2\)</span><br> - Regressionskoeffizient für <span class="math inline">\(\text{HbA1c}\beta_0\)</span></p>
+<p>Sie erhalten zur oben genannten Fragestellung folgendes Ergebnis: <br> - Intercept: <span class="math inline">\(\beta_0 = -5.2\)</span><br> - Regressionskoeffizient für <span class="math inline">\(\text{HbA1c}\)</span> ist <span class="math inline">\(\beta_1 = 0.4\)</span></p>
 <div class="webex webex-box">
 <ol type="a">
 <li>Wie lautet nun die Gleichung des logistischen Regressionsmodells? Schreiben Sie die Logit-Funktion als auch die Wahrscheinlichkeitsfunktion auf.</li>
@@ -375,7 +375,7 @@ window.Quarto = {
 </div>
 <div class="webex-check webex-box">
 <ol start="2" type="a">
-<li>Interpretieren Sie den Regressionskoeffizienten <span class="math inline">\(\beta_1\)</span>. Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br> <small style="color: gray;">(den Wert auf zwei Nachkommastellen runden)</small><br> <br> OR = <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;1.49&quot;]"></li>
+<li>Interpretieren Sie den Regressionskoeffizienten <span class="math inline">\(eta_1\)</span>. Berechnen Sie dazu das Odds Ratio (OR) und erklären Sie, was dieser Wert bedeutet. <br> <small style="color: gray;">(den Wert auf zwei Nachkommastellen runden)</small><br> <br> OR = <input class="webex-solveme nospaces" data-tol="0.01" size="4" data-answer="[&quot;1.49&quot;]"></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Lösung">
@@ -413,7 +413,7 @@ window.Quarto = {
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>HbA1c=10% in die Wahrscheinlichkeitsfunktion einsetzen ergibt:</p>
-<p><span class="math display">\[p = \frac{1}{1 + exp(-(-5.2 + 0.4 \cdot 10))} = \frac{1}{1 + exp(1.2)} = 0.232\]</span></p>
+<p><span class="math display">\[p = \frac{1}{1 + \exp(-(-5.2 + 0.4 \cdot 10))} = \frac{1}{1 + exp(1.2)} = 0.232\]</span></p>
 </div>
 </div>
 </div>
