@@ -51,7 +51,7 @@ wenden eine Varianzanalyse an, um dies statistisch zu untersuchen.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-(a) Antwort: Gruppenvariable
+(a) Antwort: Gruppenvariable (M1, M2, M3)
 :::
 
 ::: {.webex .webex-box}
