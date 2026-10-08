@@ -28,7 +28,7 @@ Bei **10 Studierenden** wurde die **Lernzeit (in Stunden)** für eine Klausur so
 (a) 
 	**Einflussgröße (unabhängige Variable):** Lernzeit (X) <br>
 	**Zielgröße (abhängige Variable):** Punktzahl (Y)<br>
-	Die Lernzeit beeinflusst die erreichter Punktzahl, nicht umgekehrt.
+	Die Lernzeit beeinflusst die erreichte Punktzahl, nicht umgekehrt.
 
 :::
 
@@ -46,7 +46,6 @@ Bei **10 Studierenden** wurde die **Lernzeit (in Stunden)** für eine Klausur so
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 cat("(c) Berechnen Sie den Korrelationskoeffizienten nach Pearson (Die Kovarianz ist $s_{xy} = 33.7$). <br>
-  Geben Sie das Ergebnis auf zwei Nachkommastellen an.<br>
 	<small style=\"color: gray;\">(den Wert auf zwei Nachkommastellen runden)</small><br>
 	<br> $r =$ ", fitb(0.94, tol = 0.01))
 ```
