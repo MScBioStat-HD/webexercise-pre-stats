@@ -41,7 +41,7 @@ cat("(a) Für welche Zielvariablen eignet sich eine ANOVA?<br><br>")
 
 ### Aufgabe 2
 
-Sie wollen untersuchen, ob es einen Unterschied zwischen drei verschiedene Medikamenten (M1, M2, M3) 
+Sie wollen untersuchen, ob es einen Unterschied zwischen drei verschiedenen Medikamenten (M1, M2, M3) 
 auf den mittleren abendlichen Cortisol-Spiegel bei Personen mit Schlafstörungen gibt. 
 Es liegen Ihnen Daten von jeweils 30 Probanden pro Gruppe vor und Sie 
 wenden eine Varianzanalyse an, um dies statistisch zu untersuchen.
