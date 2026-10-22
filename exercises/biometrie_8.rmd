@@ -141,9 +141,6 @@ cat("(a) Welche der folgenden Aussagen sind korrekt?<br><br>")
 	cat("**1.** Die Korrelation ist ein Maß für die Stärke der Übereinstimmung von zwei Merkmalen.<br>")
 	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
 
-	cat("**2.** Der Bland Altman Plot eignet sich die Übereinstimmung von zwei Merkmalen zu veranschaulichen.<br>")
-	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
-
 	cat("**3.** Ein kausaler Zusammenhang (Ursache-Wirkungs-Beziehung) ist durch eine Korrelationsanalyse nachweisbar.<br>")
 	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
 
@@ -154,5 +151,6 @@ cat("(a) Welche der folgenden Aussagen sind korrekt?<br><br>")
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 
-(h) **Richtig: 2 + 4**
+(h) **Richtig: 3**
+Die Korrelation misst nicht die Stärke der Übereinstimmung, sondern des Zusammenhangs.
 :::
