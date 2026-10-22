@@ -78,9 +78,9 @@ b) Die Teststatistik ist kleiner dem kritischen Wert d.h. $W_N = 0.852 < 1.96$.
 :::
 
 ::: {.webex .webex-box}
-c) Hätten Sie hier auch parametrisch testen können? Begründen Sie Ihre Antwort.
+c) Hätten Sie hier auch einen t-Test verwenden können, um die Gruppen zu vergleichen? Begründen Sie Ihre Antwort.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-c) Ein parametrischer Test eignet sich hier nicht, da das Outcome qualitativ ist (der Score-Wert steht nur für eine Kategorie; kein metrisches Outcome). 
+c) Ein t-Test eignet sich hier per se nicht, da das Outcome qualitativ ist (der Score-Wert steht nur für eine Kategorie; kein metrisches Outcome). 
 :::
