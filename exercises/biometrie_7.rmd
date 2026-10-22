@@ -16,7 +16,7 @@ cat("a) Ein Forscher möchte die Wirksamkeit einer neuen Therapie untersuchen.
 	(z. B. Mann-Whitney-U-Test) vorsehen?
  <br><br>")
 
-cat("**1.** Die Reaktionszeit in einer computergestützten Aufgabe (gemessen in Millisekunden).<br>")
+cat("**1.** Die Reaktionszeit in einer computergestützten Aufgabe (gemessen in Millisekunden), normalverteilt.<br>")
 	cat(mcq(c( answer = "Nein", "Ja")), "<br><br>")
 
 cat("**2.** Die subjektive Schmerzintensität (gemessen auf einer 5-stufigen Likert-Skala von $1 =$ „kein Schmerz“ bis $5 =$ „stärkster vorstellbarer Schmerz“).<br>")
