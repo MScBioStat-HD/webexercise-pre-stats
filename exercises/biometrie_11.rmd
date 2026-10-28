@@ -37,3 +37,14 @@ cat("**5.** Ein 95%-Credible-Intervall enthält 95% der posterioren Wahrscheinli
 ::: {.callout-tip collapse="true" title="Lösung"}
 (a) **Richtig: Nr. 2 und 5** <br><br> **Erklärung:** Die Interpretation ist unterschiedlich. Das Credible-Intervall erlaubt eine direkte probabilistische Aussage über den Parameter auf Basis der Posterior-Verteilung. Die 95%-Überdeckungswahrscheinlichkeit des Konfidenzintervallverfahrens bezieht sich dagegen auf wiederholte Stichproben.
 :::
+
+### Aufgabe 2
+
+In einer Studie werden zwei Medikamente im Hinblick auf die Wahrscheinlichkeit einen Schlaganfall zu erleiden verglichen. Sie betrachten den Unterschied in den Anteilen und sehen ein 95% Credible Intervall von $[-0.1,0.3]$.
+
+::: {.webex .webex-box}
+Interpretieren Sie, was das Ergebnis im Hinblick auf den Gruppenvergleich bedeutet.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Mit einer Wahrscheinlichkeit von 95% liegt die Differenz in den Anteilen innerhalb von dem Intervall $[-0.1, 0.3]$. Das Intervall enthält die 0. Somit liegt kein eindeutiger Unterschied zwischen den Medikamenten in den Anteilen vor.
