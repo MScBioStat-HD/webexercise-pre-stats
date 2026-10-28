@@ -1,5 +1,5 @@
 ---
-title: Block 11 Bayesianische Statistik
+title: Block 11
 ---
 
 ```{r, echo = FALSE, results='asis'}
