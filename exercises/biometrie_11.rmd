@@ -56,7 +56,7 @@ Aus einer Pilotstudie mit n=20 Probanden beobachten Sie einen Anteil für Therap
 
 ::: {.webex .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(a) Wie lautet der Beta Prior aus den Pilotdaten für $\theta$? <br> <br>")
+cat("(a) Wie lautet der Beta Prior aus den Pilotdaten für $\\theta$? <br> <br>")
 cat("Beta (", fitb("12"), ", ", fitb("8"), ")")
 ```
 :::
@@ -67,7 +67,7 @@ Da der Anteil 0.6 ist wurden 12 Erfolge beobachtet. Somit ist der Prior Beta(12,
 
 ::: {.webex .webex-box}
 ```{r, results='asis', echo=FALSE}
-cat("(b) In der Folgestudie haben Sie 40 Probanden, wo bei 15 ein Therpieerfolg beobachtet wird. Wie lautet die Posterior Verteilung für $\theta$? <br> <br>")
+cat("(b) In der Folgestudie haben Sie 40 Probanden, wo bei 15 ein Therpieerfolg beobachtet wird. Wie lautet die Posterior Verteilung für $\\theta$? <br> <br>")
 cat("Beta (", fitb("27"), ", ", fitb("33"), ")")
 ```
 :::
