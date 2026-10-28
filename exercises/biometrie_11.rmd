@@ -48,3 +48,19 @@ Interpretieren Sie, was das Ergebnis im Hinblick auf den Gruppenvergleich bedeut
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 Mit einer Wahrscheinlichkeit von 95% liegt die Differenz in den Anteilen innerhalb von dem Intervall $[-0.1, 0.3]$. Das Intervall enthält die 0. Somit liegt kein eindeutiger Unterschied zwischen den Medikamenten in den Anteilen vor.
+:::
+
+### Aufgabe 3
+
+Aus einer Pilotstudie mit n=20 Probanden beobachten Sie einen Anteil für Therapieerfolg $\theta$ von 0.6. Diese Daten nutzen Sie als Prior für die Folgestudie.
+
+::: {.webex .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(a) Wie lautet der Beta Prior aus den Pilotdaten für $\theta$? <br> <br>")
+cat("Beta (", fitb("12"), ", ", fitb("8"), ")")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Da der Anteil 0.6 ist wurden 12 Erfolge beobachtet. Somit ist der Prior Beta(12, 8).
+:::
