@@ -1,0 +1,39 @@
+---
+title: Block 11 Bayesianische Statistik
+---
+
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## Bayesianische Statistik
+
+<small style="color: gray;">**Hinweis:** Runden Sie das Ergebnis wenn nötig, auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
+
+### Aufgabe 1
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+	cat("Welche Aussagen sind in Bezug auf das 95%-Credible-Intervall und das 95%-Konfidenzintervall korrekt? <br><br> ")
+
+	cat("**1.** Beide Intervalle bedeuten, dass der wahre Parameter mit einer Wahrscheinlichkeit von 95 % innerhalb des konkret berechneten Intervalls liegt. <br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**2.** Ein 95%-Konfidenzintervall stammt aus einem Verfahren, das bei wiederholten Stichproben in 95 % der Fälle den wahren Parameter überdeckt. <br>")
+	cat(mcq(c( "Falsch", answer = "Richtig")), "<br><br>")
+
+	cat("**3.** Ein 95%-Konfidenzintervall verwendet einen Prior, während ein 95%-Credible-Intervall ausschließlich auf den beobachteten Daten basiert. <br>")
+	cat(mcq(c(answer = "Falsch",  "Richtig")), "<br><br>")
+
+	cat("**4.** Beide Intervalle haben dieselbe Interpretation, unterscheiden sich aber grundsätzlich darin, wie breit sie sind. <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br>")
+
+cat("**5.** Ein 95%-Credible-Intervall enthält 95% der posterioren Wahrscheinlichkeit für den Parameter. <br>")
+	cat(mcq(c( "Falsch", answer = "Richtig")), "<br><br>")	
+	
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+(a) **Richtig: Nr. 2 und 5** <br><br> **Erklärung:** Die Interpretation ist unterschiedlich. Das Credible-Intervall erlaubt eine direkte probabilistische Aussage über den Parameter auf Basis der Posterior-Verteilung. Die 95%-Überdeckungswahrscheinlichkeit des Konfidenzintervallverfahrens bezieht sich dagegen auf wiederholte Stichproben.
+:::
