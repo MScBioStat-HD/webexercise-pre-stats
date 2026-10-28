@@ -26,7 +26,7 @@ library(webexercises)
 	cat(mcq(c(answer = "Falsch",  "Richtig")), "<br><br>")
 
 	cat("**4.** Beide Intervalle haben dieselbe Interpretation, unterscheiden sich aber grundsätzlich darin, wie breit sie sind. <br>")
-	cat(mcq(c("Falsch", answer = "Richtig")), "<br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
 
 cat("**5.** Ein 95%-Credible-Intervall enthält 95% der posterioren Wahrscheinlichkeit für den Parameter. <br>")
 	cat(mcq(c( "Falsch", answer = "Richtig")), "<br><br>")	
@@ -63,4 +63,26 @@ cat("Beta (", fitb("12"), ", ", fitb("8"), ")")
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 Da der Anteil 0.6 ist wurden 12 Erfolge beobachtet. Somit ist der Prior Beta(12, 8).
+:::
+
+::: {.webex .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(b) In der Folgestudie haben Sie 40 Probanden, wo bei 15 ein Therpieerfolg beobachtet wird. Wie lautet die Posterior Verteilung für $\theta$? <br> <br>")
+cat("Beta (", fitb("27"), ", ", fitb("33"), ")")
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Der Prior ist Beta(12, 8). Dieser wird verwendet um die Posterior zu berechnen. Wir haben 15 Erfolge und somit die Posterior Beta(12+15, 8+25).
+:::
+
+::: {.webex .webex-box}
+```{r, results='asis', echo=FALSE}
+cat("(c) Was ist der Posterior Mean? <br> <br>")
+cat("Posterior Mean = ", fitb(0.45, tol=0.01))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Der Posterior Mean ist $27/60=0.45$.
 :::
