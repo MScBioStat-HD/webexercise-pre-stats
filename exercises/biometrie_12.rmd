@@ -48,14 +48,13 @@ Patienten wurden folgende Überlebenszeiten (in Monaten) beobachtet:
 **Überlebensrate:** <br>
 Bestimmen Sie zunächst die Anzahl der Personen, die
 zum Zeitpunkt $t=10$ noch unter Risiko stehen (noch leben). Dies ist
-hier $n_{10}=9$. Dann bestimmen wir die Anzahl der Todesfälle zum
-Zeitpunkt $t=10$: $d_{10}=3$. <br><br>
+hier $n_{10}=9$. <br>
+Dann bestimmen wir die Anzahl der Todesfälle zum Zeitpunkt $t=10$: $d_{10}=3$. <br><br>
 Somit ist $p(10)=6/9=0.67$
 :::
 
 ::: {.webex .webex-box}
-(b) Berechnen Sie die Überlebensfunktion $S(t)$ zum
-    Zeitpunkt $t=10$.
+(b) Berechnen Sie die Überlebensfunktion $S(t)$ zum Zeitpunkt $t=10$.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
@@ -90,9 +89,9 @@ folgt (Überlebenszeiten der 12 Patienten):
 
 ::: {.webex .webex-box}
 (a) Vervollständigen Sie die Tabelle für die Anzahlen unter Risiko,
-    Events, Zensiert.
+    Events und Zensiert.
 
-    **Anzahl Unter Risiko, Events, Zensiert**
+    **Anzahl a) unter Risiko, b) Events, c) Zensiert**
 
     |     | Unter Risiko | Events      | Zensiert    |
     |-----|--------------|-------------|-------------|
@@ -163,5 +162,6 @@ cat(mcq(opts))
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Da kein Todesfall auftritt also $d_k=0$, bleibt der Wert der Kurve für $S(t)$ konstant. Es ist $p(t_k)=(n_k-0)/n_k)=1$ und somit $S(t_k)=S(t_{k-1})\cdot 1$. 
+Da kein Todesfall auftritt also $d_k=0$, bleibt der Wert der Kurve für $S(t)$ konstant. <br>
+Es ist $p(t_k)=(n_k-0)/n_k)=1$ und somit $S(t_k)=S(t_{k-1})\cdot 1$. 
 :::
