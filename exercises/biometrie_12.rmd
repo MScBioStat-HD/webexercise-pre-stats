@@ -45,10 +45,12 @@ Patienten wurden folgende Überlebenszeiten (in Monaten) beobachtet:
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-**Überlebensrate:** Bestimmen Sie zunächst die Anzahl der Personen, die
+**Überlebensrate:** <br><br>
+Bestimmen Sie zunächst die Anzahl der Personen, die
 zum Zeitpunkt $t=10$ noch unter Risiko stehen (noch leben). Dies ist
 hier $n_{10}=9$. Dann bestimmen wir die Anzahl der Todesfälle zum
-Zeitpunkt $t=10$: $d_{10}=3$. Somit ist <br> $p(10)=6/9=0.67$
+Zeitpunkt $t=10$: $d_{10}=3$. <br>
+Somit ist $p(10)=6/9=0.67$
 :::
 
 ::: {.webex .webex-box}
@@ -57,20 +59,21 @@ Zeitpunkt $t=10$: $d_{10}=3$. Somit ist <br> $p(10)=6/9=0.67$
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-**Überlebensfunktion:** Dafür benötigen wir die Überlebensrate zu den
+**Überlebensfunktion:** <br><br>
+Dafür benötigen wir die Überlebensrate zu den
 vorherigen Zeitpunkten, da $S(10)=1\cdot p(6)\cdot p(8)\cdot p(10)$. <br>
 $p(6)=11/12=0.917$ <br> $p(8)=9/11=0.818$ <br> $p(10)=6/9=0.67$ <br><br>
 Somit ist $S(10)=1\cdot (11/12)\cdot (9/11)\cdot (6/9)=6/12=0.5$
 :::
 
 ::: {.webex .webex-box}
-(c) Berechnen Sie die Schätzwerte der Überlebensfunktion $S(t)$ zum
+(c) Berechnen Sie die Überlebensfunktion $S(t)$ zum
     Zeitpunkt $t=15$, wobei $S(12)=5/12$ ist.
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-**Überlebensfunktion:** Da $S(12)=5/12$ gegeben ist können wir sofort
-rechnen <br> $S(15)=S(12)\cdot p(15)$. <br><br>
+Da $S(12)=5/12$ gegeben ist können wir sofort rechnen: <br> 
+$S(15)=S(12)\cdot p(15)$. <br><br>
 Somit ist $S(15)=(5/12)\cdot (3/5)=3/12=0.25$
 :::
 
@@ -109,8 +112,8 @@ folgt (Überlebenszeiten der 12 Patienten):
 **Überlebensfunktion:** Dafür benötigen wir die Überlebensrate zu den
 vorherigen Zeitpunkten, da $S(12)=1 \cdot p(6) \cdot p(8) \cdot p(10) \cdot p(12)$. <br>
 $p(6)=11/12=0.917$ <br> $p(8)=9/11=0.818$ <br> $p(10)=8/9=0.889$ <br>
-$p(12)=6/7=0.857$ <br> Somit ist <br>
-$S(12)=1\cdot (11/12) \cdot (9/11)\cdot (8/9)\cdot (6/7)=0.572$
+$p(12)=6/7=0.857$ <br> 
+Somit ist $S(12)=1\cdot (11/12) \cdot (9/11)\cdot (8/9)\cdot (6/7)=0.572$
 :::
 
 ::: {.webex .webex-box}
@@ -118,13 +121,14 @@ $S(12)=1\cdot (11/12) \cdot (9/11)\cdot (8/9)\cdot (6/7)=0.572$
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-Die Mediane Überlebenszeit ist $t=15$ da zu diesem Zeitpunkt $S(t)$ den Wert 0.5 (also 50%) zum ersten Mal unterschreitet. Bei $t=12$ haben wir gesehen, dass es noch drüber ist mit $0.572$. Da $S(15)=0.477$ ist somit $S(15)\leq 0.5$.
+Die Mediane Überlebenszeit ist $t=15$ da zu diesem Zeitpunkt $S(t)$ den Wert $0.5$ (also 50%) zum ersten Mal unterschreitet. Bei $t=12$ haben wir gesehen, dass es noch drüber ist mit $0.572$. Da $S(15)=0.477$ ist somit $S(15)\leq 0.5$.
 :::
 
 ### Aufgabe 4
 
 **Frage 1:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert.
-Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? Welche der folgenden Aussagen sind richtig.
+Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? 
+Welche der folgenden Aussagen sind diesbezüglich richtig.
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
@@ -147,10 +151,10 @@ Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? Welche
 
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-  "\\(S(t)\\) sinkt leicht ab.",
-  "\\(S(t)\\) springt sofort auf 0.",
-  "\\(S(t)\\) steigt an.",
-  answer = "\\(S(t)\\) bleibt unverändert."
+  "\\S(t)\\ sinkt leicht ab.",
+  "\\S(t)\\ springt sofort auf 0.",
+  "\\S(t)\\ steigt an.",
+  answer = "\\S(t)\\ bleibt unverändert."
 )
 
 cat(mcq(opts))
