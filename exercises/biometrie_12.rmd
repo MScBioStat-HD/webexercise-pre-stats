@@ -45,7 +45,7 @@ Patienten wurden folgende Überlebenszeiten (in Monaten) beobachtet:
 :::
 
 ::: {.callout-tip collapse="true" title="Lösung"}
-**Überlebensrate:** <br><br>
+**Überlebensrate:** <br>
 Bestimmen Sie zunächst die Anzahl der Personen, die
 zum Zeitpunkt $t=10$ noch unter Risiko stehen (noch leben). Dies ist
 hier $n_{10}=9$. Dann bestimmen wir die Anzahl der Todesfälle zum
@@ -62,7 +62,8 @@ Somit ist $p(10)=6/9=0.67$
 **Überlebensfunktion:** <br>
 Dafür benötigen wir die Überlebensrate zu den
 vorherigen Zeitpunkten, <br> 
-da $S(10)=1\cdot p(6)\cdot p(8)\cdot p(10)$. <br>
+da $S(10)=1\cdot p(6)\cdot p(8)\cdot p(10)$. <br><br>
+Wir berechnen: <br>
 $p(6)=11/12=0.917$ <br> $p(8)=9/11=0.818$ <br> $p(10)=6/9=0.67$ <br><br>
 Somit ist $S(10)=1\cdot (11/12)\cdot (9/11)\cdot (6/9)=6/12=0.5$
 :::
@@ -110,7 +111,8 @@ folgt (Überlebenszeiten der 12 Patienten):
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 Dafür benötigen wir die Überlebensrate zu den vorherigen Zeitpunkten, <br>
-da $S(12)=1 \cdot p(6) \cdot p(8) \cdot p(10) \cdot p(12)$. <br>
+da $S(12)=1 \cdot p(6) \cdot p(8) \cdot p(10) \cdot p(12)$. <br><br>
+Wir berechnen: <br>
 $p(6)=11/12=0.917$ <br> $p(8)=9/11=0.818$ <br> $p(10)=8/9=0.889$ <br>
 $p(12)=6/7=0.857$ <br><br> 
 Somit ist $S(12)=1\cdot (11/12) \cdot (9/11)\cdot (8/9)\cdot (6/7)=0.572$
@@ -126,12 +128,11 @@ Die Mediane Überlebenszeit ist $t=15$ da zu diesem Zeitpunkt $S(t)$ den Wert $0
 
 ### Aufgabe 4
 
-**Frage 1:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert.
-Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? 
-Welche der folgenden Aussagen sind diesbezüglich richtig.
-
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
+ **Frage 2:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert. Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? 
+Welche der folgenden Aussagen sind diesbezüglich richtig. <br><br>
+
 	cat("**1.** Er wird wie ein Todesfall behandelt und verringert die Überlebensfunktion. <br>")
 	cat(mcq(c(answer ="Falsch", "Richtig")), "<br><br>")
 
@@ -151,10 +152,10 @@ Welche der folgenden Aussagen sind diesbezüglich richtig.
 
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-"\\$S(t)\\$ sinkt leicht ab.",
-  "\\$S(t)\\$ springt sofort auf 0.",
-  "\\$S(t)\\$ steigt an.",
-  answer = "\\$S(t)\\$ bleibt unverändert."
+"S(t) sinkt leicht ab.",
+  "S(t) springt sofort auf 0.",
+  "S(t) steigt an.",
+  answer = "S(t) bleibt unverändert."
 )
 
 cat(mcq(opts))
