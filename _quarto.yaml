@@ -40,6 +40,7 @@ website:
             - exercises/biometrie_9.rmd
             - exercises/biometrie_10.rmd
             - exercises/biometrie_11.rmd
+            - exercises/biometrie_12.rmd
 
 html:
   css: out/webex.css
