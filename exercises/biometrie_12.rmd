@@ -130,8 +130,8 @@ Die Mediane Überlebenszeit ist $t=15$ da zu diesem Zeitpunkt $S(t)$ den Wert $0
 
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
- **Frage 2:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert. Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? 
-Welche der folgenden Aussagen sind diesbezüglich richtig. <br><br>
+ cat("**Frage 1:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert. Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? 
+Welche der folgenden Aussagen sind diesbezüglich richtig. <br><br>")
 
 	cat("**1.** Er wird wie ein Todesfall behandelt und verringert die Überlebensfunktion. <br>")
 	cat(mcq(c(answer ="Falsch", "Richtig")), "<br><br>")
