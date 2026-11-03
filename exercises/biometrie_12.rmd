@@ -123,21 +123,22 @@ Die Mediane Überlebenszeit ist $t=15$ da zu diesem Zeitpunkt $S(t)$ den Wert 0.
 
 ### Aufgabe 4
 
-Wählen Sie die richtige Antwortmöglichkeit aus.
+**Frage 1:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert.
+Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers? Welche der folgenden Aussagen sind richtig.
 
 ::: {.webex-check .webex-box}
-**Frage 1:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert.
-Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers?
-
 ```{r, results='asis', echo=FALSE}
-opts <- c(
-  "Er wird wie ein Todesfall behandelt und verringert die Überlebensfunktion.",
-  answer = "Er zählt für die Berechnung von $p(12)$ noch zur Gruppe der Personen unter Risiko, wird aber für den nächsten Zeitpunkt nicht mehr mitgezählt.",
-  "Er wird komplett aus der Studie gestrichen, als wäre er nie dabei gewesen (auch nicht in den Zeitpunkten vor Monat 12).",
-  "Zensierte Patienten haben keinen Einfluss auf die Berechnung, da sie nicht gestorben sind."
-)
+	cat("**1.** Er wird wie ein Todesfall behandelt und verringert die Überlebensfunktion. <br>")
+	cat(mcq(c(answer ="Falsch", "Richtig")), "<br><br>")
 
-cat(mcq(opts))
+	cat("**2.** Er zählt für die Berechnung von $p(12)$ noch zur Gruppe der Personen unter Risiko, wird aber für den nächsten Zeitpunkt nicht mehr mitgezählt. <br>")
+	cat(mcq(c("Falsch", answer = "Richtig")), "<br><br>")
+
+	cat("**3.** Er wird komplett aus der Studie gestrichen, als wäre er nie dabei gewesen (auch nicht in den Zeitpunkten vor Monat 12). <br>")
+	cat(mcq(c(answer = "Falsch", "Richtig")), "<br><br>")
+
+	cat("**4.** Zensierte Patienten haben keinen Einfluss auf die Berechnung, da sie nicht gestorben sind. <br>")
+	cat(mcq(c(answer ="Falsch",  "Richtig")), "<br>")
 ```
 :::
 
