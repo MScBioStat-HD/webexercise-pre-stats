@@ -30,3 +30,23 @@ Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 	cat(mcq(c("Falsch", answer = "Richtig")), "<br>")
 ```
 :::
+
+### Aufgabe 2
+
+In einer klinischen Studie wurde die Wirksamkeit eines neuen Medikaments
+bei Patienten mit einer seltenen Form von Leberkrebs untersucht. Bei 12
+Patienten wurden folgende Überlebenszeiten (in Monaten) beobachtet:
+
+6, 8, 8, 10, 10, 10, 12, 15, 15, 18, 20, 22.
+
+::: {.webex .webex-box}
+(a) Berechnen Sie die Schätzwerte der Überlebensrate $p(t)$ zum
+    Zeitpunkt $t=10$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Überlebensrate:** Bestimmen Sie zunächst die Anzahl der Personen, die
+zum Zeitpunkt $t=10$ noch unter Risiko stehen (noch leben). Dies ist
+hier $n_{10}=9$. Dann bestimmen wir die Anzahl der Todesfälle zum
+Zeitpunkt $t=10$: $d_{10}=3$. Somit ist <br> $p(10)=6/9=0.67$
+:::
