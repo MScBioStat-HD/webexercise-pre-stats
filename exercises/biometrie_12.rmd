@@ -50,3 +50,112 @@ zum Zeitpunkt $t=10$ noch unter Risiko stehen (noch leben). Dies ist
 hier $n_{10}=9$. Dann bestimmen wir die Anzahl der Todesfälle zum
 Zeitpunkt $t=10$: $d_{10}=3$. Somit ist <br> $p(10)=6/9=0.67$
 :::
+
+::: {.webex .webex-box}
+(b) Berechnen Sie die Schätzwerte der Überlebensfunktion $S(t)$ zum
+    Zeitpunkt $t=10$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Überlebensfunktion:** Dafür benötigen wir die Überlebensrate zu den
+vorherigen Zeitpunkten, da $S(10)=1\cdot p(6)\cdot p(8)\cdot p(10)$. <br>
+$p(6)=11/12=0.917$ <br> $p(8)=9/11=0.818$ <br> $p(10)=6/9=0.67$ <br><br>
+Somit ist $S(10)=1\cdot (11/12)\cdot (9/11)\cdot (6/9)=6/12=0.5$
+:::
+
+::: {.webex .webex-box}
+(c) Berechnen Sie die Schätzwerte der Überlebensfunktion $S(t)$ zum
+    Zeitpunkt $t=15$, wobei $S(12)=5/12$ ist.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Überlebensfunktion:** Da $S(12)=5/12$ gegeben ist können wir sofort
+rechnen <br> $S(15)=S(12)\cdot p(15)$. <br><br>
+Somit ist $S(15)=(5/12)\cdot (3/5)=3/12=0.25$
+:::
+
+### Aufgabe 3
+
+Wir betrachten wieder das obige Beispiel aber nun sind Patienten
+zensiert (Patient hat die Studie vorzeitig beendet bevor das Ereignis
+eingetreten ist). Diese werden mit + markiert. Die Daten sind nun wie
+folgt (Überlebenszeiten der 12 Patienten):
+
+6, 8, 8, 10, 10+, 12, 15, 15+, 18, 20, 22, 25
+
+::: {.webex .webex-box}
+(a) Vervollständigen Sie die Tabelle für die Anzahlen unter Risiko,
+    Events, Zensiert.
+
+    **Anzahl Unter Risiko, Events, Zensiert**
+
+    |     | Unter Risiko | Events      | Zensiert    |
+    |-----|--------------|-------------|-------------|
+    | 6   | 12           | 1           | 0           |
+    | 8   | `r fitb(11)` | `r fitb(2)` | `r fitb(0)` |
+    | 10  | `r fitb(9)`  | `r fitb(1)` | `r fitb(1)` |
+    | 12  | `r fitb(7)`  | `r fitb(1)` | `r fitb(0)` |
+    | 15  | 6            | `r fitb(1)` | `r fitb(1)` |
+    | 18  | `r fitb(4)`  | `r fitb(1)` | `r fitb(0)` |
+    | 20  | 3            | 1           | 0           |
+:::
+
+::: {.webex .webex-box}
+(b) Berechnen Sie die Schätzwerte der Überlebensfunktion $S(t)$ zum
+    Zeitpunkt $t=12$.
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+**Überlebensfunktion:** Dafür benötigen wir die Überlebensrate zu den
+vorherigen Zeitpunkten, da $S(12)=1 \cdot p(6) \cdot p(8) \cdot p(10) \cdot p(12)$. <br>
+$p(6)=11/12=0.917$ <br> $p(8)=9/11=0.818$ <br> $p(10)=8/9=0.889$ <br>
+$p(12)=6/7=0.857$ <br> Somit ist <br>
+$S(12)=1\cdot (11/12) \cdot (9/11)\cdot (8/9)\cdot (6/7)=0.572$
+:::
+
+::: {.webex .webex-box}
+(c) Was ist die Mediane Überlebenszeit?
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Die Mediane Überlebenszeit ist $t=15$ da zu diesem Zeitpunkt $S(t)$ den Wert 0.5 (also 50%) zum ersten Mal unterschreitet. Bei $t=12$ haben wir gesehen, dass es noch drüber ist mit $0.572$. Da $S(15)=0.477$ ist somit $S(15)\leq 0.5$.
+:::
+
+### Aufgabe 4
+
+Wählen Sie die richtige Antwortmöglichkeit aus.
+
+::: {.webex-check .webex-box}
+**Frage 1:** Ein Patient wird zum Zeitpunkt $t = 12$ Monate zensiert.
+Welchen Einfluss hat dies auf die Berechnung des Kaplan-Meier-Schätzers?
+
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "Er wird wie ein Todesfall behandelt und verringert die Überlebensfunktion.",
+  answer = "Er zählt für die Berechnung von $p(12)$ noch zur Gruppe der Personen unter Risiko, wird aber für den nächsten Zeitpunkt nicht mehr mitgezählt.",
+  "Er wird komplett aus der Studie gestrichen, als wäre er nie dabei gewesen (auch nicht in den Zeitpunkten vor Monat 12).",
+  "Zensierte Patienten haben keinen Einfluss auf die Berechnung, da sie nicht gestorben sind."
+)
+
+cat(mcq(opts))
+```
+:::
+
+::: {.webex-check .webex-box}
+**Frage 2:** Angenommen, zum Zeitpunkt $t_k$ tritt nur eine Zensierung auf, aber kein Todesfall. Wie verändert sich die Überlebensfunktion $S(t)$ an diesem Zeitpunkt?
+
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  "$S(t)$ sinkt leicht ab.",
+  "$S(t)$ springt sofort auf 0.",
+  "$S(t)$ steigt an.",
+  answer = "$S(t)$ bleibt unverändert."
+)
+
+cat(mcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true" title="Lösung"}
+Da kein Todesfall auftritt also $d_k=0$, bleibt der Wert der Kurve für $S(t)$ konstant. Es ist $p(t_k)=(n_k-0)/n_k)=1$ und somit $S(t_k)=S(t_{k-1})\cdot 1$. 
+:::
