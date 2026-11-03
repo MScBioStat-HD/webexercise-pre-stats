@@ -40,7 +40,7 @@ Patienten wurden folgende Überlebenszeiten (in Monaten) beobachtet:
 6, 8, 8, 10, 10, 10, 12, 15, 15, 18, 20, 22.
 
 ::: {.webex .webex-box}
-(a) Berechnen Sie die Schätzwerte der Überlebensrate $p(t)$ zum
+(a) Berechnen Sie die Überlebensrate $p(t)$ zum
     Zeitpunkt $t=10$.
 :::
 
@@ -52,7 +52,7 @@ Zeitpunkt $t=10$: $d_{10}=3$. Somit ist <br> $p(10)=6/9=0.67$
 :::
 
 ::: {.webex .webex-box}
-(b) Berechnen Sie die Schätzwerte der Überlebensfunktion $S(t)$ zum
+(b) Berechnen Sie die Überlebensfunktion $S(t)$ zum
     Zeitpunkt $t=10$.
 :::
 
@@ -146,8 +146,8 @@ cat(mcq(opts))
 
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-  "$S(t)$ sinkt leicht ab.",
-  "$S(t)$ springt sofort auf 0.",
+  "$$S(t)$$ sinkt leicht ab.",
+  "$$S(t)$$ springt sofort auf 0.",
   "$S(t)$ steigt an.",
   answer = "$S(t)$ bleibt unverändert."
 )
