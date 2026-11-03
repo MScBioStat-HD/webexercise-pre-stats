@@ -146,10 +146,10 @@ cat(mcq(opts))
 
 ```{r, results='asis', echo=FALSE}
 opts <- c(
-  "$$S(t)$$ sinkt leicht ab.",
-  "$$S(t)$$ springt sofort auf 0.",
-  "$S(t)$ steigt an.",
-  answer = "$S(t)$ bleibt unverändert."
+  "\\(S(t)\\) sinkt leicht ab.",
+  "\\(S(t)\\) springt sofort auf 0.",
+  "\\(S(t)\\) steigt an.",
+  answer = "\\(S(t)\\) bleibt unverändert."
 )
 
 cat(mcq(opts))
