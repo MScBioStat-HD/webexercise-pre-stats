@@ -17,7 +17,7 @@ Dezimaltrennzeichen den Punkt (Bsp.: $5.24$)</small>
 ::: {.webex-check .webex-box}
 ```{r, results='asis', echo=FALSE}
 	cat("Welche der folgenden Aussagen sind richtig? <br><br> ")
-	cat("**1.** Die Überlebensfunktion beschreibt die Wahrscheinlichkeit länger als den Zeitpunkt t zu überleben. <br>")
+	cat("**1.** Die Überlebensfunktion S(t) beschreibt die Wahrscheinlichkeit länger als den Zeitpunkt t zu überleben. <br>")
 	cat(mcq(c("Falsch", answer ="Richtig")), "<br><br>")
 
 	cat("**2.** Die Überlebensfunktion ist gleich der Überlebensrate. <br>")
@@ -163,5 +163,5 @@ cat(mcq(opts))
 
 ::: {.callout-tip collapse="true" title="Lösung"}
 Da kein Todesfall auftritt also $d_k=0$, bleibt der Wert der Kurve für $S(t)$ konstant. <br>
-Es ist $p(t_k)=(n_k-0)/n_k)=1$ und somit $S(t_k)=S(t_{k-1})\cdot 1$. 
+Es ist $p(t_k)=(n_k-0)/n_k=1$ und somit $S(t_k)=S(t_{k-1})\cdot 1$. 
 :::
